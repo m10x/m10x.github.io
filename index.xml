@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>m10x</title>
+    <title>Hello Friend NG</title>
     <link>https://m10x.github.io/</link>
-    <description>Recent content on m10x</description>
+    <description>Recent content on Hello Friend NG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Tue, 09 Mar 2021 09:21:56 +0100</lastBuildDate><atom:link href="https://m10x.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First post</title>
-      <link>https://m10x.github.io/posts/testpost/</link>
+      <link>https://m10x.github.io/posts/2021/03/first-post/</link>
       <pubDate>Tue, 09 Mar 2021 09:21:56 +0100</pubDate>
       
-      <guid>https://m10x.github.io/posts/testpost/</guid>
+      <guid>https://m10x.github.io/posts/2021/03/first-post/</guid>
       <description></description>
     </item>
     
