@@ -17,5 +17,16 @@
       <description></description>
     </item>
     
+    <item>
+      <title>About</title>
+      <link>https://m10x.github.io/about/</link>
+      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://m10x.github.io/about/</guid>
+      <description>Willkommen, mein Name ist Maximilian Hildebrand, ich bin 23 Jahre alt und studiere Informatik an der TU Dortmund.
+Mein Hobby ist die IT-Security. Ich mache gerne Capture The Flags / Wargames und versuche, zu so vielen wie möglich, gut nachvollziehbare WriteUps zu machen.
+Ich benutze die Artikel als Wiederholung von dem, was ich gemacht habe und habe die Hoffnung, dass es die ein oder andere Person gibt, die meine Artikel oder Teile davon als hilfreich empfindet.</description>
+    </item>
+    
   </channel>
 </rss>
