@@ -18,6 +18,16 @@
     </item>
     
     <item>
+      <title>HackTheBox Invite Code WriteUp | Tipps &#43; Anleitung</title>
+      <link>https://m10x.github.io/posts/2021/03/hackthebox-invite-code-writeup-tipps-anleitung/</link>
+      <pubDate>Tue, 09 Mar 2021 09:21:56 +0100</pubDate>
+      
+      <guid>https://m10x.github.io/posts/2021/03/hackthebox-invite-code-writeup-tipps-anleitung/</guid>
+      <description>Tipps und Anleitung dazu, wie man an den Registrierungs Code für HackTheBox kommt.
+Einleitung HackTheBox ist eine online Plattform bei der man seine IT-Sicherheit und Penetration Test Fähigkeiten anwenden, testen und verbessern kann. Um sich registrieren zu können muss man einen kleinen Test bestehen. Ich habe diesen Eintrag geschrieben, da der Test kein Hindernis sein soll, sich bei HackTheBox zu beteiligen. Zum Beispiel, wenn man nur &amp;ldquo;hineinschnuppern&amp;rdquo; möchte oder bei einer Sache nicht weiter kommt.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://m10x.github.io/about/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
@@ -27,6 +37,33 @@
 My hobby is IT-Security. I like to compete at Capture The Flags and I try to do short but understandable Videos and WriteUps.
 I do this as repetiotion and hope that some of you might find them useful!
 I&amp;rsquo;ve spend most my time @ HackTheBox and achieved the rank Pro Hacker with ~50 Owned Systems.</description>
+    </item>
+    
+    <item>
+      <title>Summary</title>
+      <link>https://m10x.github.io/summary/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://m10x.github.io/summary/</guid>
+      <description>CTFs Defend The Web
+Videos: coming soon™
+PicoCTF
+Videos: coming soon™
+OWASP Juice Shop
+Videos: 22
+HackTheBox
+Videos: 33 (+2 in preperation)
+WriteUps: 9 (+22 in preperation)
+Practical Pentest Labs
+Videos: 2
+WriteUps: 0 (+2 in preperation)
+PicoCTF 2017
+Videos: 2
+HackThis!!
+Videos: 1
+WriteUps: 1
+OverTheWire
+WriteUps: 2</description>
     </item>
     
   </channel>

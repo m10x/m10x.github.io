@@ -19,5 +19,62 @@
             <content type="html"><![CDATA[]]></content>
         </item>
         
+        <item>
+            <title>HackTheBox Invite Code WriteUp | Tipps &#43; Anleitung</title>
+            <link>https://m10x.github.io/posts/2021/03/hackthebox-invite-code-writeup-tipps-anleitung/</link>
+            <pubDate>Tue, 09 Mar 2021 09:21:56 +0100</pubDate>
+            
+            <guid>https://m10x.github.io/posts/2021/03/hackthebox-invite-code-writeup-tipps-anleitung/</guid>
+            <description>Tipps und Anleitung dazu, wie man an den Registrierungs Code für HackTheBox kommt.
+Einleitung HackTheBox ist eine online Plattform bei der man seine IT-Sicherheit und Penetration Test Fähigkeiten anwenden, testen und verbessern kann. Um sich registrieren zu können muss man einen kleinen Test bestehen. Ich habe diesen Eintrag geschrieben, da der Test kein Hindernis sein soll, sich bei HackTheBox zu beteiligen. Zum Beispiel, wenn man nur &amp;ldquo;hineinschnuppern&amp;rdquo; möchte oder bei einer Sache nicht weiter kommt.</description>
+            <content type="html"><![CDATA[<p>Tipps und Anleitung dazu, wie man an den Registrierungs Code für HackTheBox kommt.</p>
+<h2 id="einleitung">Einleitung</h2>
+<p>HackTheBox ist eine online Plattform bei der man seine IT-Sicherheit und Penetration Test Fähigkeiten anwenden, testen und verbessern kann.
+Um sich registrieren zu können muss man einen kleinen Test bestehen. Ich habe diesen Eintrag geschrieben, da der Test kein Hindernis sein soll, sich bei HackTheBox zu beteiligen.
+Zum Beispiel, wenn man nur &ldquo;hineinschnuppern&rdquo; möchte oder bei einer Sache nicht weiter kommt.
+Allerdings gilt wie immer beim PenTesting das Motto &ldquo;Try Harder!&rdquo;. :)</p>
+<h2 id="tipps">Tipps</h2>
+<ul>
+<li>Untersuche den Quellcode.</li>
+<li>Du wirst die Console vom Browser benötigen um einen Java Script Befehl auszuführen</li>
+<li>Du musst Base64 und eventuell ROT13 dekodieren.</li>
+<li>Um einen POST-request zu senden kannst du Browser Addons benutzen</li>
+</ul>
+<h2 id="video">Video</h2>
+<p><a href="https://www.youtube.com/watch?v=5bEOmzgnWC4">Kurzes Video Walkthrough ohne Erklärungen</a></p>
+<h2 id="anleitung">Anleitung</h2>
+<p>Als erstes untersuchen wir den Quellcode (F12 oder Rechtsklick und (Element) untersuchen)<br>
+<img src="https://i.imgur.com/H11xz1Q.jpg" alt="Element untersuchen"><br>
+Können wir dort etwas interessantes finden?<br>
+<img src="https://imgur.com/wj1ZgR5.jpg" alt="inviteapi.min.js"><br>
+Das JavaScript mit dem Pfad /js/inviteapi.min.js sieht vielversprechend aus oder?<br>
+Sehen wir uns es mal genauer an&hellip;<br>
+<img src="https://imgur.com/NGOlxgY.jpg" alt="makeInviteCode"><br>
+POST und makeInviteCode sehen nützlich aus. POST bedeutet in diesem Fall, dass das JavaScript ein HTTP Post Request unterstützt. makeInviteCode ist eine Funktion des JavaScripts.<br>
+Was können wir nun mit diesem Wissen anfagen?<br>
+<img src="https://imgur.com/HMmOBL0.jpg" alt="makeInviteCode()"><br>
+Wir führen die die Funktion makeInviteCode() in der Konsole unseres Internetbrowsers aus (in meinem Fall Firefox Quantum Developer Edition) und erhalten folgendes:<br>
+data = Va beqre gb trarengr gur vaivgr pbqr, znxr n CBFG erdhrfg gb /ncv/vaivgr/trarengr<br>
+enctype = ROT13<br>
+Wir haben nun also einen String der mit Hilfe von &ldquo;ROT13&rdquo; verschlüsselt wurde. &ldquo;ROT13&rdquo; ist eine Caesar-Verschlüsselung, bei der alle Buchstaben um 13 Stellen im Alphabet verschoben werden. Wer wissen möchte, wie man mit &ldquo;ROT13&rdquo; verschlüsselte Strings ganz einfach mit Bash oder Python entschlüsseln kann, kann dies in meinem &ldquo;OverTheWire Bandit&rdquo; Anleitung nachsehen, bei Level 11-12.
+Der Einfachheit halber kann man auch eine Internetseite benutzen, die das auf Knopfdruck für einen macht oder ein Browser-Plugin. Ich benutze das Mozilla Firefox Quantum Plugin &ldquo;New Hackbar&rdquo; dafür.</p>
+<p>Der entschlüsselte Text ist wie folgt: In order to generate the invite code, make a POST request to /api/invite/generate</p>
+<p>Um sehr einfach ein POST request zu machen, kann man ein Browser-Plugin dafür benutzen.
+Firefox Quantum: New Hackbar
+Firefox Älter: Hackbar
+Google Chrome: Postman
+Ich werde Firefox Quantum mit dem &ldquo;New Hackbar&rdquo; Plugin dafür benutzen, was du benutzt, ist natürlich dir überlassen.</p>
+<p>Wir sehen nun code = SIJFVEwtSktSRkktSFIPUEYtTFIGR08tTU5QVVM= und format = encoded
+Wir haben jetzt also anscheinend, den Code den wir für die Registrierung benötigen, aber dieser ist noch codiert ( = encoded).
+Allerdings steht dort nicht, wie der Code codiert wurde. Wie können wir dies herausfinden? Trial &amp; Error?</p>
+<p>Der String code hat an letzter Stelle ein =. Deshalb ist die Wahrscheinlichkeit groß, dass der String mit Hilfe von Base64 codiert wurde,
+da eine Base64 Kodierung immer mit einem = endet.
+Versuchen wir mal unser Glück.</p>
+<p>Geschafft!! Wir haben nun den Code, welchen wir benötigt haben.</p>
+<p>Probieren wir ihn mal aus. :)</p>
+<p>Es hat funktioniert!</p>
+]]></content>
+        </item>
+        
     </channel>
 </rss>
