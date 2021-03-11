@@ -20,12 +20,13 @@
     <item>
       <title>About</title>
       <link>https://m10x.github.io/about/</link>
-      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://m10x.github.io/about/</guid>
-      <description>Willkommen, mein Name ist Maximilian Hildebrand, ich bin 23 Jahre alt und studiere Informatik an der TU Dortmund.
-Mein Hobby ist die IT-Security. Ich mache gerne Capture The Flags / Wargames und versuche, zu so vielen wie möglich, gut nachvollziehbare WriteUps zu machen.
-Ich benutze die Artikel als Wiederholung von dem, was ich gemacht habe und habe die Hoffnung, dass es die ein oder andere Person gibt, die meine Artikel oder Teile davon als hilfreich empfindet.</description>
+      <description>Welcome, my name is Maximilian Hildebrand aka m10x, I&amp;rsquo;m 23 years old and study computer science @ TU Dortmund.
+My hobby is IT-Security. I like to compete at Capture The Flags and I try to do short but understandable Videos and WriteUps.
+I do this as repetiotion and hope that some of you might find them useful!
+I&amp;rsquo;ve spend most my time @ HackTheBox and achieved the rank Pro Hacker with ~50 Owned Systems.</description>
     </item>
     
   </channel>
