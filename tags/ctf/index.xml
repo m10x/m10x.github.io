@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hackthebox on Maximilian Hildebrand</title>
-    <link>https://m10x.github.io/tags/hackthebox/</link>
-    <description>Recent content in hackthebox on Maximilian Hildebrand</description>
+    <title>ctf on Maximilian Hildebrand</title>
+    <link>https://m10x.github.io/tags/ctf/</link>
+    <description>Recent content in ctf on Maximilian Hildebrand</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 05 Dec 2018 16:00:56 +0100</lastBuildDate><atom:link href="https://m10x.github.io/tags/hackthebox/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Dec 2018 16:00:56 +0100</lastBuildDate><atom:link href="https://m10x.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HackTheBox - Kotarak WriteUp | Tipps &#43; Anleitung</title>
       <link>https://m10x.github.io/posts/2018/12/hackthebox-kotarak-writeup-tipps-anleitung/</link>
@@ -58,6 +58,26 @@ Root-Rechte zu bekommen ist sehr einfach.</description>
     </item>
     
     <item>
+      <title>OverTheWire Natas WriteUp - Level 0 bis 14</title>
+      <link>https://m10x.github.io/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</link>
+      <pubDate>Tue, 13 Feb 2018 21:27:56 +0100</pubDate>
+      
+      <guid>https://m10x.github.io/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</guid>
+      <description>Einleitung Wargames OverTheWire.org bietet über 15 verschiedene Wargames an, welche verschiedene Schwierigskeitgrade haben. Wenn du den Begriff &amp;ldquo;Wargame&amp;rdquo; im Bezug zu Cyber Security zum ersten Mal hörst, fragst du dich bestimmt: &amp;ldquo;Was ist eigentlich ein Wargame?&amp;rdquo;.
+Wargames sind Herausforderungen, entweder online oder offline als Virtuelle Maschine, in denen man versucht Sicherheitslücken auszunutzen und/oder Zugriff zu etwas zu erlangen. Sie sind teilweise sehr unterschiedlich was die benötigten Fähigkeiten, die Herausforderung und die Vorgehensweise anbelangt.</description>
+    </item>
+    
+    <item>
+      <title>OverTheWire Bandit WriteUp - Alle Level</title>
+      <link>https://m10x.github.io/posts/2018/02/overthewire-bandit-writeup-alle-level/</link>
+      <pubDate>Tue, 13 Feb 2018 20:38:56 +0100</pubDate>
+      
+      <guid>https://m10x.github.io/posts/2018/02/overthewire-bandit-writeup-alle-level/</guid>
+      <description>Einleitung Wargames OverTheWire.org bietet über 15 verschiedene Wargames an, welche verschiedene Schwierigskeitgrade haben. Wenn du den Begriff &amp;ldquo;Wargame&amp;rdquo; im Bezug zu Cyber Security zum ersten Mal hörst, fragst du dich bestimmt: &amp;ldquo;Was ist eigentlich ein Wargame?&amp;rdquo;.
+Wargames sind Herausforderungen, entweder online oder offline als Virtuelle Maschine, in denen man versucht Sicherheitslücken auszunutzen und/oder Zugriff zu etwas zu erlangen. Sie sind teilweise sehr unterschiedlich was die benötigten Fähigkeiten, die Herausforderung und die Vorgehensweise anbelangt.</description>
+    </item>
+    
+    <item>
       <title>HackTheBox - Mirai WriteUp | Tipps &#43; Anleitung</title>
       <link>https://m10x.github.io/posts/2018/02/hackthebox-mirai-writeup-tipps-anleitung/</link>
       <pubDate>Sat, 10 Feb 2018 19:59:56 +0100</pubDate>
@@ -81,6 +101,21 @@ Tipps  Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist 
     </item>
     
     <item>
+      <title>HackThis - Alle Main Level Walkthrough | Tipps &#43; Anleitung</title>
+      <link>https://m10x.github.io/posts/2018/01/hackthis-alle-main-level-walkthrough-tipps-anleitung/</link>
+      <pubDate>Tue, 23 Jan 2018 20:39:56 +0100</pubDate>
+      
+      <guid>https://m10x.github.io/posts/2018/01/hackthis-alle-main-level-walkthrough-tipps-anleitung/</guid>
+      <description>Walkthrough | Tipps + Anleitung zu allen Main Levels 1-10 von HackThis. Die Main Level gehören zu dein einfacheren von HackThis.
+Video 
+Level 1 Drücke Strg + u um den Quelltext der Seite anzuzeigen. Achte auf Kommentare im Quelltext.
+Zuerst sehen wir uns den Quelltext an, indem wir Strg + u drücken.
+In Zeile 29 finden wir folgendes: 
+Einfacher geht es wohl kaum.
+Level 2 Suche in dem Quelltext nach einem bestimmten Begriff.</description>
+    </item>
+    
+    <item>
       <title>HackTheBox - Blue WriteUp | Tipps &#43; Anleitung</title>
       <link>https://m10x.github.io/posts/2018/01/hackthebox-blue-writeup-tipps-anleitung/</link>
       <pubDate>Sat, 13 Jan 2018 20:00:56 +0100</pubDate>
@@ -89,38 +124,6 @@ Tipps  Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist 
       <description>Blue ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. Blue gehört zu den einfacheren Maschinen von HackTheBox und ist deswegen sehr gut für Anfänger geeignet. Aber auch für Erfahrene, die eine Herausforderung für zwischendurch suchen.
 
 Tipps  nmap -A zeigt uns deutlich auf welchen Port wir achten müssen Der Name der Maschine, Blue, ist ein Tipp Wenn wir wissen was die Schwachstelle ist, ist Metasploit unser Freund. Wenn der Exploit fehlschlagen sollte, überprüfe deine Einstellungen und versuche es noch ein paar Mal.</description>
-    </item>
-    
-    <item>
-      <title>HackTheBox - Blocky WriteUp | Tipps &#43; Anleitung</title>
-      <link>https://m10x.github.io/posts/2017/12/hackthebox-blocky-writeup-tipps-anleitung/</link>
-      <pubDate>Thu, 21 Dec 2017 21:45:56 +0100</pubDate>
-      
-      <guid>https://m10x.github.io/posts/2017/12/hackthebox-blocky-writeup-tipps-anleitung/</guid>
-      <description>Blocky ist eine der vielen Verfügbaren CTF Challenges auf HackTheBox. Blocky gehört zu den einfacheren Maschinen von HackTheBox und ist deswegen sehr gut für Anfänger geeignet. Aber auch für Erfahrene, die eine Herausforderung für zwischendurch suchen.
-
-Tipps  Welche Verzeichnisse kannst du finden? Eventuell eins, welches mit Plugins zu tun hat? Man sollte nie Passwörter mehrmals verwenden&amp;hellip;  Anleitung Zuerst machen wir wie gewohnt einen Nmap-Scan um herauszufinden welche Ports offen sind.</description>
-    </item>
-    
-    <item>
-      <title>HackTheBox Invite Code WriteUp | Tipps &#43; Anleitung</title>
-      <link>https://m10x.github.io/posts/2017/12/hackthebox-invite-code-writeup-tipps-anleitung/</link>
-      <pubDate>Tue, 19 Dec 2017 20:32:56 +0100</pubDate>
-      
-      <guid>https://m10x.github.io/posts/2017/12/hackthebox-invite-code-writeup-tipps-anleitung/</guid>
-      <description>Tipps und Anleitung dazu, wie man an den Registrierungs Code für HackTheBox kommt.
-Dieser Eintrag ist mit mehreren Spoiler versehen, damit du den nächsten Schritt erstmal selber ausprobieren kannst.
-Einleitung HackTheBox ist eine online Plattform bei der man seine IT-Sicherheit und Penetration Test Fähigkeiten anwenden, testen und verbessern kann.
-Um sich registrieren zu können muss man einen kleinen Test bestehen. Ich habe diesen Eintrag geschrieben, da der Test kein Hindernis sein soll, sich bei HackTheBox zu beteiligen.</description>
-    </item>
-    
-    <item>
-      <title>First post</title>
-      <link>https://m10x.github.io/posts/2010/01/first-post/</link>
-      <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
-      
-      <guid>https://m10x.github.io/posts/2010/01/first-post/</guid>
-      <description></description>
     </item>
     
   </channel>
