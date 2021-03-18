@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>overthewire on Maximilian Hildebrand</title>
-    <link>https://m10x.github.io/tags/overthewire/</link>
+    <link>https://m10x.de/tags/overthewire/</link>
     <description>Recent content in overthewire on Maximilian Hildebrand</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 13 Feb 2018 21:27:56 +0100</lastBuildDate><atom:link href="https://m10x.github.io/tags/overthewire/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Feb 2018 21:27:56 +0100</lastBuildDate><atom:link href="https://m10x.de/tags/overthewire/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OverTheWire Natas WriteUp - Level 0 bis 14</title>
-      <link>https://m10x.github.io/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</link>
+      <link>https://m10x.de/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</link>
       <pubDate>Tue, 13 Feb 2018 21:27:56 +0100</pubDate>
       
-      <guid>https://m10x.github.io/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</guid>
+      <guid>https://m10x.de/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</guid>
       <description>Einleitung Wargames OverTheWire.org bietet über 15 verschiedene Wargames an, welche verschiedene Schwierigskeitgrade haben. Wenn du den Begriff &amp;ldquo;Wargame&amp;rdquo; im Bezug zu Cyber Security zum ersten Mal hörst, fragst du dich bestimmt: &amp;ldquo;Was ist eigentlich ein Wargame?&amp;rdquo;.
 Wargames sind Herausforderungen, entweder online oder offline als Virtuelle Maschine, in denen man versucht Sicherheitslücken auszunutzen und/oder Zugriff zu etwas zu erlangen. Sie sind teilweise sehr unterschiedlich was die benötigten Fähigkeiten, die Herausforderung und die Vorgehensweise anbelangt.</description>
     </item>
     
     <item>
       <title>OverTheWire Bandit WriteUp - Alle Level</title>
-      <link>https://m10x.github.io/posts/2018/02/overthewire-bandit-writeup-alle-level/</link>
+      <link>https://m10x.de/posts/2018/02/overthewire-bandit-writeup-alle-level/</link>
       <pubDate>Tue, 13 Feb 2018 20:38:56 +0100</pubDate>
       
-      <guid>https://m10x.github.io/posts/2018/02/overthewire-bandit-writeup-alle-level/</guid>
+      <guid>https://m10x.de/posts/2018/02/overthewire-bandit-writeup-alle-level/</guid>
       <description>Einleitung Wargames OverTheWire.org bietet über 15 verschiedene Wargames an, welche verschiedene Schwierigskeitgrade haben. Wenn du den Begriff &amp;ldquo;Wargame&amp;rdquo; im Bezug zu Cyber Security zum ersten Mal hörst, fragst du dich bestimmt: &amp;ldquo;Was ist eigentlich ein Wargame?&amp;rdquo;.
 Wargames sind Herausforderungen, entweder online oder offline als Virtuelle Maschine, in denen man versucht Sicherheitslücken auszunutzen und/oder Zugriff zu etwas zu erlangen. Sie sind teilweise sehr unterschiedlich was die benötigten Fähigkeiten, die Herausforderung und die Vorgehensweise anbelangt.</description>
     </item>

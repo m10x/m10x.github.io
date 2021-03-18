@@ -2,54 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Maximilian Hildebrand</title>
-    <link>https://m10x.github.io/tags/</link>
+    <link>https://m10x.de/tags/</link>
     <description>Recent content in Tags on Maximilian Hildebrand</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 05 Dec 2018 16:00:56 +0100</lastBuildDate><atom:link href="https://m10x.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Dec 2018 16:00:56 +0100</lastBuildDate><atom:link href="https://m10x.de/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ctf</title>
-      <link>https://m10x.github.io/tags/ctf/</link>
+      <link>https://m10x.de/tags/ctf/</link>
       <pubDate>Wed, 05 Dec 2018 16:00:56 +0100</pubDate>
       
-      <guid>https://m10x.github.io/tags/ctf/</guid>
+      <guid>https://m10x.de/tags/ctf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>german</title>
-      <link>https://m10x.github.io/tags/german/</link>
+      <link>https://m10x.de/tags/german/</link>
       <pubDate>Wed, 05 Dec 2018 16:00:56 +0100</pubDate>
       
-      <guid>https://m10x.github.io/tags/german/</guid>
+      <guid>https://m10x.de/tags/german/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hackthebox</title>
-      <link>https://m10x.github.io/tags/hackthebox/</link>
+      <link>https://m10x.de/tags/hackthebox/</link>
       <pubDate>Wed, 05 Dec 2018 16:00:56 +0100</pubDate>
       
-      <guid>https://m10x.github.io/tags/hackthebox/</guid>
+      <guid>https://m10x.de/tags/hackthebox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>overthewire</title>
-      <link>https://m10x.github.io/tags/overthewire/</link>
+      <link>https://m10x.de/tags/overthewire/</link>
       <pubDate>Tue, 13 Feb 2018 21:27:56 +0100</pubDate>
       
-      <guid>https://m10x.github.io/tags/overthewire/</guid>
+      <guid>https://m10x.de/tags/overthewire/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hackthis</title>
-      <link>https://m10x.github.io/tags/hackthis/</link>
+      <link>https://m10x.de/tags/hackthis/</link>
       <pubDate>Tue, 23 Jan 2018 20:39:56 +0100</pubDate>
       
-      <guid>https://m10x.github.io/tags/hackthis/</guid>
+      <guid>https://m10x.de/tags/hackthis/</guid>
       <description></description>
     </item>
     
