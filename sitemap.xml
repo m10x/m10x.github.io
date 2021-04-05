@@ -71,9 +71,6 @@
     <loc>/posts/2010/01/first-post/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/first-post/</loc>
-    <lastmod>2010-01-01T01:01:56+01:00</lastmod>
-  </url><url>
     <loc>/posts/2010/01/hackthebox-active/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
@@ -116,6 +113,9 @@
     <loc>/posts/2010/01/hackthebox-fluxcapacitator/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
+    <loc>/posts/2010/01/hackthebox-jeeves/</loc>
+    <lastmod>2010-01-01T01:01:56+01:00</lastmod>
+  </url><url>
     <loc>/posts/2010/01/hackthebox-tally/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
@@ -123,8 +123,6 @@
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
-  </url><url>
-    <loc>/posts/1/01/hackthebox-jeeves/</loc>
   </url><url>
     <loc>/series/</loc>
   </url>
