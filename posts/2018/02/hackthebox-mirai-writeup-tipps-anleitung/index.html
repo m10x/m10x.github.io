@@ -48,8 +48,8 @@ Ein Nmap-Scan und die Website verraten dies. Standard Login-Daten sind immer was
 <meta itemprop="description" content="Mirai ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. Mirai ist eine leichte Maschine von HackTheBox und sehr gut für Anfänger geeignet. Aber auch für Erfahrene, die eine Herausforderung für zwischendurch suchen.
 
 Tipps  Informiere dich darüber, wie das Mirai-Botnetz sich ausgebreitet hat. Welches Betriebssystem hat die Maschine? Auf was für einem Gerät läuft dieses?
-Ein Nmap-Scan und die Website verraten dies. Standard Login-Daten sind immer was tolles. :) Root zu bekommen könnte nicht einfacher sein."><meta itemprop="datePublished" content="2018-02-10T19:59:56&#43;01:00" />
-<meta itemprop="dateModified" content="2018-02-10T19:59:56&#43;01:00" />
+Ein Nmap-Scan und die Website verraten dies. Standard Login-Daten sind immer was tolles. :) Root zu bekommen könnte nicht einfacher sein."><meta itemprop="datePublished" content="2018-02-10T19:59:56+01:00" />
+<meta itemprop="dateModified" content="2018-02-10T19:59:56+01:00" />
 <meta itemprop="wordCount" content="514"><meta itemprop="image" content="/"/>
 <meta itemprop="keywords" content="hackthebox,ctf,german," />
 <meta name="twitter:card" content="summary_large_image"/>
@@ -71,8 +71,8 @@ Tipps  Informiere dich darüber, wie das Mirai-Botnetz sich ausgebreitet hat. We
 Ein Nmap-Scan und die Website verraten dies. Standard Login-Daten sind immer was tolles. :) Root zu bekommen könnte nicht einfacher sein." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/2018/02/hackthebox-mirai-writeup-tipps-anleitung/" /><meta property="og:image" content="/"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2018-02-10T19:59:56&#43;01:00" />
-<meta property="article:modified_time" content="2018-02-10T19:59:56&#43;01:00" />
+<meta property="article:published_time" content="2018-02-10T19:59:56+01:00" />
+<meta property="article:modified_time" content="2018-02-10T19:59:56+01:00" />
 
 
 
@@ -173,7 +173,7 @@ Ein Nmap-Scan und die Website verraten dies.</li>
 <p><a href="http://www.youtube.com/watch?v=RMcGUrRzXVI"><img src="http://img.youtube.com/vi/RMcGUrRzXVI/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
 <h2 id="anleitung"><strong>Anleitung</strong></h2>
 <p>Als erstes kommt wie immer ein Nmap-Scan. Die Option -A sorgt dafür, dass Nmap das Betriebssystem und die Services herausfindet.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nmap -A 10.10.10.48
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nmap -A 10.10.10.48
 
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 PORT   STATE SERVICE VERSION
@@ -185,7 +185,7 @@ PORT   STATE SERVICE VERSION
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 </code></pre></div><p>Nmap konnte drei offene Ports finden. SSH, Domain und HTTP. Außerdem scheint, dass Betriebssystem Debian zu sein.</p>
 <p>Als nächstes bruteforcen wir die Verzeichnisse der Internetseite. Ich benutze dafür GoBuster, allerdings sind alternativen wie Dirb, Dirbuster, WFuzz, etc. genauso nützlich. Die Option <strong>-t</strong> legt fest wieviele Prozesse GoBuster parallel laufen lassen soll. Der Standard dabei ist 10.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# gobuster -u 10.10.10.48 -t <span style="color:#ae81ff">25</span> -w /usr/share/wordlists/dirb/common.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# gobuster -u 10.10.10.48 -t <span style="color:#ae81ff">25</span> -w /usr/share/wordlists/dirb/common.txt
 
 Gobuster v1.2 OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span style="color:#f92672">)</span>
 <span style="color:#f92672">=====================================================</span>
@@ -204,7 +204,7 @@ Gobuster v1.2 OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span st
 <p>Anscheinend haben wir es mit einem <a href="https://de.wikipedia.org/wiki/Raspberry_Pi">Raspberry Pi</a> zu tun.</p>
 <p>Die Standard Zugangsdaten bei einem Raspberry Pi mit Debian sind <strong>Nutzername: pi und Passwort: raspberry</strong>.<br>
 Vielleicht haben wir Glück und diese wurden noch nicht verändert.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# ssh pi@10.10.10.48
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# ssh pi@10.10.10.48
 pi@10.10.10.48<span style="color:#e6db74">&#39;s password
 </span><span style="color:#e6db74">
 </span><span style="color:#e6db74">[...]
@@ -214,18 +214,18 @@ pi@10.10.10.48<span style="color:#e6db74">&#39;s password
 
 pi@raspberrypi:~ $
 </code></pre></div><p>Es hat tatsächlich funktioniert. Nun können wir uns die User-Flag holen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pi@raspberrypi:~ $ ls
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pi@raspberrypi:~ $ ls
 Desktop Documents Downloads Music Pictures <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 pi@raspberrypi:~ $ cat ./Desktop/user.txt
 ff8#########zensiert#########38d
 </code></pre></div><p>Root zu werden, wird uns einfach gemacht.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pi@raspberrypi:~ $ sudo su
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pi@raspberrypi:~ $ sudo su
 root@raspberrypi:/home/pi#
 </code></pre></div><p>Nun weiter zur Root-Flag:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@raspberrypi:/home/pi# cat /root/root.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@raspberrypi:/home/pi# cat /root/root.txt
 I lost my original root.txt! I think I may have a backup on my USB stick...
 </code></pre></div><p>Den USB-Stick sollten wir unter <strong>/media</strong> finden können, falls dieser noch gemountet ist.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@raspberrypi:/home/pi# cd /media
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@raspberrypi:/home/pi# cd /media
 root@raspberrypi:/media# ls
 usbstick
 root@raspberrypi:/media# ls usbstick/
@@ -237,13 +237,13 @@ Do you know <span style="color:#66d9ef">if</span> there is any way to get them b
 -James
 </code></pre></div><p>Die Datei die wir brauchen wurde vom USB-Stick gelöscht&hellip;</p>
 <p>In Linux ist alles eine Datei. Unter <strong>/dev</strong> befinden sich alle Gerätedateien. Unter <strong>/dev/sd</strong>* können wir SATA-Festplatten und Externe Speichermedien wie z.B. USB-Sticks finden.<br>
-Mit **cat** können wir diese ganz einfach anzeigen lassen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@raspberrypi:/media# cd /dev
+Mit <strong>cat</strong> können wir diese ganz einfach anzeigen lassen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@raspberrypi:/media# cd /dev
 root@raspberrypi:/dev# ls
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span> sda1 sda2 sdb <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 root@raspberrypi:/dev# cat sdb
 </code></pre></div><p>5. letzte Zeile:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 �|<span style="color:#f92672">}</span>*,.�����+-���3d3#########zensiert#########20b
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 </code></pre></div><p>Vielen Dank für&rsquo;s durchlesen. :)</p>

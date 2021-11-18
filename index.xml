@@ -14,7 +14,7 @@
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>My name is Maximilian Hildebrand aka m10x, I&amp;rsquo;m 23 years old and I study computer science @ TU Dortmund.
+      <description>My name is Maximilian Hildebrand aka m10x, I&amp;rsquo;m 23 years old and I&amp;rsquo;m pursuing a master&amp;rsquo;s degree in IT-Security @ Ruhr-Universität Bochum.
 My hobby is IT-Security and I&amp;rsquo;m also an IT-Security working student. I like to compete at Capture The Flags and I try to do short but understandable Videos and WriteUps.
 I do this as repetition and hope that some of you might find them useful!
 I&amp;rsquo;ve spend most my time @ HackTheBox and achieved the rank Pro Hacker with ~50 Owned Systems.</description>
@@ -26,7 +26,9 @@ I&amp;rsquo;ve spend most my time @ HackTheBox and achieved the rank Pro Hacker 
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>/summary/</guid>
-      <description>Blog Posts Is Your Application Vulnerable to Web Cache Poisoning?
+      <description>Blog Posts Web Cache Vulnerability Scanner (WCVS) - Free, Customizable, Easy-To-Use
+Is Your Application Vulnerable to Web Cache Poisoning?
+Tools Web Cache Vulnerability Scanner
 CTFs Defend The Web
 Videos: coming soon™
 PicoCTF
@@ -43,9 +45,7 @@ PicoCTF 2017
 Videos: 2
 HackThis!!
 Videos: 1
-WriteUps: 1
-OverTheWire
-WriteUps: 2</description>
+WriteUps: 1</description>
     </item>
     
     <item>

