@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: m10x.de
+Token: 1ca72bcbae8b86c358f1ebab64c7e323ceeae748a269d06265c9a110e44b2c8b
