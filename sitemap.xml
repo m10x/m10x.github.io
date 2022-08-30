@@ -2,128 +2,128 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/about/</loc>
+    <loc>https://www.m10x.de/about/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/summary/</loc>
+    <loc>https://www.m10x.de/summary/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ctf/</loc>
+    <loc>https://www.m10x.de/tags/ctf/</loc>
     <lastmod>2018-12-05T16:00:56+01:00</lastmod>
   </url><url>
-    <loc>/tags/german/</loc>
+    <loc>https://www.m10x.de/tags/german/</loc>
     <lastmod>2018-12-05T16:00:56+01:00</lastmod>
   </url><url>
-    <loc>/tags/hackthebox/</loc>
+    <loc>https://www.m10x.de/tags/hackthebox/</loc>
     <lastmod>2018-12-05T16:00:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2018/12/hackthebox-kotarak-writeup-tipps-anleitung/</loc>
+    <loc>https://www.m10x.de/posts/2018/12/hackthebox-kotarak-writeup-tipps--anleitung/</loc>
     <lastmod>2018-12-05T16:00:56+01:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://www.m10x.de/</loc>
     <lastmod>2018-12-05T16:00:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>https://www.m10x.de/posts/</loc>
     <lastmod>2018-12-05T16:00:56+01:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://www.m10x.de/tags/</loc>
     <lastmod>2018-12-05T16:00:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2018/03/hackthebox-node-writeup-tipps-anleitung/</loc>
+    <loc>https://www.m10x.de/posts/2018/03/hackthebox-node-writeup-tipps--anleitung/</loc>
     <lastmod>2018-03-09T12:10:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2018/02/hackthebox-mantis-writeup-tipps-anleitung/</loc>
+    <loc>https://www.m10x.de/posts/2018/02/hackthebox-mantis-writeup-tipps--anleitung/</loc>
     <lastmod>2018-02-26T15:28:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2018/02/hackthebox-shocker-writeup-tipps-anleitung/</loc>
+    <loc>https://www.m10x.de/posts/2018/02/hackthebox-shocker-writeup-tipps--anleitung/</loc>
     <lastmod>2018-02-20T16:41:56+01:00</lastmod>
   </url><url>
-    <loc>/tags/overthewire/</loc>
+    <loc>https://www.m10x.de/tags/overthewire/</loc>
     <lastmod>2018-02-13T21:27:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</loc>
+    <loc>https://www.m10x.de/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</loc>
     <lastmod>2018-02-13T21:27:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2018/02/overthewire-bandit-writeup-alle-level/</loc>
+    <loc>https://www.m10x.de/posts/2018/02/overthewire-bandit-writeup-alle-level/</loc>
     <lastmod>2018-02-13T20:38:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2018/02/hackthebox-mirai-writeup-tipps-anleitung/</loc>
+    <loc>https://www.m10x.de/posts/2018/02/hackthebox-mirai-writeup-tipps--anleitung/</loc>
     <lastmod>2018-02-10T19:59:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2018/01/hackthebox-solidstate-writeup-tipps-anleitung/</loc>
+    <loc>https://www.m10x.de/posts/2018/01/hackthebox-solidstate-writeup-tipps--anleitung/</loc>
     <lastmod>2018-01-27T20:00:56+01:00</lastmod>
   </url><url>
-    <loc>/tags/hackthis/</loc>
+    <loc>https://www.m10x.de/tags/hackthis/</loc>
     <lastmod>2018-01-23T20:39:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2018/01/hackthis-alle-main-level-walkthrough-tipps-anleitung/</loc>
+    <loc>https://www.m10x.de/posts/2018/01/hackthis-alle-main-level-walkthrough-tipps--anleitung/</loc>
     <lastmod>2018-01-23T20:39:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2018/01/hackthebox-blue-writeup-tipps-anleitung/</loc>
+    <loc>https://www.m10x.de/posts/2018/01/hackthebox-blue-writeup-tipps--anleitung/</loc>
     <lastmod>2018-01-13T20:00:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2017/12/hackthebox-blocky-writeup-tipps-anleitung/</loc>
+    <loc>https://www.m10x.de/posts/2017/12/hackthebox-blocky-writeup-tipps--anleitung/</loc>
     <lastmod>2017-12-21T21:45:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2017/12/hackthebox-invite-code-writeup-tipps-anleitung/</loc>
+    <loc>https://www.m10x.de/posts/2017/12/hackthebox-invite-code-writeup-tipps--anleitung/</loc>
     <lastmod>2017-12-19T20:32:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/first-post/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/first-post/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-active/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-active/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-bitlab/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-bitlab/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-celestial/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-celestial/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-craft/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-craft/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-hawk/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-hawk/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-help/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-help/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-irked/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-irked/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-jerry/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-jerry/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-nibbles/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-nibbles/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-player/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-player/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-poison/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-poison/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-silo/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-silo/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-stratosphere/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-stratosphere/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-fluxcapacitator/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-fluxcapacitator/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-jeeves/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-jeeves/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/hackthebox-tally/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/hackthebox-tally/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/posts/2010/01/overthewire-leviathan/</loc>
+    <loc>https://www.m10x.de/posts/2010/01/overthewire-leviathan/</loc>
     <lastmod>2010-01-01T01:01:56+01:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://www.m10x.de/categories/</loc>
   </url><url>
-    <loc>/series/</loc>
+    <loc>https://www.m10x.de/series/</loc>
   </url>
 </urlset>

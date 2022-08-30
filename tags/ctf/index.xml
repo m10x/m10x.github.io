@@ -2,56 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ctf on Maximilian Hildebrand</title>
-    <link>/tags/ctf/</link>
+    <link>https://www.m10x.de/tags/ctf/</link>
     <description>Recent content in ctf on Maximilian Hildebrand</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 05 Dec 2018 16:00:56 +0100</lastBuildDate><atom:link href="/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Dec 2018 16:00:56 +0100</lastBuildDate><atom:link href="https://www.m10x.de/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HackTheBox - Kotarak WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/12/hackthebox-kotarak-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/12/hackthebox-kotarak-writeup-tipps--anleitung/</link>
       <pubDate>Wed, 05 Dec 2018 16:00:56 +0100</pubDate>
       
-      <guid>/posts/2018/12/hackthebox-kotarak-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/12/hackthebox-kotarak-writeup-tipps--anleitung/</guid>
       <description>Kotarak ist eine der sehr schwierigen CTF Challenges von HackTheBox.
 Tipps Wir müssen auf eine Webseite zugreifen, auf welche wir keinen Zugriff von außen haben, allerdings von einer anderen Webseite aus!
 Ein Teil von Kotarak wird auch in der HackTheBox Maschine Jerry behandelt, allerdings brauchen wir erstmal das Tomcat Admin Passwort
 Alle wichtigen Informationen zur Privilege Escalation befinden sich im /root Verzeichnis
-Video 
-Anleitung Als erstes machen wir natürlich einen Nmap-Scan.</description>
+Video Anleitung Als erstes machen wir natürlich einen Nmap-Scan.</description>
     </item>
     
     <item>
       <title>HackTheBox - Node WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/03/hackthebox-node-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/03/hackthebox-node-writeup-tipps--anleitung/</link>
       <pubDate>Fri, 09 Mar 2018 12:10:56 +0100</pubDate>
       
-      <guid>/posts/2018/03/hackthebox-node-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/03/hackthebox-node-writeup-tipps--anleitung/</guid>
       <description>Node ist eine der schwierigeren CTF Challenges von HackTheBox. Grundlegendes Wissen im Bereich Reverse Engineering und Datenbanken wird benötigt.
-
-Tipps  Sieh dir den Seitenquelltext genau an. Wenn der Download abbricht, versuche einen anderen Browser, benutze Burp als Proxy oder kopiere den Seitenquelltext. ltrace (zum debuggen) und radare2 (zur Analyse des Assembly Codes) können dich an&amp;rsquo;s Ziel bringen. Um an /root/root.txt zu kommen gibt es 3 verschiedene Methoden.  Video</description>
+Tipps Sieh dir den Seitenquelltext genau an. Wenn der Download abbricht, versuche einen anderen Browser, benutze Burp als Proxy oder kopiere den Seitenquelltext. ltrace (zum debuggen) und radare2 (zur Analyse des Assembly Codes) können dich an&amp;rsquo;s Ziel bringen. Um an /root/root.txt zu kommen gibt es 3 verschiedene Methoden. Video Anleitung Als erstes machen wir wie gewohnt einen Nmap-Scan.</description>
     </item>
     
     <item>
       <title>HackTheBox - Mantis WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/02/hackthebox-mantis-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/02/hackthebox-mantis-writeup-tipps--anleitung/</link>
       <pubDate>Mon, 26 Feb 2018 15:28:56 +0100</pubDate>
       
-      <guid>/posts/2018/02/hackthebox-mantis-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/02/hackthebox-mantis-writeup-tipps--anleitung/</guid>
       <description>Mantis ist eine der schwierigeren CTF Challenges von HackTheBox. Allerdings ist die Mantis relativ einfach, wenn man weiß, was man macht.
-
-Tipps  Port 8080 ist nicht der richtige HTTP Port. Außerdem sollte eine größere Wörterliste für das Directory Bruteforcing benutzt werden. Um an User und Root zu kommen, musst du einen Exploit für die kritische Kerberos Schwachstelle MS14-068 benutzen. GoldenPac.py von Impacket, kann es dir einfacher machen.  Video</description>
+Tipps Port 8080 ist nicht der richtige HTTP Port. Außerdem sollte eine größere Wörterliste für das Directory Bruteforcing benutzt werden. Um an User und Root zu kommen, musst du einen Exploit für die kritische Kerberos Schwachstelle MS14-068 benutzen. GoldenPac.py von Impacket, kann es dir einfacher machen. Video Anleitung Als erstes machen wir wie immer einen Nmap-Scan.</description>
     </item>
     
     <item>
       <title>HackTheBox - Shocker WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/02/hackthebox-shocker-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/02/hackthebox-shocker-writeup-tipps--anleitung/</link>
       <pubDate>Tue, 20 Feb 2018 16:41:56 +0100</pubDate>
       
-      <guid>/posts/2018/02/hackthebox-shocker-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/02/hackthebox-shocker-writeup-tipps--anleitung/</guid>
       <description>HackTheBox - Shocker WriteUp | Tipps + Anleitung | htb Shocker ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. Shocker ist eine leichte bis mittelschwere Maschine von HackTheBox.
-
 Tipps Der Webserver hat ein interessantes Verzeichnis mit einer Datei drin.
 Der Name der Maschine ist bei HackTheBox oft ein Tipp. Das Beitragsbild, welches ich mit meinen immensen Photoshop Sk1llz erstellt habe, ist auch ein &amp;ldquo;dezenter&amp;rdquo; Hinweis.
 Root-Rechte zu bekommen ist sehr einfach.</description>
@@ -59,71 +55,66 @@ Root-Rechte zu bekommen ist sehr einfach.</description>
     
     <item>
       <title>OverTheWire Natas WriteUp - Level 0 bis 14</title>
-      <link>/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</link>
+      <link>https://www.m10x.de/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</link>
       <pubDate>Tue, 13 Feb 2018 21:27:56 +0100</pubDate>
       
-      <guid>/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</guid>
+      <guid>https://www.m10x.de/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</guid>
       <description>Einleitung Wargames OverTheWire.org bietet über 15 verschiedene Wargames an, welche verschiedene Schwierigskeitgrade haben. Wenn du den Begriff &amp;ldquo;Wargame&amp;rdquo; im Bezug zu Cyber Security zum ersten Mal hörst, fragst du dich bestimmt: &amp;ldquo;Was ist eigentlich ein Wargame?&amp;rdquo;.
 Wargames sind Herausforderungen, entweder online oder offline als Virtuelle Maschine, in denen man versucht Sicherheitslücken auszunutzen und/oder Zugriff zu etwas zu erlangen. Sie sind teilweise sehr unterschiedlich was die benötigten Fähigkeiten, die Herausforderung und die Vorgehensweise anbelangt.</description>
     </item>
     
     <item>
       <title>OverTheWire Bandit WriteUp - Alle Level</title>
-      <link>/posts/2018/02/overthewire-bandit-writeup-alle-level/</link>
+      <link>https://www.m10x.de/posts/2018/02/overthewire-bandit-writeup-alle-level/</link>
       <pubDate>Tue, 13 Feb 2018 20:38:56 +0100</pubDate>
       
-      <guid>/posts/2018/02/overthewire-bandit-writeup-alle-level/</guid>
+      <guid>https://www.m10x.de/posts/2018/02/overthewire-bandit-writeup-alle-level/</guid>
       <description>Einleitung Wargames OverTheWire.org bietet über 15 verschiedene Wargames an, welche verschiedene Schwierigskeitgrade haben. Wenn du den Begriff &amp;ldquo;Wargame&amp;rdquo; im Bezug zu Cyber Security zum ersten Mal hörst, fragst du dich bestimmt: &amp;ldquo;Was ist eigentlich ein Wargame?&amp;rdquo;.
 Wargames sind Herausforderungen, entweder online oder offline als Virtuelle Maschine, in denen man versucht Sicherheitslücken auszunutzen und/oder Zugriff zu etwas zu erlangen. Sie sind teilweise sehr unterschiedlich was die benötigten Fähigkeiten, die Herausforderung und die Vorgehensweise anbelangt.</description>
     </item>
     
     <item>
       <title>HackTheBox - Mirai WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/02/hackthebox-mirai-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/02/hackthebox-mirai-writeup-tipps--anleitung/</link>
       <pubDate>Sat, 10 Feb 2018 19:59:56 +0100</pubDate>
       
-      <guid>/posts/2018/02/hackthebox-mirai-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/02/hackthebox-mirai-writeup-tipps--anleitung/</guid>
       <description>Mirai ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. Mirai ist eine leichte Maschine von HackTheBox und sehr gut für Anfänger geeignet. Aber auch für Erfahrene, die eine Herausforderung für zwischendurch suchen.
-
-Tipps  Informiere dich darüber, wie das Mirai-Botnetz sich ausgebreitet hat. Welches Betriebssystem hat die Maschine? Auf was für einem Gerät läuft dieses?
+Tipps Informiere dich darüber, wie das Mirai-Botnetz sich ausgebreitet hat. Welches Betriebssystem hat die Maschine? Auf was für einem Gerät läuft dieses?
 Ein Nmap-Scan und die Website verraten dies. Standard Login-Daten sind immer was tolles. :) Root zu bekommen könnte nicht einfacher sein.</description>
     </item>
     
     <item>
       <title>HackTheBox - SolidState WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/01/hackthebox-solidstate-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/01/hackthebox-solidstate-writeup-tipps--anleitung/</link>
       <pubDate>Sat, 27 Jan 2018 20:00:56 +0100</pubDate>
       
-      <guid>/posts/2018/01/hackthebox-solidstate-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/01/hackthebox-solidstate-writeup-tipps--anleitung/</guid>
       <description>SolidState ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. SolidState ist eine leichte bis mittelschwere Maschine von HackTheBox.
-
-Tipps  Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist Telnet dein Freund. Um nicht eine eingeschränkte Bash-Shell (rbash) zu haben, musst du einen JAMES Exploit benutzen. Benutze LinEnum.sh mit der Option -t. Sieh dir bei den LinEnum Ergebnis World-writable files genau an.  Video</description>
+Tipps Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist Telnet dein Freund. Um nicht eine eingeschränkte Bash-Shell (rbash) zu haben, musst du einen JAMES Exploit benutzen. Benutze LinEnum.sh mit der Option -t. Sieh dir bei den LinEnum Ergebnis World-writable files genau an. Video Anleitung Zuerst wie gewohnt ein Nmap-Scan.</description>
     </item>
     
     <item>
       <title>HackThis - Alle Main Level Walkthrough | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/01/hackthis-alle-main-level-walkthrough-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/01/hackthis-alle-main-level-walkthrough-tipps--anleitung/</link>
       <pubDate>Tue, 23 Jan 2018 20:39:56 +0100</pubDate>
       
-      <guid>/posts/2018/01/hackthis-alle-main-level-walkthrough-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/01/hackthis-alle-main-level-walkthrough-tipps--anleitung/</guid>
       <description>Walkthrough | Tipps + Anleitung zu allen Main Levels 1-10 von HackThis. Die Main Level gehören zu dein einfacheren von HackThis.
-Video 
-Level 1 Drücke Strg + u um den Quelltext der Seite anzuzeigen. Achte auf Kommentare im Quelltext.
+Video Level 1 Drücke Strg + u um den Quelltext der Seite anzuzeigen. Achte auf Kommentare im Quelltext.
 Zuerst sehen wir uns den Quelltext an, indem wir Strg + u drücken.
-In Zeile 29 finden wir folgendes: 
-Einfacher geht es wohl kaum.
+In Zeile 29 finden wir folgendes: Einfacher geht es wohl kaum.
 Level 2 Suche in dem Quelltext nach einem bestimmten Begriff.</description>
     </item>
     
     <item>
       <title>HackTheBox - Blue WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/01/hackthebox-blue-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/01/hackthebox-blue-writeup-tipps--anleitung/</link>
       <pubDate>Sat, 13 Jan 2018 20:00:56 +0100</pubDate>
       
-      <guid>/posts/2018/01/hackthebox-blue-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/01/hackthebox-blue-writeup-tipps--anleitung/</guid>
       <description>Blue ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. Blue gehört zu den einfacheren Maschinen von HackTheBox und ist deswegen sehr gut für Anfänger geeignet. Aber auch für Erfahrene, die eine Herausforderung für zwischendurch suchen.
-
-Tipps  nmap -A zeigt uns deutlich auf welchen Port wir achten müssen Der Name der Maschine, Blue, ist ein Tipp Wenn wir wissen was die Schwachstelle ist, ist Metasploit unser Freund. Wenn der Exploit fehlschlagen sollte, überprüfe deine Einstellungen und versuche es noch ein paar Mal.</description>
+Tipps nmap -A zeigt uns deutlich auf welchen Port wir achten müssen Der Name der Maschine, Blue, ist ein Tipp Wenn wir wissen was die Schwachstelle ist, ist Metasploit unser Freund. Wenn der Exploit fehlschlagen sollte, überprüfe deine Einstellungen und versuche es noch ein paar Mal.</description>
     </item>
     
   </channel>

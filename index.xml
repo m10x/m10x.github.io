@@ -2,94 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Maximilian Hildebrand</title>
-    <link>/</link>
+    <link>https://www.m10x.de/</link>
     <description>Recent content on Maximilian Hildebrand</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 05 Dec 2018 16:00:56 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Dec 2018 16:00:56 +0100</lastBuildDate><atom:link href="https://www.m10x.de/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>https://www.m10x.de/about/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
-      <description>My name is Maximilian Hildebrand aka m10x, I&amp;rsquo;m 25 years old and I&amp;rsquo;m pursuing a master&amp;rsquo;s degree in IT-Security @ Ruhr-Universität Bochum.
-My hobby is IT-Security and I&amp;rsquo;m also an IT-Security working student. I like to compete at Capture The Flags and I try to do short but understandable Videos and WriteUps.
-I do this as repetition and hope that some of you might find them useful!
-I&amp;rsquo;ve spend most my time @ HackTheBox and achieved the rank Pro Hacker with ~50 Owned Systems.</description>
+      <guid>https://www.m10x.de/about/</guid>
+      <description>My name is Maximilian Hildebrand aka m10x and I&amp;rsquo;m pursuing a master&amp;rsquo;s degree in IT-Security @ Ruhr-Universität Bochum, with a focus on web, network and SSO security.
+My hobby is IT-Security and I&amp;rsquo;m also an IT-Security working student (Web,API,SSO &amp;amp; Mobile Pentesting). I like to compete at Capture The Flags and I try to do short but understandable Videos and WriteUps.
+I do this as repetition and hope that some of you might find them useful!</description>
     </item>
     
     <item>
       <title>Summary</title>
-      <link>/summary/</link>
+      <link>https://www.m10x.de/summary/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/summary/</guid>
-      <description>Blog Posts Web Cache Vulnerability Scanner (WCVS) - Free, Customizable, Easy-To-Use
+      <guid>https://www.m10x.de/summary/</guid>
+      <description>A collection of my public infosec related stuff.
+Blog Posts How to Secure APIs?
+Web Cache Vulnerability Scanner (WCVS) - Free, Customizable, Easy-To-Use
 Is Your Application Vulnerable to Web Cache Poisoning?
 Tools Web Cache Vulnerability Scanner
-CTFs Defend The Web
-Videos: coming soon™
-PicoCTF
-Videos: coming soon™
-OWASP Juice Shop
+CTF WriteUps &amp;amp; Videos OWASP Juice Shop
 Videos: 22
 HackTheBox
-Videos: 33 (+2 in preperation)
-WriteUps: 9 (+22 in preperation)
+Videos: 33
+WriteUps: 9 (+22 still not finalized)
 Practical Pentest Labs
 Videos: 2
-WriteUps: 0 (+2 in preperation)
 PicoCTF 2017
 Videos: 2
-HackThis!! (now: Defend the Web)</description>
+HackThis!! (now: Defend the Web)
+Videos: 1</description>
     </item>
     
     <item>
       <title>HackTheBox - Kotarak WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/12/hackthebox-kotarak-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/12/hackthebox-kotarak-writeup-tipps--anleitung/</link>
       <pubDate>Wed, 05 Dec 2018 16:00:56 +0100</pubDate>
       
-      <guid>/posts/2018/12/hackthebox-kotarak-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/12/hackthebox-kotarak-writeup-tipps--anleitung/</guid>
       <description>Kotarak ist eine der sehr schwierigen CTF Challenges von HackTheBox.
 Tipps Wir müssen auf eine Webseite zugreifen, auf welche wir keinen Zugriff von außen haben, allerdings von einer anderen Webseite aus!
 Ein Teil von Kotarak wird auch in der HackTheBox Maschine Jerry behandelt, allerdings brauchen wir erstmal das Tomcat Admin Passwort
 Alle wichtigen Informationen zur Privilege Escalation befinden sich im /root Verzeichnis
-Video 
-Anleitung Als erstes machen wir natürlich einen Nmap-Scan.</description>
+Video Anleitung Als erstes machen wir natürlich einen Nmap-Scan.</description>
     </item>
     
     <item>
       <title>HackTheBox - Node WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/03/hackthebox-node-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/03/hackthebox-node-writeup-tipps--anleitung/</link>
       <pubDate>Fri, 09 Mar 2018 12:10:56 +0100</pubDate>
       
-      <guid>/posts/2018/03/hackthebox-node-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/03/hackthebox-node-writeup-tipps--anleitung/</guid>
       <description>Node ist eine der schwierigeren CTF Challenges von HackTheBox. Grundlegendes Wissen im Bereich Reverse Engineering und Datenbanken wird benötigt.
-
-Tipps  Sieh dir den Seitenquelltext genau an. Wenn der Download abbricht, versuche einen anderen Browser, benutze Burp als Proxy oder kopiere den Seitenquelltext. ltrace (zum debuggen) und radare2 (zur Analyse des Assembly Codes) können dich an&amp;rsquo;s Ziel bringen. Um an /root/root.txt zu kommen gibt es 3 verschiedene Methoden.  Video</description>
+Tipps Sieh dir den Seitenquelltext genau an. Wenn der Download abbricht, versuche einen anderen Browser, benutze Burp als Proxy oder kopiere den Seitenquelltext. ltrace (zum debuggen) und radare2 (zur Analyse des Assembly Codes) können dich an&amp;rsquo;s Ziel bringen. Um an /root/root.txt zu kommen gibt es 3 verschiedene Methoden. Video Anleitung Als erstes machen wir wie gewohnt einen Nmap-Scan.</description>
     </item>
     
     <item>
       <title>HackTheBox - Mantis WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/02/hackthebox-mantis-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/02/hackthebox-mantis-writeup-tipps--anleitung/</link>
       <pubDate>Mon, 26 Feb 2018 15:28:56 +0100</pubDate>
       
-      <guid>/posts/2018/02/hackthebox-mantis-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/02/hackthebox-mantis-writeup-tipps--anleitung/</guid>
       <description>Mantis ist eine der schwierigeren CTF Challenges von HackTheBox. Allerdings ist die Mantis relativ einfach, wenn man weiß, was man macht.
-
-Tipps  Port 8080 ist nicht der richtige HTTP Port. Außerdem sollte eine größere Wörterliste für das Directory Bruteforcing benutzt werden. Um an User und Root zu kommen, musst du einen Exploit für die kritische Kerberos Schwachstelle MS14-068 benutzen. GoldenPac.py von Impacket, kann es dir einfacher machen.  Video</description>
+Tipps Port 8080 ist nicht der richtige HTTP Port. Außerdem sollte eine größere Wörterliste für das Directory Bruteforcing benutzt werden. Um an User und Root zu kommen, musst du einen Exploit für die kritische Kerberos Schwachstelle MS14-068 benutzen. GoldenPac.py von Impacket, kann es dir einfacher machen. Video Anleitung Als erstes machen wir wie immer einen Nmap-Scan.</description>
     </item>
     
     <item>
       <title>HackTheBox - Shocker WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/02/hackthebox-shocker-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/02/hackthebox-shocker-writeup-tipps--anleitung/</link>
       <pubDate>Tue, 20 Feb 2018 16:41:56 +0100</pubDate>
       
-      <guid>/posts/2018/02/hackthebox-shocker-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/02/hackthebox-shocker-writeup-tipps--anleitung/</guid>
       <description>HackTheBox - Shocker WriteUp | Tipps + Anleitung | htb Shocker ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. Shocker ist eine leichte bis mittelschwere Maschine von HackTheBox.
-
 Tipps Der Webserver hat ein interessantes Verzeichnis mit einer Datei drin.
 Der Name der Maschine ist bei HackTheBox oft ein Tipp. Das Beitragsbild, welches ich mit meinen immensen Photoshop Sk1llz erstellt habe, ist auch ein &amp;ldquo;dezenter&amp;rdquo; Hinweis.
 Root-Rechte zu bekommen ist sehr einfach.</description>
@@ -97,45 +90,43 @@ Root-Rechte zu bekommen ist sehr einfach.</description>
     
     <item>
       <title>OverTheWire Natas WriteUp - Level 0 bis 14</title>
-      <link>/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</link>
+      <link>https://www.m10x.de/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</link>
       <pubDate>Tue, 13 Feb 2018 21:27:56 +0100</pubDate>
       
-      <guid>/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</guid>
+      <guid>https://www.m10x.de/posts/2018/02/overthewire-natas-writeup-level-0-bis-14/</guid>
       <description>Einleitung Wargames OverTheWire.org bietet über 15 verschiedene Wargames an, welche verschiedene Schwierigskeitgrade haben. Wenn du den Begriff &amp;ldquo;Wargame&amp;rdquo; im Bezug zu Cyber Security zum ersten Mal hörst, fragst du dich bestimmt: &amp;ldquo;Was ist eigentlich ein Wargame?&amp;rdquo;.
 Wargames sind Herausforderungen, entweder online oder offline als Virtuelle Maschine, in denen man versucht Sicherheitslücken auszunutzen und/oder Zugriff zu etwas zu erlangen. Sie sind teilweise sehr unterschiedlich was die benötigten Fähigkeiten, die Herausforderung und die Vorgehensweise anbelangt.</description>
     </item>
     
     <item>
       <title>OverTheWire Bandit WriteUp - Alle Level</title>
-      <link>/posts/2018/02/overthewire-bandit-writeup-alle-level/</link>
+      <link>https://www.m10x.de/posts/2018/02/overthewire-bandit-writeup-alle-level/</link>
       <pubDate>Tue, 13 Feb 2018 20:38:56 +0100</pubDate>
       
-      <guid>/posts/2018/02/overthewire-bandit-writeup-alle-level/</guid>
+      <guid>https://www.m10x.de/posts/2018/02/overthewire-bandit-writeup-alle-level/</guid>
       <description>Einleitung Wargames OverTheWire.org bietet über 15 verschiedene Wargames an, welche verschiedene Schwierigskeitgrade haben. Wenn du den Begriff &amp;ldquo;Wargame&amp;rdquo; im Bezug zu Cyber Security zum ersten Mal hörst, fragst du dich bestimmt: &amp;ldquo;Was ist eigentlich ein Wargame?&amp;rdquo;.
 Wargames sind Herausforderungen, entweder online oder offline als Virtuelle Maschine, in denen man versucht Sicherheitslücken auszunutzen und/oder Zugriff zu etwas zu erlangen. Sie sind teilweise sehr unterschiedlich was die benötigten Fähigkeiten, die Herausforderung und die Vorgehensweise anbelangt.</description>
     </item>
     
     <item>
       <title>HackTheBox - Mirai WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/02/hackthebox-mirai-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/02/hackthebox-mirai-writeup-tipps--anleitung/</link>
       <pubDate>Sat, 10 Feb 2018 19:59:56 +0100</pubDate>
       
-      <guid>/posts/2018/02/hackthebox-mirai-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/02/hackthebox-mirai-writeup-tipps--anleitung/</guid>
       <description>Mirai ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. Mirai ist eine leichte Maschine von HackTheBox und sehr gut für Anfänger geeignet. Aber auch für Erfahrene, die eine Herausforderung für zwischendurch suchen.
-
-Tipps  Informiere dich darüber, wie das Mirai-Botnetz sich ausgebreitet hat. Welches Betriebssystem hat die Maschine? Auf was für einem Gerät läuft dieses?
+Tipps Informiere dich darüber, wie das Mirai-Botnetz sich ausgebreitet hat. Welches Betriebssystem hat die Maschine? Auf was für einem Gerät läuft dieses?
 Ein Nmap-Scan und die Website verraten dies. Standard Login-Daten sind immer was tolles. :) Root zu bekommen könnte nicht einfacher sein.</description>
     </item>
     
     <item>
       <title>HackTheBox - SolidState WriteUp | Tipps &#43; Anleitung</title>
-      <link>/posts/2018/01/hackthebox-solidstate-writeup-tipps-anleitung/</link>
+      <link>https://www.m10x.de/posts/2018/01/hackthebox-solidstate-writeup-tipps--anleitung/</link>
       <pubDate>Sat, 27 Jan 2018 20:00:56 +0100</pubDate>
       
-      <guid>/posts/2018/01/hackthebox-solidstate-writeup-tipps-anleitung/</guid>
+      <guid>https://www.m10x.de/posts/2018/01/hackthebox-solidstate-writeup-tipps--anleitung/</guid>
       <description>SolidState ist eine der vielen Verfügbaren CTF Challenges von HackTheBox. SolidState ist eine leichte bis mittelschwere Maschine von HackTheBox.
-
-Tipps  Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist Telnet dein Freund. Um nicht eine eingeschränkte Bash-Shell (rbash) zu haben, musst du einen JAMES Exploit benutzen. Benutze LinEnum.sh mit der Option -t. Sieh dir bei den LinEnum Ergebnis World-writable files genau an.  Video</description>
+Tipps Scanne mit Nmap alle Ports. Informiere dich was JAMES ist. Außerdem ist Telnet dein Freund. Um nicht eine eingeschränkte Bash-Shell (rbash) zu haben, musst du einen JAMES Exploit benutzen. Benutze LinEnum.sh mit der Option -t. Sieh dir bei den LinEnum Ergebnis World-writable files genau an. Video Anleitung Zuerst wie gewohnt ein Nmap-Scan.</description>
     </item>
     
   </channel>
