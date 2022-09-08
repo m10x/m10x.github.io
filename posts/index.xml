@@ -6,8 +6,47 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Wed, 05 Dec 2018 16:00:56 +0100</lastBuildDate>
+        <lastBuildDate>Mon, 11 Jul 2022 01:01:56 +0100</lastBuildDate>
         <atom:link href="https://www.m10x.de/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>(External: Redirect to hackmanit.de) How to Secure APIs?</title>
+            <link>https://www.m10x.de/posts/2022/07/external-redirect-to-hackmanit.de-how-to-secure-apis/</link>
+            <pubDate>Mon, 11 Jul 2022 01:01:56 +0100</pubDate>
+            
+            <guid>https://www.m10x.de/posts/2022/07/external-redirect-to-hackmanit.de-how-to-secure-apis/</guid>
+            <description>Normalerweise, haette der Redirect funktionieren sollen&amp;hellip; Naja, hier ist der Link zum Blogartikel:
+https://hackmanit.de/de/blog/155-how-to-secure-apis</description>
+            <content type="html"><![CDATA[<p>Normalerweise, haette der Redirect funktionieren sollen&hellip; Naja, hier ist der Link zum Blogartikel:</p>
+<p><a href="https://hackmanit.de/de/blog/155-how-to-secure-apis">https://hackmanit.de/de/blog/155-how-to-secure-apis</a></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>(External: Redirect to hackmanit.de) Web Cache Vulnerability Scanner (WCVS) - Free, Customizable, Easy-To-Use</title>
+            <link>https://www.m10x.de/posts/2021/10/external-redirect-to-hackmanit.de-web-cache-vulnerability-scanner-wcvs-free-customizable-easy-to-use/</link>
+            <pubDate>Wed, 27 Oct 2021 01:01:56 +0100</pubDate>
+            
+            <guid>https://www.m10x.de/posts/2021/10/external-redirect-to-hackmanit.de-web-cache-vulnerability-scanner-wcvs-free-customizable-easy-to-use/</guid>
+            <description>Normalerweise, haette der Redirect funktionieren sollen&amp;hellip; Naja, hier ist der Link zum Blogartikel:
+https://hackmanit.de/de/blog/145-web-cache-vulnerability-scanner-wcvs-free-customizable-easy-to-use</description>
+            <content type="html"><![CDATA[<p>Normalerweise, haette der Redirect funktionieren sollen&hellip; Naja, hier ist der Link zum Blogartikel:</p>
+<p><a href="https://hackmanit.de/de/blog/145-web-cache-vulnerability-scanner-wcvs-free-customizable-easy-to-use">https://hackmanit.de/de/blog/145-web-cache-vulnerability-scanner-wcvs-free-customizable-easy-to-use</a></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>(External: Redirect to hackmanit.de) Is Your Application Vulnerable to Web Cache Poisoning?</title>
+            <link>https://www.m10x.de/posts/2021/04/external-redirect-to-hackmanit.de-is-your-application-vulnerable-to-web-cache-poisoning/</link>
+            <pubDate>Tue, 20 Apr 2021 01:01:56 +0100</pubDate>
+            
+            <guid>https://www.m10x.de/posts/2021/04/external-redirect-to-hackmanit.de-is-your-application-vulnerable-to-web-cache-poisoning/</guid>
+            <description>Normalerweise, haette der Redirect funktionieren sollen&amp;hellip; Naja, hier ist der Link zum Blogartikel:
+https://hackmanit.de/de/blog/142-is-your-application-vulnerable-to-web-cache-poisoning</description>
+            <content type="html"><![CDATA[<p>Normalerweise, haette der Redirect funktionieren sollen&hellip; Naja, hier ist der Link zum Blogartikel:</p>
+<p><a href="https://hackmanit.de/de/blog/142-is-your-application-vulnerable-to-web-cache-poisoning">https://hackmanit.de/de/blog/142-is-your-application-vulnerable-to-web-cache-poisoning</a></p>
+]]></content>
+        </item>
         
         <item>
             <title>HackTheBox - Kotarak WriteUp | Tipps &#43; Anleitung</title>

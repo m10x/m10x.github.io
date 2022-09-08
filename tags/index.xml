@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 05 Dec 2018 16:00:56 +0100</lastBuildDate><atom:link href="https://www.m10x.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jul 2022 01:01:56 +0100</lastBuildDate><atom:link href="https://www.m10x.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>API</title>
+      <link>https://www.m10x.de/tags/api/</link>
+      <pubDate>Mon, 11 Jul 2022 01:01:56 +0100</pubDate>
+      
+      <guid>https://www.m10x.de/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web cache poisoning</title>
+      <link>https://www.m10x.de/tags/web-cache-poisoning/</link>
+      <pubDate>Wed, 27 Oct 2021 01:01:56 +0100</pubDate>
+      
+      <guid>https://www.m10x.de/tags/web-cache-poisoning/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ctf</title>
       <link>https://www.m10x.de/tags/ctf/</link>
