@@ -24,7 +24,9 @@ A collection of my public infosec related stuff.
 
 [**Bachelor's Thesis: Automated Scanning for Web Cache Poisoning Vulnerabilities**](https://hackmanit.de/images/download/thesis/Automated-Scanning-for-Web-Cache-Poisoning-Vulnerabilities.pdf)
 
-## Blog Posts
+## External Blog Posts
+
+[**Harvesting the Database - 5 CVEs in TOPqw Webportal**](https://cyber.wtf/2024/11/11/topqw-webportal-cves/)
 
 [**Template Injection Vulnerabilities– Understand, Detect, Identify**](https://hackmanit.de/de/blog/178-template-injection-vulnerabilities-understand-detect-identify)
 
