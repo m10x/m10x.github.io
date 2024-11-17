@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>API on Maximilian Hildebrand</title>
+    <link>https://www.m10x.de/tags/api/</link>
+    <description>Recent content in API on Maximilian Hildebrand</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 01 Aug 2023 01:01:56 +0100</lastBuildDate><atom:link href="https://www.m10x.de/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(External: Redirect to hackmanit.de) The New OWASP Top 10 API Security Risks 2023 – What Has Changed?</title>
+      <link>https://www.m10x.de/posts/2023/08/external-redirect-to-hackmanit.de-the-new-owasp-top-10-api-security-risks-2023-what-has-changed/</link>
+      <pubDate>Tue, 01 Aug 2023 01:01:56 +0100</pubDate>
+      
+      <guid>https://www.m10x.de/posts/2023/08/external-redirect-to-hackmanit.de-the-new-owasp-top-10-api-security-risks-2023-what-has-changed/</guid>
+      <description>Normalerweise, haette der Redirect funktionieren sollen&amp;hellip; Naja, hier ist der Link zum Blogartikel:
+https://hackmanit.de/de/blog/169-owasp-api-2023</description>
+    </item>
+    
+    <item>
+      <title>(External: Redirect to hackmanit.de) BOLA - The #1 most critical API risk exemplified</title>
+      <link>https://www.m10x.de/posts/2022/09/external-redirect-to-hackmanit.de-bola-the-#1-most-critical-api-risk-exemplified/</link>
+      <pubDate>Wed, 21 Sep 2022 01:01:56 +0100</pubDate>
+      
+      <guid>https://www.m10x.de/posts/2022/09/external-redirect-to-hackmanit.de-bola-the-#1-most-critical-api-risk-exemplified/</guid>
+      <description>Normalerweise, haette der Redirect funktionieren sollen&amp;hellip; Naja, hier ist der Link zum Blogartikel:
+https://hackmanit.de/de/blog/156-bola-api-risk</description>
+    </item>
+    
+    <item>
+      <title>(External: Redirect to hackmanit.de) How to Secure APIs?</title>
+      <link>https://www.m10x.de/posts/2022/07/external-redirect-to-hackmanit.de-how-to-secure-apis/</link>
+      <pubDate>Mon, 11 Jul 2022 01:01:56 +0100</pubDate>
+      
+      <guid>https://www.m10x.de/posts/2022/07/external-redirect-to-hackmanit.de-how-to-secure-apis/</guid>
+      <description>Normalerweise, haette der Redirect funktionieren sollen&amp;hellip; Naja, hier ist der Link zum Blogartikel:
+https://hackmanit.de/de/blog/155-how-to-secure-apis</description>
+    </item>
+    
+  </channel>
+</rss>

