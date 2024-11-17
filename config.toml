@@ -1,4 +1,4 @@
-baseURL = "https://www.m10x.de"
+baseURL = "https://www.m10x.de/"
 title   = "Maximilian Hildebrand"
 languageCode = "en-us"
 theme = "hello-friend-ng"
@@ -120,7 +120,7 @@ showReadingTime = true
 
     topText = ["<a href=\"/datenschutz\">Datenschutz</a>"]
     bottomText = [
-      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
+      "Powered by <a href=\"https://gohugo.io\">Hugo</a>",
       "Made with &#10084; by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"
     ]
 
