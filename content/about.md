@@ -21,6 +21,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 
 **Certificates**
 
+- Certified Red Team Operator (CRTO)
 * Offensive Security Certified Professional (OSCP)
 * eLearnSecurity Web Application Penetration Tester Extreme v2 (eWAPTXv2)
 * Practical Network Penetration Tester (PNPT)
