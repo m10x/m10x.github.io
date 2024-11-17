@@ -21,12 +21,16 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 
 **Certificates**
 
-- Certified Red Team Operator (CRTO)
+* Certified Red Team Operator (CRTO)
 * Offensive Security Certified Professional (OSCP)
 * eLearnSecurity Web Application Penetration Tester Extreme v2 (eWAPTXv2)
 * Practical Network Penetration Tester (PNPT)
 * eLearnSecurity Mobile Application Penetration Tester (eMAPT)
 * eLearnSecurity Junior Penetration Tester (eJPT)
+
+**CVEs**
+
+* TOPqw Webportal (CVE-2024-45875, CVE-2024-45876, CVE-2024-45877, CVE-2024-45878, CVE-2024-45879)
 
 **Programming languages**
 [I've use(d) the most and done projects with]
