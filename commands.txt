@@ -1,8 +1,0 @@
-## Compile website
-cd ~/Documents/git/blog/m10x-blog && find ./public/ -not -name "CNAME" -not -path "./public/" -delete && hugo -b "https://www.m10x.de" -t "hello-friend-ng" && git add * && git commit -m "update" && git push
-
-## Push changes to github.io
-cd ~/Documents/git/m10x.github.io && rm -f -R * && cp -r ~/Documents/git/blog/m10x-blog/public/* . && git add * && git commit -m "update" && git push
-
-## Run Live Preview
-cd ~/Documents/git/blog/m10x-blog && hugo server
