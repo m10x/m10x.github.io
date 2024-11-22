@@ -6,6 +6,7 @@ images:
 tags:
   - CVE
   - Web
+  - English
 ---
 
 Hier ist der Link zum Blogartikel:
