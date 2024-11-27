@@ -18,6 +18,10 @@ I used 4 hours of my free time (not counting the Responsible Disclosure and Blog
 | CSRF: Change the administrator's password                                          | [6.8 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N) |
 | BAC: Users can directly call functions, which they are not authorized for          | [6.5 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N) |
 
+## Remediation
+
+The maintainer stated the they do not care about the vulnerabilities because Grocy is a hobby project and not intended for the use in a sensitive enterprise area. This means that the vulnerabilities probably won't get fixed.
+
 ## Vulnerabilities in Detail
 
 ### Unrestricted File Upload: Users can upload HTML or SVG files to exploit Stored XSS (8.7 High)
@@ -129,5 +133,5 @@ However, it is only possible to view data and not to modify it.
 | - | - |
 | 2024-11-26 | Discovered the vulnerabilities |
 | 2024-11-26 | Reported the vulnerabilites |
-| 2024-11-26 | Maintainer replied unpolitely that they do *NOT* wanna be bothered with "irrelevant" security issues and that I may publish my blog post |
+| 2024-11-26 | Maintainer replied that they do *NOT* want to be bothered with "irrelevant" security issues and that I may publish my blog post |
 | 2024-11-27 | CVEs requested |
