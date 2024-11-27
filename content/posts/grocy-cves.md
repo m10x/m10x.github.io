@@ -129,5 +129,5 @@ However, it is only possible to view data and not to modify it.
 | - | - |
 | 2024-11-26 | Discovered the vulnerabilities |
 | 2024-11-26 | Reported the vulnerabilites |
-| 2024-11-26 | Maintainer replied unpolitely that they do *NOT* wanna be bothered with "irrelevant" security issues |
+| 2024-11-26 | Maintainer replied unpolitely that they do *NOT* wanna be bothered with "irrelevant" security issues and that I may publish my blog post |
 | 2024-11-27 | CVEs requested |
