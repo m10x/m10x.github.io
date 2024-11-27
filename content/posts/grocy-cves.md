@@ -20,7 +20,7 @@ I used 4 hours of my free time (not counting the Responsible Disclosure and Blog
 
 ## Vulnerabilities in Detail
 
-## Unrestricted File Upload: Users can upload HTML or SVG files to exploit Stored XSS (8.7 High)
+### Unrestricted File Upload: Users can upload HTML or SVG files to exploit Stored XSS (8.7 High)
 Users have by default the permission to edit their own profile. There they can upload a profile picture. However it is not validated whether the uploaded file is a benign picture or not. Thus, it is possible to upload malicious HTML or SVG files. As a POC I've created the following HTML file:
 ```html
 <!DOCTYPE html>
@@ -95,7 +95,7 @@ Now we can login as the administrator `admin` with the newly set password `NewPa
 
 ![Grocy5](/media/2024/11/grocy5.png)
 
-## CSRF: Change the administrator's password (6.8 Medium)
+### CSRF: Change the administrator's password (6.8 Medium)
 The session cookie has no security flags (escpecially SameSite) set
 
 ![Grocy6](/media/2024/11/grocy6.png)
@@ -106,7 +106,7 @@ Further no CSRF countermeasures (such as CSRF-Tokens) are implemented at all, le
 
 The same POC as the previous vulnerability can be used, but instead of the relative URL a absolute URL needs to be specified. If an adminstrative user visits this POC on the attacker's website, the password of the default administrative user will be changed.
 
-## BAC: Users can directly call functions, which they are not authorized for (6.5 Medium)
+### BAC: Users can directly call functions, which they are not authorized for (6.5 Medium)
 
 As a starting point, we create a user `user` with no permissions
 
