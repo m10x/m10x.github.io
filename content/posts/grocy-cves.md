@@ -12,14 +12,15 @@ tags:
 I used 4 hours of my free time (not counting the Responsible Disclosure and Blog Posts...) to "speed pentest" the three biggest and most popular (measured by Github stars) open-source recipe managers. This included [Grocy](https://github.com/grocy/grocy), which had >6900 stars at the time of testing. Here I found 3 vulnerabilities. The first one is an _Unrestricted File Upload_, through which it was possible to upload any files. This included HTML and SVG files to achieve _Stored XSS_. The second one is a _CSRF_ vulnerability, because the session token has no security flags set, as well as no CSRF countermeasure is implemented. The last one is "one" _Broken Access Control_ vulnerability: For most functions, only the link in the sidebar is disabled for unauthorized users, but a direct call to the URL or API endpoint allows access to data for which you have no permissions.
 
 ## Overview of the Vulnerabilities
-| Unrestricted File Upload: Users can upload HTML or SVG files to exploit Stored XSS | High |
-| CSRF: Change the administrator's password | Medium |
-| BAC: Users can directly call functions, which they are not authorized for | Medium |
+| Name                                                                               | CVSS Score      |
+| ---------------------------------------------------------------------------------- | ------ |
+| Unrestricted File Upload: Users can upload HTML or SVG files to exploit Stored XSS | [8.7 High](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N) |
+| CSRF: Change the administrator's password                                          | [6.8 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N) |
+| BAC: Users can directly call functions, which they are not authorized for          | [6.5 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N) |
 
 ## Vulnerabilities in Detail
 
-## Unrestricted File Upload: Users can upload HTML or SVG files to exploit Stored XSS ([8.7 High](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N))
-
+## Unrestricted File Upload: Users can upload HTML or SVG files to exploit Stored XSS (8.7 High)
 Users have by default the permission to edit their own profile. There they can upload a profile picture. However it is not validated whether the uploaded file is a benign picture or not. Thus, it is possible to upload malicious HTML or SVG files. As a POC I've created the following HTML file:
 ```html
 <!DOCTYPE html>
@@ -94,7 +95,7 @@ Now we can login as the administrator `admin` with the newly set password `NewPa
 
 ![Grocy5](/media/2024/11/grocy5.png)
 
-## CSRF: Change the administrator's password ([6.8 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N))
+## CSRF: Change the administrator's password (6.8 Medium)
 The session cookie has no security flags (escpecially SameSite) set
 
 ![Grocy6](/media/2024/11/grocy6.png)
@@ -105,7 +106,7 @@ Further no CSRF countermeasures (such as CSRF-Tokens) are implemented at all, le
 
 The same POC as the previous vulnerability can be used, but instead of the relative URL a absolute URL needs to be specified. If an adminstrative user visits this POC on the attacker's website, the password of the default administrative user will be changed.
 
-## BAC: Users can directly call functions, which they are not authorized for([6.5 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N))
+## BAC: Users can directly call functions, which they are not authorized for (6.5 Medium)
 
 As a starting point, we create a user `user` with no permissions
 
@@ -124,6 +125,8 @@ This affetcs ALL functions except the user management.
 However, it is only possible to view data and not to modify it.
 
 ## Timeline
+| Date | Event |
+| - | - |
 | 2024-11-26 | Discovered the vulnerabilities |
 | 2024-11-26 | Reported the vulnerabilites |
 | 2024-11-26 | Maintainer replied unpolitely that they do *NOT* wanna be bothered with "irrelevant" security issues |
