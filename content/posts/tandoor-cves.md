@@ -11,7 +11,7 @@ tags:
 
 I used 4 hours of my free time (not counting the Responsible Disclosure and Blog Posts...) to "speed pentest" the three biggest and most popular (measured by Github stars) open-source recipe managers. 
 
-This included [Tandoor Recipes](https://github.com/TandoorRecipes/recipes), which had >5800 stars at the time of testing. Here I found 3 vulnerabilities. The first one is a _Server-Side Template Injection_, through which it was possible to execute commands on the server (Remote Code Execution). The second one is an _arbitrary file read_ vulnerability, that allows one to read any file on the server. This can be used to obtain various secrets, such as passwords, SSH keys or the Django secret key. The last one is an _Unrestricted File Upload_, through which it was possible to upload any files. This included HTML and SVG files to achieve _Stored XSS_.
+This included [Tandoor Recipes](https://github.com/TandoorRecipes/recipes), which had >5800 stars at the time of testing. Here I found 3 vulnerabilities. The first one is a _Server-Side Template Injection_, through which it was possible to execute commands on the server (Remote Code Execution). The second one is an _arbitrary file read_ vulnerability, that allowed one to read any file on the server. This can be used to obtain various secrets, such as passwords, SSH keys or the Django secret key. The last one is an _Unrestricted File Upload_, through which it was possible to upload any files. This included HTML and SVG files to achieve _Stored XSS_.
 
 ## Overview of the Vulnerabilities
 | CVE | Name                                                                               | CVSS Score      |
