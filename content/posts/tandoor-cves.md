@@ -54,7 +54,7 @@ First, we'll use the universal polyglot `<%'${{/#{@}}%>{{` which throws an error
 
 ![Tandoor4](/media/2025/01/tandoor4.png)
 
-As we can see, an error is thrown. Unfortunately for us, the error was caught and only a generic error message is displayed. Otherwise Jinja2 would have revealed itself already. So we need to continue identifying the template engine. Since we can see the output of the template engine, we can use the `Toggle Error-Based Polyglots' button to hide the error-based polyglots, as the non-error-based ones are more efficient for identifying a template engine.
+As we can see, an error is thrown. Unfortunately for us, the error was caught and only a generic error message is displayed. Otherwise Jinja2 would have revealed itself already. So we need to continue identifying the template engine. Since we can see the output of the template engine, we can use the 'Toggle Error-Based Polyglots' button to hide the error-based polyglots, as the non-error-based ones are more efficient for identifying a template engine.
 
 ![Tandoor5](/media/2025/01/tandoor5.png)
 
