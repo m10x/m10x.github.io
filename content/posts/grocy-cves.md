@@ -9,14 +9,16 @@ tags:
   - English
 ---
 
-I used 4 hours of my free time (not counting the Responsible Disclosure and Blog Posts...) to "speed pentest" the three biggest and most popular (measured by Github stars) open-source recipe managers. This included [Grocy](https://github.com/grocy/grocy), which had >6900 stars at the time of testing. Here I found 3 vulnerabilities. The first one is an _Unrestricted File Upload_, through which it was possible to upload any files. This included HTML and SVG files to achieve _Stored XSS_. The second one is a _CSRF_ vulnerability, because the session token has no security flags set, as well as no CSRF countermeasure is implemented. The last one is "one" _Broken Access Control_ vulnerability: For most functions, only the link in the sidebar is disabled for unauthorized users, but a direct call to the URL or API endpoint allows access to data for which you have no permissions.
+I used 4 hours of my free time (not counting the Responsible Disclosure and Blog Posts...) to "speed pentest" the three biggest and most popular (measured by Github stars) open-source recipe managers. 
+
+This included [Grocy](https://github.com/grocy/grocy), which had >6900 stars at the time of testing. Here I found 3 vulnerabilities. The first one is an _Unrestricted File Upload_, through which it was possible to upload any files. This included HTML and SVG files to achieve _Stored XSS_. The second one is a _CSRF_ vulnerability, because the session token has no security flags set, as well as no CSRF countermeasure is implemented. The last one is "one" _Broken Access Control_ vulnerability: For most functions, only the link in the sidebar is disabled for unauthorized users, but a direct call to the URL or API endpoint allows access to data for which you have no permissions.
 
 ## Overview of the Vulnerabilities
 | CVE | Name                                                                               | CVSS Score      |
 | ----- | ---------------------------------------------------------------------------------- | ------ |
-| CVE-2024-55074 | Unrestricted File Upload: Users can upload HTML or SVG files to exploit Stored XSS | [8.7 High](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N) |
-| CVE-2024-55075 | CSRF: Change the administrator's password                                          | [6.8 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N) |
-| CVE-2024-55076 | BAC: Users can directly call functions, which they are not authorized for          | [6.5 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N) |
+| [CVE-2024-55074](https://www.cve.org/CVERecord?id=CVE-2024-55074) | Unrestricted File Upload: Users can upload HTML or SVG files to exploit Stored XSS | [8.7 High](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N) |
+| [CVE-2024-55075](https://www.cve.org/CVERecord?id=CVE-2024-55075) | CSRF: Change the administrator's password                                          | [6.8 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N) |
+| [CVE-2024-55076](https://www.cve.org/CVERecord?id=CVE-2024-55076) | BAC: Users can directly call functions, which they are not authorized for          | [6.5 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N) |
 
 ## Remediation
 
