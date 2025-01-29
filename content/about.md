@@ -29,8 +29,9 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * eLearnSecurity Junior Penetration Tester (eJPT)
 
 **CVEs**
-
-* TOPqw Webportal (CVE-2024-45875, CVE-2024-45876, CVE-2024-45877, CVE-2024-45878, CVE-2024-45879)
+* SSTI (RCE), Arbitrary File Read & XSS in Tandoor Recipes (CVE-2025-23211,CVE-2025-23212,CVE-2025-23213)
+* XSS, CSRF & BAC in Grocy (CVE-2024-55074, CVE-2024-55075, CVE-2024-55076)
+* SQLi, XSS & more in TOPqw Webportal (CVE-2024-45875, CVE-2024-45876, CVE-2024-45877, CVE-2024-45878, CVE-2024-45879)
 
 **Programming languages**
 [I've use(d) the most and done projects with]
