@@ -9,7 +9,7 @@ tags:
   - English
 ---
 
-I used 4 hours of my free time (not counting the Responsible Disclosure and Blog Posts...) to "speed pentest" the three biggest and most popular (measured by Github stars) open-source recipe managers. 
+I used 4 hours of my free time (not counting the Responsible Disclosure and Blog Posts...) to "speed pentest" the three biggest and most popular (measured by Github stars) open-source cooking recipe managers. 
 
 This included [Grocy](https://github.com/grocy/grocy), which had >6900 stars at the time of testing. Here I found 3 vulnerabilities. The first one is an _Unrestricted File Upload_, through which it was possible to upload any files. This included HTML and SVG files to achieve _Stored XSS_. The second one is a _CSRF_ vulnerability, because the session token has no security flags set, as well as no CSRF countermeasure is implemented. The last one is "one" _Broken Access Control_ vulnerability: For most functions, only the link in the sidebar is disabled for unauthorized users, but a direct call to the URL or API endpoint allows access to data for which you have no permissions.
 
