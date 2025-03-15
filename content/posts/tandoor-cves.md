@@ -136,7 +136,7 @@ Here we choose _Local_ as Method and specify an arbitrary name, e.g. _Insecure_
 
 ![Tandoor21](/media/2025/01/tandoor21.png)
 
-Now, back at the _External Recipes_ page, we can specify can choose the just created local storage and specify a path.
+Now, back at the _External Recipes_ page, we can choose the just created local storage and specify a path.
 
 ![Tandoor22](/media/2025/01/tandoor22.png)
 
