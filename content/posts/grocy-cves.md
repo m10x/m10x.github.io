@@ -22,7 +22,7 @@ This included [Grocy](https://github.com/grocy/grocy), which had >6900 stars at 
 
 ## Remediation
 
-The maintainer stated the they do not care about the vulnerabilities because Grocy is a hobby project and not intended for the use in a sensitive enterprise area. This means that the vulnerabilities probably won't get fixed.
+The maintainer stated that they do not care about the vulnerabilities because Grocy is a hobby project and not intended for the use in a sensitive enterprise area. This means that the vulnerabilities probably won't get fixed.
 
 ## Vulnerabilities in Detail
 
@@ -124,7 +124,7 @@ The user is not authorized to access most of the functions of the webapp. The li
 
 A further example are the recipes
 
-![Grocy10](/media/2024/11/grocy9.png)
+![Grocy10](/media/2024/11/grocy10.png)
 
 This affetcs ALL functions except the user management.
 
