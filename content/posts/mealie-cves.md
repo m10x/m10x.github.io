@@ -23,7 +23,7 @@ Among them is the recipe manager that I personally use and that gave me the idea
 
 ## Remediation
 
-The three disclosed vulnerabilities have been fixed in version [2.5.0] (https://github.com/mealie-recipes/mealie/releases/tag/v2.5.0). One undisclosed vulnerability has not yet been fixed.
+The three disclosed vulnerabilities have been fixed in version [2.5.0](https://github.com/mealie-recipes/mealie/releases/tag/v2.5.0). One undisclosed vulnerability has not yet been fixed.
 
 ## Vulnerabilities in Detail
 
