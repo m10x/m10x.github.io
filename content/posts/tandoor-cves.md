@@ -22,7 +22,7 @@ This included [Tandoor Recipes](https://github.com/TandoorRecipes/recipes), whic
 
 ## Remediation
 
-The maintainer reacted quickly and professionally. All three vulnerabilities are fixed in Tandoor Recipes version 1.5.28.
+The maintainer reacted quickly and professionally. All three vulnerabilities have been fixed in Tandoor Recipes version [1.5.28](https://github.com/TandoorRecipes/recipes/releases/tag/1.5.28).
 
 ## Vulnerabilities in Detail
 
