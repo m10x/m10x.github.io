@@ -16,10 +16,10 @@ Among them is the recipe manager that I personally use and that gave me the idea
 ## Overview of the Vulnerabilities
 | CVE | Name                                                                               | CVSS Score      |
 | ----- | ---------------------------------------------------------------------------------- | ------ |
-| [CVE-2024-55073](https://www.cve.org/CVERecord?id=CVE-2025-23211) | Users can edit their own profile in order to give themselves more permissions or to change their household | [7.6 High](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L) |
-| [CVE-2024-55072](https://www.cve.org/CVERecord?id=CVE-2025-23212) | Group managers can give themselves more permissions                                          | [5.4 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L) |
-| [CVE-2024-55071](https://www.cve.org/CVERecord?id=CVE-2025-23213) | Not fixed yet :)          | [4.2 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:L) |
-| [CVE-2024-55070](https://www.cve.org/CVERecord?id=CVE-2025-23213) | Users can share recipes of other groups          | [3.1 Low](https://www.first.org/cvss/calculator/3.0#CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N) |
+| [CVE-2024-55073](https://www.cve.org/CVERecord?id=CVE-2024-55073) | Users can edit their own profile in order to give themselves more permissions or to change their household | [7.6 High](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L) |
+| [CVE-2024-55072](https://www.cve.org/CVERecord?id=CVE-2024-55072) | Group managers can give themselves more permissions                                          | [5.4 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L) |
+| [CVE-2024-55071](https://www.cve.org/CVERecord?id=CVE-2024-55071) | Not fixed yet :)          | [4.2 Medium](https://www.first.org/cvss/calculator/3.1#CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:L) |
+| [CVE-2024-55070](https://www.cve.org/CVERecord?id=CVE-2024-55070) | Users can share recipes of other groups          | [3.1 Low](https://www.first.org/cvss/calculator/3.0#CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N) |
 
 ## Remediation
 
