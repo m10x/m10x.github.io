@@ -41,7 +41,7 @@ As one can see, the API call contains not only the Username, Full Name and Email
 ![Mealie3](/media/2025/03/mealie3.png)
 
 Mealie succesfully updates those values. Both of these actions can normally only be done by an administrator.
-Thus, we've escalated our privileges as well as changed our household. Getting the id of another household in order to switch to another household is trivial, as one can see all householdIds of the current group. The following screenshot shows, that User2 now belong to Household1 instead of Household2 and that User2 is allowed to Manage the household's members
+Thus, we've escalated our privileges as well as changed our household. The following screenshot shows, that User2 now belong to Household1 instead of Household2 and that User2 is allowed to Manage the household's members
 
 ![Mealie4](/media/2025/03/mealie4.png)
 
