@@ -11,7 +11,7 @@ tags:
 
 Tandoor Recipes 2.0.0-alpha-1 is vulnerable to privilege escalation. This is due to the rework of the API, which resulted in the User Profile API Endpoint containing two boolean values indicating whether a user is staff or administrative. Consequently, any user can escalate their privileges to the highest level.
 
-This vulnerable version was released soon after I published the second part of my series, 'All Your Recipe Are Belong to Us', in which I tested - among others - Tandoor Recipes for vulnerabilities (https://m10x.de/posts/2025/01/all-your-recipe-are-belong-to-us-part-2/3-server-side-template-injection-rce-arbitrary-file-read-and-unrestricted-file-upload-stored-xss-in-tandoor-recipes/). This highlights the importance of continuous checks!
+This vulnerable version was released soon after I published the second part of my series, 'All Your Recipe Are Belong to Us', in which I tested - among others - [Tandoor Recipes for vulnerabilities](/posts/2025/01/all-your-recipe-are-belong-to-us-part-2/3-server-side-template-injection-rce-arbitrary-file-read-and-unrestricted-file-upload-stored-xss-in-tandoor-recipes/). This highlights the importance of continuous checks!
 
 ## Overview of the Vulnerabilities
 | CVE | Name                                                                               | CVSS Score      |
