@@ -47,4 +47,4 @@ Thus, the user has now the staff and admin privileges (just as already revealed 
 | - | - |
 | 2025-04-07 | Discovered and reported the vulnerability |
 | 2025-04-09 | Maintainer acknowledged the vulnerabilities thankfully |
-| 2024-04-18 | Maintainer fixed the privilege escalation in version 2.0.0-alpha-2 |
+| 2025-04-18 | Maintainer fixed the privilege escalation in version 2.0.0-alpha-2 |
