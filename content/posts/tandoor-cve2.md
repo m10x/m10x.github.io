@@ -1,7 +1,7 @@
 ---
 title: Continuous Checks are Important - Privilege Escalation in Tandoor Recipes
 date: 2025-08-02T04:00:56+01:00
-toc: false
+toc: true
 images: 
 tags:
   - CVE

@@ -1,7 +1,7 @@
 ---
 title: All Your Recipe Are Belong to Us (Part 1/3) - Stored XSS, CSRF and Broken Access Control Vulnerabilities in Grocy
 date: 2024-11-27T04:00:56+01:00
-toc: false
+toc: true
 images: 
 tags:
   - CVE

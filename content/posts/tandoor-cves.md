@@ -1,7 +1,7 @@
 ---
 title: All Your Recipe Are Belong to Us (Part 2/3) - Server-Side Template Injection (RCE), Arbitrary File Read and Unrestricted File Upload (Stored XSS) in Tandoor Recipes
 date: 2025-01-28T04:00:56+01:00
-toc: false
+toc: true
 images: 
 tags:
   - CVE
