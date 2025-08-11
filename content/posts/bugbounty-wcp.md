@@ -16,7 +16,7 @@ Wrote a [Web Cache Poisoning scanner](https://github.com/Hackmanit/Web-Cache-Vul
 ## Prolog
 In 2021, I chose web cache poisoning as the topic for [my bachelor's thesis](https://hackmanit.de/images/download/thesis/Automated-Scanning-for-Web-Cache-Poisoning-Vulnerabilities.pdf). I chose it because of the excellent papers [Practical Web Cache Poisoning](https://portswigger.net/research/practical-web-cache-poisoning) (2018, James Kettle), [Your Cache Has Fallen: Cache-Poisoned Denial-of-Service Attack](https://cpdos.org/) (2019, Hoai Viet Nguyen, Luigi Lo Iacono, and Hannes Federrath)​, and [Web Cache Entanglement: Novel Pathways to Poisoning](https://portswigger.net/research/web-cache-entanglement) (2020, James Kettle)​. I gathered all the known web cache poisoning techniques, sorted them into categories, and bundeled them into a scanner: the [Web Cache Vulnerability Scanner (WCVS)](https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner). Additionally, I scanned 51 of the top 1000 websites for web cache poisoning. However, the results weren't that great. There were too many false positives, and only 11 instances of non-malicious cached content injections.
 
-Nevertheless, throughout the years, I maintained the scanner, fixing bugs and adding and improving techniques. The positive feedback was motivating, and a few bug bounty hunters thanked me for helping them earn good money using the scanner. Every once in a while, I thought about running the scanner against some bug bounties again. This finally led me to my next free time project: Improving the scanner and running it against bug bounties!
+Nevertheless, throughout the years, I maintained the scanner, fixing bugs and adding and improving techniques. The positive feedback was motivating, and a few bug bounty hunters thanked me for helping them earn good money using the scanner. Every once in a while, I thought about running the scanner against some bug bounties again. This finally led me to my next spare-time project: Improving the scanner and running it against bug bounties!
 
 ## Automation is Key
 Because of my time constraints, I needed to make the process as efficient as possible. Thus, I created scripts for the following: 
@@ -108,7 +108,7 @@ If the cache can support a larger header field than the web server, it may forwa
 There were many other successful DoS techniques, such as metachars in header names, malformed headers, and invalid header values. However, I think those were enough PoCs!
 
 ## Conclusion
-My free time project revealed that web cache poisoning is still a significant issue.
+My spare-time project revealed that web cache poisoning is still a significant issue.
 1. Caching proxies and/or web servers do not fully comply with RFCs, so they may interpret parts of requests differently.
 2. State-changing parts of the request are not included in the cache key. Those configuring the cache need deep knowledge of the web frameworks/libraries used, their quirks, and the functionality of the web application. Most of the time, this will not be the case.
 3. Complexity kills. Some websites have more than one cache in front of them. One website even had *five*. Well, they are probably all configured the same and tailored to the website, right? *RIGHT?*
