@@ -33,7 +33,7 @@ WCVS identified:
 - two of these were reflected XSS, which gets escalated to stored XSS due to caching
 
 The vulnerable web apps where:
-- HelpDesk SaaS solutions (if you search for a company's helpdesk, chances are high they are using of these :) )
+- Helpcenter SaaS solutions (if you search for a company's helpcenter, chances are high they are using of these :) )
 - CRM SaaS solutions, App PaaS solutions, Cloud Storages
 - European Governments
 - (Food) Delivery Services, Car-Sharing Services
