@@ -14,6 +14,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 
 * Web, SSO pentesting
 * API pentesting
+* AI Application pentesting
 * Mobile pentesting
 * External pentesting
 * Internal pentesting, especially Active directory
