@@ -1,6 +1,6 @@
 ---
 title: "(External: cyber.wtf) I Know What You Shipped Last Summer - RCE, SQLi and More in Logistics Software e-TMS"
-date: 2025-09-19T12:00:00+01:00
+date: 2025-09-19T08:00:00+01:00
 toc: false
 images:
 tags:
