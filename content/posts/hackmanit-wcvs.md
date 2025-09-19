@@ -7,6 +7,6 @@ tags:
   - web cache poisoning
 ---
 
-Hier ist der Link zum Blogartikel:
+Please visit:
 
 https://hackmanit.de/de/blog/145-web-cache-vulnerability-scanner-wcvs-free-customizable-easy-to-use

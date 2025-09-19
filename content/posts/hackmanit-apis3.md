@@ -7,6 +7,6 @@ tags:
   - API
 ---
 
-Hier ist der Link zum Blogartikel:
+Please visit:
 
 https://hackmanit.de/de/blog/169-owasp-api-2023

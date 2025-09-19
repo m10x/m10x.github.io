@@ -9,6 +9,6 @@ tags:
   - English
 ---
 
-Hier ist der Link zum Blogartikel:
+Please visit:
 
 https://cyber.wtf/2024/11/11/topqw-webportal-cves/

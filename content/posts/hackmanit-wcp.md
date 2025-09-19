@@ -7,6 +7,6 @@ tags:
   - web cache poisoning
 ---
 
-Hier ist der Link zum Blogartikel:
+Please visit:
 
 https://hackmanit.de/de/blog/142-is-your-application-vulnerable-to-web-cache-poisoning

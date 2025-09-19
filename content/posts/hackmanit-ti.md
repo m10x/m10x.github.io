@@ -7,6 +7,6 @@ tags:
   - template injection
 ---
 
-Hier ist der Link zum Blogartikel:
+Please visit:
 
 https://hackmanit.de/de/blog/178-template-injection-vulnerabilities-understand-detect-identify

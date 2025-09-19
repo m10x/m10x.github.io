@@ -7,6 +7,6 @@ tags:
   - MFA
 ---
 
-Hier ist der Link zum Blogartikel:
+Please visit:
 
 https://hackmanit.de/de/blog/162-what-is-mfa

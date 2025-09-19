@@ -7,6 +7,6 @@ tags:
   - MFA
 ---
 
-Hier ist der Link zum Blogartikel:
+Please visit:
 
 https://hackmanit.de/de/blog/165-what-is-fido2
