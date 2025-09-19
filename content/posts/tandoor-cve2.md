@@ -16,7 +16,7 @@ This vulnerable version was released soon after I published the second part of m
 ## Overview of the Vulnerabilities
 | CVE | Name                                                                               | CVSS Score      |
 | ----- | ---------------------------------------------------------------------------------- | ------ |
-| CVE-2025-PENDING | Privilege Escalation | [8.8 High](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:I/C:H/I:H/A:H) |
+| CVE-2025-57396 | Privilege Escalation | [8.8 High](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:I/C:H/I:H/A:H) |
 
 ## Remediation
 
@@ -24,7 +24,7 @@ The maintainer reacted quickly and professionally. The vulnerability has been fi
 
 ## Vulnerabilities in Detail
 
-### [CVE-2025-PENDING] Privilege Escalation (8.8 High)
+### [CVE-2025-57396] Privilege Escalation (8.8 High)
 
 Users are allowed to update their names:
 
