@@ -30,8 +30,9 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * eLearnSecurity Mobile Application Penetration Tester (eMAPT)
 * eLearnSecurity Junior Penetration Tester (eJPT)
 
-**CVEs (55 Total)**
+**CVEs (56 Total)**
 * RCE, SQLi, XSS and More in e-TMS by Andsoft (CVE-2025-59735 - CVE-2025-59774)
+* Privilege Escalation in Tandoor Recipes (CVE-2025-57396)
 * SSTI (RCE), Arbitrary File Read & XSS in Tandoor Recipes (CVE-2025-23211,CVE-2025-23212,CVE-2025-23213)
 * BACs leading to Priv Escs and More in Mealie (CVE-2024-55070 - CVE-2024-55073)
 * XSS, CSRF & BAC in Grocy (CVE-2024-55074 - CVE-2024-55076)
