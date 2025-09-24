@@ -39,9 +39,9 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * SQLi, XSS & more in TOPqw Webportal (CVE-2024-45875 - CVE-2024-45879)
 
 **Hall of Fame**
-* MariaDB
-* Doctolib
-* JTL-Software
+* [MariaDB](https://hackerone.com/mariadb/thanks/2025) (Read-Only SQL statement bypass)
+* [Dailymotion](https://yeswehack.com/programs/dailymotion-public-bug-bounty#program-activity) (Web cache poisoning leading to DoS)
+* [Doctolib](https://yeswehack.com/programs/doctolib-public-bug-bounty-program#program-activity) (Web cache poisoning leading to open redirect/DoS)
 
 **Programming languages**
 [I've use(d) the most and done projects with]
@@ -54,5 +54,5 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 **Hobbys**
 * Selfhosting various services (utilizing Proxmox and Docker for Virtualization, Caddy as Reverse Proxy)
 * CTFs ([HackTheBox](https://www.hackthebox.eu/home/users/profile/19366))
-* Lockpicking ([Green Belt](https://lpulocks.com/#/speedpicks?pickerId=enpsiAVxLvbJ02mBPyTazahvXL73&name=m10x))
+* Lockpicking ([Green Belt](https://l)pulocks.com/#/speedpicks?pickerId=enpsiAVxLvbJ02mBPyTazahvXL73&name=m10x))
 * Running, Cycling, Weightlifting
