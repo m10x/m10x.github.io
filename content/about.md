@@ -38,6 +38,11 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * XSS, CSRF & BAC in Grocy (CVE-2024-55074 - CVE-2024-55076)
 * SQLi, XSS & more in TOPqw Webportal (CVE-2024-45875 - CVE-2024-45879)
 
+**Hall of Fame**
+* MariaDB
+* Doctolib
+* JTL-Software
+
 **Programming languages**
 [I've use(d) the most and done projects with]
 
