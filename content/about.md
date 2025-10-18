@@ -15,8 +15,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * Web, SSO pentesting
 * API pentesting
 * AI Application pentesting
-* Mobile pentesting
-* External pentesting
+* Mobile App pentesting
 * Internal pentesting, especially Active directory
 * Red Teaming
 
@@ -39,7 +38,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * SQLi, XSS & more in TOPqw Webportal (CVE-2024-45875 - CVE-2024-45879)
 
 **Hall of Fame**
-* [MariaDB](https://hackerone.com/mariadb/thanks/2025) (Read-Only SQL statement bypass)
+* [MariaDB](https://hackerone.com/mariadb/thanks/2025) (Read-Only SQL bypass in the official MCP server)
 * [Dailymotion](https://yeswehack.com/programs/dailymotion-public-bug-bounty#program-activity) (Web cache poisoning leading to DoS)
 * [Doctolib](https://yeswehack.com/programs/doctolib-public-bug-bounty-program#program-activity) (Web cache poisoning leading to open redirect/DoS)
 
