@@ -7,17 +7,17 @@ aliases = ["about-us","about-hugo","contact"]
 +++
 
 My name is Maximilian Hildebrand aka m10x and I'm a penetration tester @ G DATA Advanced Analytics GmbH.
-
+Previously I've worked as a penetration tester @ Hackmanit GmbH.
 I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a focus on web, network and SSO security.
 
-**Interests**
+**Types of Pentests I'm Conducting**
 
-* Web, SSO pentesting
-* API pentesting
-* AI Application pentesting
-* Mobile App pentesting
-* Internal pentesting, especially Active directory
-* Red Teaming
+* Web, SSO
+* API
+* AI Application
+* Kubernetes
+* Mobile App
+* Internal (Active Directory)
 
 **Certificates**
 
