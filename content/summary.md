@@ -26,6 +26,8 @@ A collection of my public infosec related stuff.
 
 ## External Blog Posts
 
+[**I Know What You Shipped Last Summer - RCE, SQLi and More in Logistics Software e-TMS**](https://cyber.wtf/2025/09/19/etms-by-andsoft-cves/)
+
 [**Harvesting the Database - 5 CVEs in TOPqw Webportal**](https://cyber.wtf/2024/11/11/topqw-webportal-cves/)
 
 [**Template Injection Vulnerabilities– Understand, Detect, Identify**](https://hackmanit.de/de/blog/178-template-injection-vulnerabilities-understand-detect-identify)
