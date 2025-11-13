@@ -8,15 +8,16 @@ aliases = []
 
 A collection of my public infosec related stuff.
 
-## Tools
+## Tools / Websites
+[**can-i gtfo**](https://m10x.de/can-i-gtfo/) An extensive collection of kubernetes RBAC permissions that can be abused
 
-[**TInjA (Template INJection Analyzer)**](https://github.com/Hackmanit/TInjA)
+[**Web Cache Vulnerability Scanner**](https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner) Scanner for Web Cache Poisoning and Web Cache Deception
 
-[**Template Injection Playground**](https://github.com/Hackmanit/template-injection-playground)
+[**TInjA (Template INJection Analyzer)**](https://github.com/Hackmanit/TInjA) SSTI / CSTI scanner using novel template injection Polyglots
 
-[**Template Injection Table**](https://github.com/Hackmanit/template-injection-table)
+[**Template Injection Playground**](https://github.com/Hackmanit/template-injection-playground) SSTI/CSTI Playground with 46 Template Engines
 
-[**Web Cache Vulnerability Scanner**](https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner)
+[**Template Injection Table**](https://github.com/Hackmanit/template-injection-table) Collection of novel CSTI / SSTI Polyglots
 
 ## Thesis
 
