@@ -42,7 +42,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * [MariaDB](https://hackerone.com/mariadb/thanks/2025): Read-Only SQL bypass in the official MCP server
 * [Dailymotion](https://yeswehack.com/programs/dailymotion-public-bug-bounty#program-activity): Web cache poisoning leading to DoS
 * [Doctolib](https://yeswehack.com/programs/doctolib-public-bug-bounty-program#program-activity): Web cache poisoning leading to open redirect/DoS
-* JTL Shop: [SSTI leading to XSS leading to RCE via malicious plugin upload](https://issues.jtl-software.de/issues/SHOP-9164), [CSRF to create coupons](https://issues.jtl-software.de/issues/SHOP-9165) & [Stored open redirect](https://issues.jtl-software.de/issues/SHOP-9166)
+* JTL Shop: [SSTI leading to XSS leading to RCE via malicious plugin upload](https://issues.jtl-software.de/issues/SHOP-9164), Insecure File Upload leading to RCE, [CSRF to create coupons](https://issues.jtl-software.de/issues/SHOP-9165) & [Stored open redirect](https://issues.jtl-software.de/issues/SHOP-9166)
 * Lockpickers United: Stored XSS and BOLA (edit other users' profiles) in LPUlocks.com & BOLA (edit collections of other users) in lpubelts.com
 
 **Programming languages**
