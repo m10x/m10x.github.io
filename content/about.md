@@ -41,6 +41,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * Authentication Bypass, Privilege Escalation, RCE, Multiple Stored XSS, Multiple BFLA, Multiple BOLA in UNDISCLOSED (CVE-2024-41520 - CVE-2024-41526)
 
 **Hall of Fame**
+* [Anthropic](https://hackerone.com/m10xde?type=user) No disclosure
 * [MariaDB](https://hackerone.com/mariadb/thanks/2025): Read-Only SQL bypass in the official MCP server
 * [Dailymotion](https://yeswehack.com/programs/dailymotion-public-bug-bounty#program-activity): Web cache poisoning leading to DoS
 * [Doctolib](https://yeswehack.com/programs/doctolib-public-bug-bounty-program#program-activity): Web cache poisoning leading to open redirect/DoS
