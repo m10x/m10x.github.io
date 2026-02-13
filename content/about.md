@@ -20,7 +20,9 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * Internal (Active Directory)
 
 **Certificates**
-
+* Burp Suite Certified Practitioner (BSCP)
+* Hack The Box Certified Web Exploitation Expert (HTB Expert)
+* Certified AI/ML Pentester (C-AI/MLPen)
 * Hack The Box Certified Web Exploitation Specialist (HTB CWES)
 * Certified Red Team Operator (CRTO)
 * Offensive Security Certified Professional (OSCP)
