@@ -12,12 +12,15 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 
 **Types of Pentests I'm Conducting**
 
-* Web, SSO
+* Web
+* SSO
 * API
 * AI Application
 * Kubernetes
-* Mobile App
+* Android App
+* WiFi
 * Internal (Active Directory)
+* External
 
 **Certificates**
 * Burp Suite Certified Practitioner (BSCP)
