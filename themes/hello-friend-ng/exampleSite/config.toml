@@ -97,6 +97,12 @@ disableHugoGeneratorInject = false
   #
   enableSharingButtons = true
 
+  # Reading time
+  #
+  # This option enables reading time part on post info
+  #
+  enableReadingTime = true
+
   # Global language menu
   #
   # Enables the global language menu.
@@ -108,10 +114,6 @@ disableHugoGeneratorInject = false
   #
   customCSS = []
   customJS  = []
-
-  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
-  #
-  justifyContent = false  # Set "text-align: justify" to .post-content.
 
   # Integrate Plausible.io
   # plausibleDataDomain = 'test.com'
@@ -258,9 +260,17 @@ disableHugoGeneratorInject = false
 
 [menu]
   [[menu.main]]
-    identifier = "about"
-    name       = "About"
-    url        = "about/"
+    identifier  = "about"
+    name        = "About"
+    url         = "about/"
+    hasChildren = true
+  
+  [[menu.main]]
+    identifier  = "me"
+    name        = "About Me"
+    url         = "about/me/"
+    parent      = "about"
+
   [[menu.main]]
     identifier = "posts"
     name       = "Posts"

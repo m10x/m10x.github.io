@@ -1,4 +1,4 @@
-baseURL = "https://www.m10x.de/"
+baseURL = "https://m10x.de/"
 title   = "Maximilian Hildebrand"
 languageCode = "en-us"
 theme = "hello-friend-ng"
@@ -113,10 +113,9 @@ showReadingTime = true
   # If you want, you can easily override the default footer with your own content. 
   #
   [params.footer]
-    trademark = true
+    trademark = "m10x"
     rss = true
-    copyright = true
-    author = true
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
     topText = ["<a href=\"/datenschutz\">Datenschutz</a>"]
     bottomText = [
@@ -150,8 +149,8 @@ showReadingTime = true
   # A better internet.
   # Uncomment this to enable Commento.
   #
-  [params.commento]
-      url = "https://commento-plus-plus.kirlia.de/js/commento.js"
+  #[params.commento]
+  #    url = "https://commento-plus-plus.kirlia.de/js/commento.js"
 
   # Uncomment this if you want a portrait on your start page
   #
@@ -167,7 +166,7 @@ showReadingTime = true
 
   [[params.social]]
     name = "email"
-    url  = "mailto:website@m10x.de"
+    url  = "javascript:alert('website-at-m10x.de')"
 
   [[params.social]]
     name = "github"
@@ -177,14 +176,10 @@ showReadingTime = true
     name = "linkedin"
     url  = "https://www.linkedin.com/in/maximilian-hildebrand-95b43a142/"
 
-  [[params.social]]
-    name = "xing"
-    url  = "https://www.xing.com/profile/Maximilian_Hildebrand2/"
-
 [languages]
   [languages.en]
-    subtitle  = "German Penetration Testing Blog"
-    homeSubtitle = "German Penetration Tester"
+    subtitle  = "Penetration Testing & Cyber Security Research"
+    homeSubtitle = "Cyber Security Stuff"
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 

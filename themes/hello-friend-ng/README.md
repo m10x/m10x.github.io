@@ -70,7 +70,7 @@ baseurl      = "localhost"
 title        = "My Blog"
 languageCode = "en-us"
 theme        = "hello-friend-ng"
-paginate     = 10
+pagination.pagerSize     = 10
 
 [params]
   dateform        = "Jan 2, 2006"
@@ -123,6 +123,19 @@ paginate     = 10
     identifier = "blog"
     name       = "Blog"
     url        = "/posts"
+
+  # and submenus
+  [[menu.main]]
+    identifier  = "parent"
+    name        = "Parent"
+    url         = "/parent"
+    hasChildren = true
+
+  [[menu.main]]
+    identifier  = "child"
+    name        = "Child"
+    url         = "/parent/child"
+    parent      = "parent"
 ```
 
 ## More things
@@ -186,7 +199,7 @@ If you need another one, just open an issue or create a pull request with your w
 
 ## Known issues
 
-There is a bug in Hugo that sometimes causes the main page not to render correctly. The reason is an empty taxonomy part.
+There is a bug in Hugo that sometimes causes the main page not to render correctly. The reason is an taxonomy part with empty entries.
 Related issue tickets: [!14](https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues/14) [!59](https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues/59).
 
 Either you comment it out completely or you write the following in
@@ -195,6 +208,12 @@ Either you comment it out completely or you write the following in
 [taxonomies]
   tag      = "tags"
   category = "categories"
+```
+
+In case you'd like to actually have an empty taxonomy, you can do so by specifying the following (i.e. without adding any entries to the taxonomy part):
+
+``` toml
+[taxonomies]
 ```
 
 ## How to edit the theme
@@ -208,6 +227,6 @@ If you like my work and if you think this project is worth to support it, just <
 
 ## Licence
 
-Copyright © 2019-2021 Djordje Atlialp
+Copyright © 2019-2025 Djordje Atlialp
 
 The theme is released under the MIT License. Check the [original theme license](https://github.com/rhazdon/hugo-theme-hello-friend-ng/blob/master/LICENSE.md) for additional licensing information.
