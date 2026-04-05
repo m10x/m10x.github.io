@@ -3,13 +3,13 @@ title: Pwning AI Agents (Part 1/4) - Exploiting AI Coding Agents and Read-Only S
 date: 2025-08-11T04:00:56+01:00
 toc: true
 images: 
-  - /media/2026/03/breakingboundaries-header.jpg
+  - /media/2026/04/breakingboundaries-header.jpg
 tags:
   - AI
   - English
 ---
 
-![Breaking Boundaries Header](/media/2026/03/breakingboundaries-header.jpg)
+![Breaking Boundaries Header](/media/2026/04/breakingboundaries-header.jpg)
 
 This is the first of four posts about vulnerabilities found in AI coding agents, MCP servers and MCP hosts. This first post provides a non-technical overview of the three projects and their results, while the subsequent three posts delve deeper into each project, including the technical aspects.
 
