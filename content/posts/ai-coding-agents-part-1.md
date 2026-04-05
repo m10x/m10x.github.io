@@ -1,6 +1,6 @@
 ---
 title: Pwning AI Agents (Part 1/4) - Exploiting AI Coding Agents and Read-Only SQL MCP Servers
-date: 2025-08-11T04:00:56+01:00
+date: 2025-05-04T04:00:56+01:00
 toc: true
 images: 
   - /media/2026/04/breakingboundaries-header.jpg
