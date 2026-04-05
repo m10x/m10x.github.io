@@ -151,8 +151,8 @@ Vulnerabilities were found in 18 of the 19 examined MCP servers. In 14 cases, th
 |MariaDB/mcp| x | File Write/Read | 0.2.4 | [CVE-2025-69860](https://www.cve.org/CVERecord?id=CVE-2025-69860) |
 |db-mcp-server (postgresql)| 2x | File Write/Read | Oct 1, 2025 Release | [CVE-2025-71175](https://www.cve.org/CVERecord?id=CVE-2025-71175),[CVE-2025-69862](https://www.cve.org/CVERecord?id=CVE-2025-69862) |
 |REDACTED|x| File Write/Read |
-|REDACTED|x| File Write/Read |
-|REDACTED|x| File Write/Read |
+|REDACTED|x| File Write/Read, Port Scanning |
+|REDACTED|x| File Write/Read, Port Scanning |
 |REDACTED| | File Write/Read |
 |REDACTED|x| File Write/Read, Port Scanning |
 |REDACTED|x| File Write/Read, Port Scanning |
