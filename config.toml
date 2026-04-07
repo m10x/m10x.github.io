@@ -160,13 +160,13 @@ showReadingTime = true
   #   maxWidth = "50px"
 
   # Social icons
-  [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/m10x_de"
+  #[[params.social]]
+  #  name = "twitter"
+  #  url  = "https://twitter.com/m10x_de"
 
   [[params.social]]
     name = "email"
-    url  = "javascript:alert('website-at-m10x.de')"
+    url  = "hi-at-m10x.de"
 
   [[params.social]]
     name = "github"
@@ -174,7 +174,7 @@ showReadingTime = true
 
   [[params.social]]
     name = "linkedin"
-    url  = "https://www.linkedin.com/in/maximilian-hildebrand-95b43a142/"
+    url  = "https://www.linkedin.com/in/maximilian-hildebrand/"
 
 [languages]
   [languages.en]
