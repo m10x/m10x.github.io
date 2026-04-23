@@ -11,7 +11,6 @@ Previously I've worked as a penetration tester @ Hackmanit GmbH.
 I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a focus on web, network and SSO security.
 
 **Types of Pentests I'm Conducting**
-
 * Web
 * SSO
 * API
@@ -50,6 +49,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * Authentication Bypass, Privilege Escalation, RCE, Multiple Stored XSS, Multiple BFLA, Multiple BOLA in UNDISCLOSED (CVE-2024-41520 - CVE-2024-41526)
 
 **Hall of Fame**
+* [Portswigger](https://portswigger.net/web-security/hall-of-fame): #1 at Portswigger's Academy
 * [Anthropic](https://hackerone.com/m10xde?type=user): No disclosure, yet
 * [MariaDB](https://hackerone.com/mariadb/thanks/2025): Read-Only SQL bypass in the official MCP server
 * [Dailymotion](https://yeswehack.com/programs/dailymotion-public-bug-bounty#program-activity): Web cache poisoning leading to DoS
