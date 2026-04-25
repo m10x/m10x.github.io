@@ -34,8 +34,8 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * eLearnSecurity Mobile Application Penetration Tester (eMAPT)
 * eLearnSecurity Junior Penetration Tester (eJPT)
 
-**CVEs (91 Total)**
-* RCE, SQL Injection, File Writes, SSRF, Read-Only Bypasses & More in 9 "Read-Only" SQL MCP Servers (CVE-2025-71169 - CVE-2025-71175, CVE-2025-69853 - CVE-2025-69855, CVE-2025-69859)
+**CVEs (102 Total)**
+* RCE, SQL Injection, File Writes, SSRF, Read-Only Bypasses & More in 18 "Read-Only" SQL MCP Servers (CVE-2025-71169 - CVE-2025-71175, CVE-2025-69853 - CVE-2025-69855, CVE-2025-69859, CVE-2026-37013 - CVE-2026-37017, CVE-2026-37019, CVE-2026-37023 - CVE-2026-37027, CVE-2026-37029)
 * Insecure MCP Server Handling in ZED (CVE-2026-25805)
 * Bearer Token and Cleartext Passwort Disclosure in Soon-To-Be-Disclosed (CVE-2025-69797)
 * 3 Instances of Reflected XSS in Soon-To-Be-Disclosed (CVE-2026-4293)
