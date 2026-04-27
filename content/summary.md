@@ -21,9 +21,9 @@ A collection of my public infosec related stuff.
 
 ## Thesis
 
-[**Master's Thesis: Improving the Detection and Identification of Template Engines for Large-Scale Template Injection Scanning**](https://hackmanit.de/images/download/thesis/Improving-the-Detection-and-Identification-of-Template-Engines-for-Large-Scale-Template-Injection-Scanning-Maximilian-Hildebrand-Master-Thesis-Hackmanit.pdf)
+[**Master's Thesis: Improving the Detection and Identification of Template Engines for Large-Scale Template Injection Scanning**](https://m10x.de/Master-Thesis.pdf)
 
-[**Bachelor's Thesis: Automated Scanning for Web Cache Poisoning Vulnerabilities**](https://hackmanit.de/images/download/thesis/Automated-Scanning-for-Web-Cache-Poisoning-Vulnerabilities.pdf)
+[**Bachelor's Thesis: Automated Scanning for Web Cache Poisoning Vulnerabilities**](https://m10x.de/Bachelor-Thesis.pdf)
 
 ## External Blog Posts
 
