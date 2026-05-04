@@ -10,6 +10,10 @@ My name is Maximilian Hildebrand aka m10x and I'm a penetration tester @ G DATA 
 Previously I've worked as a penetration tester @ Hackmanit GmbH.
 I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a focus on web, network and SSO security.
 
+**Contact**
+- Discord: m10x.de
+- Mail: hi-at-m10x.de
+
 **Types of Pentests I'm Conducting**
 * Web
 * SSO
