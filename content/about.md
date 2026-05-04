@@ -55,6 +55,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 **Hall of Fame**
 * [Portswigger](https://portswigger.net/web-security/hall-of-fame): #1 at Portswigger's Academy
 * [Anthropic](https://hackerone.com/m10xde?type=user): No disclosure, yet
+* [AWS](https://hackerone.com/m10xde?type=user): No disclosure, yet
 * [MariaDB](https://hackerone.com/mariadb/thanks/2025): Read-Only SQL bypass in the official MCP server
 * [Dailymotion](https://yeswehack.com/programs/dailymotion-public-bug-bounty#program-activity): Web cache poisoning leading to DoS
 * [Doctolib](https://yeswehack.com/programs/doctolib-public-bug-bounty-program#program-activity): Web cache poisoning leading to open redirect/DoS
