@@ -41,7 +41,8 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * RCE, SQL Injection, File Writes, SSRF, Read-Only Bypasses & More in 18 "Read-Only" SQL MCP Servers (CVE-2025-71169 - CVE-2025-71175, CVE-2025-69853 - CVE-2025-69855, CVE-2025-69859, CVE-2026-37013 - CVE-2026-37017, CVE-2026-37019, CVE-2026-37023 - CVE-2026-37027, CVE-2026-37029)
 * Insecure MCP Server Handling in ZED (CVE-2026-25805)
 * Bearer Token and Cleartext Passwort Disclosure in Soon-To-Be-Disclosed (CVE-2025-69797)
-* 3 Instances of Reflected XSS in Soon-To-Be-Disclosed (CVE-2026-4293)
+* 3 Instances of Reflected XSS in Kieback & Peter DDC Building Controllers
+(CVE-2026-4293)
 * BFLA, Stored XSS, Unrestricted File Upload, CSV Injection in Soon-To-Be-Disclosed (CVE-2025-69865 - CVE-2025-69868)
 * Stored XSS, CSV Injection, Insufficient Brute Force Protection, API Key Leak & More in Soon-To-Be-Disclosed (CVE-2025-69849 - CVE-2025-69852, CVE-2025-69798 - CVE-2025-69801)
 * RCE, SQLi, XSS and More in e-TMS by Andsoft (CVE-2025-59735 - CVE-2025-59774)
