@@ -14,7 +14,7 @@ tags:
 This is the first of four posts about vulnerabilities found in AI coding agents, MCP servers and MCP hosts. This first post provides a non-technical overview of the three projects and their results, while the subsequent three posts delve deeper into each project, including the technical aspects.
 
 ## TLDR
-- Found 31 vulnerabilities in 19 AI Coding Agents with way over 100 million downloads in total. 12x RCE due to autonomous execution of dangerous commands or command allowlist bypasses. 14x data exfiltration via markdown images. 5x insecure MCP Server handling.
+- Found 26 vulnerabilities in 19 AI Coding Agents with way over 100 million downloads in total. 12x RCE due to autonomous execution of dangerous commands or command allowlist bypasses. 14x data exfiltration via markdown images.
 - 5 AI Coding Agents with way over 100 million downloads in total handled MCP servers insecurely leading to RCE and tool poisoning. Furthermore, MCP Inspector was found to be vulnerable to XSS, which could be escalated to RCE. To test the security of such MCP hosts [MaliM](https://github.com/m10x/malim), an advanced malicious MCP server with several attack techniques, was developed. 
 - Bypassed the read-only restriction in 17 "read-only" SQL MCP servers, leading to arbitrary data modification and deletion as well as arbitrary file writes. Among these was the official MariaDB MCP server.
 - Approximetely 30 minutes of my spare time were spend for each AI Agent and MCP server. This highlights the disastrous state of security and suggests that there are most likely many more vulnerabilities yet to be found.
