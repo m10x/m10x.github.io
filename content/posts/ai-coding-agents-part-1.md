@@ -14,7 +14,7 @@ tags:
 This is the first of four posts about vulnerabilities found in AI coding agents, MCP servers and MCP hosts. This first post provides a non-technical overview of the three projects and their results, while the subsequent three posts delve deeper into each project, including the technical aspects.
 
 ## TLDR
-- Found 25 vulnerabilities in 19 AI Coding Agents with way over 100 million downloads in total. 11x RCE due to autonomous execution of dangerous commands or command allowlist bypasses. 14x data exfiltration via markdown images.
+- Found 26 vulnerabilities in 19 AI Coding Agents with way over 100 million downloads in total. 12x RCE due to autonomous execution of dangerous commands or command allowlist bypasses. 14x data exfiltration via markdown images.
 - 5 AI Coding Agents with way over 100 million downloads in total handled MCP servers insecurely leading to RCE and tool poisoning. Furthermore, the REDACTED (will be disclosed soon) was found to be vulnerable to XSS, which could be escalated to RCE. To test the security of such MCP hosts [MaliM](https://github.com/m10x/malim), an advanced malicious MCP server with several attack techniques, was developed. 
 - Bypassed the read-only restriction in 17 "read-only" SQL MCP servers, leading to arbitrary data modification and deletion as well as arbitrary file writes. Among these was the official MariaDB MCP server.
 - Approximetely 30 minutes of my spare time were spend for each AI Agent and MCP server. This highlights the disastrous state of security and suggests that there are most likely many more vulnerabilities yet to be found.
@@ -38,7 +38,7 @@ My targets were AI coding agents that:
 - Have more than one million downloads/users
 - Have not yet been tested by security researcher Johann Rehberger, aka "wunderwuzzi" :)
 
-The following 18 AI coding agents were therefore examined:
+The following 20 AI coding agents were therefore examined:
 - REDACTED
 - Alibaba's Lingma
 - REDACTED
@@ -57,8 +57,10 @@ The following 18 AI coding agents were therefore examined:
 - Mistral-Vibe
 - Qoder IDE
 - Qoder Plugin for Intellij
+- Blackbox.AI
+- Proxy.AI
 
-Three were REDACTED due to private bug bounty programs and/or legal reasons. Mistral and Qoder were tested as well, even though they did not meet the criteria of having at least one million downloads or users, because they ranked high in search queries.
+Three were REDACTED due to private bug bounty programs and/or legal reasons. Mistral and Qoder were tested, even though they did not meet the criteria of having at least one million downloads or users, because they ranked high in search queries.
 There are no official download figures for Kiro and Windsurf. Nevertheless, it can be assumed that they are among the most widely used AI coding agents.
 
 ### Methods
@@ -75,28 +77,28 @@ The AI coding agents were always used in their default configuration.
 
 19 of the 20 AI coding agents examined had RCE or data exfiltration vulnerabilities. Amazon's Q Developer was the only agent not vulnerable to the attack methods. It later came to light that Johann Rehberger had successfully exploited and reported these vulnerabilities. The vulnerabilities had therefore already been fixed, though this had not yet been publicly announced at the time of my tests.
 
-| AI Coding Agent | RCE | Data Exfiltration | Fixed |
+| AI Coding Agent | RCE | Data Exfiltration | Examined Version | Fixed |
 |-------------------|----|----|---|
+| REDACTED | x | |  |
+| Alibaba's Lingma | x | x | 2.5.16 |
 | REDACTED | x | |
-| Alibaba's Lingma | x | x |
-| REDACTED | x | |
-| Windsurf IDE | | x |
-| Windsurf Plugin for VSCode/Intellij | | x |
-| Intellij's Junie | | x |
+| Windsurf IDE | | x | 1.12.44 |
+| Windsurf Plugin for VSCode/Intellij | | x | 1.49.2 |
+| Intellij's Junie | | x | 252.284.66 |
 | REDACTED | | x |
-| Cline | | x |
-| Codegeex | | x |
-| Sourcery | | x | 1.42.0 |
+| Cline | x | x | v3.24.0 | 3.72.0 |
+| Codegeex | | x | 2.27.5 |
+| Sourcery | | x | 1.37.0 | 1.42.0 |
 | Amazon's Kiro | | x | 0.8.0 |
-| Amazon's Q Developer | | |
-| Qodo | x | | Fixed according to vendor |
-| Kilo | 2x | x |
-| RooCode | | x |
-| Mistral-Vibe | x | | 2.5.0 |
-| Qoder IDE | x | |
-| Qoder Plugin for Intellij | x | x |
-| REDACTED | x | |
-| REDACTED | x | 2x |
+| Qodo | x | | 1.7.10 | 1.7.12 |
+| Kilo | 2x | x | 4.141.1 |
+| RooCode | | x | v3.38.0 |
+| Mistral-Vibe | x | | 2.0.0 | 2.5.0 |
+| Qoder IDE | x | | 0.3.3
+| Qoder Plugin for Intellij | x | x | 0.9.1 |
+| Blackbox.AI | x | | 1.0.2 |
+| Proxy.AI | x | 2x | 3.7.4-241.1 |
+| Amazon's Q Developer | | | |
 
 The AI coding agents with known vulnerabilities have been downloaded way over 100 million times. However, two of the most popular agents, Windsurf and Kiro, do not disclose their download figures and were therefore not included in the calculation.
 
@@ -121,8 +123,16 @@ The following 19 read-only SQL MCP were therefore examined:
 - [mcp-server-mysql](https://github.com/benborla/mcp-server-mysql)
 - [db-mcp-server](https://github.com/zerogon1203/db-mcp-server) (inspected both the mysql and postgresql mode)
 - [MariaDB/mcp](https://github.com/MariaDB/mcp) (MariaDB's official MCP server)
-- 9x REDACTED
 - [postgres-mcp](https://github.com/crystaldba/postgres-mcp)
+- [mcp-universal-db-client](https://github.com/IzumiSy/mcp-universal-db-client)
+- [OrionPotter/dbhub](https://github.com/OrionPotter/dbhub)
+- [bytebase/dbhub](https://github.com/bytebase/dbhub)
+- [mysql-mcp-server](https://github.com/dpflucas/mysql-mcp-server)
+- [read-only-local-mysql-mcp-server](github.com/hovecapital/read-only-local-mysql-mcp-server)
+- [read-only-local-postgres-mcp-server](github.com/hovecapital/read-only-local-postgres-mcp-server)
+- [mssql-mcp-core](github.com/ConnorBritain/mssql-mcp-core)
+- [mssql-mcp-server](github.com/dperussina/mssql-mcp-server)
+- [mcp-sqlserver](github.com/bilims/mcp-sqlserver)
 
 Due to responsible disclosure, nine of the tested MCP servers will be disclosed in early June.
 
@@ -139,43 +149,41 @@ Many great SQL quirks and inconspicuous commands were exploited. Even classic SQ
 
 Vulnerabilities were found in 18 of the 19 examined MCP servers. In 14 cases, the read-only restriction could be bypassed. As an outcome of this, RCE is possible in the case of Postgres, and database user passwords can be changed in the case of MySQL. In another 14 cases, it was possible to read or write files on the server.
 
-|MCP Server| Read-Only Bypass | Other Vuln | Fixed | CVE |
+|MCP Server| Read-Only Bypass | Other Vuln | Examined Version | Fixed | CVE |
 |-|-|-|-|-|
-|sqlite-reader-mcp| | File Enum | | [CVE-2025-71169](https://www.cve.org/CVERecord?id=CVE-2025-71169) |
-|sqlite-explorer-fastmcp-mcp-server| x | | | [CVE-2025-71170](https://www.cve.org/CVERecord?id=CVE-2025-71170) |
-|mcp-mysql-server| x | File Write/Read | | [CVE-2025-71171](https://www.cve.org/CVERecord?id=CVE-2025-71171),[CVE-2025-69853](https://www.cve.org/CVERecord?id=CVE-2025-69853) |
-|mcp-server-mysql| x | File Write/Read | | [CVE-2025-71174](https://www.cve.org/CVERecord?id=CVE-2025-71174),[CVE-2025-69859](https://www.cve.org/CVERecord?id=CVE-2025-69859) |
-|simple-mysql-mcp-server| x | File Write/Read | | [CVE-2025-71173](https://www.cve.org/CVERecord?id=CVE-2025-71173),[CVE-2025-69854](https://www.cve.org/CVERecord?id=CVE-2025-69854) |
-|db-mcp-server (mysql)| | File Write/Read | Oct 1, 2025 Release | [CVE-2025-71175](https://www.cve.org/CVERecord?id=CVE-2025-71175),[CVE-2025-69862](https://www.cve.org/CVERecord?id=CVE-2025-69862) |
-|mcp-server-mariadb| | File Write/Read | | [CVE-2025-71172](https://www.cve.org/CVERecord?id=CVE-2025-71172),[CVE-2025-69855](https://www.cve.org/CVERecord?id=CVE-2025-69855) |
-|MariaDB/mcp| x | File Write/Read | 0.2.4 | [CVE-2025-69860](https://www.cve.org/CVERecord?id=CVE-2025-69860) |
-|db-mcp-server (postgresql)| 2x | File Write/Read | Oct 1, 2025 Release | [CVE-2025-71175](https://www.cve.org/CVERecord?id=CVE-2025-71175),[CVE-2025-69862](https://www.cve.org/CVERecord?id=CVE-2025-69862) |
-|REDACTED|x| File Write/Read |
-|REDACTED|x| File Write/Read, Port Scanning |
-|REDACTED|x| File Write/Read, Port Scanning |
-|REDACTED| | File Write/Read |
-|REDACTED|x| File Write/Read, Port Scanning |
-|REDACTED|x| File Write/Read, Port Scanning |
-|REDACTED|x| |
-|REDACTED|x| File Write/Read |
-|REDACTED|x| |
+|sqlite-reader-mcp| | File Enum | 0.1.0 | | [CVE-2025-71169](https://www.cve.org/CVERecord?id=CVE-2025-71169) |
+|sqlite-explorer-fastmcp-mcp-server| x | | n/a |  | [CVE-2025-71170](https://www.cve.org/CVERecord?id=CVE-2025-71170) |
+|mcp-mysql-server| x | File Write/Read | 0.1.0 | | [CVE-2025-71171](https://www.cve.org/CVERecord?id=CVE-2025-71171),[CVE-2025-69853](https://www.cve.org/CVERecord?id=CVE-2025-69853) |
+|mcp-server-mysql| x | File Write/Read | v2.0.5 | | [CVE-2025-71174](https://www.cve.org/CVERecord?id=CVE-2025-71174),[CVE-2025-69859](https://www.cve.org/CVERecord?id=CVE-2025-69859) |
+|simple-mysql-mcp-server| x | File Write/Read | 0.1.0 | | [CVE-2025-71173](https://www.cve.org/CVERecord?id=CVE-2025-71173),[CVE-2025-69854](https://www.cve.org/CVERecord?id=CVE-2025-69854) |
+|db-mcp-server (mysql)| | File Write/Read | 2.0.0 | Oct 1, 2025 Release | [CVE-2025-71175](https://www.cve.org/CVERecord?id=CVE-2025-71175),[CVE-2025-69862](https://www.cve.org/CVERecord?id=CVE-2025-69862) |
+|mcp-server-mariadb| | File Write/Read | 0.1.2 | | [CVE-2025-71172](https://www.cve.org/CVERecord?id=CVE-2025-71172),[CVE-2025-69855](https://www.cve.org/CVERecord?id=CVE-2025-69855) |
+|MariaDB/mcp| x | File Write/Read | 0.2.1 | 0.2.4 | [CVE-2025-69860](https://www.cve.org/CVERecord?id=CVE-2025-69860) |
+|db-mcp-server (postgresql)| 2x | File Write/Read | 2.0.0 | Oct 1, 2025 Release | [CVE-2025-71175](https://www.cve.org/CVERecord?id=CVE-2025-71175),[CVE-2025-69862](https://www.cve.org/CVERecord?id=CVE-2025-69862) |
+|mcp-universal-db-client|x| File Write/Read | 0.1.4 | 0.1.8 | [CVE-2026-37019](https://www.cve.org/CVERecord?id=CVE-2026-37019) |
+|OrionPotter/dbhub|x| File Write/Read, Port Scanning | 0.11.6 | | [CVE-2026-37013](https://www.cve.org/CVERecord?id=CVE-2026-37013),[CVE-2026-37015](https://www.cve.org/CVERecord?id=CVE-2026-37015),[CVE-2026-37016](https://www.cve.org/CVERecord?id=CVE-2026-37016) |
+|bytebase/dbhub|x| File Write/Read, Port Scanning | 0.15.1
+|mysql-mcp-server| | File Write/Read | 0.1.3 | | [CVE-2026-37014](https://www.cve.org/CVERecord?id=CVE-2026-37014) |
+|read-only-local-mysql-mcp-server|x| File Write/Read, Port Scanning | 0.1.1 | Yes, no new release, yet | [CVE-2026-37017](https://www.cve.org/CVERecord?id=CVE-2026-37017),[CVE-2026-37029](https://www.cve.org/CVERecord?id=CVE-2026-37029) |
+|read-only-local-postgres-mcp-server|x| File Write/Read, Port Scanning | 0.3.0 | | [CVE-2026-37023](https://www.cve.org/CVERecord?id=CVE-2026-37023),[CVE-2026-37027](https://www.cve.org/CVERecord?id=CVE-2026-37027) |
+|mssql-mcp-core|x| | 0.5.0 | | [CVE-2026-37025](https://www.cve.org/CVERecord?id=CVE-2026-37025) |
+|mssql-mcp-server|x| File Write/Read | 1.0.0 | | [CVE-2026-37026](https://www.cve.org/CVERecord?id=CVE-2026-37026) |
+|mcp-sqlserver|x| | 2.0.3 | | [CVE-2026-37024](https://www.cve.org/CVERecord?id=CVE-2026-37024) |
 |postgres-mcp|
 
-## Project 3: Developing a Malicious MCP Server to Exploit insecure MCP Hosts
+## Project 3: Developing a Malicious MCP Server to Exploit Insecure MCP Hosts
 
 ### Targets
 
 Not all AI coding agents support MCP servers. Furthermore, the MCP server configuration and use were not fully developed for a few of the AI coding agents. MaliM's development also took a long time, which is why I only tested six MCP hosts.
 
-The following 5 AI coding agents were therefore examined:
+The following 6 AI coding agents were therefore examined:
 - JetBrains' AI Assistant
 - Windsurf IDE
 - ZED
-- REDACTED
-- REDACTED
+- Kiro
+- Proxy.AI
 - Cursor
-
-Furthermore, REDACTED (will be disclosed soon), was tested as well. Due to responsible disclosure, one of the tested AI coding agents will not be announced for several weeks or months.
 
 ### MaliM
 [MaliM](https://github.com/m10x/malim) is a **Mali**cious **M**CP server that I developed for this project. Apart from a few minor proof-of-concepts (PoCs), I was surprised that there is still no MCP server available to fully test MCP hosts for vulnerabilities, such as insecure handling of MCP servers.
@@ -198,13 +206,13 @@ With the exception of Cursor, all of the AI coding agents examined were found to
 - MCP tool calls are not displayed if the tool returns an error (covert tool invocations)
 - Users are shown insufficient information for confirmation (e.g., parameters or MCP server name are missing)
 
-|AI Coding Agent|Insecure MCP Server Handling|Fixed|CVE|
+|AI Coding Agent|Insecure MCP Server Handling|Examined Version|Fixed|CVE|
 |-|-|-|-|
-|JetBrains' AI Assistant|x|
-|Windsurf IDE|x|
-|ZED|x|0.219.4|[CVE-2026-25805](https://nvd.nist.gov/vuln/detail/CVE-2026-25805)|
-|REDACTED|x|x|
-|REDACTED|x|
+|JetBrains' AI Assistant|x|252.28238.10|
+|Windsurf IDE|x|1.12.44|
+|ZED|x|v0.217.3|0.219.4|[CVE-2026-25805](https://nvd.nist.gov/vuln/detail/CVE-2026-25805)|
+|Kiro|x|x|0.1.42|0.11.63|
+|Proxy.AI|x|3.7.4-241.1|
 |Cursor|
 
 ## Conclusion
