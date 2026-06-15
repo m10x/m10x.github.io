@@ -150,7 +150,7 @@ Many great SQL quirks and inconspicuous commands were exploited. Even classic SQ
 Vulnerabilities were found in 18 of the 19 examined MCP servers. In 14 cases, the read-only restriction could be bypassed. As an outcome of this, RCE is possible in the case of Postgres, and database user passwords can be changed in the case of MySQL. In another 14 cases, it was possible to read or write files on the server.
 
 |MCP Server| Read-Only Bypass | Other Vuln | Examined Version | Fixed | CVE |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 |sqlite-reader-mcp| | File Enum | 0.1.0 | | [CVE-2025-71169](https://www.cve.org/CVERecord?id=CVE-2025-71169) |
 |sqlite-explorer-fastmcp-mcp-server| x | | n/a |  | [CVE-2025-71170](https://www.cve.org/CVERecord?id=CVE-2025-71170) |
 |mcp-mysql-server| x | File Write/Read | 0.1.0 | | [CVE-2025-71171](https://www.cve.org/CVERecord?id=CVE-2025-71171),[CVE-2025-69853](https://www.cve.org/CVERecord?id=CVE-2025-69853) |
