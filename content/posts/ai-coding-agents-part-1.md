@@ -78,7 +78,7 @@ The AI coding agents were always used in their default configuration.
 19 of the 20 AI coding agents examined had RCE or data exfiltration vulnerabilities. Amazon's Q Developer was the only agent not vulnerable to the attack methods. It later came to light that Johann Rehberger had successfully exploited and reported these vulnerabilities. The vulnerabilities had therefore already been fixed, though this had not yet been publicly announced at the time of my tests.
 
 | AI Coding Agent | RCE | Data Exfiltration | Examined Version | Fixed |
-|-------------------|----|----|---|
+|-------------------|----|----|---|---|
 | REDACTED | x | |  |
 | Alibaba's Lingma | x | x | 2.5.16 |
 | REDACTED | x | |
@@ -208,7 +208,7 @@ With the exception of Cursor, all of the AI coding agents examined were found to
 - MCP Inspector did not properly validate user input and thus was vulnerable to XSS
 
 |AI Coding Agent|Insecure MCP Server Handling|Examined Version|Fixed|CVE|
-|-|-|-|-|
+|-|-|-|-|-|
 |JetBrains' AI Assistant|x|252.28238.10|
 |Windsurf IDE|x|1.12.44|
 |ZED|x|v0.217.3|0.219.4|[CVE-2026-25805](https://nvd.nist.gov/vuln/detail/CVE-2026-25805)|
