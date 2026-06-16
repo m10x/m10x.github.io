@@ -102,7 +102,7 @@ The AI coding agents were always used in their default configuration.
 
 The AI coding agents with known vulnerabilities have been downloaded way over 100 million times. However, two of the most popular agents, Windsurf and Kiro, do not disclose their download figures and were therefore not included in the calculation.
 
-## Project 2: Bypassing the Read-Only Restrction in SQL MCP Servers
+## Project 2: Bypassing the Read-Only Restriction in SQL MCP Servers
 
 There are countless MCP servers for everything under the sun. To limit the pool of servers to be examined, I decided to test "read-only" SQL MCP servers and circumvent the read-only restriction.
 
