@@ -9,7 +9,7 @@ tags:
   - English
 ---
 
-![Breaking Boundaries Header](/media/2026/03/breakingboundaries-header.jpg)
+![Breaking Boundaries Header](/media/2026/04/breakingboundaries-header.jpg)
 
 This is the second of four posts about vulnerabilities found in AI coding agents, MCP servers and MCP hosts. 
 The [first post](https://m10x.de/posts/2026/04/pwning-ai-agents-part-1/4-exploiting-ai-coding-agents-and-read-only-sql-mcp-servers/) provided a non-technical overview of the three projects and their results. This post delves deeper into the first project: Achieving RCE and Data Exfiltration in AI Coding Agents.
