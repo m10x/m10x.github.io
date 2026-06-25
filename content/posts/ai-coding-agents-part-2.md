@@ -1,6 +1,6 @@
 ---
 title: Pwning AI Agents (Part 2/4) - RCE and Data Exfiltration in AI Coding Agents
-date: 2026-05-13T04:00:56+01:00
+date: 2026-06-25T04:00:56+01:00
 toc: true
 images: 
   - /media/2026/03/breakingboundaries-header.jpg
