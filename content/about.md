@@ -23,6 +23,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * Android App
 * WiFi
 * Internal (Active Directory)
+* Physical
 * External
 
 **Certificates**
