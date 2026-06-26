@@ -27,6 +27,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * External
 
 **Certificates**
+* WiP: OffSec AI Red Teamer (OSAI)
 * Burp Suite Certified Practitioner (BSCP)
 * Hack The Box Certified Web Exploitation Expert (HTB CWEE)
 * Certified AI/ML Pentester (C-AI/MLPen)
@@ -69,6 +70,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 
 * Go
 * Python
+* JavaScript
 * C#
 * Java
 
