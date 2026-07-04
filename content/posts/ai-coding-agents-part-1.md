@@ -205,7 +205,7 @@ With the exception of Cursor, all of the AI coding agents examined were found to
 - Users do not have to confirm execution of MCP tools (data exfiltration)
 - MCP tool calls are not displayed if the tool returns an error (covert tool invocations)
 - Users are shown insufficient information for confirmation (e.g., parameters or MCP server name are missing)
-- MCP Inspector did not properly validate user input and thus was vulnerable to XSS
+- MCP Inspector (before 0.21.2) did not properly validate user input and thus was vulnerable to XSS
 
 |AI Coding Agent|Insecure MCP Server Handling|Examined Version|Fixed|CVE|
 |-|-|-|-|-|
