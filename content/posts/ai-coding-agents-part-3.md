@@ -49,7 +49,7 @@ That's not that astonishing because there are a lot of state-changing commands.
 
 For example, just to name a few, there are (depending on the database used): SET, GRANT, REVOKE, RENAME, DROP, COPY, MERGE, INSERT, UPDATE, UPSERT, COPY, EXEC, ALTER, ...
 
-The exploitation is straight forward: just send a query using one of the not denylisted commands. Just to show you an example of a command that *NONE* of the denylists contained: SET
+The exploitation is straight forward: just send a query using one of the not denylisted commands. Just to show you an example of a command that *NONE* of the denylists contained: *SET*
 
 SET can be used to change the password of SQL users.
 ![markdown](/media/2026/06/sqli1.png)
@@ -61,11 +61,13 @@ The denylist of one MCP server (dperussina/mssql-mcp-server) had even a more sev
 There were different types of insufficient allowlist validations. Let's see some examples:
 
 1. Multiple statements in one query
+
 This one affected MariaDB/mcp and a few others. They had a sufficient allowlist, however only validated the first command of the query and allowed multiple statements: `SELECT 1; [ANYTHING]` allowed to use ANY command.
 
 ![markdown](/media/2026/06/sqli5.png)
 
 2. WITH
+
 This one was pretty effective as well. WITH can be used to e.g. run a SELECT statement and use it's result for a following statement. 6 MCP Servers allowed the use of WITH and did not validate the statement following it.
 ![markdown](/media/2026/06/sqli4.png)
 
