@@ -39,10 +39,11 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * eLearnSecurity Mobile Application Penetration Tester (eMAPT)
 * eLearnSecurity Junior Penetration Tester (eJPT)
 
-**CVEs (105 Total)**
-* RCE, SQL Injection, File Writes, SSRF, Read-Only Bypasses & More in 18 "Read-Only" SQL MCP Servers (CVE-2025-71169 - CVE-2025-71175, CVE-2025-69853 - CVE-2025-69855, CVE-2025-69859, CVE-2026-37013 - CVE-2026-37017, CVE-2026-37019, CVE-2026-37023 - CVE-2026-37027, CVE-2026-37029)
+**CVEs (110 Total)**
+* RCE, SQL Injection, File Writes, SSRF, Read-Only Bypasses & More in 18 "Read-Only" SQL MCP Servers (CVE-2025-71169 - CVE-2025-71175, CVE-2025-69853 - CVE-2025-69855, CVE-2025-69859, CVE-2026-37013 - CVE-2026-37017, CVE-2026-37019, CVE-2026-37023 - CVE-2026-37027, CVE-2026-37029, CVE-2026-63129)
 * Insecure MCP Server Handling in ZED (CVE-2026-25805)
 * Bearer Token and Cleartext Passwort Disclosure in Soon-To-Be-Disclosed (CVE-2025-69797)
+* Multiple Vulnerabilities leading to RCE and more in JTL Shop (CVE-2026-52397 - CVE-2026-52400)
 * 3 Instances of Reflected XSS in Kieback & Peter DDC Building Controllers
 (CVE-2026-4293)
 * BOLA, BFLA, Stored XSS, Unrestricted File Upload, SSRF, CSV Injection & More in VITU (CVE-2025-69865 - CVE-2025-69868, 2026-36977 - 2026-36979)
