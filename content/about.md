@@ -78,6 +78,6 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 
 **Hobbys**
 * Selfhosting various services (utilizing Proxmox and Docker for Virtualization, Caddy as Reverse Proxy)
-* CTFs ([HackTheBox](https://www.hackthebox.eu/home/users/profile/19366))
+* CTFs ([HackTheBox Grandmaster](https://profile.hackthebox.com/profile/019c5aa5-be63-7022-b300-4bfdc95638a7)
 * Lockpicking ([Green Belt](https://lpulocks.com/#/speedpicks?pickerId=enpsiAVxLvbJ02mBPyTazahvXL73&name=m10x))
 * Running, Cycling, Weightlifting
