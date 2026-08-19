@@ -11,7 +11,7 @@ tags:
 
 ![Breaking Boundaries Header](/media/2026/04/breakingboundaries-header.jpg)
 
-This is the second of four posts about vulnerabilities found in AI coding agents, MCP servers and MCP hosts. 
+This is the last of four posts about vulnerabilities found in AI coding agents, MCP servers and MCP hosts. 
 The [first post](https://m10x.de/posts/2026/04/pwning-ai-agents-part-1/4-exploiting-ai-coding-agents-and-read-only-sql-mcp-servers/) provided a non-technical overview of the three projects and their results. This post delves deeper into the third project: Developing a malicious MCP server and utilizing it to check MCP hosts for insecure MCP server handling.
 
 For more information about background information about this project (how did it start, how were the targets chosen, ...) see the [first post](https://m10x.de/posts/2026/04/pwning-ai-agents-part-1/4-exploiting-ai-coding-agents-and-read-only-sql-mcp-servers/).
