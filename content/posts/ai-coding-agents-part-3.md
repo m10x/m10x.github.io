@@ -32,13 +32,13 @@ The following 14 SQL MCP Servers were vulnerable to at least one type of read-on
 - alexcc4/mcp-mysql-server
 - benborla/mcp-server-mysql
 - bintariq/simple-mysql-mcp-server
-- MariaDB/mcp
-- zerogon1203/db-mcp-server
-- IzumiSy/mcp-universal-db-client
+- MariaDB/mcp (fixed in 0.2.4)
+- zerogon1203/db-mcp-server (fixed in Oct 1, 2025 release)
+- IzumiSy/mcp-universal-db-client (fixed in 0.1.8)
 - OrionPotter/dbhub
 - bytebase/dbhub
-- hovecapital/read-only-local-mysql-mcp-server
-- hovecapital/read-only-local-postgres-mcp-server
+- hovecapital/read-only-local-mysql-mcp-server (fixed in 0.2.0)
+- hovecapital/read-only-local-postgres-mcp-server (fixed in 0.5.0)
 - ConnorBritain/mssql-mcp-core
 - dperussina/mssql-mcp-server
 - bilims/mcp-sqlserver
@@ -72,7 +72,7 @@ This one was pretty effective as well. WITH can be used to e.g. run a SELECT sta
 ![markdown](/media/2026/06/sqli4.png)
 
 ### SQL Injection
-Almost all MCP Servers did a pretty good job to prevent SQL injections by strictly using prepared statements. There were only two outliers: zerogon1203/db-mcp-server and ConnorBritain/mssql-mcp-core. Each of them had one SQL tool that did not use prepared statements.
+Almost all MCP Servers did a pretty good job to prevent SQL injections by strictly using prepared statements. There were only two outliers: zerogon1203/db-mcp-server (fixed in Oct 1, 2025 release) and ConnorBritain/mssql-mcp-core. Each of them had one SQL tool that did not use prepared statements.
 
 In the case of zerogon1203/db-mcp-server, the vulnerable tool was `get_stable_stats`. `table_name` was directly embedded into the SQL query. While I found that vulnerability during the source code audit, I still confirmed it using a TRUE and a FALSE payload.
 ![markdown](/media/2026/06/sqli2.png)
@@ -86,14 +86,14 @@ The following 13 SQL MCP Servers were vulnerable to insecure file operations:
 - abel9851/mcp-server-mariadb
 - bintariq/simple-mysql-mcp-server
 - benborla/mcp-server-mysql
-- zerogon1203/db-mcp-server
-- MariaDB/mcp
-- IzumiSy/mcp-universal-db-client
+- zerogon1203/db-mcp-server (fixed in Oct 1, 2025 release)
+- MariaDB/mcp (fixed in 0.2.4)
+- IzumiSy/mcp-universal-db-client (fixed in 0.1.8)
 - OrionPotter/dbhub
 - bytebase/dbhub
 - dpflucas/mysql-mcp-server
-- hovecapital/read-only-local-mysql-mcp-server
-- hovecapital/read-only-local-postgres-mcp-server
+- hovecapital/read-only-local-mysql-mcp-server (fixed in 0.2.0)
+- hovecapital/read-only-local-postgres-mcp-server (fixed in 0.5.0)
 - dperussina/mssql-mcp-server
 
 Not everybody knows that most SQL servers allow read and write file operations. What is special about writing files is that, in most SQL databases, "SELECT" is used followed by "INTO OUTFILE" or "INTO DUMPFILE" to write to files. Because of this, many MCP servers have allowed this functionality thanks to the "SELECT" at the beginning. However, the ability to write files is *not* read-only :)
@@ -108,8 +108,8 @@ When reading the content of the file, we can see that the file write was success
 
 ## Port Scanning
 The following 4 SQL MCP Servers could be exploited for port scanning:
-- hovecapital/read-only-local-mysql-mcp-server
-- hovecapital/read-only-local-postgres-mcp-server
+- hovecapital/read-only-local-mysql-mcp-server (fixed in 0.2.0)
+- hovecapital/read-only-local-postgres-mcp-server (fixed in 0.5.0)
 - OrionPotter/dbhub
 - bytebase/dbhub
 

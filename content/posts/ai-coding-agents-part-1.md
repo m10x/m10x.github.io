@@ -164,8 +164,8 @@ Vulnerabilities were found in 18 of the 19 examined MCP servers. In 14 cases, th
 |OrionPotter/dbhub|x| File Write/Read, Port Scanning | 0.11.6 | | [CVE-2026-37013](https://www.cve.org/CVERecord?id=CVE-2026-37013),[CVE-2026-37015](https://www.cve.org/CVERecord?id=CVE-2026-37015),[CVE-2026-37016](https://www.cve.org/CVERecord?id=CVE-2026-37016) |
 |bytebase/dbhub|x| File Write/Read, Port Scanning | 0.15.1
 |mysql-mcp-server| | File Write/Read | 0.1.3 | | [CVE-2026-37014](https://www.cve.org/CVERecord?id=CVE-2026-37014) |
-|read-only-local-mysql-mcp-server|x| File Write/Read, Port Scanning | 0.1.1 | Yes, no new release, yet | [CVE-2026-37017](https://www.cve.org/CVERecord?id=CVE-2026-37017),[CVE-2026-37029](https://www.cve.org/CVERecord?id=CVE-2026-37029) |
-|read-only-local-postgres-mcp-server|x| File Write/Read, Port Scanning | 0.3.0 | | [CVE-2026-37023](https://www.cve.org/CVERecord?id=CVE-2026-37023),[CVE-2026-37027](https://www.cve.org/CVERecord?id=CVE-2026-37027) |
+|read-only-local-mysql-mcp-server|x| File Write/Read, Port Scanning | 0.1.1 | 0.2.0 | [CVE-2026-37017](https://www.cve.org/CVERecord?id=CVE-2026-37017),[CVE-2026-37029](https://www.cve.org/CVERecord?id=CVE-2026-37029) |
+|read-only-local-postgres-mcp-server|x| File Write/Read, Port Scanning | 0.3.0 | 0.5.0 | [CVE-2026-37023](https://www.cve.org/CVERecord?id=CVE-2026-37023),[CVE-2026-37027](https://www.cve.org/CVERecord?id=CVE-2026-37027) |
 |mssql-mcp-core|x| | 0.5.0 | | [CVE-2026-37025](https://www.cve.org/CVERecord?id=CVE-2026-37025), [CVE-2026-63129](https://www.cve.org/CVERecord?id=CVE-2026-63129) |
 |mssql-mcp-server|x| File Write/Read | 1.0.0 | | [CVE-2026-37026](https://www.cve.org/CVERecord?id=CVE-2026-37026) |
 |mcp-sqlserver|x| | 2.0.3 | | [CVE-2026-37024](https://www.cve.org/CVERecord?id=CVE-2026-37024) |
