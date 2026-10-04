@@ -39,7 +39,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * eLearnSecurity Mobile Application Penetration Tester (eMAPT)
 * eLearnSecurity Junior Penetration Tester (eJPT)
 
-** Conference Talks **
+**Conference Talks**
 * How to Hack "Read-Only" SQL MCP Servers Online (Fast) - [German OWASP Day 2026](https://god.owasp.de/2026/en/index.html)
 
 **CVEs (110 Total)**
