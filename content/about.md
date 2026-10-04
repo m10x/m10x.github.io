@@ -27,7 +27,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * External
 
 **Certificates**
-* WiP: OffSec AI Red Teamer (OSAI)
+* OffSec AI Red Teamer (OSAI)
 * Burp Suite Certified Practitioner (BSCP)
 * Hack The Box Certified Web Exploitation Expert (HTB CWEE)
 * Certified AI/ML Pentester (C-AI/MLPen)
@@ -38,6 +38,9 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * Practical Network Penetration Tester (PNPT)
 * eLearnSecurity Mobile Application Penetration Tester (eMAPT)
 * eLearnSecurity Junior Penetration Tester (eJPT)
+
+** Conference Talks **
+* How to Hack "Read-Only" SQL MCP Servers Online (Fast) - [German OWASP Day 2026](https://god.owasp.de/2026/en/index.html)
 
 **CVEs (110 Total)**
 * RCE, SQL Injection, File Writes, SSRF, Read-Only Bypasses & More in 18 "Read-Only" SQL MCP Servers (CVE-2025-71169 - CVE-2025-71175, CVE-2025-69853 - CVE-2025-69855, CVE-2025-69859, CVE-2026-37013 - CVE-2026-37017, CVE-2026-37019, CVE-2026-37023 - CVE-2026-37027, CVE-2026-37029, CVE-2026-63129)
