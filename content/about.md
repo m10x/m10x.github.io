@@ -27,17 +27,17 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * External
 
 **Certificates**
-* OffSec AI Red Teamer (OSAI)
-* Burp Suite Certified Practitioner (BSCP)
-* Hack The Box Certified Web Exploitation Expert (HTB CWEE)
-* Certified AI/ML Pentester (C-AI/MLPen)
-* Hack The Box Certified Web Exploitation Specialist (HTB CWES)
-* Certified Red Team Operator (CRTO)
-* Offensive Security Certified Professional (OSCP)
-* eLearnSecurity Web Application Penetration Tester Extreme v2 (eWAPTXv2)
-* Practical Network Penetration Tester (PNPT)
-* eLearnSecurity Mobile Application Penetration Tester (eMAPT)
-* eLearnSecurity Junior Penetration Tester (eJPT)
+* [OffSec AI Red Teamer (OSAI)](https://credentials.offsec.com/836d7c99-517b-435b-b98a-465f4ea25ea3)
+* [Burp Suite Certified Practitioner (BSCP)](https://portswigger.net/web-security/e/c/2664b1437bb0718a)
+* [Hack The Box Certified Web Exploitation Expert (HTB CWEE)](https://www.credly.com/badges/3098f3ae-13af-49d1-94e1-e645340cc99a/)
+* [Certified AI/ML Pentester (C-AI/MLPen)](https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXQD3Alcvdxl8D9dH27MRmdEkMZcdRoxUhPeLZY0SdS/GAdEEKjmp1mD4Ug+Q0TP71fVDWnWMuKMXNMDRTw485g0=)
+* [Hack The Box Certified Web Exploitation Specialist (HTB CWES)](https://www.credly.com/badges/66305891-a81f-4ee1-b934-65658b236830/)
+* [Certified Red Team Operator (CRTO)](https://badges.parchment.eu/public/assertions/bVPleXNgTQyaEPGvsJsmUQ)
+* [Offensive Security Certified Professional (OSCP)](https://www.credential.net/b3bc97c0-29c6-4e91-b7fc-e72eaa00d063)
+* [eLearnSecurity Web Application Penetration Tester Extreme v2 (eWAPTXv2)](https://certs.ine.com/6e007a3b-7819-4a22-b27a-418fa1599acf)
+* [Practical Network Penetration Tester (PNPT)](https://www.credential.net/3c856c08-c732-4590-a3f7-c879be4781dd)
+* [eLearnSecurity Mobile Application Penetration Tester (eMAPT)](https://certs.ine.com/b603ee65-5103-4b32-9126-45a6f50295a8)
+* [eLearnSecurity Junior Penetration Tester (eJPT)](https://certs.ine.com/cfa636e7-39ac-4e1b-82d4-c7af96bfb7a2)
 
 **Conference Talks**
 * How to Hack "Read-Only" SQL MCP Servers Online (Fast) - [German OWASP Day 2026](https://god.owasp.de/2026/en/index.html)
