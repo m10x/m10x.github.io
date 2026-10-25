@@ -27,6 +27,7 @@ I've pursued a master's degree in IT-Security @ Ruhr-Universität Bochum, with a
 * External
 
 **Certificates**
+* [AI Red Team Analyst (AI-RTA)](https://labs.cyberwarfare.live/credential/achievement/6ade4b30b9f5a5dba8e675fe)
 * [OffSec AI Red Teamer (OSAI)](https://credentials.offsec.com/836d7c99-517b-435b-b98a-465f4ea25ea3)
 * [Burp Suite Certified Practitioner (BSCP)](https://portswigger.net/web-security/e/c/2664b1437bb0718a)
 * [Hack The Box Certified Web Exploitation Expert (HTB CWEE)](https://www.credly.com/badges/3098f3ae-13af-49d1-94e1-e645340cc99a/)
